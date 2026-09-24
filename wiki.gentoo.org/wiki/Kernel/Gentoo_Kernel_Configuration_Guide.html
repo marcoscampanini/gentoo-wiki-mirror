@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Kernel/Gentoo Kernel Configuration Guide - Gentoo wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"12689f9d33e7d92246bcc8ea","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Kernel/Gentoo_Kernel_Configuration_Guide","wgTitle":"Kernel/Gentoo Kernel Configuration Guide","wgCurRevisionId":1444736,"wgRevisionId":1444736,"wgArticleId":30575,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Guide","Kernel","Server and Security"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Kernel/Gentoo_Kernel_Configuration_Guide","wgRelevantArticleId":30575,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,
+"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgULSCurrentAutonym":"English","wgPageFormsTargetName":null,"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":!1,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":!1,"srfFilteredConfig":null,"wgULSPosition":"personal","wgULSisCompactLinksEnabled":!0,"wgTranslatePageTranslation":"source"};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.translate":"ready","ext.translate.tag.languages":
+"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","ext.uls.pt":"ready","ext.srf.styles":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.tyrian.styles":"ready","skins.tyrian.icons":"ready"};RLPAGEMODULES=["ext.smw.tooltips","ext.smw.style","smw.entityexaminer","site","mediawiki.page.startup","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.uls.compactlinks","ext.uls.interface"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="../../load.php%3Flang=en&amp;modules=ext.pygments,translate|ext.smw.style|ext.smw.tooltip.styles|ext.translate.tag.languages|ext.uls.pt|jquery.makeCollapsible.styles|mediawiki.skinning.content.externallinks|mediawiki.skinning.interface|mediawiki.to.css"/>
+<link rel="stylesheet" href="../../load.php%3Flang=en&amp;modules=ext.srf.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<script async="" src="../../load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=tyrian"></script>
+<link rel="stylesheet" href="https://assets.gentoo.org/tyrian/bootstrap.min.css"/><link rel="stylesheet" href="https://assets.gentoo.org/tyrian/tyrian.min.css"/><style>#mw-indicator-mw-helplink {display:none;}</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../../load.php%3Flang=en&amp;modules=site.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<meta name="generator" content="MediaWiki 1.35.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#54487a"/>
+<link rel="alternate" type="application/rdf+xml" title="Kernel/Gentoo Kernel Configuration Guide" href="https://wiki.gentoo.org/index.php?title=Special:ExportRDF/Kernel/Gentoo_Kernel_Configuration_Guide&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="https://www.gentoo.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.gentoo.org/opensearch_desc.php" title="Gentoo Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.gentoo.org/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Kernel_Gentoo_Kernel_Configuration_Guide rootpage-Kernel skin-tyrian action-view">	<div class="mw-jump sr-only">
+		Jump to:		<a href="Gentoo_Kernel_Configuration_Guide.html#top">content</a>
+	</div>
+	<header>
+		<div class="site-title">
+			<div class="container">
+				<div class="row">
+					<div class="site-title-buttons">
+						<div class="btn-group btn-group-sm">
+							<a href="https://get.gentoo.org/" role="button" class="btn get-gentoo"><span class="fa fa-fw fa-download"></span> <strong>Get Gentoo!</strong></a>
+							<div class="btn-group btn-group-sm">
+								<a class="btn gentoo-org-sites dropdown-toggle" data-toggle="dropdown" data-target="#" href="Gentoo_Kernel_Configuration_Guide.html#">
+									<span class="fa fa-fw fa-map-o"></span> <span class="hidden-xs">gentoo.org sites</span> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="https://www.gentoo.org/" title="Gentoo's main website"><span class="fa fa-home fa-fw"></span> gentoo.org</a></li>
+									<li><a href="https://wiki.gentoo.org/" title="Find and contribute documentation"><span class="fa fa-file-text-o fa-fw"></span> Wiki</a></li>
+									<li><a href="https://bugs.gentoo.org/" title="Discover and report issues with Gentoo"><span class="fa fa-bug fa-fw"></span> Bugs</a></li>
+									<li><a href="https://packages.gentoo.org/" title="Find software to install"><span class="fa fa-hdd-o fa-fw"></span> Packages</a></li>
+									<li><a href="https://forums.gentoo.org/" title="Discuss with the community"><span class="fa fa-comments-o fa-fw"></span> Forums</a></li>
+									<li class="divider"></li>
+									<li><a href="https://planet.gentoo.org/" title="Find out what's going on in the dev community"><span class="fa fa-rss fa-fw"></span> Planet</a></li>
+									<li><a href="https://archives.gentoo.org/" title="Read up on past discussions"><span class="fa fa-archive fa-fw"></span> Archives</a></li>
+									<li><a href="https://devmanual.gentoo.org/" title="Read the development guide"><span class="fa fa-book fa-fw"></span> Devmanual</a></li>
+									<li><a href="https://gitweb.gentoo.org/" title="Browse our source code in Gitweb"><span class="fa fa-code fa-fw"></span> Gitweb</a></li>
+									<li class="divider"></li>
+									<li><a href="https://infra-status.gentoo.org/" title="Get updates on the services provided by the Gentoo infra team"><span class="fa fa-server fa-fw"></span> Infra status</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="https://wiki.gentoo.org/" title="Back to the homepage" class="site-logo">
+							<img src="https://assets.gentoo.org/tyrian/site-logo.png"  alt="Gentoo Linux Logo" srcset="https://assets.gentoo.org/tyrian/site-logo.svg">
+						</a>
+						<span class="site-label">Wiki</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="tyrian-navbar" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-main-collapse">
+						<ul class="nav navbar-nav">
+							<li id="n-mainpage-description"><a href="https://wiki.gentoo.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.gentoo.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-help"><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li><li id="n-Contribute.21"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Contributor%27s_guide">Contribute!</a></li>			<li class="dropdown">
+				<a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Menu-Documentation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu"><li id="n-Gentoo-Handbook"><a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page">Gentoo Handbook</a></li><li id="n-Gentoo-FAQ"><a href="https://wiki.gentoo.org/wiki/FAQ">Gentoo FAQ</a></li><li role="presentation" class="divider"></li><li id="n-Core-system"><a href="https://wiki.gentoo.org/wiki/Category:Core_system">Core system</a></li><li id="n-Hardware"><a href="https://wiki.gentoo.org/wiki/Category:Hardware">Hardware</a></li><li id="n-Software"><a href="https://wiki.gentoo.org/wiki/Category:Software">Software</a></li><li id="n-Desktop"><a href="https://wiki.gentoo.org/wiki/Category:Desktop">Desktop</a></li><li id="n-Server-.26-Security"><a href="https://wiki.gentoo.org/wiki/Category:Server_and_Security">Server &amp; Security</a></li><li id="n-Project-.26-Community"><a href="https://wiki.gentoo.org/wiki/Category:Project_and_Community">Project &amp; Community</a></li><li role="presentation" class="divider"></li><li id="n-Gentoo-Projects"><a href="https://wiki.gentoo.org/wiki/Project:Gentoo">Gentoo Projects</a></li>				</ul>
+			</li>						</ul>
+						<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+			<a href="Gentoo_Kernel_Configuration_Guide.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i> Tools <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="t-whatlinkshere"><a href="https://wiki.gentoo.org/wiki/Special:WhatLinksHere/Kernel/Gentoo_Kernel_Configuration_Guide" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.gentoo.org/wiki/Special:RecentChangesLinked/Kernel/Gentoo_Kernel_Configuration_Guide" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.gentoo.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.gentoo.org/index.php?title=Kernel/Gentoo_Kernel_Configuration_Guide&amp;oldid=1444736" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.gentoo.org/index.php?title=Kernel/Gentoo_Kernel_Configuration_Guide&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="https://wiki.gentoo.org/wiki/Special:Browse/:Kernel-2FGentoo-5FKernel-5FConfiguration-5FGuide" rel="search">Browse properties</a></li>			</ul>
+		</li>
+			<li class="dropdown">
+			<a href="Gentoo_Kernel_Configuration_Guide.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				<span class="fa fa-user" aria-label="Personal tools"></span>
+				User				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="pt-uls" class="active"><a href="Gentoo_Kernel_Configuration_Guide.html#" class="uls-trigger">English</a></li><li id="pt-createaccount"><a href="https://wiki.gentoo.org/index.php?title=Special:CreateAccount&amp;returnto=Kernel%2FGentoo+Kernel+Configuration+Guide" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.gentoo.org/index.php?title=Special:UserLogin&amp;returnto=Kernel%2FGentoo+Kernel+Configuration+Guide" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>			</ul>
+		</li>
+								</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="navbar navbar-grey navbar-stick" id="wiki-actions" role="navigation">
+			<div class="container"><div class="row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gw-toolbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="gw-toolbar">
+					<ul class="nav navbar-nav">
+					<li id="ca-nstab-main" class="selected active"><a href="Gentoo_Kernel_Configuration_Guide.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="https://wiki.gentoo.org/wiki/Talk:Kernel/Gentoo_Kernel_Configuration_Guide" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>					</ul>
+							<form action="https://wiki.gentoo.org/index.php" id="searchform" class="navbar-form navbar-right" role="search">
+			<input type='hidden' name="title" value="Special:Search"/>
+
+				<div class="input-group">
+					<input type="search" name="search" placeholder="Search" title="Search Gentoo Wiki [f]" accesskey="f" id="searchInput" class="form-control"/>					<div class="input-group-btn"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton btn btn-default"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton btn btn-default"/></div>
+				</div>
+		</form>
+						<ul class="nav navbar-nav navbar-right">
+					<li id="ca-viewsource"><a href="https://wiki.gentoo.org/index.php?title=Kernel/Gentoo_Kernel_Configuration_Guide&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li class="dropdown">
+						<a href="Gentoo_Kernel_Configuration_Guide.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">more <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+					<li id="ca-history"><a href="https://wiki.gentoo.org/index.php?title=Kernel/Gentoo_Kernel_Configuration_Guide&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>							</ul>
+						</li>
+					</ul>
+				</div>
+			</div></div>
+		</nav>
+		</header>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="content" class="mw-body" role="main">
+						<a id="top"></a>
+						
+						<h1 id="firstHeading" class="first-header" lang="en">
+							<span dir="auto">Kernel/Gentoo Kernel Configuration Guide</span>
+						</h1>
+
+						<div id="bodyContent" class="mw-body-content">
+							<div id="siteSub">From Gentoo Wiki</div>
+							<div id="contentSub">
+								<span class="subpages">&lt; <a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/Kernel" title="Special:MyLanguage/Kernel">Kernel</a></span>							</div>
+												                <div id="jump-to-nav"></div>
+					                <a class="mw-jump-link" href="Gentoo_Kernel_Configuration_Guide.html#mw-head">Jump to:navigation</a>
+					                <a class="mw-jump-link" href="Gentoo_Kernel_Configuration_Guide.html#searchInput">Jump to:search</a>
+
+							<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-pt-translate-header noprint nomobile" dir="ltr" lang="en">This page contains <span class="plainlinks"><a rel="nofollow" class="external text" href="https://wiki.gentoo.org/index.php?title=Kernel/Gentoo_Kernel_Configuration_Guide&amp;oldid=1407667&amp;diff=1444736">changes</a></span> which are not marked for translation.</div><div class="mw-parser-output"><div class="mw-pt-languages noprint" lang="en" dir="ltr"><div class="mw-pt-languages-label">Other languages:</div><ul class="mw-pt-languages-list"><li><a href="https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide/de" class="mw-pt-progress mw-pt-progress--stub" title="Kernel/Gentoo Kernel-Konfigurationsleitfaden (1% translated)" lang="de" dir="ltr">Deutsch</a></li>
+<li><span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en" dir="ltr">English</span></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide/es" class="mw-pt-progress mw-pt-progress--med" title="Guía de configuración del núcleo en Gentoo (42% translated)" lang="es" dir="ltr">español</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide/fr" class="mw-pt-progress mw-pt-progress--complete" title="Noyau/Guide de configuration du noyau de Gentoo (100% translated)" lang="fr" dir="ltr">français</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide/hu" class="mw-pt-progress mw-pt-progress--med" title="Kernel/Gentoo kernel beállításával kapcsolatos útmutató (57% translated)" lang="hu" dir="ltr">magyar</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide/ru" class="mw-pt-progress mw-pt-progress--high" title="Ядро/Руководство по конфигурации ядра Gentoo (60% translated)" lang="ru" dir="ltr">русский</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide/zh-cn" class="mw-pt-progress mw-pt-progress--high" title="Kernel/Gentoo 内核配置指南 (66% translated)" lang="zh-Hans-CN" dir="ltr">中文（中国大陆）‎</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide/ja" class="mw-pt-progress mw-pt-progress--complete" title="カーネル/Gentoo カーネルコンフィギュレーションガイド (100% translated)" lang="ja" dir="ltr">日本語</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/Gentoo_Kernel_Configuration_Guide/ko" class="mw-pt-progress mw-pt-progress--med" title="Kernel/Gentoo Kernel Configuration Guide/ko (40% translated)" lang="ko" dir="ltr">한국어</a></li></ul></div>
+<p><br />
+This document aims to introduce the concepts of <b>manual kernel configuration</b> and details some of the most common configuration pitfalls.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Gentoo_Kernel_Configuration_Guide.html#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Gentoo_Kernel_Configuration_Guide.html#Configuration_concepts"><span class="tocnumber">2</span> <span class="toctext">Configuration concepts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="Gentoo_Kernel_Configuration_Guide.html#The_basics"><span class="tocnumber">2.1</span> <span class="toctext">The basics</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Gentoo_Kernel_Configuration_Guide.html#Built-in_vs_modular"><span class="tocnumber">2.2</span> <span class="toctext">Built-in vs modular</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="Gentoo_Kernel_Configuration_Guide.html#Hardware_support"><span class="tocnumber">2.3</span> <span class="toctext">Hardware support</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="Gentoo_Kernel_Configuration_Guide.html#Kernel_features"><span class="tocnumber">2.4</span> <span class="toctext">Kernel features</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Gentoo_Kernel_Configuration_Guide.html#Ready.3F"><span class="tocnumber">2.5</span> <span class="toctext">Ready?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="Gentoo_Kernel_Configuration_Guide.html#Configuring_the_kernel"><span class="tocnumber">3</span> <span class="toctext">Configuring the kernel</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="Gentoo_Kernel_Configuration_Guide.html#Enabling_required_options"><span class="tocnumber">3.1</span> <span class="toctext">Enabling required options</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="Gentoo_Kernel_Configuration_Guide.html#Enabling_support_for_typical_system_components"><span class="tocnumber">3.2</span> <span class="toctext">Enabling support for typical system components</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Gentoo_Kernel_Configuration_Guide.html#SATA_and_NVMe_disks"><span class="tocnumber">3.3</span> <span class="toctext">SATA and NVMe disks</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="Gentoo_Kernel_Configuration_Guide.html#File_system_support"><span class="tocnumber">3.4</span> <span class="toctext">File system support</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="Gentoo_Kernel_Configuration_Guide.html#USB_host_controllers"><span class="tocnumber">3.5</span> <span class="toctext">USB host controllers</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="Gentoo_Kernel_Configuration_Guide.html#Multiprocessor.2C_hyper-threading.2C_and_multi-core_systems"><span class="tocnumber">3.6</span> <span class="toctext">Multiprocessor, hyper-threading, and multi-core systems</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="Gentoo_Kernel_Configuration_Guide.html#Compressed_kernel_modules"><span class="tocnumber">3.7</span> <span class="toctext">Compressed kernel modules</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="Gentoo_Kernel_Configuration_Guide.html#PPPoE"><span class="tocnumber">3.8</span> <span class="toctext">PPPoE</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="Gentoo_Kernel_Configuration_Guide.html#Signed_kernel_modules_and_SecureBoot"><span class="tocnumber">3.9</span> <span class="toctext">Signed kernel modules and SecureBoot</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="Gentoo_Kernel_Configuration_Guide.html#Signing_the_kernel_image_.28Secure_Boot.29"><span class="tocnumber">3.9.1</span> <span class="toctext">Signing the kernel image (Secure Boot)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="Gentoo_Kernel_Configuration_Guide.html#Architecture_specific_kernel_configuration"><span class="tocnumber">3.10</span> <span class="toctext">Architecture specific kernel configuration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="Gentoo_Kernel_Configuration_Guide.html#alpha"><span class="tocnumber">3.10.1</span> <span class="toctext">alpha</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="Gentoo_Kernel_Configuration_Guide.html#amd64"><span class="tocnumber">3.10.2</span> <span class="toctext">amd64</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="Gentoo_Kernel_Configuration_Guide.html#ppc"><span class="tocnumber">3.10.3</span> <span class="toctext">ppc</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="Gentoo_Kernel_Configuration_Guide.html#SPARC"><span class="tocnumber">3.10.4</span> <span class="toctext">SPARC</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="Gentoo_Kernel_Configuration_Guide.html#x86"><span class="tocnumber">3.10.5</span> <span class="toctext">x86</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="Gentoo_Kernel_Configuration_Guide.html#Compiling_and_installing"><span class="tocnumber">4</span> <span class="toctext">Compiling and installing</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="Gentoo_Kernel_Configuration_Guide.html#Kernel_configuration_shorthand_notation"><span class="tocnumber">5</span> <span class="toctext">Kernel configuration shorthand notation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-27"><a href="Gentoo_Kernel_Configuration_Guide.html#Introduction_2"><span class="tocnumber">5.1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="Gentoo_Kernel_Configuration_Guide.html#Translating_CONFIG_FOO_to_the_real_configuration_location"><span class="tocnumber">5.2</span> <span class="toctext">Translating CONFIG_FOO to the real configuration location</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="Gentoo_Kernel_Configuration_Guide.html#Other_kernel_configuration_documentation"><span class="tocnumber">6</span> <span class="toctext">Other kernel configuration documentation</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="Gentoo_Kernel_Configuration_Guide.html#Troubleshooting"><span class="tocnumber">7</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-31"><a href="Gentoo_Kernel_Configuration_Guide.html#Configuration_changes_do_not_take_effect"><span class="tocnumber">7.1</span> <span class="toctext">Configuration changes do not take effect</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="Gentoo_Kernel_Configuration_Guide.html#Modules_do_not_get_loaded_automatically"><span class="tocnumber">7.2</span> <span class="toctext">Modules do not get loaded automatically</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="Gentoo_Kernel_Configuration_Guide.html#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span></h2>
+<p>Gentoo provides two ways for users to handle kernel configuration, installation, and upgrades: <i>automatic</i> (such as genkernel or Dracut) and <i>manual</i>. Although the automatic method can be regarded as easier for most users, there are a number of reasons why a large proportion of Gentoo users choose to configure their kernels manually:
+</p>
+<ul><li>Greater flexibility and control over configuration</li>
+<li>Smaller (kernel) sizes</li>
+<li>Shorter compilation times</li>
+<li>The learning experience</li></ul>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />While the <a href="https://wiki.gentoo.org/wiki/Project:Distribution_Kernel" title="Project:Distribution Kernel">Distribution Kernel</a> will produce a slightly larger kernel than one configured yourself. It should be noted that Linux will only load the modules it needs so it won't be a huge difference.</div> 
+<p>This guide does not attempt to document the manual configuration process from start to finish — the configuration process relies upon a large degree of common sense and a relatively high level of technical knowledge about the system being used. Instead it will introduce the concepts of manual configuration and detail the most common pitfalls which users face. 
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />This guide is written with recent kernels in mind for common computer architectures. Some details may differ for older kernels or more exotic architectures; however much of the content will still be relevant.</div>
+<p>At this point, the user is presumed to have Linux kernel sources unpacked on the hard disk (usually somewhere under <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr/src</span>), and is expected to know how to enter the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">menuconfig</span> or <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">nconfig</span> configuration utility with knowledge to navigate through the ncurses-based menu system. If the user is not at this stage, other documentation is available to help. Read the following articles, then return to this guide:
+</p>
+<ul><li>The <a href="https://wiki.gentoo.org/wiki/Kernel/Packages" title="Kernel/Packages">kernel packages article</a> contains information on the various kernel source packages available in the Portage tree.</li>
+<li>The <a href="https://wiki.gentoo.org/wiki/Kernel/Upgrade" title="Kernel/Upgrade">Kernel upgrade article</a> explains how to upgrade a kernel or switch from one kernel to another.</li></ul>
+<h2><span class="mw-headline" id="Configuration_concepts">Configuration concepts</span></h2>
+<h3><span class="mw-headline" id="The_basics">The basics</span></h3>
+<p>The general process is actually rather simple: a series of options, categorized into individual menus and sub-menus, are presented and the desired hardware support and kernel features relevant to the system are selected.
+</p><p>The kernel includes a <i>default configuration</i>, which is presented the first time menuconfig is run on a particular set of sources. The defaults are generally broad and sensible, which means that the majority of users will only have to make a small number of changes to the base configuration. When deciding to disable an option that was enabled from kernel's default configuration, make sure a good understanding has been obtained of exactly what that option does, and the consequences of disabling it. 
+</p><p>During a first time Linux kernel configuring, aim to be conservative; do not be too adventurous, and try to make as few modifications to the default settings as possible. At the same time, keep in mind that there are certain parts to a system's setup that must be customized to actually allow for the system to boot.
+</p>
+<h3><span class="mw-headline" id="Built-in_vs_modular">Built-in vs modular</span></h3>
+<p>Most configuration options are <i>tristate</i>: they can be either not built at all <code>(N)</code>, built directly into the kernel <code>(Y)</code>, or built as a module <code>(M)</code>. Modules are stored externally on the filesystem, whereas built-in items are built directly into the kernel image itself. 
+</p><p>There is an important difference between <a href="https://wiki.gentoo.org/wiki/Kernel_Modules" title="Kernel Modules">built-in and modular</a>: with a few exceptions, the kernel makes no attempt whatsoever to load any external modules when the system might need them; it is left up to the user to decide when, or when to not, load a module. While certain other parts of the system may have load-on-demand facilities, and there are some automatic module loading utilities available, it is recommended to build hardware support and kernel features directly into the kernel. The kernel can then ensure the functionality and hardware support is available whenever needed. This is done by setting each kernel feature to <code>(Y)</code>. For this setup to be coherent it is also necessary to include firmware support in the kernel. For details see the <a href="https://wiki.gentoo.org/wiki/Linux_firmware" title="Linux firmware">Linux firmware</a> article.
+</p><p>For other parts of the configuration, built-in is an absolute requirement. For example, if the root partition is a btrfs filesystem the system can't boot if btrfs was built as a module. The system would have to look on the root partition to find the btrfs module (since modules are stored in the root partition), but it cannot look on the root partition unless it already has btrfs support loaded! If btrfs has not been built-in then the init process will fail to find the root device.
+</p><p>See the article on <a href="https://wiki.gentoo.org/wiki/Kernel_Modules" title="Kernel Modules">kernel Modules</a> for more information, and the instructions on <a href="https://wiki.gentoo.org/wiki/Kernel/Configuration#Usage" title="Kernel/Configuration">using menuconfig</a> to configure the kernel.
+</p>
+<h3><span class="mw-headline" id="Hardware_support">Hardware support</span></h3>
+<p>Beyond detecting the <i>architecture type</i> of the system, the configuration utility makes no attempt to identify what hardware is actually present in the system. While there are default settings for <i>some</i> hardware support, users almost certainly need to find and select the configuration options relevant to each system's hardware configuration. 
+</p><p>Selecting the proper configuration options requires a knowledge of the components inside and connected to the computer. Most of the time these components can be identified without taking the lid off the system. For most internal components, users need to identify the <i>chipset</i> used on each device, rather than the retailed product name. Many expansion cards are retailed with a certain brand name, but use another manufacturer's chipset.
+</p><p>There are some utilities available to help users determine what kernel configuration options to use. <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">lspci</span> (part of the <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/pciutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/pciutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/pciutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package) will identify PCI-based and AGP-based hardware, this includes components built onto the motherboard itself. <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">lsusb</span> (from the <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/usbutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/usbutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/usbutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package) will identify various devices connected to the system's USB ports. 
+</p><p>The situation is somewhat confused by varying degrees of standardization in the hardware world. Unless the user selects extreme deviation from the default configuration settings, the IDE hard disks should "just work", as will the PS/2 or USB keyboard and mouse. Basic VGA display support is also included. However, some devices such as Ethernet adapters are hardly standardized at all; for these devices users will have to identify the Ethernet chipset and select the appropriate hardware support for the specific card to get network access.
+</p><p>In addition, while some things just-about-work with the default settings, more specialized options may need to be selected to get the full potential from the system. For example, if support for the appropriate IDE chipset has not been enabled, the IDE hard disks will run <i>very</i> slowly.
+</p><p>It is recommended for drivers that require firmware to be configured as modules to more easily load the firmware from disk.  Common groups that should be included here are GPU and networking drivers (when not using an <a href="https://wiki.gentoo.org/wiki/NFS" class="mw-redirect" title="NFS">NFS</a>, or similar networked based, rootfs).
+</p>
+<h3><span class="mw-headline" id="Kernel_features">Kernel features</span></h3>
+<p>In addition to hardware support, users need to consider the software features that will be required in the kernel. One important example of such a feature is filesystem support: users must select support for the filesystems in use on their hard disks, as well as any filesystems they might use on external storage devices (e.g. VFAT on USB drives). 
+</p><p>Another common software feature example is advanced network functionality. In order to do some kind of routing or firewalling the relevant configuration items must be included in the kernel configuration. 
+</p>
+<h3><span id="Ready?"></span><span class="mw-headline" id="Ready.3F">Ready?</span></h3>
+<p>Now that the concepts have been introduced, it should be easy to start identifying the system hardware, browsing through the menuconfig interface, and selecting the required kernel options for the system. 
+</p><p>The rest of this guide should clear up common areas of confusion, and provide advice for how to avoid common problems which users often run into. Best wishes!
+</p>
+<h2><span class="mw-headline" id="Configuring_the_kernel">Configuring the kernel</span></h2>
+<h3><span class="mw-headline" id="Enabling_required_options">Enabling required options</span></h3>
+<p>When using <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, it is strongly recommend the Gentoo-specific configuration options be enabled. These ensure that a minimum of kernel features required for proper functioning is available:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enabling Gentoo-specific options</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Gentoo Linux ---&gt;
+    [*] Gentoo Linux support
+    [*]   Linux dynamic and persistent device naming (userspace devfs) support
+    [*]   Select options required by Portage features
+        Support for init systems, system and service managers  ---&gt;
+          [*] OpenRC, runit and other script based systems and managers
+          [*] systemd
+</pre></div>
+<p>Naturally the choice in the last two lines depends on the selected init system (<a href="../OpenRC.html" title="OpenRC">OpenRC</a> vs. <a href="https://wiki.gentoo.org/wiki/Systemd" title="Systemd">systemd</a>). It does not hurt to have support for both init systems enabled.
+</p><p>When using <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/vanilla-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/vanilla-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/vanilla-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, the additional selections for init systems will be unavailable. Enabling support is possible.
+</p>
+<h3><span class="mw-headline" id="Enabling_support_for_typical_system_components">Enabling support for typical system components</span></h3>
+<p>Make sure that every driver that is vital to the booting of the system (such as SATA controllers, NVMe block device support, filesystem support, etc.) is compiled in the kernel and not as a module, otherwise the system may not be able to boot completely.
+</p><p>Next select the exact processor type. It is also recommended to enable MCE features (if available) so that users are able to be notified of any hardware problems. On some architectures (such as x86_64), these errors are not printed to <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">dmesg</span>, but to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/dev/mcelog</span>. This requires the <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-admin/mcelog package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-admin/mcelog"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-admin/mcelog</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package. 
+</p><p>Also select <i>Maintain a devtmpfs file system to mount at /dev</i> so that critical device files are already available early in the boot process (<var>CONFIG_DEVTMPFS</var> and <var>CONFIG_DEVTMPFS_MOUNT</var>):
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enabling devtmpfs support (<var>CONFIG_DEVTMPFS</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Device Drivers ---&gt;
+  Generic Driver Options ---&gt;
+    [*] Maintain a devtmpfs filesystem to mount at /dev
+    [*]   Automount devtmpfs at /dev, after the kernel mounted the rootfs
+</pre></div>
+<h3><span class="mw-headline" id="SATA_and_NVMe_disks">SATA and NVMe disks</span></h3>
+<p>Most modern desktop systems ship with storage devices (hard disk and CD/DVD drives) on a <a href="https://en.wikipedia.org/wiki/SATA" class="extiw" title="wikipedia:SATA">Serial ATA</a> bus, rather than the older <a href="https://en.wikipedia.org/wiki/Parallel_ATA" class="extiw" title="wikipedia:Parallel ATA">Parallel ATA IDE</a> (ribbon cable) bus type. 
+</p><p>SATA support in Linux is implemented in a layer referred to as <i>libata</i>, which sits below the SCSI subsystem. For this reason, SATA drivers are found in the SCSI driver section of the configuration. Additionally, the system's storage devices will be treated as SCSI devices, which means SCSI disk/cdrom support will also be required. The first SATA hard disk will be named <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/dev/sda</span> and the first SATA CD/DVD drive will be named <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/dev/sr0</span>. 
+</p><p>Although the majority of these drivers are for SATA controllers, libata was not designed to be SATA-specific. All common IDE drivers were also ported to libata, and at this point, the above considerations will also apply for IDE users. 
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Configuration options for libata</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Device Drivers  ---&gt;
+   SCSI device support  ---&gt;
+      &lt;*&gt; SCSI device support
+      &lt;*&gt; SCSI disk support
+      &lt;*&gt; SCSI CDROM support
+ 
+      [ ] SCSI low-level drivers  ---&gt;
+ 
+   &lt;*&gt; Serial ATA and Parallel ATA drivers (libata)  ---&gt;
+</pre></div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Non-standard chipsets are listed under <code>SCSI low-level drivers</code> in the <code>Serial ATA and Parallel ATA drivers (libata)</code> kernel box above.</div>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enable basic NVMe support for Linux 5.x.x (<var>CONFIG_BLK_DEV_NVME</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Device Drivers ---&gt;
+  NVME Support ---&gt;
+    &lt;*&gt; NVM Express block device
+</pre></div>
+<p>It does not hurt to enable the following additional NVMe support:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enabling additional NVMe support (<var>CONFIG_NVME_MULTIPATH</var>, <var>CONFIG_NVME_MULTIPATH</var>, <var>CONFIG_NVME_HWMON</var>, <var>CONFIG_NVME_FC</var>, <var>CONFIG_NVME_TCP</var>, <var>CONFIG_NVME_TARGET</var>, <var>CONFIG_NVME_TARGET_PASSTHRU</var>, <var>CONFIG_NVME_TARGET_LOOP</var>, <var>CONFIG_NVME_TARGET_FC</var>, <var>CONFIG_NVME_TARGET_FCLOOP</var>, <var>CONFIG_NVME_TARGET_TCP</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>[*] NVMe multipath support
+[*] NVMe hardware monitoring
+&lt;M&gt; NVM Express over Fabrics FC host driver
+&lt;M&gt; NVM Express over Fabrics TCP host driver
+&lt;M&gt; NVMe Target support
+  [*]   NVMe Target Passthrough support
+  &lt;M&gt;   NVMe loopback device support
+  &lt;M&gt;   NVMe over Fabrics FC target driver
+  &lt; &gt;     NVMe over Fabrics FC Transport Loopback Test driver (NEW)
+  &lt;M&gt;   NVMe over Fabrics TCP target support
+</pre></div>
+<p>Now go to File Systems and select support for the filesystems that will be used by the system. Do not compile the file system that is used for the root filesystem as module, otherwise the system may not be able to mount the partition. Also select <i>Virtual memory</i> and <i>/proc file system</i>. Select one or more of the following options as needed by the system:
+</p>
+<h3><span class="mw-headline" id="File_system_support">File system support</span></h3>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enable file system support (<var>CONFIG_EXT2_FS</var>, <var>CONFIG_EXT3_FS</var>, <var>CONFIG_EXT4_FS</var>, <var>CONFIG_BTRFS_FS</var>, <var>CONFIG_XFS_FS</var>, <var>CONFIG_MSDOS_FS</var>, <var>CONFIG_VFAT_FS</var>, <var>CONFIG_PROC_FS</var>, and <var>CONFIG_TMPFS</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>File systems ---&gt;
+  &lt; &gt; Second extended fs support
+  &lt; &gt; The Extended 3 (ext3) filesystem
+  &lt;*&gt; The Extended 4 (ext4) filesystem
+  &lt;*&gt; Btrfs filesystem support
+  &lt;*&gt; XFS filesystem support
+  DOS/FAT/NT Filesystems  ---&gt;
+    &lt;*&gt; MSDOS fs support
+    &lt;*&gt; VFAT (Windows-95) fs support
+  Pseudo Filesystems ---&gt;
+    [*] /proc file system support
+    [*] Tmpfs virtual memory file system support (former shm fs)
+</pre></div>
+<p>Note that ext2 and ext3 are redundant since the <a href="https://wiki.gentoo.org/wiki/Ext4" title="Ext4">ext4</a> driver already supports all ext versions.
+</p>
+<h3><span class="mw-headline" id="USB_host_controllers">USB host controllers</span></h3>
+<p><a href="https://wiki.gentoo.org/wiki/USB" title="USB">USB</a> is a widely adopted bus for connecting external peripherals to a computer. One of the reasons behind the success of USB is that it is a standardized protocol, however the USB <i>host controller devices (HCDs)</i> implemented on the host computer do vary a little. There are 4 main types: 
+</p>
+<ol><li><code>UHCI</code> is the Universal Host Controller Interface. It supports USB 1.1, and is usually found on motherboards based on a VIA or Intel chipset.</li>
+<li><code>OHCI</code> is the Open Host Controller Interface. It supports USB 1.1 and is usually found on motherboards based on an NVIDIA or SiS chipset.</li>
+<li><code>EHCI</code> is the Extended Host Controller Interface. It is the only common host controller to support USB 2.0, and can typically be found on any computer that supports USB 2.0.</li>
+<li><code>XHCI</code> is the eXtensible Host Controller Interface. It is the host controller for USB 3.0 and is compatible with USB 1.0, 1.1, 2.0, 3.0 and future speeds. Enable this feature when the board supports USB 3.0.</li></ol>
+<p>Most systems come with two of the above interface types: XHCI (USB 3.0) <i>and</i> EHCI (USB 2.0). To use USB devices, it is no longer necessary to select both options since XHCI is compatible with slower USB-controllers. Users can also enable EHCI to be "extra" safe; it does no harm if USB 2.0 controllers are unavailable.
+</p><p>If the relevant options corresponding to the USB HCD types present on the system are not selected, then 'dead' USB ports may be experienced. This case can be determined if a working USB device is plugged in, but it does not get power or respond in any way. 
+</p><p>A neat <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">lspci</span> trick (from the <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/pciutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/pciutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/pciutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package) makes it relatively easy to detect which HCDs are present on system. Ignoring the SATA controller which was also matched, it is easy to spot that this system requires EHCI and XHCI support:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>lspci -v | grep HCI</code></div><pre>00:14.0 USB controller: Intel Corporation 8 Series/C220 Series Chipset Family USB xHCI (rev 04) (prog-if 30 [XHCI])
+00:1a.0 USB controller: Intel Corporation 8 Series/C220 Series Chipset Family USB EHCI #2 (rev 04) (prog-if 20 [EHCI])
+00:1d.0 USB controller: Intel Corporation 8 Series/C220 Series Chipset Family USB EHCI #1 (rev 04) (prog-if 20 [EHCI])
+00:1f.2 SATA controller: Intel Corporation 8 Series/C220 Series Chipset Family 6-port SATA Controller 1 [AHCI mode] (rev 04) (prog-if 01 [AHCI 1.0])
+</pre></div>
+<p>Select the HCDs present on the system. In general select all three options for maximum support, or if the correct option is uncertain:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong><a href="https://wiki.gentoo.org/wiki/USB#Kernel_Configuration" title="USB">Configuration for USB HCDs</a></strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Device Drivers  ---&gt;
+   USB support  ---&gt;
+      &lt;*&gt; Support for Host-side USB
+      ---   USB Host Controller Drivers
+      &lt;*&gt;   xHCI HCD (USB 3.0) support
+      &lt;*&gt;   EHCI HCD (USB 2.0) support
+      &lt; &gt;   OHCI HCD  (USB 1.1) support
+      &lt; &gt;   UHCI HCD (most Intel and VIA) support
+</pre></div>
+<p>In Linux kernel 3.12.13 and later, <code>OHCI support for PCI-bus USB controllers</code> (<code>USB_OHCI_HCD_PCI</code>) has to be enabled if the USB controller is OHCI and a USB keyboard or mouse is used.
+</p>
+<h3><span id="Multiprocessor,_hyper-threading,_and_multi-core_systems"></span><span class="mw-headline" id="Multiprocessor.2C_hyper-threading.2C_and_multi-core_systems">Multiprocessor, hyper-threading, and multi-core systems</span></h3>
+<p>Many computer systems are based on multiple processors, but not always in an immediately obvious way. 
+</p>
+<ul><li>Nearly every recent Intel/AMD/IBM CPU supports the <a href="https://en.wikipedia.org/wiki/simultaneous_multithreading" class="extiw" title="wikipedia:simultaneous multithreading">simultaneous multithreading</a> (SMT) technology which is also known as <a href="https://en.wikipedia.org/wiki/hyper-threading" class="extiw" title="wikipedia:hyper-threading">hyper-threading</a>. This technology enables a single CPU to be viewed by the system as two or more <i>logical</i> processors.</li>
+<li>Most recent CPUs actually consist of multiple physical processors inside a single package, these processors are known as <a href="https://en.wikipedia.org/wiki/multi-core_processor" class="extiw" title="wikipedia:multi-core processor">multi-core</a> processors.</li>
+<li>Some high-end computer systems actually have multiple physical processors installed on specialized motherboards to provide a significant performance increase over a <i>uniprocessor</i> system. System users will probably know if they have such a system, since they are not cheap.</li></ul>
+<p>In all of these cases, the appropriate kernel options must be selected to obtain optimum performance from these setups:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Configuration for multi-processing support</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Processor type and features  ---&gt;
+ [*] Symmetric multi-processing support
+ [*]   Multi-core scheduler support (NEW)
+</pre></div>
+<p>The next option not only enables power management features, but might also be a requirement for making all CPUs available to the system:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Power management for multi-processor systems</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Power management and ACPI options  ---&gt;
+ [*] ACPI (Advanced Configuration and Power Interface) Support
+</pre></div>
+<h3><span class="mw-headline" id="Compressed_kernel_modules">Compressed kernel modules</span></h3>
+<p>From kernel version 3.18.x (and up) compression of kernel modules has been possible. It is important to emerge <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/kmod package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/kmod"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/kmod</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> with the proper USE flags <i>before</i> compiling a kernel with compressed modules:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/portage/package.use/kmod</code></strong><strong>Enabling compression support for kmod</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>sys-apps/kmod lzma zlib
+</pre></div>
+<p>Re-emerge <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/kmod package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/kmod"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/kmod</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask&#160;--oneshot --changed-use sys-apps/kmod</code></div></div> 
+<p>Enable module compression and select a preferred compression method:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enable module compression</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"></div>
+<pre>[*] Enable loadable module support <span class="smw-highlighter" data-type="8" data-state="inline" data-title="Note" title="Search for CONFIG_MODULES to find this item."><span class="smwtticon note"></span><span class="smwttcontent"><a href="https://wiki.gentoo.org/wiki/Kernel/Configuration#Search_modules" title="Kernel/Configuration">Search</a> for &lt;code&gt;CONFIG_MODULES&lt;/code&gt; to find this item.</span></span> ---&gt;
+  Module compression mode () ---&gt;
+    ( ) None
+    (X) GZIP
+    ( ) XZ
+    ( ) ZSTD
+</pre>
+<h3><span class="mw-headline" id="PPPoE">PPPoE</span></h3>
+<p>If PPPoE is used to connect to the Internet, or a dial-up modem, then enable the following options (<var>CONFIG_PPP</var>, <var>CONFIG_PPP_ASYNC</var>, and <var>CONFIG_PPP_SYNC_TTY</var>):
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enabling PPPoE support (<var>PPPoE</var>, <var>CONFIG_PPPOE</var>, <var>CONFIG_PPP_ASYNC</var>, <var>CONFIG_PPP_SYNC_TTY</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Device Drivers ---&gt;
+  Network device support ---&gt;
+    &lt;*&gt; PPP (point-to-point protocol) support
+    &lt;*&gt; PPP over Ethernet
+    &lt;*&gt; PPP support for async serial ports
+    &lt;*&gt; PPP support for sync tty ports
+</pre></div>
+<p>Usually <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">make modules_install</span> runs <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">depmod</span>. If <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/kmod package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/kmod"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/kmod</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> did not have the proper USE flags set (see the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">package.use</span> step above) the first time it was run, then the dependency list will be empty. The system will therefore be unable to load any modules that were built compressed.
+</p><p>After kmod has been recompiled, re-run <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">depmod</span> as a solution to this problem:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>depmod -a
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>modprobe &lt;module_name&gt;
+</code></div></div>
+<h3><span class="mw-headline" id="Signed_kernel_modules_and_SecureBoot">Signed kernel modules and SecureBoot</span></h3>
+<p>To automatically sign the kernel modules enable <var>CONFIG_MODULE_SIG_ALL</var>:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Sign kernel modules (<var>CONFIG_MODULE_SIG_ALL</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>[*] Enable loadable module support  
+  -*-   Module signature verification    
+    [*]     Automatically sign all modules    
+    Which hash algorithm should modules be signed with? (Sign modules with SHA-512) ---&gt;
+</pre></div>
+<p>Optionally change the hash algorithm if desired.
+</p><p>To enforce that all modules are signed with a valid signature, enable <var>CONFIG_MODULE_SIG_FORCE</var> as well:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enforce signed kernel modules (<var>CONFIG_MODULE_SIG_FORCE</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>[*] Enable loadable module support  
+  -*-   Module signature verification    
+    [*]     Require modules to be validly signed
+    [*]     Automatically sign all modules
+    Which hash algorithm should modules be signed with? (Sign modules with SHA-512) ---&gt;
+</pre></div>
+<p>To use a custom key, specify the location of this key in <var>CONFIG_MODULE_SIG_KEY</var>. If unspecified, the kernel build system will generate a key. It is recommended to generate one manually instead. This can be done with:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>openssl req -new -nodes -utf8 -sha256 -x509 -outform PEM -out kernel_key.pem -keyout kernel_key.pem</code></div></div>
+<p>OpenSSL will ask some questions about the user generating the key, it is recommended to fill in these questions as detailed as possible.
+</p><p>Store the key in a safe location, at the very least the key should be readable only by the root user. Verify this with:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>ls -l kernel_key.pem</code></div><pre> -r-------- 1 root root 3164 Jan  4 10:38 kernel_key.pem </pre></div>
+<p>If this outputs anything other then the above, correct the permissions with:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>chown root:root kernel_key.pem
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>chmod 400 kernel_key.pem
+</code></div></div>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Specify signing key (<var>CONFIG_MODULE_SIG_KEY</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>-*- Cryptographic API  ---&gt; 
+  Certificates for signature checking  ---&gt;  
+    (/path/to/kernel_key.pem) File name or PKCS#11 URI of module signing key
+</pre></div>
+<p>To also sign external kernel modules installed by other packages via <code>linux-mod-r1.eclass</code>, enable the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the modules-sign USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/modules-sign"><span style="color: MidnightBlue;">modules-sign</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag globally:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/portage/make.conf</code></strong><strong>Enable module signing</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">USE</span><span class="o">=</span><span class="s2">&quot;modules-sign&quot;</span>
+
+<span class="c1"># Optionally, when using custom signing keys.</span>
+<span class="nv">MODULES_SIGN_KEY</span><span class="o">=</span><span class="s2">&quot;/path/to/kernel_key.pem&quot;</span>
+<span class="nv">MODULES_SIGN_CERT</span><span class="o">=</span><span class="s2">&quot;/path/to/kernel_key.pem&quot;</span><span class="w"> </span><span class="c1"># Only required if the MODULES_SIGN_KEY does not also contain the certificate</span>
+<span class="nv">MODULES_SIGN_HASH</span><span class="o">=</span><span class="s2">&quot;sha512&quot;</span><span class="w"> </span><span class="c1"># Defaults to sha512</span>
+</pre></div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br /><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">MODULES_SIGN_KEY</span> and <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">MODULES_SIGN_CERT</span> may point to different files. For this example, the pem file generated by OpenSSL includes both the key and the accompanying certificate, and thus both variables are set to the same value.</div>
+<h4><span id="Signing_the_kernel_image_(Secure_Boot)"></span><span class="mw-headline" id="Signing_the_kernel_image_.28Secure_Boot.29">Signing the kernel image (Secure Boot)</span></h4>
+<p>When signing the kernel image (for use on systems with <a href="https://wiki.gentoo.org/wiki/Secure_Boot" title="Secure Boot">Secure Boot</a> enabled) it is recommended to set the following kernel config options:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Lockdown for secureboot</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>General setup  ---&gt;
+  Kexec and crash features  ---&gt;   
+    [*] Enable kexec system call                                                                                          
+    [*] Enable kexec file based system call                                                                               
+    [*]   Verify kernel signature during kexec_file_load() syscall                                                        
+    [*]     Require a valid signature in kexec_file_load() syscall                                                        
+    [*]     Enable &quot;&quot;image&quot;&quot; signature verification support  
+
+[*] Enable loadable module support  
+  -*-   Module signature verification    
+    [*]     Require modules to be validly signed
+    [*]     Automatically sign all modules
+    Which hash algorithm should modules be signed with? (Sign modules with SHA-512) ---&gt;  
+
+Security options  ---&gt; 
+[*] Integrity subsystem   
+  [*] Basic module for enforcing kernel lockdown                                                                       
+  [*]   Enable lockdown LSM early in init                                                                       
+        Kernel default lockdown mode (Integrity)  ---&gt;            
+
+[*]   Digital signature verification using multiple keyrings                                                            
+  [*]     Enable asymmetric keys support                                                                                     
+  -*-       Require all keys on the integrity keyrings be signed                                                              
+  [*]       Provide keyring for platform/firmware trusted keys                                                                
+  [*]       Provide a keyring to which Machine Owner Keys may be added                                                        
+  [ ]         Enforce Machine Keyring CA Restrictions
+</pre></div>
+<p>Where ""image"" is a placeholder for the architecture specific image name. These options, from the top to the bottom: enforces that the kernel image in a kexec call must be signed (kexec allows replacing the kernel in-place), enforces that kernel modules are signed, enables lockdown <var>integrity</var> mode (prevents modifying the kernel at runtime), and enables various keychains.
+</p><p>On arches that do not natively support decompressing the kernel (e.g. <b><span style="font-family: monospace; font-size: 95%; color: #54487a">arm64</span></b> and <b><span style="font-family: monospace; font-size: 95%; color: #54487a">riscv</span></b>), the kernel must be built with its own decompressor (zboot):
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>zboot (<var>CONFIG_EFI_ZBOOT</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Device Drivers ---&gt;                                                                                                                           
+  Firmware Drivers ---&gt;                                                                                                                       
+    EFI (Extensible Firmware Interface) Support ---&gt;                                                                                               
+      [*] Enable the generic EFI decompressor
+</pre></div>
+<p>After compilation of the kernel, as explained in the next section, the kernel image must be signed. First install <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-crypt/sbsigntools package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-crypt/sbsigntools"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-crypt/sbsigntools</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> and then sign the kernel image:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask app-crypt/sbsigntools</code></div></div> 
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>sbsign /usr/src/linux-x.y.z/path/to/kernel-image --cert /path/to/kernel_key.pem --key /path/to/kernel_key.pem --output /usr/src/linux-x.y.z/path/to/kernel-image</code></div></div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />For this example, the same key that was generated to sign the modules is used to sign the kernel image. It is also possible to generate and use a second separate key for signing the kernel image. The same OpenSSL command as in the previous section may be used again.</div>
+<p>Then proceed with the installation.
+</p><p>To automatically sign EFI executables installed by other packages, enable the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the secureboot USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/secureboot"><span style="color: MidnightBlue;">secureboot</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag globally:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/portage/make.conf</code></strong><strong>Enable Secure Boot</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">USE</span><span class="o">=</span><span class="s2">&quot;modules-sign secureboot&quot;</span>
+
+<span class="c1"># Optionally, to use custom signing keys.</span>
+<span class="nv">MODULES_SIGN_KEY</span><span class="o">=</span><span class="s2">&quot;/path/to/kernel_key.pem&quot;</span>
+<span class="nv">MODULES_SIGN_CERT</span><span class="o">=</span><span class="s2">&quot;/path/to/kernel_key.pem&quot;</span><span class="w"> </span><span class="c1"># Only required if the MODULES_SIGN_KEY does not also contain the certificate.</span>
+<span class="nv">MODULES_SIGN_HASH</span><span class="o">=</span><span class="s2">&quot;sha512&quot;</span><span class="w"> </span><span class="c1"># Defaults to sha512</span>
+
+<span class="c1"># Optionally, to boot with secureboot enabled, may be the same or different signing key.</span>
+<span class="nv">SECUREBOOT_SIGN_KEY</span><span class="o">=</span><span class="s2">&quot;/path/to/kernel_key.pem&quot;</span>
+<span class="nv">SECUREBOOT_SIGN_CERT</span><span class="o">=</span><span class="s2">&quot;/path/to/kernel_key.pem&quot;</span>
+</pre></div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br /><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">SECUREBOOT_SIGN_KEY</span> and <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">SECUREBOOT_SIGN_CERT</span> may point to different files. For this example, the pem file generated by OpenSSL includes both the key and the accompanying certificate, and thus both variables are set to the same value.</div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />When generating an <a href="https://wiki.gentoo.org/wiki/Unified_Kernel_Image" class="mw-redirect" title="Unified Kernel Image">Unified Kernel Image</a> with systemd's <code>ukify</code> the kernel image will be signed automatically before inclusion in the unified kernel image and it is not necessary to sign it manually.</div>
+<h3><span class="mw-headline" id="Architecture_specific_kernel_configuration">Architecture specific kernel configuration</span></h3>
+<h4><span class="mw-headline" id="alpha">alpha</span></h4>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>alpha recommended options</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>General setup ---&gt;
+  &lt;*&gt; SRM environment through procfs
+  &lt;*&gt; Configure uac policy via sysctl
+  
+Plug and Play configuration ---&gt;
+  &lt;*&gt; Plug and Play support
+  &lt;M&gt;   ISA Plug and Play support
+  
+SCSI support ---&gt;
+  SCSI low-level drivers ---&gt;
+    &lt;*&gt; SYM53C8XX Version 2 SCSI support (NEW)
+    &lt;*&gt; Qlogic ISP SCSI support
+  
+Network device support ---&gt;
+  Ethernet (10 or 100 Mbit) ---&gt;
+    &lt;M&gt; DECchip Tulip (dc21x4x) PCI support
+    &lt;M&gt; Generic DECchip &amp; DIGITAL EtherWORKS PCI/EISA
+    &lt;M&gt; EtherExpressPro/100 support (eepro100)
+    &lt;M&gt; EtherExpressPro/100 support (e100)
+  Ethernet (1000 Mbit) ---&gt;
+    &lt;M&gt; Alteon AceNIC
+      [*] Omit support for old Tigon I
+    &lt;M&gt; Broadcom Tigon3
+  [*] FDDI driver support
+  &lt;M&gt; Digital DEFEA and DEFPA
+  &lt;*&gt; PPP support
+    &lt;*&gt; PPP Deflate compression
+  
+Character devices ---&gt;
+  [*] Support for console on serial port
+  [*] Direct Rendering Manager
+  
+File systems ---&gt;
+  &lt;*&gt; Kernel automounter version 4 support
+  Network File Systems ---&gt;
+    &lt;*&gt; NFS
+      [*] NFSv3 client
+      &lt;*&gt; NFS server
+      [*] NFSv3 server
+  Partition Types ---&gt;
+    [*] Advanced partition selection
+    [*] Alpha OSF partition support
+  Native Language Support
+    &lt;*&gt; NLS ISO 8859-1
+  
+Sound ---&gt;
+  &lt;M&gt; Sound card support
+    &lt;M&gt; OSS sound modules
+      [*] Verbose initialisation
+      [*] Persistent DMA buffers
+      &lt;M&gt; 100% Sound Blaster compatibles
+</pre></div>
+<h4><span class="mw-headline" id="amd64">amd64</span></h4>
+<p>Make sure to select IA32 Emulation and 32-bit time_t if 32-bit programs should be supported (<var>CONFIG_IA32_EMULATION</var> and <var>CONFIG_COMPAT_32BIT_TIME</var>). Gentoo installs a multilib system (mixed 32-bit/64-bit computing) by default, so unless a no-multilib profile is used, these options are required.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Selecting processor types and features</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Processor type and features  ---&gt;
+   [ ] Machine Check / overheating reporting 
+   [ ]   Intel MCE Features
+   [ ]   AMD MCE Features
+   Processor family (AMD-Opteron/Athlon64)  ---&gt;
+      ( ) Opteron/Athlon64/Hammer/K8
+      ( ) Intel P4 / older Netburst based Xeon
+      ( ) Core 2/newer Xeon
+      ( ) Intel Atom
+      ( ) Generic-x86-64
+Binary Emulations ---&gt;
+   [*] IA32 Emulation
+General architecture-dependent options  ---&gt;
+   [*] Provide system calls for 32-bit time_t
+</pre></div>
+<p>Enable GPT partition label support if that was used previously when partitioning the disk (<var>CONFIG_PARTITION_ADVANCED</var> and <var>CONFIG_EFI_PARTITION</var>):
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enable support for GPT</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>-*- Enable the block layer ---&gt;
+   Partition Types ---&gt;
+      [*] Advanced partition selection
+      [*] EFI GUID Partition support
+</pre></div>
+<p>Enable EFI stub support, EFI variables and EFI Framebuffer in the Linux kernel if UEFI is used to boot the system (<var>CONFIG_EFI</var>, <var>CONFIG_EFI_STUB</var>, <var>CONFIG_EFI_MIXED</var>, <var>CONFIG_EFIVAR_FS</var>, and <var>CONFIG_FB_EFI</var>):
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enable support for UEFI</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Processor type and features  ---&gt;
+    [*] EFI runtime service support 
+    [*]   EFI stub support
+    [*]     EFI mixed-mode support
+ 
+Device Drivers
+    Graphics support  ---&gt;
+        Frame buffer Devices  ---&gt;
+            &lt;*&gt; Support for frame buffer devices  ---&gt;
+                [*]   EFI-based Framebuffer Support
+
+File Systems
+    Pseudo filesystems  ---&gt;
+        &lt;*&gt; EFI Variable filesystem
+</pre></div>
+<p>To enable the Kernel options for the use of <a href="https://wiki.gentoo.org/index.php?title=Handbook:Kernel/Installation/Kernel&amp;action=edit&amp;redlink=1" class="new" title="Handbook:Kernel/Installation/Kernel (page does not exist)">SOF Firmware</a> covered earlier:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enabling SOF Firmware support (<var>CONFIG_SND_SOC_SOF_TOPLEVEL</var>, <var>CONFIG_SND_SOC_SOF_PCI</var>, <var>CONFIG_SND_SOC_SOF_ACPI</var>, <var>CONFIG_SND_SOC_SOF_AMD_TOPLEVEL</var>, <var>CONFIG_SND_SOC_SOF_INTEL_TOPLEVEL</var>)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Device Drivers ---&gt;
+  Sound card support ---&gt;
+    Advanced Linux Sound Architecture ---&gt;
+      &lt;M&gt; ALSA for SoC audio support ---&gt;
+        [*] Sound Open Firmware Support ---&gt;
+            &lt;M&gt; SOF PCI enumeration support
+            &lt;M&gt; SOF ACPI enumeration support
+            &lt;M&gt; SOF support for AMD audio DSPs
+            [*] SOF support for Intel audio DSPs
+</pre></div>
+<h4><span class="mw-headline" id="ppc">ppc</span></h4>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>ppc32 recommended options</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>File Systems ---&gt;
+  Miscellaneous filesystems ---&gt;
+    &lt;M&gt; Apple Macintosh file system support
+    &lt;M&gt; Apple Extended HFS file system support
+
+Device Drivers ---&gt;
+  IEEE 1394 (FireWire) support ---&gt;
+    &lt;*&gt; IEEE 1394 (FireWire) support
+    &lt;*&gt;   OHCI-1394 support
+    &lt;*&gt;   SBP-2 support (Harddisks etc.)
+
+Device Drivers ---&gt;
+  Graphics support ---&gt;
+    &lt;*&gt; Support for frame buffer devices
+    [*] Open Firmware frame buffer device support
+    &lt;*&gt; ATI Radeon display support
+    &lt;*&gt; ATI Rage128 display support
+    &lt;*&gt; ATI Mach64 display support
+    Console display driver support ---&gt;
+      &lt;*&gt; Framebuffer Console support
+</pre></div>
+<h4><span class="mw-headline" id="SPARC">SPARC</span></h4>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>SPARC recommended options</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Console drivers ---&gt;
+  Frame-buffer support ---&gt;
+    [*] SBUS and UPA framebuffers             
+      [*] Creator/Creator3D support     (Only for UPA slot adapter used in many Ultras)
+    [*] CGsix (GX,TurboGX) support      (Only for SBUS slot adapter used in many SPARCStations)
+
+Misc Linux/SPARC drivers ---&gt;
+  [*]  /dev/openprom device support
+
+SCSI support ---&gt;
+  SCSI low-level drivers ---&gt;
+    &lt;*&gt; Sparc ESP Scsi Driver             (Only for SPARC ESP on-board SCSI adapter)
+    &lt;*&gt; PTI Qlogic, ISP Driver            (Only for SBUS SCSI controllers from PTI or QLogic)
+    &lt;*&gt; SYM53C8XX Version 2 SCSI support  (Only for Ultra 60 on-board SCSI adapter)
+
+Network device support ---&gt;
+  Ethernet (10 or 100Mbit) ---&gt;
+    &lt;*&gt; Sun LANCE support                   (Only for SPARCStation, older Ultra systems, and as Sbus option)
+    &lt;*&gt; Sun Happy Meal 10/100baseT support  (Only for Ultra; also supports &quot;qfe&quot; quad-ethernet on PCI and Sbus)
+    &lt;*&gt; DECchip Tulip (dc21x4x) PCI support (For some Netras, like N1)
+  Ethernet (1000Mbit) ---&gt;
+    &lt;*&gt; Broadcom Tigon3 support (Modern Netra, Sun Fire machines)
+
+Device Drivers  ---&gt;
+   Generic Driver Options  ---&gt;
+   ()  External firmware blobs to build into the kernel binary
+   ()  Firmware blobs root directory
+</pre></div>
+<h4><span class="mw-headline" id="x86">x86</span></h4>
+<p>Due to limitations in the 32-bit address space of the <b><span style="font-family: monospace; font-size: 95%; color: #54487a">x86</span></b> architecture, a kernel with default configuration can only support up to 896 MB RAM. If a system has more memory, only the first 896 MB will be visible, unless high memory support has been enabled. 
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />This limitation is specific to the <b><span style="font-family: monospace; font-size: 95%; color: #54487a">x86</span></b> (IA32) architecture. Other architectures naturally support large amounts of memory, with no configuration tweaks required.</div>
+<p>High memory support is not enabled by default, because it introduces a small system overhead. Do not be distracted by this, the overhead is insignificant when compared to the performance increase of having more memory available! 
+</p><p>Choose the 4 GB option, unless the system has more than 4 GB of RAM:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enabling high memory support on x86</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Processor type and features  ---&gt;
+ High Memory Support  ---&gt;
+  (X) 4GB
+  ( ) 64GB
+</pre></div>
+<h2><span class="mw-headline" id="Compiling_and_installing">Compiling and installing</span></h2>
+<p>With the configuration now done, it is time to compile and install the kernel. Exit the configuration and start the compilation process:
+</p><p><br />
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>make &amp;&amp; make modules_install</code></div></div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />It is possible to enable parallel builds using <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">make -jX</span> with <code>X</code> being an integer number of parallel tasks that the build process is allowed to launch. This is similar to the instructions about <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/portage/make.conf</span> earlier, with the <var>MAKEOPTS</var> variable.</div>
+<p>When the kernel has finished compiling, copy the kernel image to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/</span>. This is handled by the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">make install</span> command:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>make install</code></div></div>
+<p>This command will copy the kernel image to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span>. If <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/installkernel package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/installkernel"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/installkernel</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> is installed it will call <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/sbin/installkernel</span> instead and delegate the kernel installation. Instead of simply copying the kernel to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span>, <a href="https://wiki.gentoo.org/wiki/Installkernel" title="Installkernel">Installkernel</a> installs each kernel with its version number in the file name. Additionally, installkernel provides a framework for automatically accomplishing various tasks relating to kernel installation, such as: generating an <a href="https://wiki.gentoo.org/wiki/Initramfs" title="Initramfs">initramfs</a>, building an <a href="https://wiki.gentoo.org/wiki/Unified_Kernel_Image" class="mw-redirect" title="Unified Kernel Image">Unified Kernel Image</a>, and updating the <a href="https://wiki.gentoo.org/wiki/Bootloader" title="Bootloader">bootloader</a> configuration.
+</p>
+<h2><span class="mw-headline" id="Kernel_configuration_shorthand_notation">Kernel configuration shorthand notation</span></h2>
+<h3><span class="mw-headline" id="Introduction_2">Introduction</span></h3>
+<p>When reading about kernel configuration, often times settings are described as <var>CONFIG_&lt;something&gt;</var>. This short-hand notation is what the kernel configuration actually uses internally, and is what will be found in the kernel configuration file (be it <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr/src/linux/.config</span> or in the auto-generated <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/proc/config.gz</span> file). Of course, using short-hand notation would not do much good if this cannot translate this to the real location in the kernel configuration. The <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">make menuconfig</span> tool makes this possible.
+</p>
+<h3><span class="mw-headline" id="Translating_CONFIG_FOO_to_the_real_configuration_location">Translating CONFIG_FOO to the real configuration location</span></h3>
+<p>Suppose the <var>CONFIG_TMPFS_XATTR</var> feature needs to be enabled. Launch the kernel configuration menu (<span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">make menuconfig</span>) and press the <kbd style="color: black; font-size: small; border: 0.2em solid; border-color: #DDD #BBB #BBB #DDD; padding: 0 0.4em; background: #EEE; white-space: nowrap;">/</kbd> key. This will open a search box. In the search box, type <var>CONFIG_TMPFS_XATTR</var>. 
+</p><p>The following is an output of the result of this search:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Result of searching menuconfig for "CONFIG_TMPFS_XATTR"</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Symbol: TMPFS_XATTR [=n]
+Type  : boolean
+Prompt: Tmpfs extended attributes
+  Defined at fs/Kconfig:138
+  Depends on: TMPFS [=y]
+  Location:
+    -&gt; File systems
+      -&gt; Pseudo filesystems
+(1)     -&gt; Virtual memory file system support (former shm fs) (TMPFS [=y])
+  Selected by: TMPFS_POSIX_ACL [=n] &amp;&amp; TMPFS [=y]
+</pre></div>
+<p>This output yields lots of interesting information.
+</p>
+<table class="table table-condensed table-striped" style="text-align: left;">
+<tbody><tr>
+<th>Entry
+</th>
+<th>Description
+</th></tr>
+
+<tr>
+<td>Symbol: TMPFS_XATTR [=n]
+</td>
+<td>This identifies the kernel configuration entry being searched for. It also shows that this setting is currently <i>not enabled</i> ([=n]).
+</td></tr>
+
+<tr>
+<td>Type: boolean
+</td>
+<td>The setting searched for is a boolean (which means it can be one of two options: enabled or disabled). Some settings are numbers or strings.
+</td></tr>
+
+<tr>
+<td>Prompt: Tmpfs extended attributes
+</td>
+<td>This is the text found in the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">make menuconfig</span> entry that controls the variable (<var>TMPFS_XATTR</var>) in the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.config</span> file. It is essentially the variable name in a more human readable format.
+</td></tr>
+
+<tr>
+<td>Depends on: TMPFS [=y]
+</td>
+<td>Before this entry can be seen <var>CONFIG_TMPFS</var> must be enabled. In this case it is already done (hence the [=y]) but if this is not the case, first look for (and enable) <var>CONFIG_TMPFS</var>.
+</td></tr>
+
+<tr>
+<td>Location: ...
+</td>
+<td>This is the location in the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">make menuconfig</span> structure where the setting can be found. Remember, the setting to look for is <i>Tmpfs extended attributes</i>.
+</td></tr>
+
+<tr>
+<td>Selected by: TMPFS_POSIX_ACL [=n] &amp;&amp; TMPFS [=y]
+</td>
+<td>If the settings described here are both enabled (in this case the first one is not), then <var>CONFIG_TMPFS_XATTR</var> will be automatically enabled and will not be possible to be <i>disabled</i> until one of these settings is de-selected.
+</td></tr>
+
+</tbody></table>
+<p>With this information, it should be possible to translate any <var>CONFIG_*</var> requirements fairly easily. In short, it means a user must:
+</p>
+<ol><li>Enable the settings described in the <i>Depends on</i> field</li>
+<li>Navigate where <i>Location:</i> points</li>
+<li>Toggle the value referred to by <i>Prompt:</i></li></ol>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-check-circle"></i> Tip</strong><br />Notice the number in parenthesis; users can jump to that option, or as close as possible for enabled menus, by pressing the number while in the search. In the above example, pressing <kbd style="color: black; font-size: small; border: 0.2em solid; border-color: #DDD #BBB #BBB #DDD; padding: 0 0.4em; background: #EEE; white-space: nowrap;">1</kbd> on the keyboard will jump to or near that option.</div>
+<h2><span class="mw-headline" id="Other_kernel_configuration_documentation">Other kernel configuration documentation</span></h2>
+<p>So far only general concepts and specific problems related to kernel configuration has been discussed; precise details have been left up to the user to discover. However, other parts of the Gentoo documentation collection provide specialized details for the topics at hand.
+</p><p>Such documents may be helpful while configuring specific areas of the kernel. Although this warning was mentioned previously in this guide, remember: users who are new to kernel configuration should not be adventurous when attempting to configure their kernels. Start by getting a basic system up and running, support for audio, printing, etc., can always be added at a later date.
+</p><p>Getting the basics of a kernel operational will help users in later configuration steps because the user will know what is breaking their system and what is not. It is always wise to save the base (working) kernel configuration in a folder other than the kernel's sources folder <i>before</i> attempting to add new features or hardware.  
+</p>
+<ul><li>The <a href="https://wiki.gentoo.org/wiki/ALSA" title="ALSA">ALSA article</a> details the configuration options required for sound card support. Note that ALSA is an exception to the suggested scheme of not building things as modules: ALSA is actually much easier to configure when the components are modular.</li></ul>
+<ul><li>The <a href="https://wiki.gentoo.org/wiki/Bluetooth" title="Bluetooth">Bluetooth article</a> details the options needed in order to use Bluetooth devices.</li></ul>
+<ul><li>The <a href="https://wiki.gentoo.org/wiki/IPv6_router_guide" title="IPv6 router guide">IPv6 router guide</a> describes how to configure the kernel for routing using the next generation network addressing scheme.</li></ul>
+<ul><li>If the closed-source NVIDIA graphics drivers will be used for improved 3D graphics performance, the <a href="https://wiki.gentoo.org/wiki/NVIDIA/nvidia-drivers" title="NVIDIA/nvidia-drivers">NVIDIA Guide</a> lists the options that should and should not be selected on such a system.</li></ul>
+<ul><li>Amongst other things, the <a href="https://wiki.gentoo.org/wiki/Power_management/Guide" title="Power management/Guide">Power Management guide</a> explains how to configure the kernel for CPU frequency scaling, and for suspend and hibernate functionality.</li></ul>
+<ul><li>If running a PowerPC system, the <a href="https://wiki.gentoo.org/wiki/PPC/FAQ" title="PPC/FAQ">PPC FAQ</a> has a few sections about PPC kernel configuration.</li></ul>
+<ul><li>The <a href="https://wiki.gentoo.org/wiki/Printing" title="Printing">Printing guide</a> lists the kernel options needed to support printing in Linux.</li></ul>
+<ul><li>The <a href="https://wiki.gentoo.org/wiki/USB/Guide" title="USB/Guide">USB Guide</a> details the configuration settings required to use common USB devices such as keyboards, mice, storage devices, and USB printers.</li></ul>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="Configuration_changes_do_not_take_effect">Configuration changes do not take effect</span></h3>
+<p>It is very common for users to make a configuration change, but then make a small mistake in the process of actually booting to their newly configured kernel. They reboot into a kernel image that is not the one they just reconfigured, observe that whatever problem they were trying to solve is still present, and conclude that the configuration change does not solve the problem. 
+</p><p>The process of compiling and installing kernels is outside the scope of this document; refer to the <a href="https://wiki.gentoo.org/wiki/Kernel/Upgrade" title="Kernel/Upgrade">Kernel Upgrade Guide</a> for general guidance. In short, the process to get a modified kernel is the following:
+</p>
+<ol><li>configure</li>
+<li>compile</li>
+<li>mount <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> (if not already mounted)</li>
+<li>copy new kernel image to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span></li>
+<li>make sure the bootloader will reference the new kernel</li>
+<li>reboot</li></ol>
+<p>If one of those final stages has been missed, then the changes will not properly take effect.
+</p><p>It is possible to verify if the kernel that has booted matches the newly kernel compiled on the hard disk. This is performed by examining the date and time of the kernel's compilation. Assuming the system architecture is <b><span style="font-family: monospace; font-size: 95%; color: #54487a">x86</span></b> and the kernel sources are installed at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr/src/linux</span>, the following command can be used:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>uname -v</code></div><pre>#4 SMP PREEMPT Sat Jul 15 08:49:26 BST 2006
+</pre></div>
+<p>The above command will display the date and time the currently booted kernel was compiled.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>ls -l /usr/src/linux/arch/i386/boot/bzImage</code></div><pre>-rw-r--r-- 1 dsd users 1504118 Jul 15 08:49 /usr/src/linux/arch/i386/boot/bzImage
+</pre></div>
+<p>The above command displays the date and time that the kernel image on the hard disk was last compiled.
+</p><p>If the time stamps from the above commands differ by more than 2 minutes, it indicates a mistake was made during kernel reinstallation and the system has not booted from the newly modified kernel image.
+</p>
+<h3><span class="mw-headline" id="Modules_do_not_get_loaded_automatically">Modules do not get loaded automatically</span></h3>
+<p>As mentioned earlier in this document, the kernel configuration system hides a large behavioral change when selecting a kernel component as a module <code>(M)</code> rather than built-in <code>(Y)</code>. It is worth repeating this again because so many users fall into this trap.
+</p><p>When selecting a component as built-in, the code is built into the kernel image (bzImage). When the kernel needs to use that component, it can initialize and load it automatically, without any user intervention. 
+</p><p>When selecting a component as a module, the code is built into a kernel module file and installed on the filesystem. In general, when the kernel needs to use that component, it will not be able to find it. With some exceptions, the kernel makes no effort to actually load these modules — this task is left up to the user. 
+</p><p>If building support for a network card as a module, and it is discovered the network is not accessible, it is probably because the module is not loaded — either this must be done manually or the system must be configured to autoload the module at boot time.
+</p><p>Unless a user has reason to do otherwise, some time can be saved by building these components directly into the kernel image, so that the kernel can automatically configure these small settings by itself.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="../Dracut.html" title="Dracut">Dracut</a> — an <a href="https://wiki.gentoo.org/wiki/Initramfs" title="Initramfs">initramfs</a> infrastructure and aims to have as little as possible hard-coded into the initramfs.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Installkernel" title="Installkernel">Installkernel</a> — a collection of scripts to automatically install new <a href="../Kernel.html" title="Kernel">kernels</a> and update <a href="https://wiki.gentoo.org/wiki/Bootloader" title="Bootloader">bootloader</a> configuration</li>
+<li><a href="https://wiki.gentoo.org/wiki/Security_Handbook/Firewalls_and_Network_Security#The_proc_filesystem" title="Security Handbook/Firewalls and Network Security">proc filesystem (Security Handbook)</a> — dynamically change kernel parameters and variables on the fly.</li></ul>
+<p><br />
+</p>
+<div class="alert alert-success gw-box" style="padding-top: 5px; padding-bottom: 5px; background-color: #f5f5f5; border-color: #b8adde; color: #4d4370;"><div>Authorship information<span class="mw-collapsible mw-collapsed"><div style="margin-top: 1em;">This page is based on a document formerly found on <a rel="nofollow" class="external text" href="https://www.gentoo.org/">gentoo.org</a>.<br />The following people contributed to the original document: <b>Daniel Drake, Curtis Napier, Justin Robinson, Lukasz Damentko, Jonathan Smith, nightmorph</b><br /><br /><i><span style="color: #555;">Editors: please do <b>not</b> add yourself here. Contributions are recorded on each article's associated history page, this list is only present to preserve authorship information, as wiki history does not allow for any external attribution.</span></i></div></span></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20260924171134
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.154 seconds
+Real time usage: 0.201 seconds
+Preprocessor visited node count: 4679/1000000
+Post‐expand include size: 79522/4194304 bytes
+Template argument size: 43228/4194304 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 29/150
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 20117/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   98.154      1 -total
+ 22.69%   22.267     30 Template:Link
+ 13.39%   13.146      2 Template:See_also
+ 12.30%   12.073     12 Template:RootCmd
+ 12.02%   11.795     25 Template:KernelBox
+ 10.29%   10.098     28 Template:PreBox
+  9.45%    9.273     12 Template:GenericCmd
+  8.20%    8.051      9 Template:Note
+  6.53%    6.414     11 Template:Package
+  6.32%    6.208      9 Template:Note/core
+-->
+
+<!-- Saved in parser cache with key gentoo?hwiki:pcache:idhash:30575-0!dateformat=default and timestamp 20260924171133 and revision id 1444736
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.gentoo.org/index.php?title=Kernel/Gentoo_Kernel_Configuration_Guide&amp;oldid=1444736">https://wiki.gentoo.org/index.php?title=Kernel/Gentoo_Kernel_Configuration_Guide&amp;oldid=1444736</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.gentoo.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.gentoo.org/wiki/Category:Guide" title="Category:Guide">Guide</a></li><li><a href="https://wiki.gentoo.org/wiki/Category:Kernel" title="Category:Kernel">Kernel</a></li><li><a href="https://wiki.gentoo.org/wiki/Category:Server_and_Security" title="Category:Server and Security">Server and Security</a></li></ul></div></div>						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-7">
+											<div class="spacer"></div>
+						<ul id="f-list">
+							<li id="lastmod>"> This page was last edited on 26 July 2026, at 15:03.</li><li id="privacy>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Privacy_policy" class="mw-redirect" title="Gentoo Wiki:Privacy policy">Privacy policy</a></li><li id="about>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:About" title="Gentoo Wiki:About">About Gentoo Wiki</a></li><li id="disclaimer>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:General_disclaimer" title="Gentoo Wiki:General disclaimer">Disclaimers</a></li>						</ul>
+									</div>
+				<div class="col-xs-12 col-md-3">
+					<!-- No questions or comments, the Wiki has enough information on how to contact us. -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<ul class="footerlinks three-icons">
+						<li><a href="https://twitter.com/gentoo" title="@Gentoo on Twitter"><span class="fa fa-twitter fa-fw"></span></a></li>
+						<li><a href="https://www.facebook.com/gentoo.org" title="Gentoo on Facebook"><span class="fa fa-facebook fa-fw"></span></a></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-xs-9 col-md-9">
+					<strong>&copy; 2001&ndash;2026 Gentoo Authors</strong><br />
+					<small>
+						Gentoo is a trademark of the Gentoo Foundation, Inc. and of Förderverein Gentoo e.V.
+						The contents of this document, unless otherwise expressly stated, are licensed under the
+						<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC-BY-SA-4.0</a> license.
+						The <a href="https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html">Gentoo Name and Logo Usage Guidelines</a> apply.
+					</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script>
+function defer(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function() { defer(method) }, 50);
+    }
+}
+defer(function() { mw.loader.load( 'https://assets.gentoo.org/tyrian/bootstrap.min.js'); });
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.154","walltime":"0.201","ppvisitednodes":{"value":4679,"limit":1000000},"postexpandincludesize":{"value":79522,"limit":4194304},"templateargumentsize":{"value":43228,"limit":4194304},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":29,"limit":150},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":20117,"limit":5000000},"timingprofile":["100.00%   98.154      1 -total"," 22.69%   22.267     30 Template:Link"," 13.39%   13.146      2 Template:See_also"," 12.30%   12.073     12 Template:RootCmd"," 12.02%   11.795     25 Template:KernelBox"," 10.29%   10.098     28 Template:PreBox","  9.45%    9.273     12 Template:GenericCmd","  8.20%    8.051      9 Template:Note","  6.53%    6.414     11 Template:Package","  6.32%    6.208      9 Template:Note/core"]},"cachereport":{"timestamp":"20260924171134","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":58});});</script></body></html>

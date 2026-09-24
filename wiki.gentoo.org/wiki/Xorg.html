@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Xorg - Gentoo wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"c0394ad2592753bb19659cde","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Xorg","wgTitle":"Xorg","wgCurRevisionId":1243413,"wgRevisionId":1243413,"wgArticleId":7775,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["X.Org"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Xorg","wgRelevantArticleId":7775,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgULSCurrentAutonym":"English","wgPageFormsTargetName":null,"wgPageFormsAutocompleteValues":[]
+,"wgPageFormsAutocompleteOnAllChars":!1,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":!1,"srfFilteredConfig":null,"wgULSPosition":"personal","wgULSisCompactLinksEnabled":!0,"wgTranslatePageTranslation":"source"};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.translate":"ready","ext.translate.tag.languages":"ready","mediawiki.toc.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","ext.uls.pt":"ready","ext.srf.styles":"ready",
+"mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.tyrian.styles":"ready","skins.tyrian.icons":"ready"};RLPAGEMODULES=["ext.gentooPackages","ext.smw.style","ext.smw.tooltips","smw.entityexaminer","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","ext.uls.compactlinks","ext.uls.interface"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.smw.style|ext.smw.tooltip.styles|ext.translate|ext.translate.tag.languages|ext.uls.pt|mediawiki.skinning.content.externallinks|mediawiki.skinning.interface|mediawiki.toc.styles|skins.tyrian.icons,styles&amp;only.css"/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.srf.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<script async="" src="../load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=tyrian"></script>
+<link rel="stylesheet" href="https://assets.gentoo.org/tyrian/bootstrap.min.css"/><link rel="stylesheet" href="https://assets.gentoo.org/tyrian/tyrian.min.css"/><style>#mw-indicator-mw-helplink {display:none;}</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=site.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<meta name="generator" content="MediaWiki 1.35.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#54487a"/>
+<link rel="alternate" type="application/rdf+xml" title="Xorg" href="https://wiki.gentoo.org/index.php?title=Special:ExportRDF/Xorg&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="https://www.gentoo.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.gentoo.org/opensearch_desc.php" title="Gentoo Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.gentoo.org/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Xorg rootpage-Xorg skin-tyrian action-view">	<div class="mw-jump sr-only">
+		Jump to:		<a href="Xorg.html#top">content</a>
+	</div>
+	<header>
+		<div class="site-title">
+			<div class="container">
+				<div class="row">
+					<div class="site-title-buttons">
+						<div class="btn-group btn-group-sm">
+							<a href="https://get.gentoo.org/" role="button" class="btn get-gentoo"><span class="fa fa-fw fa-download"></span> <strong>Get Gentoo!</strong></a>
+							<div class="btn-group btn-group-sm">
+								<a class="btn gentoo-org-sites dropdown-toggle" data-toggle="dropdown" data-target="#" href="Xorg.html#">
+									<span class="fa fa-fw fa-map-o"></span> <span class="hidden-xs">gentoo.org sites</span> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="https://www.gentoo.org/" title="Gentoo's main website"><span class="fa fa-home fa-fw"></span> gentoo.org</a></li>
+									<li><a href="https://wiki.gentoo.org/" title="Find and contribute documentation"><span class="fa fa-file-text-o fa-fw"></span> Wiki</a></li>
+									<li><a href="https://bugs.gentoo.org/" title="Discover and report issues with Gentoo"><span class="fa fa-bug fa-fw"></span> Bugs</a></li>
+									<li><a href="https://packages.gentoo.org/" title="Find software to install"><span class="fa fa-hdd-o fa-fw"></span> Packages</a></li>
+									<li><a href="https://forums.gentoo.org/" title="Discuss with the community"><span class="fa fa-comments-o fa-fw"></span> Forums</a></li>
+									<li class="divider"></li>
+									<li><a href="https://planet.gentoo.org/" title="Find out what's going on in the dev community"><span class="fa fa-rss fa-fw"></span> Planet</a></li>
+									<li><a href="https://archives.gentoo.org/" title="Read up on past discussions"><span class="fa fa-archive fa-fw"></span> Archives</a></li>
+									<li><a href="https://devmanual.gentoo.org/" title="Read the development guide"><span class="fa fa-book fa-fw"></span> Devmanual</a></li>
+									<li><a href="https://gitweb.gentoo.org/" title="Browse our source code in Gitweb"><span class="fa fa-code fa-fw"></span> Gitweb</a></li>
+									<li class="divider"></li>
+									<li><a href="https://infra-status.gentoo.org/" title="Get updates on the services provided by the Gentoo infra team"><span class="fa fa-server fa-fw"></span> Infra status</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="https://wiki.gentoo.org/" title="Back to the homepage" class="site-logo">
+							<img src="https://assets.gentoo.org/tyrian/site-logo.png"  alt="Gentoo Linux Logo" srcset="https://assets.gentoo.org/tyrian/site-logo.svg">
+						</a>
+						<span class="site-label">Wiki</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="tyrian-navbar" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-main-collapse">
+						<ul class="nav navbar-nav">
+							<li id="n-mainpage-description"><a href="https://wiki.gentoo.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.gentoo.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-help"><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li><li id="n-Contribute.21"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Contributor%27s_guide">Contribute!</a></li>			<li class="dropdown">
+				<a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Menu-Documentation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu"><li id="n-Gentoo-Handbook"><a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page">Gentoo Handbook</a></li><li id="n-Gentoo-FAQ"><a href="https://wiki.gentoo.org/wiki/FAQ">Gentoo FAQ</a></li><li role="presentation" class="divider"></li><li id="n-Core-system"><a href="https://wiki.gentoo.org/wiki/Category:Core_system">Core system</a></li><li id="n-Hardware"><a href="https://wiki.gentoo.org/wiki/Category:Hardware">Hardware</a></li><li id="n-Software"><a href="https://wiki.gentoo.org/wiki/Category:Software">Software</a></li><li id="n-Desktop"><a href="https://wiki.gentoo.org/wiki/Category:Desktop">Desktop</a></li><li id="n-Server-.26-Security"><a href="https://wiki.gentoo.org/wiki/Category:Server_and_Security">Server &amp; Security</a></li><li id="n-Project-.26-Community"><a href="https://wiki.gentoo.org/wiki/Category:Project_and_Community">Project &amp; Community</a></li><li role="presentation" class="divider"></li><li id="n-Gentoo-Projects"><a href="https://wiki.gentoo.org/wiki/Project:Gentoo">Gentoo Projects</a></li>				</ul>
+			</li>						</ul>
+						<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+			<a href="Xorg.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i> Tools <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="t-whatlinkshere"><a href="https://wiki.gentoo.org/wiki/Special:WhatLinksHere/Xorg" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.gentoo.org/wiki/Special:RecentChangesLinked/Xorg" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.gentoo.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.gentoo.org/index.php?title=Xorg&amp;oldid=1243413" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.gentoo.org/index.php?title=Xorg&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="https://wiki.gentoo.org/wiki/Special:Browse/:Xorg" rel="search">Browse properties</a></li>			</ul>
+		</li>
+			<li class="dropdown">
+			<a href="Xorg.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				<span class="fa fa-user" aria-label="Personal tools"></span>
+				User				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="pt-uls" class="active"><a href="Xorg.html#" class="uls-trigger">English</a></li><li id="pt-createaccount"><a href="https://wiki.gentoo.org/index.php?title=Special:CreateAccount&amp;returnto=Xorg" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.gentoo.org/index.php?title=Special:UserLogin&amp;returnto=Xorg" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>			</ul>
+		</li>
+								</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="navbar navbar-grey navbar-stick" id="wiki-actions" role="navigation">
+			<div class="container"><div class="row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gw-toolbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="gw-toolbar">
+					<ul class="nav navbar-nav">
+					<li id="ca-nstab-main" class="selected active"><a href="Xorg.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk" class="new"><a href="https://wiki.gentoo.org/index.php?title=Talk:Xorg&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></li>					</ul>
+							<form action="https://wiki.gentoo.org/index.php" id="searchform" class="navbar-form navbar-right" role="search">
+			<input type='hidden' name="title" value="Special:Search"/>
+
+				<div class="input-group">
+					<input type="search" name="search" placeholder="Search" title="Search Gentoo Wiki [f]" accesskey="f" id="searchInput" class="form-control"/>					<div class="input-group-btn"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton btn btn-default"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton btn btn-default"/></div>
+				</div>
+		</form>
+						<ul class="nav navbar-nav navbar-right">
+					<li id="ca-viewsource"><a href="https://wiki.gentoo.org/index.php?title=Xorg&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li class="dropdown">
+						<a href="Xorg.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">more <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+					<li id="ca-history"><a href="https://wiki.gentoo.org/index.php?title=Xorg&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>							</ul>
+						</li>
+					</ul>
+				</div>
+			</div></div>
+		</nav>
+		</header>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="content" class="mw-body" role="main">
+						<a id="top"></a>
+						
+						<h1 id="firstHeading" class="first-header" lang="en">
+							<span dir="auto">Xorg</span>
+						</h1>
+
+						<div id="bodyContent" class="mw-body-content">
+							<div id="siteSub">From Gentoo Wiki</div>
+							<div id="contentSub">
+															</div>
+												                <div id="jump-to-nav"></div>
+					                <a class="mw-jump-link" href="Xorg.html#mw-head">Jump to:navigation</a>
+					                <a class="mw-jump-link" href="Xorg.html#searchInput">Jump to:search</a>
+
+							<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="mw-pt-languages noprint" lang="en" dir="ltr"><div class="mw-pt-languages-label">Other languages:</div><ul class="mw-pt-languages-list"><li><span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en" dir="ltr">English</span></li>
+<li><a href="https://wiki.gentoo.org/wiki/Xorg/hu" class="mw-pt-progress mw-pt-progress--complete" title="Xorg (100% translated)" lang="hu" dir="ltr">magyar</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Xorg/rue" class="mw-pt-progress mw-pt-progress--low" title="Xorg/rue (20% translated)" lang="rue" dir="ltr">русиньскый</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Xorg/ja" class="mw-pt-progress mw-pt-progress--complete" title="Xorg (100% translated)" lang="ja" dir="ltr">日本語</a></li></ul></div>
+<div id="infobox-stack" class="list-group" style="width: 25em; float: right; clear: right; font-size: 90%; margin-left: 1em;">
+<div class="list-group-item text-center" style="padding-top: 3px; padding-bottom: 3px; background-color: #463C65; color: white;"><b>Resources</b></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><a href="https://wiki.gentoo.org/wiki/Project:X11" title="Project:X11"><img alt="Gentoo peach graphic" src="../images/thumb/a/ad/Gentoo-logo-peach.svg/25px-Gentoo-logo-peach.svg.png" decoding="async" width="25" height="26" srcset="../images/thumb/a/ad/Gentoo-logo-peach.svg/38px-Gentoo-logo-peach.svg.png 1.5x, ../images/thumb/a/ad/Gentoo-logo-peach.svg/50px-Gentoo-logo-peach.svg.png 2x" /></a></span><span><a href="https://wiki.gentoo.org/wiki/Project:X11" title="Project:X11">Project</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-home fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="http://www.x.org">Home</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-file-text fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="http://www.x.org/wiki/Documentation/">Official documentation</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-book fa-fw fa-2x"></span></span><span><a href="https://wiki.gentoo.org/wiki/Xorg/Guide" title="Xorg/Guide">Guide</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-wikipedia-w fa-fw fa-2x"></span></span><span><a href="https://en.wikipedia.org/wiki/X.Org_Server" class="extiw" title="wikipedia:X.Org Server">Wikipedia</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-code-fork fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="http://cgit.freedesktop.org/xorg/xserver/">GitWeb</a></span></div>
+</div>
+<p><b>Xorg</b> is an open source implementation of the <a href="https://wiki.gentoo.org/wiki/X_server" title="X server">X server</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Xorg.html#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Xorg.html#USE_flags"><span class="tocnumber">1.1</span> <span class="toctext">USE flags</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="Xorg.html#The_X_USE_flag"><span class="tocnumber">1.2</span> <span class="toctext">The X USE flag</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Xorg.html#Emerge"><span class="tocnumber">1.3</span> <span class="toctext">Emerge</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="Xorg.html#Troubleshooting"><span class="tocnumber">2</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="Xorg.html#X_server_starts_and_dies_unexpectedly_with_no_errors"><span class="tocnumber">2.1</span> <span class="toctext">X server starts and dies unexpectedly with no errors</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Xorg.html#Blockers_when_updating_xorg-server_with_xorg-drivers"><span class="tocnumber">2.2</span> <span class="toctext">Blockers when updating xorg-server with xorg-drivers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="Xorg.html#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p><a href="https://wiki.gentoo.org/wiki/Xorg/Guide" title="Xorg/Guide">Xorg guide</a> details the installation of Xorg.
+</p>
+<h3><span class="mw-headline" id="USE_flags">USE flags</span></h3>
+<p class="mw-empty-elt">      </p><div class="panel panel-default gp-panel">
+        <div class="panel-heading gp-panel-heading">
+          <h3 class="panel-title">
+            <span class="text-muted">USE flags for</span>
+            <a href="https://packages.gentoo.org/packages/x11-base/xorg-server">x11-base/xorg-server</a>
+            <small><span class="fa fa-external-link-square"></span></small>
+            <small class="gp-pkg-desc">X.Org X servers</small>
+          </h3>
+        </div>
+        <div class="table-responsive gp-useflag-table-container">
+                <table class="table gp-useflag-table">        <tbody><tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+elogind">+elogind</a></code>
+          </td>
+          <td>
+            Use elogind to get control over framebuffer when running as regular user
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+udev">+udev</a></code>
+          </td>
+          <td>
+            Enable virtual/udev integration (device discovery, power and storage device support, etc)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/debug">debug</a></code>
+          </td>
+          <td>
+            Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see https://wiki.gentoo.org/wiki/Project:Quality_Assurance/Backtraces
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/minimal">minimal</a></code>
+          </td>
+          <td>
+            Install a very minimal build (disables, for example, plugins, fonts, most drivers, non-critical features)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/selinux">selinux</a></code>
+          </td>
+          <td>
+            !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/suid">suid</a></code>
+          </td>
+          <td>
+            Enable setuid root program(s)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/systemd">systemd</a></code>
+          </td>
+          <td>
+            Enable use of systemd-specific libraries and features like socket activation or session tracking
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/test">test</a></code>
+          </td>
+          <td>
+            Enable dependencies and/or preparations necessary to run tests (usually controlled by FEATURES=test but can be toggled independently)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/unwind">unwind</a></code>
+          </td>
+          <td>
+            Enable libunwind usage for backtraces
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/xcsecurity">xcsecurity</a></code>
+          </td>
+          <td>
+            Build Security extension
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/xephyr">xephyr</a></code>
+          </td>
+          <td>
+            Build the Xephyr server
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/xnest">xnest</a></code>
+          </td>
+          <td>
+            Build the Xnest server
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/xorg">xorg</a></code>
+          </td>
+          <td>
+            Build the Xorg X server (HIGHLY RECOMMENDED)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/xvfb">xvfb</a></code>
+          </td>
+          <td>
+            Build the Xvfb server
+          </td>
+        </tr>      </tbody></table>
+        </div>
+        <div class="panel-footer gp-panel-footer">
+          <small class="pull-right">
+            Data provided by the <a href="https://packages.gentoo.org">Gentoo Package Database</a>
+            &#183;
+            Last update: 2026-07-10 20:50
+          </small>
+          <small>
+            <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE">More information about USE flags</a>
+          </small>
+        </div>
+      </div>
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="The_X_USE_flag">The X USE flag</span></h3>
+<p>Many packages can be built with optional X11 support by activating the global <code><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/X">X</a></code> USE flag (if not already activated by <a href="https://wiki.gentoo.org/wiki/Profile_(Portage)" class="mw-redirect" title="Profile (Portage)">profile</a> selection).
+</p>
+<h3><span class="mw-headline" id="Emerge">Emerge</span></h3>
+<p>Just the necessary components:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask x11-base/xorg-server</code></div></div> 
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Getting a working graphical environment (including popular desktops like <a href="KDE.html" title="KDE">KDE</a> and <a href="https://wiki.gentoo.org/wiki/GNOME" title="GNOME">GNOME</a>) requires additional configuration <b>before</b> emerging one of these packages. See the more extensive <a href="https://wiki.gentoo.org/wiki/Xorg/Guide" title="Xorg/Guide">Xorg Guide</a> for details.</div>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="X_server_starts_and_dies_unexpectedly_with_no_errors">X server starts and dies unexpectedly with no errors</span></h3>
+<p><b>Problem</b>: Running <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">startx</span> will start the X server, however it will immediately die without any errors (searching "<code>EE</code>" in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/var/log/Xorg.0.log</span> returns no related results).
+</p><p><b>Cause</b>: an empty <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.xinitrc</span> file exists for the user who is running the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">startx</span> command, so the X server is starting, then stopping because there is nothing left for it to do.
+</p><p><b>Resolution</b>: Either remove the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.xinitrc</span> file or define a window manager inside it.
+</p><p><b>Reproducible</b> via:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>touch ~/.xinitrc</code></div></div>
+<h3><span class="mw-headline" id="Blockers_when_updating_xorg-server_with_xorg-drivers">Blockers when updating xorg-server with xorg-drivers</span></h3>
+<p>When an update is available for xorg-server, it is possible that a normal -up world command will produce blocker messages with xorg drivers. When this happens, rebuilding x11 modules can help proceed with the update Ex:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge -av1 xorg-server @x11-module-rebuild</code></div></div>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="https://wiki.gentoo.org/wiki/Non_root_Xorg" title="Non root Xorg">Non root Xorg</a> — describes how an unprivileged user can run <a class="mw-selflink selflink">Xorg</a> without using suid.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Xorg/Guide" title="Xorg/Guide">Xorg/Guide</a> — explains what Xorg is, how to install it, and the various configuration options.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Xorg/Hardware_3D_acceleration_guide" title="Xorg/Hardware 3D acceleration guide">Xorg/Hardware 3D acceleration guide</a> — a guide to getting 3D acceleration working using the DRM with Xorg in Gentoo.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Xrandr" title="Xrandr">Xrandr</a> — <a href="https://wiki.gentoo.org/wiki/X" class="mw-redirect" title="X">X</a> protocol extension and its CLI tool <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">xrandr</span> are used to manage screen resolutions, rotation and screens with multiply displays in X</li>
+<li><a href="https://wiki.gentoo.org/wiki/Xorg/Using_the_numeric_keyboard_keys_as_mouse" title="Xorg/Using the numeric keyboard keys as mouse">Xorg/Using the numeric keyboard keys as mouse</a> — XOrg comes with built-in mouse emulation using the keyboards numeric keypad.</li>
+<li><a href="https://wiki.gentoo.org/wiki/X_server" title="X server">X server</a> — the main component of the X Window system which abstracts the hardware and provides the foundation for most graphical user interfaces, like <a href="https://wiki.gentoo.org/wiki/Desktop_environment" title="Desktop environment">desktop environments</a> or <a href="https://wiki.gentoo.org/wiki/Window_manager" title="Window manager">window managers</a>, and their applications.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260924233240
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.101 seconds
+Real time usage: 0.174 seconds
+Preprocessor visited node count: 1095/1000000
+Post‐expand include size: 31565/4194304 bytes
+Template argument size: 7786/4194304 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 11/150
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 5443/5000000 bytes
+Lua time usage: 0.020/7 seconds
+Lua virtual size: 4.86 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  131.103      1 -total
+ 49.98%   65.522      1 Template:InfoBox_stack
+ 39.90%   52.314      6 Template:InfoBox
+ 35.84%   46.984      8 Template:Anchor
+ 33.34%   43.711      1 Template:InfoBox_project
+ 27.80%   36.441      1 Template:InfoBox_header
+ 27.32%   35.822      6 Template:See_also
+  7.78%   10.203      1 Template:Emerge
+  7.12%    9.340      2 Template:RootCmd
+  4.69%    6.145      6 Template:Link
+-->
+
+<!-- Saved in parser cache with key gentoo?hwiki:pcache:idhash:7775-0!dateformat=default and timestamp 20260924233240 and revision id 1243413
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.gentoo.org/index.php?title=Xorg&amp;oldid=1243413">https://wiki.gentoo.org/index.php?title=Xorg&amp;oldid=1243413</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.gentoo.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://wiki.gentoo.org/wiki/Category:X.Org" title="Category:X.Org">X.Org</a></li></ul></div></div>						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-7">
+											<div class="spacer"></div>
+						<ul id="f-list">
+							<li id="lastmod>"> This page was last edited on 8 June 2023, at 19:35.</li><li id="privacy>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Privacy_policy" class="mw-redirect" title="Gentoo Wiki:Privacy policy">Privacy policy</a></li><li id="about>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:About" title="Gentoo Wiki:About">About Gentoo Wiki</a></li><li id="disclaimer>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:General_disclaimer" title="Gentoo Wiki:General disclaimer">Disclaimers</a></li>						</ul>
+									</div>
+				<div class="col-xs-12 col-md-3">
+					<!-- No questions or comments, the Wiki has enough information on how to contact us. -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<ul class="footerlinks three-icons">
+						<li><a href="https://twitter.com/gentoo" title="@Gentoo on Twitter"><span class="fa fa-twitter fa-fw"></span></a></li>
+						<li><a href="https://www.facebook.com/gentoo.org" title="Gentoo on Facebook"><span class="fa fa-facebook fa-fw"></span></a></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-xs-9 col-md-9">
+					<strong>&copy; 2001&ndash;2026 Gentoo Authors</strong><br />
+					<small>
+						Gentoo is a trademark of the Gentoo Foundation, Inc. and of Förderverein Gentoo e.V.
+						The contents of this document, unless otherwise expressly stated, are licensed under the
+						<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC-BY-SA-4.0</a> license.
+						The <a href="https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html">Gentoo Name and Logo Usage Guidelines</a> apply.
+					</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script>
+function defer(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function() { defer(method) }, 50);
+    }
+}
+defer(function() { mw.loader.load( 'https://assets.gentoo.org/tyrian/bootstrap.min.js'); });
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.101","walltime":"0.174","ppvisitednodes":{"value":1095,"limit":1000000},"postexpandincludesize":{"value":31565,"limit":4194304},"templateargumentsize":{"value":7786,"limit":4194304},"expansiondepth":{"value":17,"limit":40},"expensivefunctioncount":{"value":11,"limit":150},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":5443,"limit":5000000},"timingprofile":["100.00%  131.103      1 -total"," 49.98%   65.522      1 Template:InfoBox_stack"," 39.90%   52.314      6 Template:InfoBox"," 35.84%   46.984      8 Template:Anchor"," 33.34%   43.711      1 Template:InfoBox_project"," 27.80%   36.441      1 Template:InfoBox_header"," 27.32%   35.822      6 Template:See_also","  7.78%   10.203      1 Template:Emerge","  7.12%    9.340      2 Template:RootCmd","  4.69%    6.145      6 Template:Link"]},"scribunto":{"limitreport-timeusage":{"value":"0.020","limit":"7"},"limitreport-virtmemusage":{"value":5099520,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20260924233240","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":57});});</script></body></html>

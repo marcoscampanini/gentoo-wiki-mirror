@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>GRUB - Gentoo wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"c13245d21a5dda24c8c7397d","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"GRUB","wgTitle":"GRUB","wgCurRevisionId":1453919,"wgRevisionId":1453919,"wgArticleId":1001,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Bootloaders"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"GRUB","wgRelevantArticleId":1001,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgULSCurrentAutonym":"English","wgPageFormsTargetName":null,
+"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":!1,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":!1,"srfFilteredConfig":null,"wgULSPosition":"personal","wgULSisCompactLinksEnabled":!0,"wgTranslatePageTranslation":"source"};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.translate":"ready","ext.translate.tag.languages":"ready","ext.pygments":"ready","mediawiki.toc.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles"
+:"ready","ext.uls.pt":"ready","ext.srf.styles":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.tyrian.styles":"ready","skins.tyrian.icons":"ready"};RLPAGEMODULES=["ext.gentooPackages","ext.smw.style","ext.smw.tooltips","smw.entityexaminer","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","ext.uls.compactlinks","ext.uls.interface"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.pygments,translate|ext.smw.style|ext.smw.tooltip.styles|ext.translate.tag.languages|ext.uls.pt|mediawiki.skinning.content.externallinks|mediawiki.skinning.interface|mediawiki.toc.styles|skins.tyrian.icons,st.css"/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.srf.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<script async="" src="../load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=tyrian"></script>
+<link rel="stylesheet" href="https://assets.gentoo.org/tyrian/bootstrap.min.css"/><link rel="stylesheet" href="https://assets.gentoo.org/tyrian/tyrian.min.css"/><style>#mw-indicator-mw-helplink {display:none;}</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=site.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<meta name="generator" content="MediaWiki 1.35.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#54487a"/>
+<link rel="alternate" type="application/rdf+xml" title="GRUB" href="https://wiki.gentoo.org/index.php?title=Special:ExportRDF/GRUB&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="https://www.gentoo.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.gentoo.org/opensearch_desc.php" title="Gentoo Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.gentoo.org/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-GRUB rootpage-GRUB skin-tyrian action-view">	<div class="mw-jump sr-only">
+		Jump to:		<a href="GRUB.html#top">content</a>
+	</div>
+	<header>
+		<div class="site-title">
+			<div class="container">
+				<div class="row">
+					<div class="site-title-buttons">
+						<div class="btn-group btn-group-sm">
+							<a href="https://get.gentoo.org/" role="button" class="btn get-gentoo"><span class="fa fa-fw fa-download"></span> <strong>Get Gentoo!</strong></a>
+							<div class="btn-group btn-group-sm">
+								<a class="btn gentoo-org-sites dropdown-toggle" data-toggle="dropdown" data-target="#" href="GRUB.html#">
+									<span class="fa fa-fw fa-map-o"></span> <span class="hidden-xs">gentoo.org sites</span> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="https://www.gentoo.org/" title="Gentoo's main website"><span class="fa fa-home fa-fw"></span> gentoo.org</a></li>
+									<li><a href="https://wiki.gentoo.org/" title="Find and contribute documentation"><span class="fa fa-file-text-o fa-fw"></span> Wiki</a></li>
+									<li><a href="https://bugs.gentoo.org/" title="Discover and report issues with Gentoo"><span class="fa fa-bug fa-fw"></span> Bugs</a></li>
+									<li><a href="https://packages.gentoo.org/" title="Find software to install"><span class="fa fa-hdd-o fa-fw"></span> Packages</a></li>
+									<li><a href="https://forums.gentoo.org/" title="Discuss with the community"><span class="fa fa-comments-o fa-fw"></span> Forums</a></li>
+									<li class="divider"></li>
+									<li><a href="https://planet.gentoo.org/" title="Find out what's going on in the dev community"><span class="fa fa-rss fa-fw"></span> Planet</a></li>
+									<li><a href="https://archives.gentoo.org/" title="Read up on past discussions"><span class="fa fa-archive fa-fw"></span> Archives</a></li>
+									<li><a href="https://devmanual.gentoo.org/" title="Read the development guide"><span class="fa fa-book fa-fw"></span> Devmanual</a></li>
+									<li><a href="https://gitweb.gentoo.org/" title="Browse our source code in Gitweb"><span class="fa fa-code fa-fw"></span> Gitweb</a></li>
+									<li class="divider"></li>
+									<li><a href="https://infra-status.gentoo.org/" title="Get updates on the services provided by the Gentoo infra team"><span class="fa fa-server fa-fw"></span> Infra status</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="https://wiki.gentoo.org/" title="Back to the homepage" class="site-logo">
+							<img src="https://assets.gentoo.org/tyrian/site-logo.png"  alt="Gentoo Linux Logo" srcset="https://assets.gentoo.org/tyrian/site-logo.svg">
+						</a>
+						<span class="site-label">Wiki</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="tyrian-navbar" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-main-collapse">
+						<ul class="nav navbar-nav">
+							<li id="n-mainpage-description"><a href="https://wiki.gentoo.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.gentoo.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-help"><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li><li id="n-Contribute.21"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Contributor%27s_guide">Contribute!</a></li>			<li class="dropdown">
+				<a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Menu-Documentation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu"><li id="n-Gentoo-Handbook"><a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page">Gentoo Handbook</a></li><li id="n-Gentoo-FAQ"><a href="https://wiki.gentoo.org/wiki/FAQ">Gentoo FAQ</a></li><li role="presentation" class="divider"></li><li id="n-Core-system"><a href="https://wiki.gentoo.org/wiki/Category:Core_system">Core system</a></li><li id="n-Hardware"><a href="https://wiki.gentoo.org/wiki/Category:Hardware">Hardware</a></li><li id="n-Software"><a href="https://wiki.gentoo.org/wiki/Category:Software">Software</a></li><li id="n-Desktop"><a href="https://wiki.gentoo.org/wiki/Category:Desktop">Desktop</a></li><li id="n-Server-.26-Security"><a href="https://wiki.gentoo.org/wiki/Category:Server_and_Security">Server &amp; Security</a></li><li id="n-Project-.26-Community"><a href="https://wiki.gentoo.org/wiki/Category:Project_and_Community">Project &amp; Community</a></li><li role="presentation" class="divider"></li><li id="n-Gentoo-Projects"><a href="https://wiki.gentoo.org/wiki/Project:Gentoo">Gentoo Projects</a></li>				</ul>
+			</li>						</ul>
+						<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+			<a href="GRUB.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i> Tools <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="t-whatlinkshere"><a href="https://wiki.gentoo.org/wiki/Special:WhatLinksHere/GRUB" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.gentoo.org/wiki/Special:RecentChangesLinked/GRUB" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.gentoo.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.gentoo.org/index.php?title=GRUB&amp;oldid=1453919" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.gentoo.org/index.php?title=GRUB&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="https://wiki.gentoo.org/wiki/Special:Browse/:GRUB" rel="search">Browse properties</a></li>			</ul>
+		</li>
+			<li class="dropdown">
+			<a href="GRUB.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				<span class="fa fa-user" aria-label="Personal tools"></span>
+				User				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="pt-uls" class="active"><a href="GRUB.html#" class="uls-trigger">English</a></li><li id="pt-createaccount"><a href="https://wiki.gentoo.org/index.php?title=Special:CreateAccount&amp;returnto=GRUB" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.gentoo.org/index.php?title=Special:UserLogin&amp;returnto=GRUB" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>			</ul>
+		</li>
+								</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="navbar navbar-grey navbar-stick" id="wiki-actions" role="navigation">
+			<div class="container"><div class="row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gw-toolbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="gw-toolbar">
+					<ul class="nav navbar-nav">
+					<li id="ca-nstab-main" class="selected active"><a href="GRUB.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="https://wiki.gentoo.org/wiki/Talk:GRUB" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>					</ul>
+							<form action="https://wiki.gentoo.org/index.php" id="searchform" class="navbar-form navbar-right" role="search">
+			<input type='hidden' name="title" value="Special:Search"/>
+
+				<div class="input-group">
+					<input type="search" name="search" placeholder="Search" title="Search Gentoo Wiki [f]" accesskey="f" id="searchInput" class="form-control"/>					<div class="input-group-btn"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton btn btn-default"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton btn btn-default"/></div>
+				</div>
+		</form>
+						<ul class="nav navbar-nav navbar-right">
+					<li id="ca-viewsource"><a href="https://wiki.gentoo.org/index.php?title=GRUB&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li class="dropdown">
+						<a href="GRUB.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">more <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+					<li id="ca-history"><a href="https://wiki.gentoo.org/index.php?title=GRUB&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>							</ul>
+						</li>
+					</ul>
+				</div>
+			</div></div>
+		</nav>
+		</header>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="content" class="mw-body" role="main">
+						<a id="top"></a>
+						
+						<h1 id="firstHeading" class="first-header" lang="en">
+							<span dir="auto">GRUB</span>
+						</h1>
+
+						<div id="bodyContent" class="mw-body-content">
+							<div id="siteSub">From Gentoo Wiki</div>
+							<div id="contentSub">
+															</div>
+												                <div id="jump-to-nav"></div>
+					                <a class="mw-jump-link" href="GRUB.html#mw-head">Jump to:navigation</a>
+					                <a class="mw-jump-link" href="GRUB.html#searchInput">Jump to:search</a>
+
+							<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="mw-pt-languages noprint" lang="en" dir="ltr"><div class="mw-pt-languages-label">Other languages:</div><ul class="mw-pt-languages-list"><li><a href="https://wiki.gentoo.org/wiki/GRUB/de" class="mw-pt-progress mw-pt-progress--med" title="GRUB (43% translated)" lang="de" dir="ltr">Deutsch</a></li>
+<li><span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en" dir="ltr">English</span></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/es" class="mw-pt-progress mw-pt-progress--low" title="GRUB2 (32% translated)" lang="es" dir="ltr">español</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/fr" class="mw-pt-progress mw-pt-progress--stub" title="GRUB2 (0% translated)" lang="fr" dir="ltr">français</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/it" class="mw-pt-progress mw-pt-progress--low" title="GRUB (39% translated)" lang="it" dir="ltr">italiano</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/hu" class="mw-pt-progress mw-pt-progress--high" title="GRUB (67% translated)" lang="hu" dir="ltr">magyar</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/pl" class="mw-pt-progress mw-pt-progress--stub" title="GRUB2 (2% translated)" lang="pl" dir="ltr">polski</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/pt-br" class="mw-pt-progress mw-pt-progress--stub" title="GRUB2 (3% translated)" lang="pt-BR" dir="ltr">português do Brasil</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/ru" class="mw-pt-progress mw-pt-progress--complete" title="GRUB (80% translated)" lang="ru" dir="ltr">русский</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/zh-cn" class="mw-pt-progress mw-pt-progress--med" title="GRUB (49% translated)" lang="zh-Hans-CN" dir="ltr">中文（中国大陆）‎</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/ja" class="mw-pt-progress mw-pt-progress--complete" title="GRUB (97% translated)" lang="ja" dir="ltr">日本語</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/ko" class="mw-pt-progress mw-pt-progress--low" title="GRUB2/ko (24% translated)" lang="ko" dir="ltr">한국어</a></li></ul></div>
+<div id="infobox-stack" class="list-group" style="width: 25em; float: right; clear: right; font-size: 90%; margin-left: 1em;">
+<div class="list-group-item text-center" style="padding-top: 3px; padding-bottom: 3px; background-color: #463C65; color: white;"><b>Resources</b></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-home fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://gnu.org/software/grub/">Home</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-file-text fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://gnu.org/software/grub/grub-documentation.html">Official documentation</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-hdd-o fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-boot/grub">Package information</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-wikipedia-w fa-fw fa-2x"></span></span><span><a href="https://en.wikipedia.org/wiki/GNU_GRUB" class="extiw" title="wikipedia:GNU GRUB">Wikipedia</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-code-fork fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://git.savannah.gnu.org/cgit/grub.git/">GitWeb</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-comments-o fa-fw fa-2x"></span></span><span><span style="font-family: monospace; font-size: 95%;"><a rel="nofollow" class="external text" href="ircs://irc.libera.chat/#grub">#grub</a></span> (<span style="font-family: monospace; font-size: 95%;"><a rel="nofollow" class="external text" href="https://web.libera.chat/#grub">webchat</a></span>)</span></div>
+</div>
+<p><b>GRUB</b> is a multiboot secondary <a href="https://wiki.gentoo.org/wiki/Bootloader" title="Bootloader">bootloader</a> capable of loading kernels from a variety of <a href="https://wiki.gentoo.org/wiki/Filesystem" title="Filesystem">filesystems</a> on most system architectures. GRUB supports PC BIOS, PC EFI, IEEE 1275 (Open Firmware), SPARC, and MIPS Lemote Yeeloong.
+</p><p>GRUB, or more formally <b>GRUB 2</b>, replaces the original "GRUB Legacy" (or "GRUB 1") with an entirely separate code base featuring a new shell-like syntax for advanced scripting capabilities.
+</p><p>Since GRUB 2 superseded GRUB legacy long ago, today it is commonly called simply "GRUB".
+</p>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px; background-color: #f5f5f5; border-color: #b8adde; color: #4d4370&#32;;"><strong><i class="fa fa-search-plus"></i> See also</strong><br />For a quick setup approach, see <a href="https://wiki.gentoo.org/wiki/GRUB2_Quick_Start" title="GRUB2 Quick Start">GRUB2 Quick Start</a>.</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="GRUB.html#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="GRUB.html#Prerequisites"><span class="tocnumber">1.1</span> <span class="toctext">Prerequisites</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="GRUB.html#USE_flags"><span class="tocnumber">1.2</span> <span class="toctext">USE flags</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="GRUB.html#Emerge"><span class="tocnumber">1.3</span> <span class="toctext">Emerge</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="GRUB.html#Additional_software"><span class="tocnumber">1.4</span> <span class="toctext">Additional software</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="GRUB.html#os-prober_to_automatically_detect_available_operating_systems"><span class="tocnumber">1.4.1</span> <span class="toctext">os-prober to automatically detect available operating systems</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="GRUB.html#libisoburn_for_rescue_image_creation_with_grub-mkrescue"><span class="tocnumber">1.4.2</span> <span class="toctext">libisoburn for rescue image creation with grub-mkrescue</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="GRUB.html#Boot_from_ISOs_from_your_main_storage_-_without_USB"><span class="tocnumber">1.4.3</span> <span class="toctext">Boot from ISOs from your main storage - without USB</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="GRUB.html#sys-fs.2Fmdadm_for_RAID_device_detection"><span class="tocnumber">1.4.4</span> <span class="toctext">sys-fs/mdadm for RAID device detection</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="GRUB.html#GRUB_Bootloader_Installation"><span class="tocnumber">2</span> <span class="toctext">GRUB Bootloader Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="GRUB.html#UEFI_with_GPT"><span class="tocnumber">2.1</span> <span class="toctext">UEFI with GPT</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="GRUB.html#Partitioning_for_UEFI_with_GPT"><span class="tocnumber">2.1.1</span> <span class="toctext">Partitioning for UEFI with GPT</span></a>
+<ul>
+<li class="toclevel-4 tocsection-13"><a href="GRUB.html#Partitioning_with_fdisk"><span class="tocnumber">2.1.1.1</span> <span class="toctext">Partitioning with fdisk</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-14"><a href="GRUB.html#Installing_GRUB_for_EFI"><span class="tocnumber">2.1.2</span> <span class="toctext">Installing GRUB for EFI</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="GRUB.html#BIOS_with_MBR"><span class="tocnumber">2.2</span> <span class="toctext">BIOS with MBR</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="GRUB.html#Partitioning_for_BIOS_with_MBR"><span class="tocnumber">2.2.1</span> <span class="toctext">Partitioning for BIOS with MBR</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="GRUB.html#BIOS_with_GPT"><span class="tocnumber">2.3</span> <span class="toctext">BIOS with GPT</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="GRUB.html#Dual-boot_with_Windows"><span class="tocnumber">2.3.1</span> <span class="toctext">Dual-boot with Windows</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="GRUB.html#Partitioning_for_BIOS_with_GPT"><span class="tocnumber">2.3.2</span> <span class="toctext">Partitioning for BIOS with GPT</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="GRUB.html#Open_Firmware_.28IEEE_1275.29_on_PowerPC"><span class="tocnumber">2.4</span> <span class="toctext">Open Firmware (IEEE 1275) on PowerPC</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="GRUB.html#Install_on_encrypted_partition"><span class="tocnumber">2.5</span> <span class="toctext">Install on encrypted partition</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="GRUB.html#Configuration"><span class="tocnumber">3</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="GRUB.html#Main_configuration_file"><span class="tocnumber">3.1</span> <span class="toctext">Main configuration file</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="GRUB.html#Setting_configuration_parameters"><span class="tocnumber">3.2</span> <span class="toctext">Setting configuration parameters</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="GRUB.html#Enabling_or_disabling_configuration_scripts"><span class="tocnumber">3.3</span> <span class="toctext">Enabling or disabling configuration scripts</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="GRUB.html#Manipulating_configuration_scripts"><span class="tocnumber">3.4</span> <span class="toctext">Manipulating configuration scripts</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="GRUB.html#Extended_features"><span class="tocnumber">4</span> <span class="toctext">Extended features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="GRUB.html#Chainloading"><span class="tocnumber">4.1</span> <span class="toctext">Chainloading</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="GRUB.html#Password_protection_of_GRUB_menu"><span class="tocnumber">4.2</span> <span class="toctext">Password protection of GRUB menu</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="GRUB.html#Using_framebuffer_display"><span class="tocnumber">4.3</span> <span class="toctext">Using framebuffer display</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="GRUB.html#HiDPI_displays"><span class="tocnumber">4.3.1</span> <span class="toctext">HiDPI displays</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="GRUB.html#Installing_a_new_kernel"><span class="tocnumber">5</span> <span class="toctext">Installing a new kernel</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="GRUB.html#Automatic_GRUB_reconfiguration"><span class="tocnumber">5.1</span> <span class="toctext">Automatic GRUB reconfiguration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-34"><a href="GRUB.html#After_updating_sys-boot.2Fgrub"><span class="tocnumber">6</span> <span class="toctext">After updating sys-boot/grub</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="GRUB.html#Troubleshooting"><span class="tocnumber">7</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-36"><a href="GRUB.html#os-prober_not_running"><span class="tocnumber">7.1</span> <span class="toctext">os-prober not running</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="GRUB.html#Motherboard_firmware_not_finding_the_.EFI_file"><span class="tocnumber">7.2</span> <span class="toctext">Motherboard firmware not finding the .EFI file</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="GRUB.html#os-prober_and_UEFI_in_chroot"><span class="tocnumber">7.3</span> <span class="toctext">os-prober and UEFI in chroot</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-39"><a href="GRUB.html#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="GRUB.html#External_resources"><span class="tocnumber">9</span> <span class="toctext">External resources</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="GRUB.html#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<h3><span class="mw-headline" id="Prerequisites">Prerequisites</span></h3>
+<p>The <var>GRUB_PLATFORMS</var> variable in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">make.conf</span> controls what <b>target</b> GRUB will use with <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span>. The <b><span style="font-family: monospace; font-size: 95%; color: #54487a">amd64</span></b> architecture includes a profile default which works for most systems.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/portage/make.conf</code></strong><strong>Example of setting the <var>GRUB_PLATFORMS</var> variable for EMU, EFI, and PC platforms</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">GRUB_PLATFORMS</span><span class="o">=</span><span class="s2">&quot;emu efi-32 efi-64 pc&quot;</span>
+</pre></div>
+<p>The following platforms are supported depending on the target CPU:
+</p>
+<table class="table table-condensed">
+<tbody><tr>
+<th rowspan="2" style="text-align:center;">Platform
+</th>
+<th colspan="7" style="text-align:center;">Target
+</th></tr>
+
+<tr>
+<th>i386
+</th>
+<th>ia64
+</th>
+<th>mips
+</th>
+<th>mipsel
+</th>
+<th>powerpc
+</th>
+<th>sparc64
+</th>
+<th>x86_64
+</th></tr>
+<tr>
+<th>ARC
+</th>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td></tr>
+<tr>
+<th>Coreboot
+</th>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background: #FFB; color: black; vertical-align: middle; text-align: left;" class="cell-partial"><i class="fa fa-minus"></i> 32-bit
+</td></tr>
+<tr>
+<th>EFI
+</th>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td></tr>
+<tr>
+<th>EMU
+</th>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td></tr>
+<tr>
+<th>IEEE 1275 (Open Firmware)
+</th>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background: #FFB; color: black; vertical-align: middle; text-align: left;" class="cell-partial"><i class="fa fa-minus"></i> 32-bit
+</td></tr>
+<tr>
+<th>Loongson
+</th>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td></tr>
+<tr>
+<th>Multiboot
+</th>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background: #FFB; color: black; vertical-align: middle; text-align: left;" class="cell-partial"><i class="fa fa-minus"></i> 32-bit
+</td></tr>
+<tr>
+<th>QEMU
+</th>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background: #FFB; color: black; vertical-align: middle; text-align: left;" class="cell-partial"><i class="fa fa-minus"></i> 32-bit
+</td></tr>
+<tr>
+<th>QEMU-MIPS
+</th>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td></tr>
+<tr>
+<th>PC
+</th>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No
+</td>
+<td style="background: #FFB; color: black; vertical-align: middle; text-align: left;" class="cell-partial"><i class="fa fa-minus"></i> 32-bit
+</td></tr>
+</tbody></table>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Whenever the values in the <var>GRUB_PLATFORMS</var> variable are adjusted GRUB will need to be re-emerged in order to build the changed binary. Be sure to use the <code>--newuse --deep</code> options as shown in the <a href="GRUB.html#Emerge" title="GRUB">emerge section</a> below.</div>
+<p>The <b><span style="font-family: monospace; font-size: 95%; color: #54487a">amd64</span></b> profiles enable support for (U)EFI functionality by default. When using a BIOS-based system, set <var>GRUB_PLATFORMS</var> variable to <code>pc</code> to avoid unneeded dependencies.
+</p>
+<h3><span class="mw-headline" id="USE_flags">USE flags</span></h3>
+<p class="mw-empty-elt">      </p><div class="panel panel-default gp-panel">
+        <div class="panel-heading gp-panel-heading">
+          <h3 class="panel-title">
+            <span class="text-muted">USE flags for</span>
+            <a href="https://packages.gentoo.org/packages/sys-boot/grub">sys-boot/grub</a>
+            <small><span class="fa fa-external-link-square"></span></small>
+            <small class="gp-pkg-desc">GNU GRUB boot loader</small>
+          </h3>
+        </div>
+        <div class="table-responsive gp-useflag-table-container">
+                <table class="table gp-useflag-table">        <tbody><tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+branding">+branding</a></code>
+          </td>
+          <td>
+            Enable Gentoo specific branding
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+device-mapper">+device-mapper</a></code>
+          </td>
+          <td>
+            Enable support for devmapper; required for LUKS or LVM volume detection
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+fonts">+fonts</a></code>
+          </td>
+          <td>
+            Build and install fonts for the gfxterm module
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+themes">+themes</a></code>
+          </td>
+          <td>
+            Build and install GRUB themes (starfield)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/doc">doc</a></code>
+          </td>
+          <td>
+            Add extra documentation (API, Javadoc, etc). It is recommended to enable per package instead of globally
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/efiemu">efiemu</a></code>
+          </td>
+          <td>
+            Build and install the efiemu runtimes
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/libzfs">libzfs</a></code>
+          </td>
+          <td>
+            Enable support for sys-fs/zfs
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/mount">mount</a></code>
+          </td>
+          <td>
+            Build and install the grub-mount utility
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/nls">nls</a></code>
+          </td>
+          <td>
+            Add Native Language Support (using gettext - GNU locale utilities)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/protect">protect</a></code>
+          </td>
+          <td>
+            Build and install the grub-protect utility
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/sdl">sdl</a></code>
+          </td>
+          <td>
+            Add support for Simple Direct Layer (media library)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/secureboot">secureboot</a></code>
+          </td>
+          <td>
+            Automatically sign efi executables using user specified key
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/test">test</a></code>
+          </td>
+          <td>
+            Enable dependencies and/or preparations necessary to run tests (usually controlled by FEATURES=test but can be toggled independently)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/truetype">truetype</a></code>
+          </td>
+          <td>
+            Build and install grub-mkfont conversion utility
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/verify-sig">verify-sig</a></code>
+          </td>
+          <td>
+            Verify upstream signatures on distfiles
+          </td>
+        </tr>      </tbody></table>
+        </div>
+        <div class="panel-footer gp-panel-footer">
+          <small class="pull-right">
+            Data provided by the <a href="https://packages.gentoo.org">Gentoo Package Database</a>
+            &#183;
+            Last update: 2026-09-21 19:31
+          </small>
+          <small>
+            <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE">More information about USE flags</a>
+          </small>
+        </div>
+      </div>
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Emerge"><span class="anchor" id="Emerge"></span> Emerge</span></h3>
+<div class="alert alert-warning gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-circle"></i> Important</strong><br />Installing GRUB with <a href="https://wiki.gentoo.org/wiki/Emerge" title="Emerge">emerge</a> does not <i>enable</i> the boot loader's operation. This only installs the GRUB system and utilities to the system. To install GRUB from there so that it will be used to boot the system, see the <a href="GRUB.html#Configuration" title="GRUB">Configuration</a> section.</div>
+<p>To install GRUB:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask&#160;--newuse --deep sys-boot/grub</code></div></div> 
+<h3><span class="mw-headline" id="Additional_software">Additional software</span></h3>
+<h4><span class="mw-headline" id="os-prober_to_automatically_detect_available_operating_systems"><span class="anchor" id="additional_software_os-prober"></span> os-prober to automatically detect available operating systems</span></h4>
+<p>Optionally, <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-boot/os-prober package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-boot/os-prober"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-boot/os-prober</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> can be installed to detect and generate boot entries for other operating systems when running <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span>. In most cases, enables GRUB to automatically detect other operating systems including Windows and other Linux distributions, etc.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask&#160;--newuse sys-boot/os-prober</code></div></div> 
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-check-circle"></i> Tip</strong><br />Due to security concerns, os-prober is disabled by default. Set <var>GRUB_DISABLE_OS_PROBER=false</var> in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/default/grub</span> to enable it. See <a href="GRUB.html#os-prober_not_running">corresponding troubleshooting section</a>.</div>
+<h4><span class="mw-headline" id="libisoburn_for_rescue_image_creation_with_grub-mkrescue">libisoburn for rescue image creation with grub-mkrescue</span></h4>
+<p><span style="white-space: nowrap;" class="plainlinks" title="External link for the dev-libs/libisoburn package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/dev-libs/libisoburn"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">dev-libs/libisoburn</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> may be installed to allow creation of rescue images with the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkrescue</span> utility:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask dev-libs/libisoburn</code></div></div> 
+<h4><span class="mw-headline" id="Boot_from_ISOs_from_your_main_storage_-_without_USB">Boot from ISOs from your main storage - without USB</span></h4>
+<p><a rel="nofollow" class="external free" href="https://wiki.grml.org/doku.php?id=rescueboot">https://wiki.grml.org/doku.php?id=rescueboot</a>
+</p><p>From Guru:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask sys-boot/grml-rescueboot</code></div></div> 
+<p>Or manually launch discs with GRUB's loopback device:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/grub.d/40_custom</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>menuentry &quot;systemrescue-11.02-amd64.iso&quot; {
+     iso_path=&quot;/systemrescue-11.02-amd64.iso&quot;
+     export iso_path
+     search --set=root --file $iso_path
+ 
+     # support booting recent GRUB versions on UEFI systems
+     rmmod tpm
+ 
+loopback loop $iso_path
+     set root=(loop)
+     # the path below is on the SystemRescue ISO, not the hard drive
+     configfile /boot/grub/loopback.cfg
+}
+</pre></div>
+<p>After saving the entry, to update GRUB:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-mkconfig -o /boot/grub/grub.cfg</code></div></div>
+<h4><span id="sys-fs/mdadm_for_RAID_device_detection"></span><span class="mw-headline" id="sys-fs.2Fmdadm_for_RAID_device_detection">sys-fs/mdadm for RAID device detection</span></h4>
+<p><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/mdadm package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/mdadm"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/mdadm</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> may be installed to enable RAID device detection:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask sys-fs/mdadm</code></div></div> 
+<h2><span class="mw-headline" id="GRUB_Bootloader_Installation"><span class="anchor" id="Installing_the_boot_loader"></span>GRUB Bootloader Installation</span></h2>
+<p>Installing GRUB as the system's boot loader depends on how the system is meant to boot (through which type of firmware, e.g. on PCs either the legacy <a href="https://wiki.gentoo.org/wiki/BIOS" title="BIOS">BIOS</a> or its successor <a href="https://wiki.gentoo.org/wiki/UEFI" title="UEFI">UEFI</a>) and how the disk on which the boot loader should be installed is partitioned (e.g. on a PC, whether it is using the <a href="https://wiki.gentoo.org/wiki/Master_Boot_Record" title="Master Boot Record">MBR</a> or the <a href="https://wiki.gentoo.org/wiki/GPT" class="mw-redirect" title="GPT">GPT</a> <a href="https://wiki.gentoo.org/wiki/Partition" title="Partition">partition</a> layout).
+</p><p>This article covers the following situations:
+</p>
+<ul><li><a href="GRUB.html#BIOS_with_MBR" title="GRUB">BIOS with MBR</a> or (U)EFI using the CSM (often called 'BIOS mode' or 'legacy/compatibility mode')</li>
+<li><a href="GRUB.html#BIOS_with_GPT" title="GRUB">BIOS with GPT</a></li>
+<li><a href="GRUB.html#UEFI_with_GPT" title="GRUB">UEFI with GPT</a>, the native (U)EFI boot mode</li>
+<li><a href="GRUB.html#Open_Firmware_.28IEEE_1275.29_on_PowerPC" title="GRUB">Open Firmware (IEEE 1275) on PowerPC</a></li></ul>
+<p>Select the installation instructions appropriate for the system.
+</p>
+<h3><span class="mw-headline" id="UEFI_with_GPT"><span class="anchor" id="UEFI_with_GPT"></span> UEFI with GPT</span></h3>
+<div class="alert alert-danger gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-triangle"></i> Warning</strong><br />Even though 64-bit processors of Intel/AMD architecture ("x86_64", for which Gentoo uses the <b><span style="font-family: monospace; font-size: 95%; color: #54487a">amd64</span></b> notation) support running 32-bit software, it is not possible for an EFI implementation to do the same. A 64-bit EFI will not be able to run 32-bit <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.efi</span> loaders! It should be noted that some early 64-bit-capable systems, used a 32-bit implementation of EFI, like some early MacBooks (Intel Core 2) and some pre-2010 Windows computers. In such cases, even though the processor is 64-bit, (U)EFI is implemented as 32-bit software, so <code>efi-32</code> would be the correct GRUB platform.</div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />If the CSM is used, refer to <a href="GRUB.html#BIOS_with_MBR" title="GRUB">BIOS with MBR</a> or <a href="GRUB.html#BIOS_with_GPT" title="GRUB">BIOS with GPT</a> instead. CSM stands for "Compatibility Support Module" and is a BIOS emulation, making the UEFI behave like a BIOS. In the firmware setup user interface it is often called "Legacy Mode" or "Compatibility Mode". CSM has always been optional and was phased out on mainstream systems (such as PCs) in 2020.</div>
+<h4><span class="mw-headline" id="Partitioning_for_UEFI_with_GPT">Partitioning for UEFI with GPT</span></h4>
+<p>UEFI systems boot from executable files (<span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.efi</span> files) in a variant of Microsoft's Portable Executable format —PE32+, specifically—, on their <a href="https://wiki.gentoo.org/wiki/EFI_System_Partition" title="EFI System Partition">EFI System Partition</a> (ESP). The EFI System Partition can be just about any size, <a rel="nofollow" class="external text" href="https://www.ctrl.blog/entry/esp-size-guide.html">with implementation considerations in mind</a>.
+</p>
+<div class="alert alert-warning gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-circle"></i> Important</strong><br />For UEFI GPT boot, the system <i>must</i> have a dedicated ESP containing a <a href="https://wiki.gentoo.org/wiki/FAT" title="FAT">FAT</a> filesystem.</div>
+<p>Only the bootloader's <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.efi</span> file is <i>required</i> to be in EFI System Partition. Typically, <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> contains the kernels, <a href="https://wiki.gentoo.org/wiki/Initramfs" title="Initramfs">initramfs</a> if needed, and GRUB's configuration file and support files.
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />The EFI System Partition is usually mounted at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span>, <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/efi</span> or <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi</span>. Using <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi</span> allows files like the kernel, initramfs and bootloader support files to be stored on a separate partition and filesystem, or on the root filesystem itself; the later requires that GRUB can access the root filesystem and read the required files, which may not always be possible or very hard to set up (like with root filesystem encryption).</div>
+<p>A size of 128MB for the EFI System Partition is reasonable, this allows multiple PE32+ <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.efi</span> files to be stored. There is little harm in keeping backups of working PE32+ files, which could still be booted if a new one is installed.
+</p><p>Create the partition using the partitioning <a href="https://wiki.gentoo.org/wiki/Partition#GUID_Partition_Table_.28GPT.29" title="Partition">tool of choice</a>.
+</p>
+<h5><span class="mw-headline" id="Partitioning_with_fdisk">Partitioning with fdisk</span></h5>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />In the example contained in <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Disks" title="Handbook:AMD64/Installation/Disks">Preparing the disks</a>, an EFI System Partition with a FAT32 filesystem mounted at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi</span> is shown. Depending on the preferred system configuration, a separate partition for <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> may be desirable, e.g. in the case of filesystem encryption.</div>
+<p>If using <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">fdisk</span> to do the partitioning, start by opening the disk for modification, <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/dev/sda</span> in this example:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>fdisk /dev/sda</code></div><pre>Welcome to fdisk (util-linux 2.38.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+</pre></div>
+<p>A new partition table can be created using <b>g</b>:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">Command (m for help):</code><code>g</code></div><pre>
+
+Created a new GPT disklabel (GUID: 4AB36B49-BAAD-D544-AC45-E3154565018D).</pre></div>
+<p>A new partition can be created using <b>n</b>:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">Command (m for help):</code><code>n</code></div><pre> 
+Partition number (1-128, default 1): 1
+First sector (2048-121012190, default 2048): 
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-121012190, default 121010175): +128M
+ 
+Created a new partition 1 of type 'Linux filesystem' and of size 128 MiB.
+</pre></div>
+<p>Once the partition is created, its Partition Type GUID must be set to that of the EFI System Partition; this can be accomplished with the <b>t</b> option, to change the <i>partition type</i>, and then selecting <b>1</b> to set it to "EFI System Partition":
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">Command (m for help):</code><code>t</code></div><pre> 
+Selected partition 1
+Partition type or alias (type L to list all): 1
+Changed type of partition 'Linux filesystem' to 'EFI System'.
+</pre></div>
+<p>Finally, the changes can be saved by running <b>w</b>:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">Command (m for help):</code><code>w</code></div><pre> 
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+</pre></div>
+<p>Now, the partition can be formatted to use the FAT32 filesystem with:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mkfs.fat -F 32 -n efi-boot /dev/sda1
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount /dev/sda1 /efi
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mkdir -p /efi/EFI</code></div></div>
+<p>To determine the <i>partition UUID</i> (PARTUUID) of the new partition, the following command can be used:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>lsblk -o name,partuuid</code></div><pre>NAME   PARTUUID
+sda
+└─sda1 20f3d6cc-9781-3640-9232-0f5a8c662a60
+</pre></div>
+<p>To create a <a href="https://wiki.gentoo.org/wiki//etc/fstab" title="/etc/fstab">fstab</a> entry for this partition:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/fstab</code></strong><strong>Adding the ESP's mountpoint</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>PARTUUID=20f3d6cc-9781-3640-9232-0f5a8c662a60       /efi      vfat    noauto,noatime  1 2
+</pre></div>
+<h4><span class="mw-headline" id="Installing_GRUB_for_EFI"><span class="anchor" id="Installing_GRUB_for_EFI"></span> Installing GRUB for EFI</span></h4>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Gentoo's <b><span style="font-family: monospace; font-size: 95%; color: #54487a">amd64</span></b> profiles set a reasonable default for the <var>GRUB_PLATFORMS</var> variable, and <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> can usually figure out whether to install GRUB for EFI, for BIOS with MBR or for BIOS with GPT, so setting <var>GRUB_PLATFORMS</var> in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/portage/make.conf</span> is usually not necessary. Users might want to set it so that it matches their computer's platform, to make <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">emerge sys-boot/grub</span> install fewer files. As mentioned before, 32-bit UEFI systems need <code>efi-32</code> set in <var>GRUB_PLATFORMS</var>.</div>
+<p>Before installing GRUB, the EFI System Partition must be mounted. If there is an entry for it in the <a href="https://wiki.gentoo.org/wiki//etc/fstab" title="/etc/fstab">fstab</a>, it can be mounted just by specifying the corresponding mountpoint. Assuming it is <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi</span>, like in the example from the Handbook:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount /efi</code></div></div>
+<p><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> copies GRUB's support files to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub</span>, GRUB's PE32+ executable to the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">\EFI\gentoo</span> directory of the ESP with name <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">grubx64.efi</span> (making its full pathname <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi/EFI/gentoo/grubx64.efi</span> if the ESP is mounted at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi</span>), and calls <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator"><a href="https://wiki.gentoo.org/wiki/Efibootmgr" title="Efibootmgr">efibootmgr</a></span> to add a boot entry.
+</p>
+<div class="alert alert-warning gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-circle"></i> Important</strong><br />In order for <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span>'s call to <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">efibootmgr</span> to succeed, the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">efivarfs</span> pseudo-filesystem must be mounted read-write, before using the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> command. If support for this pseudo-filesystem was built as a module, the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">efivarfs</span> kernel module must be loaded.</div>
+<p>If the ESP is mounted at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/efi</span>:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-install</code></div><pre>Installation finished. No error reported.
+</pre></div>
+<p>If the ESP is mounted elsewhere, an <code>--efi-directory</code> option specifying its mountpoint's pathname must be used. So, if the ESP is mounted at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi</span>, like in the example from the Handbook:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-install --efi-directory=/efi</code></div><pre>Installation finished. No error reported.
+</pre></div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />By default, GRUB installs targeting the platform of system which the command is executed on. If another system platform is used (e. g. if the computer was booted in CSM mode, making the platform BIOS with GPT), the <code>--target=x86_64-efi</code> option (or <code>--target=i386-efi</code> for a 32-bit UEFI target) can be used to target an EFI platform.</div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />The <code>--removable</code> option can be used to install GRUB's PE32+ executable to the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">\EFI\BOOT</span> directory of the ESP with name <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">BOOTX64.efi</span> (making its full pathname <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi/EFI/BOOT/BOOTX64.efi</span> if the ESP is mounted at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi</span>). This is only recommended when installing to a removable medium, or when installing on a computer with limited UEFI firmware that does not support boot entries with arbitrary pathnames very well. See also <a href="https://wiki.gentoo.org/wiki/EFI_System_Partition#Removable_media" title="EFI System Partition">EFI System Partition #Removable media</a>.</div>
+<h3><span class="mw-headline" id="BIOS_with_MBR"><span class="anchor" id="BIOS_with_MBR"></span> BIOS with MBR</span></h3>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />When the system is meant to dual-boot with another (pre-installed) operating system, such as Microsoft Windows, make sure that the Linux bootloader can coexist or dual-boot both operating systems. On PCs it is recommended to use the same boot method as the pre-installed system, e.g. when Windows is using the legacy MBR partitioning, it is also booted in 'legacy BIOS' mode (UEFI calls it CSM, short for Compatibility Support Module, in essence a BIOS emulation). If the mode is changed, e.g. from EFI-CSM (BIOS mode) to native (U)EFI mode, the pre-installed system will most certainly no longer be bootable.</div>
+<p>Make sure that the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> location is available - if this uses a separate partition, make sure that it is mounted:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount /boot</code></div></div>
+<p>Run the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> command to copy the relevant files to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub</span>. On the PC platform, this also installs a boot image to the Master Boot Record (MBR) or a partition's boot sector. If all goes well, after running <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> an output such as the one below is to be expected:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-install /dev/sda</code></div><pre>Installation finished. No error reported.
+</pre></div>
+<p><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> accepts a <code>--target</code> option to set the CPU architecture and system platform. If unspecified, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> will attempt to guess the proper values; on an <b><span style="font-family: monospace; font-size: 95%; color: #54487a">amd64</span></b>/<b><span style="font-family: monospace; font-size: 95%; color: #54487a">x86</span></b> system it will use <code>i386-pc</code> by default. <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> also accepts a <code>--boot-directory</code> option to tell the GRUB installer which directory to look for the boot files. This defaults to the current <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> but is useful when trying to move a root partition.
+</p>
+<h4><span class="mw-headline" id="Partitioning_for_BIOS_with_MBR">Partitioning for BIOS with MBR</span></h4>
+<p>Be sure to leave enough free space before the first partition. Starting the first partition at sector 2048 leaves at least 1 MiB of disk space for the master boot record. It is recommended (but not mandatory) to create an additional partition for GRUB called the <i>BIOS boot partition</i>. This partition just needs to be defined, but not formatted. It is only needed if the system is later migrated to the GPT partition layout. When sticking with MBR, this is not needed.
+</p><p>If the <a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page" title="Handbook:Main Page">Gentoo installation instructions</a> were followed, this BIOS boot partition will already be available.
+</p>
+<h3><span class="mw-headline" id="BIOS_with_GPT"><span class="anchor" id="BIOS_with_GPT"></span> BIOS with GPT</span></h3>
+<div class="alert alert-danger gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-triangle"></i> Warning</strong><br />Although GPT was not designed for legacy BIOS systems, it defines a <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/GUID_Partition_Table#Protective_MBR_(LBA_0)">protective MBR</a> to maintain compatibility and prevent MBR-based utilities from misinterpreting GPT disks. In dual-boot setups with legacy OSes that rely on MBR (common in BIOS-based systems), partitions must be accessed via the MBR. This is achievable using hybrid GPT/MBR partitions, which combine a standard GPT layout with a modified MBR to bridge compatibility. However, this approach comes with some limitations.</div>
+<p>On a BIOS system with GPT partitioning, GRUB relies on a partition called "BIOS boot partition". This partition is not formatted with a file system, instead <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> will copy parts of the boot loader to it. The "BIOS boot partition" is not the same partition as a /boot partition.
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />See also <a href="https://wiki.gentoo.org/wiki/Handbook:X86/Blocks/Disks#What_is_the_BIOS_boot_partition.3F" title="Handbook:X86/Blocks/Disks">What is the BIOS boot partition?</a> in the <b><span style="font-family: monospace; font-size: 95%; color: #54487a">x86</span></b> Handbook.</div>
+<p>If a <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> partition is needed, start by mounting the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> partition:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount /boot</code></div></div>
+<p>If all goes well, after running the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> command an output such as the one below is to be expected:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-install /dev/sda</code></div><pre>Installation finished. No error reported.
+</pre></div>
+<p><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> accepts a <code>--target</code> option to set the CPU architecture and system platform. If unspecified, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> will attempt to guess the correct values; on an <b><span style="font-family: monospace; font-size: 95%; color: #54487a">amd64</span></b>/<b><span style="font-family: monospace; font-size: 95%; color: #54487a">x86</span></b> system in BIOS mode it will use <code>i386-pc</code> by default and in conjunction with a GUID partition table (GPT) a "BIOS boot partition" will be automatically used when present.
+</p><p><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> also accepts a <code>--boot-directory</code> option to tell the GRUB installer which directory to look in for the boot files. This defaults to the current <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> but is useful when trying to move a root partition.
+</p>
+<h4><span class="mw-headline" id="Dual-boot_with_Windows">Dual-boot with Windows</span></h4>
+<p>When the system is meant to dual-boot with Microsoft Windows installed in BIOS mode, full and native GPT partitioning isn't possible. Windows only allows to be booted from an MBR partition when in BIOS mode, which includes the BIOS emulation mode of (U)EFI called 'CSM'. For Linux however it is still possible to use a GPT partitioning scheme even from BIOS (or EFI-CSM) mode, but for the dual-boot with Windows this requires hybrid partitioning: up to four partitions can be defined in both the GPT and the MBR partition tables simultainiously.
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Traditionally x86-PCs used a BIOS as firmware. After the switch to (U)EFI on PCs (around 2005) there used to be a BIOS emulation called 'Compatibility Support Module' (CSM), PCs were therefore still compatible with existing operating systems. On mainstream PCs the EFI-CSM has been phased out since 2020. Even before 2020 some (U)EFI implementations, such as servers, lacked the CSM completely. 'Legacy BIOS mode' is therefore no longer available on modern UEFI systems. UEFI in its native boot mode demands the GUID Partition Table (GPT), a pre-installed operating system will therefore already be using a GPT partitioning scheme.</div>
+<p>An already installed Windows will refuse to boot when the boot mode or the partitioning scheme is changed. Also, older Windows systems don't support GPT (or EFI) at all, demanding that a BIOS or the EFI-CSM along with an MBR must be used. If Windows supports EFI it can be re-installed in the native UEFI mode and the GPT partitioning scheme, as well as Linux; see section <a href="GRUB.html#UEFI_with_GPT" title="GRUB">UEFI with GPT</a>.
+</p><p><a href="https://wiki.gentoo.org/wiki/Hybrid_partition_table" title="Hybrid partition table">Hybrid partitioning</a> between GPT and MBR creates both a valid GPT partition table and a valid MBR partition table at the same time, but limits the total number of hybrid partitions to four because of the four primary partition limit of the MBR. Since the ESP (the <a href="https://wiki.gentoo.org/wiki/EFI_System_Partition" title="EFI System Partition">EFI System Partition</a> holding the EFI bootloaders) takes up one partition this leaves only three shared partitions between MBR and GPT. When one partition is used for Windows and one for Linux, there is only one additional hybrid partition possible, like a separate Linux <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> partition or a shared data partition between the two operating systems.
+</p>
+<div class="alert alert-danger gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-triangle"></i> Warning</strong><br />Normally, a GPT partition table will always also create an MBR partition table which holds only one partition spanning over the whole disk. This will ensure that older software doesn't mistake the disk as 'empty'. The MBR with its protective partition is therefore called a 'protecive MBR' and is part of the GPT specification. By defining hybrid partitions, this protective feature of the GPT is sacrificed! Legacy software will no longer see used space when analyzing the hybrid MBR. Software that is unaware of the GPT and only sees the MBR may mistake undefined disk space as unused and empty space. Data written outside the defined MBR partitions may cause data loss to the underlying GPT partitions!</div>
+<p>If there are two physical disks available to the system, a great solution is to have one disk use the GPT and the other the MBR partitioning scheme. Normally, the Windows installation uses only one partition as 'system partition' and 'boot partition', called 'drive C:'. When in BIOS mode the initial partition for booting, the 'system partition', must be an MBR partition. This applies to every Windows version since Windows XP and includes Windows 10. Since Windows Vista (actually Windows XP x64 Edition) the Microsoft operating system supports accessing GPT partitions. The solution is to relocate the 'system partition' part of an installation to the MBR partitioned disk, and convert the 'boot partition' (the one containing \WINDOWS) into a GPT partitioned disk. Windows can thereafter access all the GPT partitions on the one disk, and will continue to use the MBR partitions (or hybrid partitions) on the disk containing the 'system partition'. The Windows installation (containing \WINDOWS) would be a GPT partition, even when booted in BIOS mode. Windows 11 no longer supports BIOS/CSM/MBR mode.
+</p>
+<h4><span class="mw-headline" id="Partitioning_for_BIOS_with_GPT">Partitioning for BIOS with GPT</span></h4>
+<p>When a GPT partition table is present on the system, a small <i>BIOS boot partition</i> with type <code>EF02</code> (which is different from the <i>EFI System Partition (ESP)</i> which has type <code>EF00</code>) will need to be available. 1 MiB will be enough to work, but 2-4 MiB is a safer option. This BIOS boot partition will hold the stage 2 of the bootloader. BIOS boot partitions do not need to be formatted with a filesystem; the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> command will overwrite any existing filesystem with one of its own.
+</p>
+<div class="alert alert-warning gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-circle"></i> Important</strong><br />The BIOS boot partition is <i>not</i> the same partition that is commonly mounted at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span>. The <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> and BIOS boot are different partitions and should be handled separately. The BIOS boot partition should <i>not</i> be regularly mounted on the system (i.e., it should <i>not</i> be defined in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/fstab</span>). The <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> partition <i>can</i> be regularly mounted with no issues and therefore can be present in the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/fstab</span> file.</div>
+<p>To set a partition as a BIOS partition use the command-line tool <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">parted</span> (<span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-block/parted package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-block/parted"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-block/parted</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>) by typing (change <code>1</code> to the number of the partition to mark as a BIOS boot partition!):
+</p>
+<div class="cmd-box"><div><code style="color: white; user-select: none; font-weight: bold;">(parted)</code><code>set 1 bios_grub on</code></div></div>
+<p>With <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/gptfdisk package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/gptfdisk"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/gptfdisk</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>'s <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">cgdisk</span> utility, this is accomplished by setting the partition type to <code>0xEF02</code> and giving it a label of <code>gptbios</code>.
+</p><p>An EFI System Partition is not required, but it would be sensible to make sure that the BIOS boot partition is large enough to be converted to one, should the system motherboard later be upgraded to an UEFI board.
+</p><p>The following is the output of pressing the <kbd style="color: black; font-size: small; border: 0.2em solid; border-color: #DDD #BBB #BBB #DDD; padding: 0 0.4em; background: #EEE; white-space: nowrap;">p</kbd> key using the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">gdisk</span> utility on a GPT-partitioned disk with both a BIOS boot [0xEF02] partition and an EFI [0xEF00] partition:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>gdisk /dev/sdc</code></div><pre>GPT fdisk (gdisk) version 0.8.1
+ 
+Partition table scan:
+  MBR: protective
+  BSD: not present
+  APM: not present
+  GPT: present
+ 
+Found valid GPT with protective MBR; using GPT.
+ 
+Command (? for help): p
+Disk /dev/sdc: 976773168 sectors, 465.8 GiB
+Logical sector size: 512 bytes
+Disk identifier (GUID): AA369F4D-37A4-4C0D-A357-DC24B99A6337
+Partition table holds up to 128 entries
+First usable sector is 34, last usable sector is 976773134
+Partitions will be aligned on 2048-sector boundaries
+Total free space is 2014 sectors (1007.0 KiB)
+ 
+Number  Start (sector)    End (sector)  Size       Code  Name
+   1            2048       828377087   395.0 GiB   8E00  Linux LVM
+   2       828377088       891291647   30.0 GiB    0700  Microsoft basic data
+   3       891291648       975177727   40.0 GiB    0700  Microsoft basic data
+   4       975177728       976754687   770.0 MiB   8300  Linux filesystem
+   5       976754688       976756735   1024.0 KiB  EF02  BIOS boot partition
+   6       976756736       976773134   8.0 MiB     EF00  EFI System
+ 
+Command (? for help): 
+</pre></div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />The <code>0x</code> hexadecimal prefix does not need to be entered for GPT when using <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">fdisk</span>.</div>
+<p>Using the same setup, the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">parted</span> utility gives output with slightly different syntax:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>parted /dev/sdc</code></div><pre>GNU Parted 3.0
+Using /dev/sdc
+(parted) print
+...
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+  
+Number  Start   End    Size    File system  Name                  Flags
+ 1      1049kB  424GB  424GB                Linux LVM             lvm
+ 2      424GB   456GB  32.2GB               Microsoft basic data
+ 3      456GB   499GB  42.9GB               Microsoft basic data
+ 4      499GB   500GB  807MB   ext2         Linux filesystem
+ 5      500GB   500GB  1049kB               BIOS boot partition   bios_grub
+ 6      500GB   500GB  8396kB               EFI System            boot
+  
+(parted)
+</pre></div>
+<p>Creating partitions in <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">gdisk</span> is straightforward for users familiar with the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">fdisk</span> partitioning utility. After starting <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">gdisk</span>, type <kbd style="color: black; font-size: small; border: 0.2em solid; border-color: #DDD #BBB #BBB #DDD; padding: 0 0.4em; background: #EEE; white-space: nowrap;">n</kbd> (for new) in the main menu, provide beginning and end sectors (if needed), and set the partition type to <code>EF00</code> for an EFI system partition.
+</p><p>Users who have followed the <a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page" title="Handbook:Main Page">Gentoo installation instructions</a> will already have the proper partitioning layout set up.
+</p>
+<h3><span id="Open_Firmware_(IEEE_1275)_on_PowerPC"></span><span class="mw-headline" id="Open_Firmware_.28IEEE_1275.29_on_PowerPC"><span class="anchor" id="Open_Firmware_.28IEEE_1275.29_on_PowerPC"></span> Open Firmware (IEEE 1275) on PowerPC</span></h3>
+<p>See <a href="https://wiki.gentoo.org/wiki/GRUB_on_Open_Firmware_(PowerPC)" title="GRUB on Open Firmware (PowerPC)">GRUB on Open Firmware (PowerPC)</a>.
+</p>
+<h3><span class="mw-headline" id="Install_on_encrypted_partition"><span class="anchor" id="Install_on_encrypted_partition"></span> Install on encrypted partition</span></h3>
+<p>If the whole disk is encrypted, including <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span>, extra steps need to be taken, to allow GRUB to decrypt and mount the device.
+</p><p>The <a rel="nofollow" class="external text" href="https://www.gentoo.org/support/use-flags/">device-mapper</a> <a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag">USE flag</a> needs to be set when emerging the GRUB package. Then the <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/cryptsetup package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/cryptsetup"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/cryptsetup</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package needs to be installed. The partition needs to be encrypted as <a href="https://wiki.gentoo.org/wiki/Dm-crypt#Full_disk_encryption_booting" title="Dm-crypt">luks1</a> partition type.
+</p><p>After installing GRUB on the device, depending on the way the kernel is setup, <a href="https://wiki.gentoo.org/wiki/Dm-crypt_full_disk_encryption#Generating_an_initramfs" class="mw-redirect" title="Dm-crypt full disk encryption">initramfs</a> might need to be modified in order for the system to boot completely. If a <a href="Kernel.html#Distribution_kernels" title="Kernel">distribution kernel</a> is installed, <a href="Dracut.html" title="Dracut">Dracut</a> will be installed on the system as well and can be used to finish the configuration.
+</p>
+<h2><span class="mw-headline" id="Configuration"><span class="anchor" id="Configuration"></span> Configuration</span></h2>
+<p>Once GRUB has been installed, it can be configured to suit the specific system. In most cases, no additional configuration is required.
+</p>
+<h3><span class="mw-headline" id="Main_configuration_file">Main configuration file</span></h3>
+<p>The <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> script is used to generate a grub configuration. It uses the scripts under <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/grub.d/*</span> together with the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/default/grub</span> configuration file to generate the final <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub/grub.cfg</span> - the only configuration file used by GRUB itself. 
+</p>
+<table class="table table-condensed">
+<tbody><tr>
+<th scope="col" width="20%">File
+</th>
+<th scope="col" width="15%">Format
+</th>
+<th scope="col" width="10%">Edits recommended?
+</th>
+<th>Description
+</th></tr>
+
+<tr>
+<td><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr/sbin/grub-mkconfig</span></td>
+<td>POSIX shell script</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No</td>
+<td>Installed as part of the <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-boot/grub package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-boot/grub"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-boot/grub</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>:2 package. Run this script to generate <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub/grub.cfg</span> after configuring the files described below.
+</td></tr>
+
+<tr>
+<td><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub/grub.cfg</span></td>
+<td>GRUB shell script</td>
+<td style="background-color: #F2DEDE; color: black; vertical-align: middle; text-align: left;" class="cell-no"><i class="fa fa-times"></i> No</td>
+<td>The file generated by <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span>. This file is evaluated by GRUB's built-in script interpreter and doesn't necessarily support all POSIX commands or syntax. See the <a rel="nofollow" class="external text" href="https://www.gnu.org/software/grub/manual/grub.html#Shell_002dlike-scripting">scripting reference</a> in the GRUB manual for supported features. Be aware that modifications to this file won't persist to the next time <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> is run.
+</td></tr>
+
+<tr>
+<td><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/grub.d/*</span></td>
+<td>POSIX shell scripts</td>
+<td style="background: #FFB; color: black; vertical-align: middle; text-align: left;" class="cell-partial"><i class="fa fa-minus"></i> Maybe</td>
+<td>Each script under <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/grub.d/*</span> that has its execute bit set is evaluated in sequence, and the stdout is concatenated to form the final <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub/grub.cfg</span> (or whatever file is given to the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> <code>-o</code> option). These scripts use the current system shell and therefore can use any supported syntax. Ideally they should be POSIX-compatible scripts, and the output script must be compatible with the GRUB interpreter. It may be necessary to disable or add scripts. For instance, to add menu items that couldn't be automatically generated.
+</td></tr>
+
+<tr>
+<td><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub/custom.cfg</span></td>
+<td>GRUB shell script</td>
+<td style="background: #FFB; color: black; vertical-align: middle; text-align: left;" class="cell-partial"><i class="fa fa-minus"></i> Maybe</td>
+<td>The /etc/grub.d/41_custom script will reference this file to be read in at boot time if it exists.  This file provides a place to add additional entries or commands and does not require regeneration of the main grub.cfg file.
+</td></tr>
+
+<tr>
+<td><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/default/grub</span></td>
+<td>POSIX shell script</td>
+<td style="background-color: #DFF0D8; color: black; vertical-align: middle; text-align: left;" class="cell-yes"><i class="fa fa-check"></i> Yes</td>
+<td>In most cases this is the only file that should be modified directly. It is mainly used to assign variables used by the scripts in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/grub.d</span> to generate a working configuration file. See <a href="https://wiki.gentoo.org/wiki/GRUB/Configuration_variables" title="GRUB/Configuration variables">GRUB configuration variables</a> or the <a rel="nofollow" class="external text" href="https://www.gnu.org/software/grub/manual/grub.html#Simple-configuration">official reference</a> for supported variables.
+</td></tr>
+
+</tbody></table>
+<p>GRUB does not require the administrator to manually maintain a boot option configuration (as is the case with boot loaders such as GRUB Legacy and <a href="https://wiki.gentoo.org/wiki/LILO" title="LILO">LILO</a>). Instead it can generate its configuration file (<span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub/grub.cfg</span>) using the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> command. This utility will use the scripts in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/grub.d/</span> and the settings in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/default/grub</span>.
+</p>
+<div class="alert alert-danger gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-triangle"></i> Warning</strong><br />The <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> utility does not work properly when using software RAID. Manual configuration of the scripts in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/grub.d/</span> is necessary, as otherwise after installation the system will be left in a non-bootable state.</div>
+<p>After modifying one or more settings, run the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> utility with the <code>-o</code> option pointing to the output file located at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub/grub.cfg</span> (this is GRUB's default output location):
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-mkconfig -o /boot/grub/grub.cfg</code></div><pre>Generating grub.cfg ...
+Found linux image: /boot/vmlinuz-3.3.0-gentoo
+done
+</pre></div>
+<p>Each time the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> utility is called a new configuration will be generated. 
+</p>
+<div class="alert alert-danger gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-triangle"></i> Warning</strong><br />If <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> does not report any found entries then no entries were found. In this case GRUB will offer no boot selections when upon system restart which may be a tricky, time consuming situation to resolve. Make sure the output is satisfactory before restarting the system.</div>
+<h3><span class="mw-headline" id="Setting_configuration_parameters">Setting configuration parameters</span></h3>
+<p>The following variables in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/default/grub</span> are the most common ones to set to control how GRUB will function:
+</p>
+<table class="table">
+<tbody><tr>
+<th>Variable
+</th>
+<th>Explanation
+</th>
+<th>Default value
+</th></tr>
+
+<tr>
+<td><var>GRUB_DEFAULT</var>
+</td>
+<td>Defines the default menu entry selected on boot. May be a numeric index (starts from 0), a menu title, or "saved". Accessing menus requires the value to be put in double quotes and seperated by a bigger than symbol, for example, <code>"1&gt;3"</code> will open the second submenu and the fourth option in it.
+</td>
+<td>Defaults to first detected entry.
+</td></tr>
+
+<tr>
+<td><var>GRUB_TIMEOUT</var>
+</td>
+<td>Delay (in seconds) before booting default menu entry. Set to <code>0</code> to boot immediately or <code>-1</code> to wait indefinitely.
+</td>
+<td>The default is 5 seconds.
+</td></tr>
+
+<tr>
+<td><var>GRUB_CMDLINE_LINUX</var>
+</td>
+<td>Parameters to be passed on the kernel command line for all Linux menu entries. For instance, to support hibernation, users will need to add <code>GRUB_CMDLINE_LINUX="resume=/dev/sdXY"</code> with <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/dev/sdXY</span> being the swap partition.
+</td>
+<td>
+</td></tr>
+
+<tr>
+<td><var>GRUB_CMDLINE_LINUX_DEFAULT</var>
+</td>
+<td>Parameters to be passed on the kernel command line for non-recovery Linux menu entries.
+</td>
+<td>
+</td></tr>
+
+<tr>
+<td><var>GRUB_DEVICE</var>
+</td>
+<td>The initial root device (i.e. the kernel's <code>root=</code> parameter). Set this to override the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> command's root device auto-detection. For example, <code>GRUB_DEVICE=/dev/ram0</code> will force <code>root=/dev/ram0</code> to be used in the kernel command line.
+</td>
+<td>
+</td></tr>
+
+</tbody></table>
+<p>For a more complete list, please refer to the <a href="https://wiki.gentoo.org/wiki/GRUB/Configuration_variables" title="GRUB/Configuration variables">configuration variables</a> sub-page and as the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">info</span> page of <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span>.
+</p><p>After modifying the parameters, regenerate the GRUB configuration file with <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span>.
+</p>
+<h3><span class="mw-headline" id="Enabling_or_disabling_configuration_scripts">Enabling or disabling configuration scripts</span></h3>
+<p>The directory <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/grub.d/</span> contains the scripts that <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> uses to generate a <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">grub.cfg</span> file. By default the contents of this directory should be similar to the following:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>ls /etc/grub.d/</code></div><pre>00_header  10_linux  20_linux_xen  30_os-prober  40_custom  41_custom README
+</pre></div>
+<p>GRUB will use all installed scripts that are marked as executable (which by default, they all are). To disable any of the scripts simply remove the executable bit from the script's file permissions using the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">chmod</span> command. In the following example every script but <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">00_header</span> and <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">10_linux</span> are disabled:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>chmod -x /etc/grub.d/{20_linux_xen,30_os-prober,40_custom,41_custom}</code></div></div>
+<p>After modifying the scripts (or removing the executable bit), regenerate the configuration file using <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span>.
+</p>
+<h3><span class="mw-headline" id="Manipulating_configuration_scripts">Manipulating configuration scripts</span></h3>
+<p>Some features or functionalities are only possible to be exploited by modifying the configuration scripts. For instance, to support dual-booting with FreeBSD, the following manipulation needs to be done.
+</p><p>Change the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/grub.d/40_custom</span> script to:  
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/grub.d/40_custom</code></strong><strong>Adding an entry for dual booting</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>menuentry &quot;FreeBSD&quot; --class freebsd --class bsd --class os {
+ insmod ufs2
+ insmod bsd
+ set root=(hd0,1)
+ kfreebsd /boot/kernel/kernel
+ kfreebsd_loadenv /boot/device.hints
+ set kFreeBSD.vfs.root.mountfrom=ufs:/dev/ada0s1a
+ set kFreeBSD.vfs.root.mountfrom.options=rw
+ set kFreeBSD.hw.psm.synaptics_support=1
+}
+</pre></div>
+<p><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/dev/sda1</span> or <code>(hd0,1)</code> is the partition in which FreeBSD resides. If the normal UFS install was used for the FreeBSD partition then <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/dev/sda1</span> is a container (something like a logical partition). It consists of the swap and root partition. Verify the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">40_custom</span> script is executable by running <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">ls -la /etc/grub.d/40_custom</span>. If the executable bit is not set then set it using the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">chmod u+x 40_custom</span> command.  
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Users familiar with how GRUB Legacy numbered partitions should note partitions starting from 1, not 0, with GRUB.</div>
+<p>Next install GRUB and update the configuration file:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-install /dev/sda
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-mkconfig -o /boot/grub/grub.cfg</code></div></div>
+<h2><span class="mw-headline" id="Extended_features">Extended features</span></h2>
+<p>GRUB 2 has many features that make it a very powerful boot loader. It supports:
+</p>
+<ul><li>Booting from UEFI platforms.</li>
+<li>Booting from GPT partitioned drives without needing a hybrid MBR (hybrid MBR can enabled as needed for compatibility or portability).</li>
+<li>Booting from a <a href="https://wiki.gentoo.org/wiki/Btrfs" title="Btrfs">btrfs</a> formatted <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> partition.</li>
+<li>Booting from a <a href="https://wiki.gentoo.org/wiki/ZFS" title="ZFS">ZFS</a> pool.</li>
+<li>Booting directly from a <a href="https://wiki.gentoo.org/wiki/Btrfs" title="Btrfs">btrfs</a> RAID set without needing an <a href="https://wiki.gentoo.org/wiki/Initramfs" title="Initramfs">initramfs</a> for early mount setup.</li>
+<li>Booting directly from logical volume management (such as <a href="https://wiki.gentoo.org/wiki/LVM" title="LVM">LVM2</a>).</li>
+<li>Booting with support for DM-RAID (RAID 0, 1, 4, 5, 6, 9 and 10).</li>
+<li>Booting from encrypted devices (LUKS).</li></ul>
+<p>Some specific features are explained in more detail next.
+</p>
+<h3><span class="mw-headline" id="Chainloading">Chainloading</span></h3>
+<p>GRUB 2 was built with a truly improved chainload mode when compared to GRUB Legacy. To chainload another boot loader, use the <code>chainloader</code> option.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/grub.d/40_custom</code></strong><strong>Chainloading another bootloader</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>menuentry &quot;Custom Super-bootloader example&quot; {
+     insmod part_msdos
+     insmod chain
+     chainloader (hd1,1)+1
+}
+</pre></div>
+<p>For more information on chainloading, please see the <a href="https://wiki.gentoo.org/wiki/GRUB/Chainloading" title="GRUB/Chainloading">Chainloading</a> sub-page.
+</p>
+<h3><span class="mw-headline" id="Password_protection_of_GRUB_menu">Password protection of GRUB menu</span></h3>
+<p>To secure GRUB so it is not possible for anyone to change boot parameters or use the command line, add a user/password combination to GRUB's configuration files. The program grub-mkpasswd-pbkdf2 generates password hashes for GRUBː
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>grub-mkpasswd-pbkdf2</code></div><pre>Password:
+Reenter password:
+ 
+PBKDF2 hash of your password is grub.pbkdf2.sha512.10000.9CA4611006FE96BC77A...</pre></div>
+<p>Then, add the following toː
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/grub.d/35_auth:</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Grub user</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;set superusers=&quot;&lt;username&gt;&quot;&#39;</span>
+<span class="c1"># Grub password</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;password_pbkdf2 &lt;username&gt; &lt;password-hash&gt;&#39;</span>
+</pre></div>
+<p>The above may lock all Grub menu entries, even the default entry.  In that case, to allow users to boot some menu entries without a password, see <a rel="nofollow" class="external text" href="https://daniel-lange.com/archives/75-Securing-the-grub-boot-loader.html">Securing the grub boot loader</a>.
+</p><p>The permissions for the file need to be properly set before doing grub-mkconfig:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>chmod +x /etc/grub.d/35_auth</code></div></div>
+<h3><span class="mw-headline" id="Using_framebuffer_display">Using framebuffer display</span></h3>
+<p>To have GRUB use a <a href="https://wiki.gentoo.org/wiki/Framebuffer" title="Framebuffer">framebuffer</a> graphical display, re-emerge GRUB with the <code>truetype</code> USE flag enabled. This will install a default True Type font as well as a font conversion utility.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask --newuse sys-boot/grub:2</code></div></div> 
+<p>Proceed to configure the default configuration file located at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/default/grub</span>. For example:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/default/grub</code></strong><strong>Framebuffer related settings</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Set resolution and color depth</span>
+<span class="nv">GRUB_GFXMODE</span><span class="o">=</span>1366x768x32
+<span class="w"> </span>
+<span class="c1"># Keep resolution when loading the kernel</span>
+<span class="nv">GRUB_GFXPAYLOAD_LINUX</span><span class="o">=</span>keep
+<span class="w">  </span>
+<span class="c1"># Set a background image</span>
+<span class="nv">GRUB_BACKGROUND</span><span class="o">=</span><span class="s2">&quot;/boot/grub/bg.png&quot;</span>
+<span class="w"> </span>
+<span class="c1"># Use a custom font, converted using grub-mkfont utility</span>
+<span class="nv">GRUB_FONT</span><span class="o">=</span><span class="s2">&quot;/boot/grub/fonts/roboto.pf2&quot;</span>
+<span class="w"> </span>
+<span class="c1"># Set the menu colors </span>
+<span class="nv">GRUB_COLOR_NORMAL</span><span class="o">=</span><span class="s2">&quot;light-blue/black&quot;</span>
+<span class="nv">GRUB_COLOR_HIGHLIGHT</span><span class="o">=</span><span class="s2">&quot;light-cyan/blue&quot;</span>
+</pre></div>
+<h4><span class="mw-headline" id="HiDPI_displays">HiDPI displays</span></h4>
+<p>On modern displays with high DPI ("HiDPI"), e.g. UHD (3840x2160), the standard font will look very small. If you like to have the same font as the kernel, Terminus can be used, which resembles a BIOS built-in textmode font.
+</p><p>To select this font in-kernel, <code>CONFIG_FONT_TER16x32</code> has to be enabled.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Kernel compiled-in fonts</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>Library routines  ---&gt;
+      [*] Select compiled-in fonts
+      [*] Terminus 16x32 font (not supported by all drivers)
+</pre></div>
+<p>The same font is available as <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-fonts/terminus-font package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-fonts/terminus-font"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-fonts/terminus-font</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, which can then be used for GRUB as well.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask media-fonts/terminus-font</code></div></div> 
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-mkfont -s 32 -o /boot/grub/fonts/terminus32b.pf2 /usr/share/fonts/terminus/ter-u32b.otb</code></div></div>
+<p>In the above example the filename chosen for <code>grub-mkfont</code> output is <code>terminus32b.pf2</code>. The font's path has to be accessible to GRUB during boot, so it should reside in the same mount point as GRUB does; this example uses <code>/boot/grub/fonts</code>. The font then has to be set as <code>GRUB_FONT</code> in <code>/etc/default/grub</code> in order to be used.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/default/grub</code></strong><strong>Framebuffer related settings</strong></div> <div class="mw-highlight mw-highlight-lang-ini mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Use a custom font, converted using grub-mkfont utility</span>
+<span class="na">GRUB_FONT</span><span class="o">=</span><span class="s">&quot;/boot/grub/fonts/terminus32b.pf2&quot;</span>
+</pre></div>
+<p>Updating the GRUB configuration file <code>grub.cfg</code> will then activate the configuration with the new font.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-mkconfig -o /boot/grub/grub.cfg</code></div></div>
+<h2><span class="mw-headline" id="Installing_a_new_kernel">Installing a new kernel</span></h2>
+<p>Whenever a new kernel is installed, GRUB must be reconfigured to recognize it. This can be done using <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span>, as shown below, or can be <a rel="nofollow" class="external text" href="https://www.gnu.org/software/grub/manual/grub/grub.html#Configuration">done manually</a>. 
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Make sure the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> partition is mounted for this step.</div>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-mkconfig -o /boot/grub/grub.cfg</code></div><pre>Generating grub.cfg ...
+Found linux image: /boot/kernel-3.3.8-gentoo
+Found initrd image: /boot/initramfs-genkernel-x86_64-3.3.8-gentoo
+Found linux image: /boot/kernel-3.2.12-gentoo
+Found initrd image: /boot/initramfs-genkernel-x86_64-3.2.12-gentoo
+done
+</pre></div>
+<p>Note that GRUB only needs to be reconfigured, not <i>reinstalled</i> to the boot drive's Master Boot Record (MBR). On the other hand, when GRUB itself has been upgraded it does need to be reinstalled on the boot drive, but usually does not need to be reconfigured.
+</p>
+<h3><span class="mw-headline" id="Automatic_GRUB_reconfiguration">Automatic GRUB reconfiguration</span></h3>
+<p>If <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/installkernel package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/installkernel"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/installkernel</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> is installed and the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the grub USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/grub"><span style="color: MidnightBlue;">grub</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> <a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag">USE flag</a> is set, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> will run automatically whenever the kernel is updated.
+</p>
+<h2><span id="After_updating_sys-boot/grub"></span><span class="mw-headline" id="After_updating_sys-boot.2Fgrub">After updating sys-boot/grub</span></h2>
+<p>After <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-boot/grub package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-boot/grub"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-boot/grub</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> is updated (either explicitly or via a <a href="https://wiki.gentoo.org/wiki/Upgrading_Gentoo" title="Upgrading Gentoo">world update</a>), the core boot files and modules should be reinstalled. This is mentioned in the following post-install message:
+</p>
+<div class="gw-box"><div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #204A87">CODE</span> <strong></strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>* Re-run grub-install to update installed boot code!
+* Re-run grub-mkconfig to update grub.cfg!
+</pre></div></div>
+<p>To re-install these files, follow the steps in the relevant sections:
+</p>
+<ul><li><a href="GRUB.html#Installing_GRUB_for_EFI" title="GRUB">Installing GRUB for EFI</a></li>
+<li><a href="GRUB.html#BIOS_with_MBR" title="GRUB">BIOS with MBR</a></li>
+<li><a href="GRUB.html#BIOS_with_GPT" title="GRUB">BIOS with GPT</a></li>
+<li><a href="GRUB.html#Open_Firmware_.28IEEE_1275.29_on_PowerPC" title="GRUB">Open Firmware (IEEE 1275) on PowerPC</a></li>
+<li><a href="GRUB.html#Install_on_encrypted_partition" title="GRUB">Install on encrypted partition</a></li></ul>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px; background-color: #f5f5f5; border-color: #b8adde; color: #4d4370&#32;;"><strong><i class="fa fa-search-plus"></i> See also</strong><br />For more troubleshooting, please refer to the <a href="https://wiki.gentoo.org/wiki/GRUB/Troubleshooting" title="GRUB/Troubleshooting">Troubleshooting</a> sub-article.</div>
+<p>Most of the issues can be resolved by ensuring that the partition layout is correct. Make sure enough space is available before the first partition of the disk, or optionally make sure that a <i>BIOS boot partition</i> is available. Also verify that <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/grub/grub.cfg</span> was correctly generated with <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span>, or generate one with a custom menu entry.
+</p>
+<h3><span class="mw-headline" id="os-prober_not_running"><span class="anchor" id="os-prober_not_running"></span> os-prober not running</span></h3>
+<p>When running the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> command, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">os-prober</span> is not running as expected, even though it is installed:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-mkconfig -o /boot/grub/grub.cfg</code></div><pre>Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.11.14-gentoo-x86_64
+Found initrd image: /boot/amd-uc.img /boot/initramfs-5.11.14-gentoo-x86_64.img
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+</pre></div>
+<p>This can be corrected by setting the <var>GRUB_DISABLE_OS_PROBER</var> variable to <code>false</code> in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/default/grub</span> file.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/default/grub</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">GRUB_DISABLE_OS_PROBER</span><span class="o">=</span><span class="nb">false</span>
+</pre></div>
+<p>Upon the next run, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-mkconfig</span> should find additional bootable partitions:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-mkconfig -o /boot/grub/grub.cfg</code></div><pre>Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.11.14-gentoo-x86_64
+Found initrd image: /boot/amd-uc.img /boot/initramfs-5.11.14-gentoo-x86_64.img
+Warning: os-prober will be executed to detect other bootable partitions.
+It's output will be used to detect bootable binaries on them and create new boot entries.
+Found Windows Boot Manager on /dev/nvme0n1p2@/efi/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+</pre></div>
+<h3><span class="mw-headline" id="Motherboard_firmware_not_finding_the_.EFI_file">Motherboard firmware not finding the .EFI file</span></h3>
+<p>Some especially older (pre-2020) motherboards from certain manufacturers seem to only support one location for PE32+ files in the EFI System Partition (ESP): the <a href="https://wiki.gentoo.org/wiki/EFI_System_Partition#Removable_media" title="EFI System Partition">fallback or removable media path</a>. If this seems to be the case, GRUB's <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;"></span> file can be renamed and moved to the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">\EFI\BOOT</span> directory of the ESP. First, make sure the ESP is mounted. Presuming it is mounted at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/efi</span>, as suggested in the Handbook, execute:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mkdir -p /efi/EFI/BOOT
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>cp /efi/EFI/gentoo/grubx64.efi /efi/EFI/BOOT/BOOTX64.efi
+</code></div></div>
+<p>On a 32-bit EFI implementation use name <code>BOOTIA32.efi</code> instead:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>cp /efi/EFI/gentoo/grubia32.efi /efi/EFI/BOOT/BOOTIA32.efi
+</code></div></div>
+<p>Alternatively, the <code>--removable</code> option of <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">grub-install</span> can be used to generate this file automatically:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>grub-install --efi-directory=/efi --removable</code></div><pre>Installation finished. No error reported.
+</pre></div>
+<p>This should aid the motherboard firmware in loading GRUB's executable. Reboot the system to see if the firmware now correctly loads GRUB.
+</p>
+<h3><span class="mw-headline" id="os-prober_and_UEFI_in_chroot">os-prober and UEFI in chroot</span></h3>
+<p>The <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-boot/os-prober package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-boot/os-prober"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-boot/os-prober</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> utility is used to discover alternate installs, such as Microsoft Windows. To function properly, it needs to have access to information from the live environment's udev to test for the EFI System Partition.
+</p><p>Run these commands in the host environment to provide the required files (example shows Gentoo mounted on <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/mnt/gentoo</span> like in the Handbook):
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mkdir -p /mnt/gentoo/run/udev
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount -o bind /run/udev /mnt/gentoo/run/udev
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount --make-rslave /mnt/gentoo/run/udev
+</code></div></div>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="https://wiki.gentoo.org/wiki/Secure_Boot/GRUB" title="Secure Boot/GRUB">Secure Boot/GRUB</a> — This article explains how to set up <a class="mw-selflink selflink">GRUB</a> to work with <a href="https://wiki.gentoo.org/wiki/Secure_Boot" title="Secure Boot">Secure Boot</a>.</li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB2_Migration" title="GRUB2 Migration">GRUB2 Migration</a> — provides instructions for smooth migration from <a href="https://wiki.gentoo.org/wiki/GRUB_Legacy" title="GRUB Legacy">GRUB Legacy</a> to <a class="mw-selflink selflink">GRUB</a>.</li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/Advanced_storage" title="GRUB/Advanced storage">Advanced storage subarticle</a> the necessary steps are documented on how to install and use GRUB on more advanced storage situations, such as software RAID, logical volumes or encrypted file systems.</li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/Chainloading" title="GRUB/Chainloading">Chainloading subarticle</a> the use of GRUB to boot other boot loaders is described. This is important to read when dual-booting systems, or when GRUB needs to be configured to boot ISO files.</li>
+<li><a href="https://wiki.gentoo.org/wiki/GRUB/Configuration_variables" title="GRUB/Configuration variables">Configuration variables subarticle</a> an exhaustive list of GRUB configuration variables, as used by <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/default/grub</span>, is documented.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Hybrid_partition_table" title="Hybrid partition table">Hybrid partition table</a> the use of a mixed MBR/GPT setup is documented, as well as how to use such hybrid partition layout with GRUB.</li>
+<li>In <a href="https://wiki.gentoo.org/wiki/GRUB/Troubleshooting" title="GRUB/Troubleshooting">Troubleshooting subarticle</a> a list of common GRUB errors (with their solutions) is presented.</li></ul>
+<h2><span class="mw-headline" id="External_resources">External resources</span></h2>
+<p>For more information, please see:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://www.gnu.org/software/grub/manual/grub.html">GNU GRUB 2 manual page</a>
+<ul><li><a rel="nofollow" class="external text" href="https://www.gnu.org/software/grub/manual/grub.html#Network">Network (PXE) section of GRUB</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="https://www.rodsbooks.com/gdisk/bios.html">Legacy BIOS issues with GPT article</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.rodsbooks.com/gdisk/hybrid.html">GPT and Hybrid MBR article</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.rodsbooks.com/gdisk/">GPT fdisk utility page</a></li>
+<li><a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/GRUB2">Arch Linux GRUB 2 wiki article</a></li>
+<li><a rel="nofollow" class="external text" href="https://fedoraproject.org/wiki/GRUB_2?rd=Grub2#Encountering_the_dreaded_GRUB_2_boot_prompt">Fedora GRUB2 wiki article&#160;: Encountering the dreaded GRUB2 boot prompt</a></li>
+<li><a rel="nofollow" class="external text" href="https://help.ubuntu.com/community/UEFIBooting">ubuntu UEFI booting help</a></li>
+<li><a rel="nofollow" class="external text" href="https://unix.stackexchange.com/questions/109272/dualboot-freebsd-gentoo-with-grub2-mbr">https://unix.stackexchange.com/questions/109272/dualboot-freebsd-gentoo-with-grub2-mbr</a></li>
+<li><a rel="nofollow" class="external text" href="https://daniel-lange.com/archives/75-Securing-the-grub-boot-loader.html">A blog post entry on locking specific GRUB2 boot entries with a password</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+</div>
+<!-- 
+NewPP limit report
+Cached time: 20260924220728
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.002 seconds
+CPU time usage: 0.311 seconds
+Real time usage: 0.443 seconds
+Preprocessor visited node count: 9980/1000000
+Post‐expand include size: 187264/4194304 bytes
+Template argument size: 56986/4194304 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 39/150
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 15611/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 5.25 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  276.006      1 -total
+ 27.49%   75.868     19 Template:Anchor
+ 27.17%   74.999      1 Template:InfoBox_stack
+ 22.38%   61.771      6 Template:InfoBox
+ 17.30%   47.750      1 Template:InfoBox_homepage
+ 14.46%   39.901      1 Template:InfoBox_header
+ 13.87%   38.282     62 Template:Link
+ 11.39%   31.435     37 Template:RootCmd
+  9.65%   26.635     40 Template:GenericCmd
+  8.21%   22.658      3 Template:See_also
+-->
+
+<!-- Saved in parser cache with key gentoo?hwiki:pcache:idhash:1001-0!dateformat=default and timestamp 20260924220727 and revision id 1453919
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.gentoo.org/index.php?title=GRUB&amp;oldid=1453919">https://wiki.gentoo.org/index.php?title=GRUB&amp;oldid=1453919</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.gentoo.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://wiki.gentoo.org/wiki/Category:Bootloaders" title="Category:Bootloaders">Bootloaders</a></li></ul></div></div>						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-7">
+											<div class="spacer"></div>
+						<ul id="f-list">
+							<li id="lastmod>"> This page was last edited on 21 September 2026, at 03:40.</li><li id="privacy>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Privacy_policy" class="mw-redirect" title="Gentoo Wiki:Privacy policy">Privacy policy</a></li><li id="about>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:About" title="Gentoo Wiki:About">About Gentoo Wiki</a></li><li id="disclaimer>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:General_disclaimer" title="Gentoo Wiki:General disclaimer">Disclaimers</a></li>						</ul>
+									</div>
+				<div class="col-xs-12 col-md-3">
+					<!-- No questions or comments, the Wiki has enough information on how to contact us. -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<ul class="footerlinks three-icons">
+						<li><a href="https://twitter.com/gentoo" title="@Gentoo on Twitter"><span class="fa fa-twitter fa-fw"></span></a></li>
+						<li><a href="https://www.facebook.com/gentoo.org" title="Gentoo on Facebook"><span class="fa fa-facebook fa-fw"></span></a></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-xs-9 col-md-9">
+					<strong>&copy; 2001&ndash;2026 Gentoo Authors</strong><br />
+					<small>
+						Gentoo is a trademark of the Gentoo Foundation, Inc. and of Förderverein Gentoo e.V.
+						The contents of this document, unless otherwise expressly stated, are licensed under the
+						<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC-BY-SA-4.0</a> license.
+						The <a href="https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html">Gentoo Name and Logo Usage Guidelines</a> apply.
+					</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script>
+function defer(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function() { defer(method) }, 50);
+    }
+}
+defer(function() { mw.loader.load( 'https://assets.gentoo.org/tyrian/bootstrap.min.js'); });
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.002},"limitreport":{"cputime":"0.311","walltime":"0.443","ppvisitednodes":{"value":9980,"limit":1000000},"postexpandincludesize":{"value":187264,"limit":4194304},"templateargumentsize":{"value":56986,"limit":4194304},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":39,"limit":150},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":15611,"limit":5000000},"timingprofile":["100.00%  276.006      1 -total"," 27.49%   75.868     19 Template:Anchor"," 27.17%   74.999      1 Template:InfoBox_stack"," 22.38%   61.771      6 Template:InfoBox"," 17.30%   47.750      1 Template:InfoBox_homepage"," 14.46%   39.901      1 Template:InfoBox_header"," 13.87%   38.282     62 Template:Link"," 11.39%   31.435     37 Template:RootCmd","  9.65%   26.635     40 Template:GenericCmd","  8.21%   22.658      3 Template:See_also"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":5505024,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20260924220728","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":55});});</script></body></html>

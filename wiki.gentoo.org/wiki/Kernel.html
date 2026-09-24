@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Kernel - Gentoo wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"e44a509468acb7a5642ece7a","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Kernel","wgTitle":"Kernel","wgCurRevisionId":1453352,"wgRevisionId":1453352,"wgArticleId":79,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Kernel","Meta"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Kernel","wgRelevantArticleId":79,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgULSCurrentAutonym":"English","wgPageFormsTargetName":null,
+"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":!1,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":!1,"srfFilteredConfig":null,"wgULSPosition":"personal","wgULSisCompactLinksEnabled":!0,"wgTranslatePageTranslation":"source"};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.translate":"ready","ext.translate.tag.languages":"ready","mediawiki.toc.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","ext.uls.pt":
+"ready","ext.srf.styles":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.tyrian.styles":"ready","skins.tyrian.icons":"ready"};RLPAGEMODULES=["ext.gentooPackages","ext.smw.style","ext.smw.tooltips","smw.entityexaminer","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","ext.uls.compactlinks","ext.uls.interface"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.smw.style|ext.smw.tooltip.styles|ext.translate|ext.translate.tag.languages|ext.uls.pt|mediawiki.skinning.content.externallinks|mediawiki.skinning.interface|mediawiki.toc.styles|skins.tyrian.icons,styles&amp;only.css"/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.srf.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<script async="" src="../load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=tyrian"></script>
+<link rel="stylesheet" href="https://assets.gentoo.org/tyrian/bootstrap.min.css"/><link rel="stylesheet" href="https://assets.gentoo.org/tyrian/tyrian.min.css"/><style>#mw-indicator-mw-helplink {display:none;}</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=site.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<meta name="generator" content="MediaWiki 1.35.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#54487a"/>
+<link rel="alternate" type="application/rdf+xml" title="Kernel" href="https://wiki.gentoo.org/index.php?title=Special:ExportRDF/Kernel&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="https://www.gentoo.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.gentoo.org/opensearch_desc.php" title="Gentoo Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.gentoo.org/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Kernel rootpage-Kernel skin-tyrian action-view">	<div class="mw-jump sr-only">
+		Jump to:		<a href="Kernel.html#top">content</a>
+	</div>
+	<header>
+		<div class="site-title">
+			<div class="container">
+				<div class="row">
+					<div class="site-title-buttons">
+						<div class="btn-group btn-group-sm">
+							<a href="https://get.gentoo.org/" role="button" class="btn get-gentoo"><span class="fa fa-fw fa-download"></span> <strong>Get Gentoo!</strong></a>
+							<div class="btn-group btn-group-sm">
+								<a class="btn gentoo-org-sites dropdown-toggle" data-toggle="dropdown" data-target="#" href="Kernel.html#">
+									<span class="fa fa-fw fa-map-o"></span> <span class="hidden-xs">gentoo.org sites</span> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="https://www.gentoo.org/" title="Gentoo's main website"><span class="fa fa-home fa-fw"></span> gentoo.org</a></li>
+									<li><a href="https://wiki.gentoo.org/" title="Find and contribute documentation"><span class="fa fa-file-text-o fa-fw"></span> Wiki</a></li>
+									<li><a href="https://bugs.gentoo.org/" title="Discover and report issues with Gentoo"><span class="fa fa-bug fa-fw"></span> Bugs</a></li>
+									<li><a href="https://packages.gentoo.org/" title="Find software to install"><span class="fa fa-hdd-o fa-fw"></span> Packages</a></li>
+									<li><a href="https://forums.gentoo.org/" title="Discuss with the community"><span class="fa fa-comments-o fa-fw"></span> Forums</a></li>
+									<li class="divider"></li>
+									<li><a href="https://planet.gentoo.org/" title="Find out what's going on in the dev community"><span class="fa fa-rss fa-fw"></span> Planet</a></li>
+									<li><a href="https://archives.gentoo.org/" title="Read up on past discussions"><span class="fa fa-archive fa-fw"></span> Archives</a></li>
+									<li><a href="https://devmanual.gentoo.org/" title="Read the development guide"><span class="fa fa-book fa-fw"></span> Devmanual</a></li>
+									<li><a href="https://gitweb.gentoo.org/" title="Browse our source code in Gitweb"><span class="fa fa-code fa-fw"></span> Gitweb</a></li>
+									<li class="divider"></li>
+									<li><a href="https://infra-status.gentoo.org/" title="Get updates on the services provided by the Gentoo infra team"><span class="fa fa-server fa-fw"></span> Infra status</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="https://wiki.gentoo.org/" title="Back to the homepage" class="site-logo">
+							<img src="https://assets.gentoo.org/tyrian/site-logo.png"  alt="Gentoo Linux Logo" srcset="https://assets.gentoo.org/tyrian/site-logo.svg">
+						</a>
+						<span class="site-label">Wiki</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="tyrian-navbar" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-main-collapse">
+						<ul class="nav navbar-nav">
+							<li id="n-mainpage-description"><a href="https://wiki.gentoo.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.gentoo.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-help"><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li><li id="n-Contribute.21"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Contributor%27s_guide">Contribute!</a></li>			<li class="dropdown">
+				<a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Menu-Documentation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu"><li id="n-Gentoo-Handbook"><a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page">Gentoo Handbook</a></li><li id="n-Gentoo-FAQ"><a href="https://wiki.gentoo.org/wiki/FAQ">Gentoo FAQ</a></li><li role="presentation" class="divider"></li><li id="n-Core-system"><a href="https://wiki.gentoo.org/wiki/Category:Core_system">Core system</a></li><li id="n-Hardware"><a href="https://wiki.gentoo.org/wiki/Category:Hardware">Hardware</a></li><li id="n-Software"><a href="https://wiki.gentoo.org/wiki/Category:Software">Software</a></li><li id="n-Desktop"><a href="https://wiki.gentoo.org/wiki/Category:Desktop">Desktop</a></li><li id="n-Server-.26-Security"><a href="https://wiki.gentoo.org/wiki/Category:Server_and_Security">Server &amp; Security</a></li><li id="n-Project-.26-Community"><a href="https://wiki.gentoo.org/wiki/Category:Project_and_Community">Project &amp; Community</a></li><li role="presentation" class="divider"></li><li id="n-Gentoo-Projects"><a href="https://wiki.gentoo.org/wiki/Project:Gentoo">Gentoo Projects</a></li>				</ul>
+			</li>						</ul>
+						<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+			<a href="Kernel.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i> Tools <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="t-whatlinkshere"><a href="https://wiki.gentoo.org/wiki/Special:WhatLinksHere/Kernel" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.gentoo.org/wiki/Special:RecentChangesLinked/Kernel" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.gentoo.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.gentoo.org/index.php?title=Kernel&amp;oldid=1453352" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.gentoo.org/index.php?title=Kernel&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="https://wiki.gentoo.org/wiki/Special:Browse/:Kernel" rel="search">Browse properties</a></li>			</ul>
+		</li>
+			<li class="dropdown">
+			<a href="Kernel.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				<span class="fa fa-user" aria-label="Personal tools"></span>
+				User				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="pt-uls" class="active"><a href="Kernel.html#" class="uls-trigger">English</a></li><li id="pt-createaccount"><a href="https://wiki.gentoo.org/index.php?title=Special:CreateAccount&amp;returnto=Kernel" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.gentoo.org/index.php?title=Special:UserLogin&amp;returnto=Kernel" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>			</ul>
+		</li>
+								</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="navbar navbar-grey navbar-stick" id="wiki-actions" role="navigation">
+			<div class="container"><div class="row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gw-toolbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="gw-toolbar">
+					<ul class="nav navbar-nav">
+					<li id="ca-nstab-main" class="selected active"><a href="Kernel.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="https://wiki.gentoo.org/wiki/Talk:Kernel" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>					</ul>
+							<form action="https://wiki.gentoo.org/index.php" id="searchform" class="navbar-form navbar-right" role="search">
+			<input type='hidden' name="title" value="Special:Search"/>
+
+				<div class="input-group">
+					<input type="search" name="search" placeholder="Search" title="Search Gentoo Wiki [f]" accesskey="f" id="searchInput" class="form-control"/>					<div class="input-group-btn"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton btn btn-default"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton btn btn-default"/></div>
+				</div>
+		</form>
+						<ul class="nav navbar-nav navbar-right">
+					<li id="ca-viewsource"><a href="https://wiki.gentoo.org/index.php?title=Kernel&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li class="dropdown">
+						<a href="Kernel.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">more <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+					<li id="ca-history"><a href="https://wiki.gentoo.org/index.php?title=Kernel&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>							</ul>
+						</li>
+					</ul>
+				</div>
+			</div></div>
+		</nav>
+		</header>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="content" class="mw-body" role="main">
+						<a id="top"></a>
+						
+						<h1 id="firstHeading" class="first-header" lang="en">
+							<span dir="auto">Kernel</span>
+						</h1>
+
+						<div id="bodyContent" class="mw-body-content">
+							<div id="siteSub">From Gentoo Wiki</div>
+							<div id="contentSub">
+															</div>
+												                <div id="jump-to-nav"></div>
+					                <a class="mw-jump-link" href="Kernel.html#mw-head">Jump to:navigation</a>
+					                <a class="mw-jump-link" href="Kernel.html#searchInput">Jump to:search</a>
+
+							<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-pt-translate-header noprint nomobile" dir="ltr" lang="en">This page contains <span class="plainlinks"><a rel="nofollow" class="external text" href="https://wiki.gentoo.org/index.php?title=Kernel&amp;oldid=1418811&amp;diff=1453352">changes</a></span> which are not marked for translation.</div><div class="mw-parser-output"><div class="mw-pt-languages noprint" lang="en" dir="ltr"><div class="mw-pt-languages-label">Other languages:</div><ul class="mw-pt-languages-list"><li><a href="https://wiki.gentoo.org/wiki/Kernel/de" class="mw-pt-progress mw-pt-progress--med" title="Kernel (42% translated)" lang="de" dir="ltr">Deutsch</a></li>
+<li><span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en" dir="ltr">English</span></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/tr" class="mw-pt-progress mw-pt-progress--stub" title="Çekirdek (4% translated)" lang="tr" dir="ltr">Türkçe</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/es" class="mw-pt-progress mw-pt-progress--high" title="El Núcleo (Kernel) (65% translated)" lang="es" dir="ltr">español</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/fr" class="mw-pt-progress mw-pt-progress--complete" title="Noyau (84% translated)" lang="fr" dir="ltr">français</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/it" class="mw-pt-progress mw-pt-progress--stub" title="Kernel (7% translated)" lang="it" dir="ltr">italiano</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/hu" class="mw-pt-progress mw-pt-progress--complete" title="Kernel (85% translated)" lang="hu" dir="ltr">magyar</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/pl" class="mw-pt-progress mw-pt-progress--stub" title="Kernel/pl (0% translated)" lang="pl" dir="ltr">polski</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/pt-br" class="mw-pt-progress mw-pt-progress--stub" title="Kernel (7% translated)" lang="pt-BR" dir="ltr">português do Brasil</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/ru" class="mw-pt-progress mw-pt-progress--high" title="Ядро (62% translated)" lang="ru" dir="ltr">русский</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/zh-cn" class="mw-pt-progress mw-pt-progress--med" title="内核 (42% translated)" lang="zh-Hans-CN" dir="ltr">中文（中国大陆）‎</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/ja" class="mw-pt-progress mw-pt-progress--complete" title="カーネル (100% translated)" lang="ja" dir="ltr">日本語</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Kernel/ko" class="mw-pt-progress mw-pt-progress--stub" title="Kernel (7% translated)" lang="ko" dir="ltr">한국어</a></li></ul></div>
+<div id="infobox-stack" class="list-group" style="width: 25em; float: right; clear: right; font-size: 90%; margin-left: 1em;">
+<div class="list-group-item text-center" style="padding-top: 3px; padding-bottom: 3px; background-color: #463C65; color: white;"><b>Resources</b></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><a href="https://wiki.gentoo.org/wiki/Project:Kernel" title="Project:Kernel"><img alt="Gentoo peach graphic" src="../images/thumb/a/ad/Gentoo-logo-peach.svg/25px-Gentoo-logo-peach.svg.png" decoding="async" width="25" height="26" srcset="../images/thumb/a/ad/Gentoo-logo-peach.svg/38px-Gentoo-logo-peach.svg.png 1.5x, ../images/thumb/a/ad/Gentoo-logo-peach.svg/50px-Gentoo-logo-peach.svg.png 2x" /></a></span><span><a href="https://wiki.gentoo.org/wiki/Project:Kernel" title="Project:Kernel">Project</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-home fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://www.kernel.org">Home</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-file-text fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://www.kernel.org/doc/html/latest/">Official documentation</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-wikipedia-w fa-fw fa-2x"></span></span><span><a href="https://en.wikipedia.org/wiki/Linux_kernel" class="extiw" title="wikipedia:Linux kernel">Wikipedia</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-github fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://github.com/torvalds/linux">GitHub</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-code-fork fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git">GitWeb</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-bug fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://bugzilla.kernel.org/">Bugs (upstream)</a></span></div>
+</div>
+<div class="thumb tright"><div class="thumbinner" style="width:252px;"><a href="https://wiki.gentoo.org/wiki/File:Tux.png" class="image"><img alt="" src="../images/thumb/a/af/Tux.png/250px-Tux.png" decoding="async" width="250" height="302" class="thumbimage" srcset="../images/thumb/a/af/Tux.png/375px-Tux.png 1.5x, ../images/a/af/Tux.png 2x" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://wiki.gentoo.org/wiki/File:Tux.png" class="internal" title="Enlarge"></a></div>Tux, the Linux mascot.</div></div></div>
+<p>The <b><a href="https://en.wikipedia.org/wiki/Linux_kernel" class="extiw" title="wikipedia:Linux kernel">Linux</a> kernel</b> is a central part of the Gentoo <a href="https://en.wikipedia.org/wiki/operating_system" class="extiw" title="wikipedia:operating system">operating system (OS)</a>. It provides essential OS facilities such as <a href="https://en.wikipedia.org/wiki/Device_driver" class="extiw" title="wikipedia:Device driver">device drivers</a>, <a href="https://wiki.gentoo.org/wiki/Terminal_emulator#Virtual_consoles_and_switching" title="Terminal emulator">virtual consoles</a>, <a href="https://en.wikipedia.org/wiki/memory_management" class="extiw" title="wikipedia:memory management">memory management</a>, <a href="https://en.wikipedia.org/wiki/Scheduling_(computing)" class="extiw" title="wikipedia:Scheduling (computing)">task scheduling</a>, <a href="https://en.wikipedia.org/wiki/inter-process_communication" class="extiw" title="wikipedia:inter-process communication">inter-process communication</a>, <a href="https://en.wikipedia.org/wiki/Virtual_file_system" class="extiw" title="wikipedia:Virtual file system">virtual filesystems</a>, etc.
+</p><p>Though Linux is a <a href="https://en.wikipedia.org/wiki/monolithic_kernel" class="extiw" title="wikipedia:monolithic kernel">monolithic kernel</a>, its <a href="https://en.wikipedia.org/wiki/Loadable_kernel_module" class="extiw" title="wikipedia:Loadable kernel module">modular design</a> means that code will only ever be loaded if required, allowing modules to be available without affecting performance or memory usage. Linux kernel deployments can therefore provide many device drivers and services, with little to no penalty on performance: unneeded modules will simply be ignored.
+</p><p>The kernel is predominantly written in <a href="https://wiki.gentoo.org/wiki/C" title="C">C</a>, and also uses <a href="https://wiki.gentoo.org/wiki/Assembly_Language" title="Assembly Language">assembly</a> and <a href="https://wiki.gentoo.org/wiki/Rust" title="Rust">Rust</a>.
+</p>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px; background-color: #f5f5f5; border-color: #b8adde; color: #4d4370&#32;;"><strong><i class="fa fa-search-plus"></i> See also</strong><br />See also the <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel" title="Handbook:AMD64/Installation/Kernel">handbook</a> on installing and setting up a kernel.</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Kernel.html#Which_kernel_to_install.3F"><span class="tocnumber">1</span> <span class="toctext">Which kernel to install?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Kernel.html#Distribution_kernels"><span class="tocnumber">1.1</span> <span class="toctext">Distribution kernels</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="Kernel.html#gentoo-kernel-bin"><span class="tocnumber">1.1.1</span> <span class="toctext">gentoo-kernel-bin</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="Kernel.html#gentoo-kernel"><span class="tocnumber">1.1.2</span> <span class="toctext">gentoo-kernel</span></a>
+<ul>
+<li class="toclevel-4 tocsection-5"><a href="Kernel.html#Code_snippet"><span class="tocnumber">1.1.2.1</span> <span class="toctext">Code snippet</span></a></li>
+<li class="toclevel-4 tocsection-6"><a href="Kernel.html#savedconfig"><span class="tocnumber">1.1.2.2</span> <span class="toctext">savedconfig</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="Kernel.html#gentoo-sources"><span class="tocnumber">1.2</span> <span class="toctext">gentoo-sources</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="Kernel.html#Installing_kernel_source_code"><span class="tocnumber">2</span> <span class="toctext">Installing kernel source code</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="Kernel.html#USE_flags"><span class="tocnumber">2.1</span> <span class="toctext">USE flags</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="Kernel.html#Emerge"><span class="tocnumber">2.2</span> <span class="toctext">Emerge</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="Kernel.html#Alternative_kernels"><span class="tocnumber">2.2.1</span> <span class="toctext">Alternative kernels</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="Kernel.html#Searching_all_kernel_packages"><span class="tocnumber">2.2.2</span> <span class="toctext">Searching all kernel packages</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="Kernel.html#Managing_the_kernel"><span class="tocnumber">3</span> <span class="toctext">Managing the kernel</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="Kernel.html#Configuration"><span class="tocnumber">3.1</span> <span class="toctext">Configuration</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="Kernel.html#Upgrade"><span class="tocnumber">3.2</span> <span class="toctext">Upgrade</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="Kernel.html#Removal"><span class="tocnumber">3.3</span> <span class="toctext">Removal</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="Kernel.html#Troubleshooting"><span class="tocnumber">4</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="Kernel.html#Kernel_configuration_support"><span class="tocnumber">4.1</span> <span class="toctext">Kernel configuration support</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="Kernel.html#Kernel_command-line_parameters"><span class="tocnumber">4.2</span> <span class="toctext">Kernel command-line parameters</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="Kernel.html#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="Kernel.html#External_resources"><span class="tocnumber">6</span> <span class="toctext">External resources</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Which_kernel_to_install?"></span><span class="mw-headline" id="Which_kernel_to_install.3F"><span class="anchor" id="Which_kernel_to_install.3F"></span> Which kernel to install?</span></h2>
+<p>Gentoo provides a choice of methods to get a kernel up and running, from a standard binary kernel as would be supplied by most distributions to a custom configured and compiled kernel.
+</p>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-check-circle"></i> Tip</strong><br />When starting out, the <a href="https://wiki.gentoo.org/wiki/Project:Distribution_Kernel" title="Project:Distribution Kernel">gentoo-kernel-bin</a> provides a quick and easy way to get a kernel up and running, while still providing a light, high performance kernel (just like any modern distribution would). Once a system is installed and functioning correctly, a different kernel may be selected if needed. The <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-kernel-bin package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel-bin"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-kernel-bin</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> can be kept around in case of issues booting a custom kernel.</div>
+<h3><span class="mw-headline" id="Distribution_kernels"><span class="anchor" id="Distribution_kernels"></span> Distribution kernels</span></h3>
+<div class="hatnote" style="padding-left: 1.6em;margin-bottom: 0.5em;font-style: italic;">Main article: 
+<a href="https://wiki.gentoo.org/wiki/Distribution_Kernel" title="Distribution Kernel">Distribution Kernel</a></div>
+<p>The <a href="https://wiki.gentoo.org/wiki/Project:Distribution_Kernel" title="Project:Distribution Kernel">distribution kernel project</a> provides packages to install and manage kernels through <a href="Portage.html" title="Portage">Portage</a>. These kernels are compiled (if needed) and installed with just an <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">emerge</span> command like any other package, which can lessen the administrative burden. Kernel updates are performed when <a href="https://wiki.gentoo.org/wiki/Upgrading_Gentoo" title="Upgrading Gentoo">updating the system</a> (e.g. <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">emerge -avuDN @world</span>).
+</p><p>These kernels come with a default configuration that should "just work" for most systems. For users not interested in configuring their own kernel from scratch, these kernels can get things up and running quicker:
+</p>
+<h4><span class="mw-headline" id="gentoo-kernel-bin"><span class="anchor" id="gentoo-kernel-bin"></span> gentoo-kernel-bin</span></h4>
+<p>The <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-kernel-bin package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel-bin"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-kernel-bin</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> is a binary package containing a precompiled kernel, allowing for faster installation. This package is  a precompiled version of the gentoo-kernel package with a default configuration.
+</p>
+<h4><span class="mw-headline" id="gentoo-kernel"><span class="anchor" id="gentoo-kernel"></span> gentoo-kernel</span></h4>
+<p>The <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-kernel package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-kernel</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package provides a kernel that will be compiled and installed when the package is emerged. This comes with a default configuration that should work out of the box on most systems.
+</p><p><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-kernel package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-kernel</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> can also be configured to use a custom kernel config, which simplifies automation compared to using <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>.
+</p><p>Below are some examples of this:
+</p>
+<h5><span class="mw-headline" id="Code_snippet">Code snippet</span></h5>
+<p>If only a few config lines need to be changed, it is possible to apply the changes using <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.config</span> files in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/kernel/config.d</span>. 
+</p><p>This could be something like applying CONFIG_X86_NATIVE_CPU=y to tune performance to the build system, or setting CONFIG_BLK_DEV_NVME=y to allow booting without <a href="https://wiki.gentoo.org/wiki/Initramfs" title="Initramfs">initramfs</a>.
+</p><p>This process is described in more detail in the <a href="https://wiki.gentoo.org/wiki/Distribution_Kernel#Using_.2Fetc.2Fkernel.2Fconfig.d" title="Distribution Kernel">Distribution kernel config.d</a> section
+</p>
+<h5><span class="mw-headline" id="savedconfig">savedconfig</span></h5>
+<p>When a completely custom kernel config is required, it is usually better to use the <code>savedconfig</code> USE flag.
+</p><p>This allows a kernel config made with <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> to be transferred to the distribution and kernel allows that config to applied to future updates. 
+</p><p>Some consider this a better way to manage the kernel than <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, because <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-kernel package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-kernel</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> can automatically trigger portage rebuilds of out-of-tree modules such as <span style="white-space: nowrap;" class="plainlinks" title="External link for the x11-drivers/nvidia-driver package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/x11-drivers/nvidia-driver"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">x11-drivers/nvidia-driver</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> with every kernel update, when the <code>dist-kernel</code> USE flag is set on those packages.
+</p><p>This process is described in more detail in the <a href="https://wiki.gentoo.org/wiki/Distribution_Kernel#Using_savedconfig" title="Distribution Kernel">Distribution kernel savedconfig</a> section
+</p>
+<div class="alert alert-warning gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-circle"></i> Important</strong><br />The rest of this article concerns installation using the <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package. See the <a href="https://wiki.gentoo.org/wiki/Distribution_Kernel" title="Distribution Kernel">distribution kernel </a> for further information on distribution kernels.</div>
+<h3><span class="mw-headline" id="gentoo-sources"><span class="anchor" id="gentoo-sources"></span> gentoo-sources</span></h3>
+<p>When manually compiling kernel sources, Gentoo recommends the <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package for most users. Its stable versions follow the long term stable (LTS) kernels from upstream kernel.org.
+</p>
+<h2><span class="mw-headline" id="Installing_kernel_source_code"><span class="anchor" id="Installation"></span> Installing kernel source code</span></h2>
+<p>To obtain a kernel, it is necessary to install the kernel source code. The recommended kernel sources for a Gentoo desktop system are <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>. These are maintained by the Gentoo developers, and patched when necessary to fix security vulnerabilities and functional problems, as well as to improve compatibility with rare system architectures.
+</p>
+<h3><span class="mw-headline" id="USE_flags"><span class="anchor" id="USE_flags"></span> USE flags</span></h3>
+<p class="mw-empty-elt">      </p><div class="panel panel-default gp-panel">
+        <div class="panel-heading gp-panel-heading">
+          <h3 class="panel-title">
+            <span class="text-muted">USE flags for</span>
+            <a href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources">sys-kernel/gentoo-sources</a>
+            <small><span class="fa fa-external-link-square"></span></small>
+            <small class="gp-pkg-desc">Full sources including the Gentoo patchset for the 7.2 kernel tree</small>
+          </h3>
+        </div>
+        <div class="table-responsive gp-useflag-table-container">
+                <table class="table gp-useflag-table">        <tbody><tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/build">build</a></code>
+          </td>
+          <td>
+            !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used for creating build images and the first half of bootstrapping [make stage1]
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/experimental">experimental</a></code>
+          </td>
+          <td>
+            Apply experimental patches; for more information, see &quot;https://wiki.gentoo.org/wiki/Project:Kernel/Experimental&quot;.
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/symlink">symlink</a></code>
+          </td>
+          <td>
+            Force kernel ebuilds to automatically update the /usr/src/linux symlink
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/vanilla">vanilla</a></code>
+          </td>
+          <td>
+            Do not add extra patches which change default behaviour; DO NOT USE THIS ON A GLOBAL SCALE as the severity of the meaning changes drastically
+          </td>
+        </tr>      </tbody></table>
+        </div>
+        <div class="panel-footer gp-panel-footer">
+          <small class="pull-right">
+            Data provided by the <a href="https://packages.gentoo.org">Gentoo Package Database</a>
+            &#183;
+            Last update: 2026-09-21 14:21
+          </small>
+          <small>
+            <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE">More information about USE flags</a>
+          </small>
+        </div>
+      </div>
+<p class="mw-empty-elt"></p>
+<h3><span class="mw-headline" id="Emerge"><span class="anchor" id="Emerge"></span> Emerge</span></h3>
+<p>To install <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-sources package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-sources"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-sources</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask sys-kernel/gentoo-sources</code></div></div> 
+<h4><span class="mw-headline" id="Alternative_kernels"><span class="anchor" id="Alternative_kernels"></span> Alternative kernels</span></h4>
+<p>There are many other kernel packages in the Portage tree. For details on many of these, see the <a href="https://wiki.gentoo.org/wiki/Kernel/Packages" title="Kernel/Packages">kernel packages</a> article. Further help on choosing a kernel can be found in developer Greg Kroah-Hartman's article <a rel="nofollow" class="external text" href="http://kroah.com/log/blog/2018/08/24/what-stable-kernel-should-i-use/">What Stable Kernel Should I Use?</a>.
+</p>
+<h4><span class="mw-headline" id="Searching_all_kernel_packages"><span class="anchor" id="Searching_all_kernel_packages"></span> Searching all kernel packages</span></h4>
+<p>A full list of kernel sources with short descriptions can be found by searching with <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">emerge</span>:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --search sources</code></div></div> 
+<h2><span class="mw-headline" id="Managing_the_kernel"><span class="anchor" id="Managing_the_kernel"></span> Managing the kernel</span></h2>
+<h3><span class="mw-headline" id="Configuration"><span class="anchor" id="Configuration"></span> Configuration</span></h3>
+<dl><dt><a href="https://wiki.gentoo.org/wiki/Kernel/Configuration" title="Kernel/Configuration">Understanding manual configuration</a></dt>
+<dd>A guide on manual configuration offering a broader understanding of concepts.</dd></dl>
+<dl><dt><a href="Kernel/Gentoo_Kernel_Configuration_Guide.html" title="Kernel/Gentoo Kernel Configuration Guide">Applying manual configuration</a></dt>
+<dd>A guide on manual configuration providing the tools and steps needed to get the job done.</dd></dl>
+<dl><dt><a href="https://wiki.gentoo.org/wiki/Kernel/Deblobbing" title="Kernel/Deblobbing">Deblobbing</a></dt>
+<dd>A guide to deblobbing the kernel</dd></dl>
+<dl><dt><a href="https://wiki.gentoo.org/wiki/Security_Handbook/Kernel_security" title="Security Handbook/Kernel security">Security</a></dt>
+<dd>Instructions for hardening the kernel.</dd></dl>
+<dl><dt><a href="https://wiki.gentoo.org/wiki/Kernel_Modules" title="Kernel Modules">Modules</a></dt>
+<dd>Modules are object files that contain code to extend the kernel.</dd></dl>
+<dl><dt><a href="https://wiki.gentoo.org/wiki/Kernel/Optimization" title="Kernel/Optimization">Optimization</a></dt>
+<dd>Descriptions of various optimizations for the kernel, including speed and hardening.</dd></dl>
+<dl><dt><a href="https://wiki.gentoo.org/wiki/Kernel/Command-line_parameters" title="Kernel/Command-line parameters">Command-line parameters</a></dt>
+<dd>Descriptions of some commonly useful command-line parameters which can be passed to the kernel at boot time for troubleshooting.</dd></dl>
+<h3><span class="mw-headline" id="Upgrade"><span class="anchor" id="Upgrade"></span> Upgrade</span></h3>
+<dl><dt><a href="https://wiki.gentoo.org/wiki/Kernel/Upgrade" title="Kernel/Upgrade">Kernel upgrade</a></dt>
+<dd>Steps to upgrade to a new kernel using an existing configuration.</dd></dl>
+<h3><span class="mw-headline" id="Removal"><span class="anchor" id="Removal"></span> Removal</span></h3>
+<dl><dt><a href="https://wiki.gentoo.org/wiki/Kernel/Removal" title="Kernel/Removal">Kernel removal</a></dt>
+<dd>Steps to completely remove old kernels.</dd></dl>
+<h2><span class="mw-headline" id="Troubleshooting"><span class="anchor" id="Troubleshooting"></span> Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="Kernel_configuration_support"><span class="anchor" id="In-kernel_configuration_support"></span> Kernel configuration support</span></h3>
+<p>See the <a href="https://wiki.gentoo.org/wiki/Kernel/IKCONFIG_support" title="Kernel/IKCONFIG support">IKCONFIG support</a> sub-article.
+</p>
+<h3><span class="mw-headline" id="Kernel_command-line_parameters"><span class="anchor" id="Kernel_command-line_parameters"></span> Kernel command-line parameters</span></h3>
+<p>When booting from a bootloader, the Linux kernel can accept command-line parameters to change its behavior. This can help, for example, in troubleshooting the kernel at boot time, or to blacklist a certain module that should not be loading. See Gentoo's <a href="https://wiki.gentoo.org/wiki/Kernel/Command-line_parameters" title="Kernel/Command-line parameters">Kernel/Command-line parameters</a> article for more details.
+</p><p>Kernel.org has a nicely formatted list of available <a rel="nofollow" class="external text" href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html">kernel command-line parameters</a> in their admin guide.
+</p>
+<h2><span class="mw-headline" id="See_also"><span class="anchor" id="See_also"></span> See also</span></h2>
+<ul><li><a href="https://wiki.gentoo.org/wiki/Fwupd" title="Fwupd">fwupd</a> — a daemon that provides a safe, reliable way of applying firmware updates on Linux.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel" title="Handbook:AMD64/Installation/Kernel">Handbook:AMD64/Installation/Kernel</a> — handbook page about installing and setting up a kernel</li>
+<li><a href="https://wiki.gentoo.org/wiki/Linux_firmware" title="Linux firmware">Linux firmware</a> — is a package distributed alongside the Linux kernel that contains firmware <a href="https://en.wikipedia.org/wiki/binary_blob" class="extiw" title="wikipedia:binary blob">binary blobs</a> necessary for partial or full functionality of certain hardware devices.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Category:Kernel" title="Category:Kernel">The kernel category</a> — all the kernel related articles on the wiki.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Category:Hardware" title="Category:Hardware">The hardware category</a> — lists of hardware stacks with associated kernel configurations.</li></ul>
+<h2><span class="mw-headline" id="External_resources"><span class="anchor" id="External_resources"></span> External resources</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://planet.kernel.org/">planet.kernel.org</a> - Blogs related to the Linux kernel.</li>
+<li><a rel="nofollow" class="external text" href="https://kernelnewbies.org/">kernelnewbies.org</a> - A "community of aspiring Linux kernel developers who work to improve their kernels, as well as more experienced developers willing to share their knowledge".</li>
+<li><a rel="nofollow" class="external text" href="https://www.kernel.org/doc/">kernel.org/doc/</a> - Official comprehensive documentation for the Linux kernel.</li>
+<li><a rel="nofollow" class="external text" href="http://kroah.com/log/blog/2018/08/24/what-stable-kernel-should-i-use/">What Stable Kernel Should I Use?</a> - An article by kernel developer Greg Kroah-Hartman.</li>
+<li><a rel="nofollow" class="external text" href="https://forums.gentoo.org/viewtopic-t-1064076.html">Building the kernel as root can be harmful</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/sysprog21/lkmpg/">The Linux Kernel Module Programming Guide</a></li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260924121445
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.001 seconds
+CPU time usage: 0.164 seconds
+Real time usage: 0.291 seconds
+Preprocessor visited node count: 2241/1000000
+Post‐expand include size: 53706/4194304 bytes
+Template argument size: 14933/4194304 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 30/150
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 4464/5000000 bytes
+Lua time usage: 0.040/7 seconds
+Lua virtual size: 5.26 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  199.624      1 -total
+ 43.35%   86.531     28 Template:Anchor
+ 36.81%   73.479      1 Template:InfoBox_stack
+ 29.11%   58.101      7 Template:InfoBox
+ 24.22%   48.357      1 Template:InfoBox_project
+ 20.94%   41.798      1 Template:InfoBox_header
+ 12.65%   25.252     28 Template:Link
+  9.68%   19.315      3 Template:See_also
+  6.28%   12.537     13 Template:Package
+  4.76%    9.500      2 Template:Emerge
+-->
+
+<!-- Saved in parser cache with key gentoo?hwiki:pcache:idhash:79-0!dateformat=default and timestamp 20260924121445 and revision id 1453352
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.gentoo.org/index.php?title=Kernel&amp;oldid=1453352">https://wiki.gentoo.org/index.php?title=Kernel&amp;oldid=1453352</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.gentoo.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.gentoo.org/wiki/Category:Kernel" title="Category:Kernel">Kernel</a></li><li><a href="https://wiki.gentoo.org/wiki/Category:Meta" title="Category:Meta">Meta</a></li></ul></div></div>						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-7">
+											<div class="spacer"></div>
+						<ul id="f-list">
+							<li id="lastmod>"> This page was last edited on 15 September 2026, at 10:00.</li><li id="privacy>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Privacy_policy" class="mw-redirect" title="Gentoo Wiki:Privacy policy">Privacy policy</a></li><li id="about>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:About" title="Gentoo Wiki:About">About Gentoo Wiki</a></li><li id="disclaimer>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:General_disclaimer" title="Gentoo Wiki:General disclaimer">Disclaimers</a></li>						</ul>
+									</div>
+				<div class="col-xs-12 col-md-3">
+					<!-- No questions or comments, the Wiki has enough information on how to contact us. -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<ul class="footerlinks three-icons">
+						<li><a href="https://twitter.com/gentoo" title="@Gentoo on Twitter"><span class="fa fa-twitter fa-fw"></span></a></li>
+						<li><a href="https://www.facebook.com/gentoo.org" title="Gentoo on Facebook"><span class="fa fa-facebook fa-fw"></span></a></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-xs-9 col-md-9">
+					<strong>&copy; 2001&ndash;2026 Gentoo Authors</strong><br />
+					<small>
+						Gentoo is a trademark of the Gentoo Foundation, Inc. and of Förderverein Gentoo e.V.
+						The contents of this document, unless otherwise expressly stated, are licensed under the
+						<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC-BY-SA-4.0</a> license.
+						The <a href="https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html">Gentoo Name and Logo Usage Guidelines</a> apply.
+					</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script>
+function defer(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function() { defer(method) }, 50);
+    }
+}
+defer(function() { mw.loader.load( 'https://assets.gentoo.org/tyrian/bootstrap.min.js'); });
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.001},"limitreport":{"cputime":"0.164","walltime":"0.291","ppvisitednodes":{"value":2241,"limit":1000000},"postexpandincludesize":{"value":53706,"limit":4194304},"templateargumentsize":{"value":14933,"limit":4194304},"expansiondepth":{"value":18,"limit":40},"expensivefunctioncount":{"value":30,"limit":150},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":4464,"limit":5000000},"timingprofile":["100.00%  199.624      1 -total"," 43.35%   86.531     28 Template:Anchor"," 36.81%   73.479      1 Template:InfoBox_stack"," 29.11%   58.101      7 Template:InfoBox"," 24.22%   48.357      1 Template:InfoBox_project"," 20.94%   41.798      1 Template:InfoBox_header"," 12.65%   25.252     28 Template:Link","  9.68%   19.315      3 Template:See_also","  6.28%   12.537     13 Template:Package","  4.76%    9.500      2 Template:Emerge"]},"scribunto":{"limitreport-timeusage":{"value":"0.040","limit":"7"},"limitreport-virtmemusage":{"value":5513216,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20260924121445","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":62});});</script></body></html>

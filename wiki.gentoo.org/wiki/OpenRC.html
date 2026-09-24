@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>OpenRC - Gentoo wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"504db6b2a3037fb52fa4cfeb","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"OpenRC","wgTitle":"OpenRC","wgCurRevisionId":1451293,"wgRevisionId":1451293,"wgArticleId":1238,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Stale","Todo articles","OpenRC","Logging"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"OpenRC","wgRelevantArticleId":1238,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgULSCurrentAutonym":"English",
+"wgPageFormsTargetName":null,"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":!1,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":!1,"srfFilteredConfig":null,"wgULSPosition":"personal","wgULSisCompactLinksEnabled":!0,"wgTranslatePageTranslation":"source"};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.translate":"ready","ext.translate.tag.languages":"ready","ext.pygments":"ready","mediawiki.toc.styles":"ready","ext.smw.style":
+"ready","ext.smw.tooltip.styles":"ready","ext.uls.pt":"ready","ext.srf.styles":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.tyrian.styles":"ready","skins.tyrian.icons":"ready"};RLPAGEMODULES=["ext.gentooPackages","ext.smw.style","ext.smw.tooltips","smw.entityexaminer","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","ext.uls.compactlinks","ext.uls.interface"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.pygments,translate|ext.smw.style|ext.smw.tooltip.styles|ext.translate.tag.languages|ext.uls.pt|mediawiki.skinning.content.externallinks|mediawiki.skinning.interface|mediawiki.toc.styles|skins.tyrian.icons,st.css"/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.srf.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<script async="" src="../load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=tyrian"></script>
+<link rel="stylesheet" href="https://assets.gentoo.org/tyrian/bootstrap.min.css"/><link rel="stylesheet" href="https://assets.gentoo.org/tyrian/tyrian.min.css"/><style>#mw-indicator-mw-helplink {display:none;}</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=site.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<meta name="generator" content="MediaWiki 1.35.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#54487a"/>
+<link rel="alternate" type="application/rdf+xml" title="OpenRC" href="https://wiki.gentoo.org/index.php?title=Special:ExportRDF/OpenRC&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="https://www.gentoo.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.gentoo.org/opensearch_desc.php" title="Gentoo Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.gentoo.org/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-OpenRC rootpage-OpenRC skin-tyrian action-view">	<div class="mw-jump sr-only">
+		Jump to:		<a href="OpenRC.html#top">content</a>
+	</div>
+	<header>
+		<div class="site-title">
+			<div class="container">
+				<div class="row">
+					<div class="site-title-buttons">
+						<div class="btn-group btn-group-sm">
+							<a href="https://get.gentoo.org/" role="button" class="btn get-gentoo"><span class="fa fa-fw fa-download"></span> <strong>Get Gentoo!</strong></a>
+							<div class="btn-group btn-group-sm">
+								<a class="btn gentoo-org-sites dropdown-toggle" data-toggle="dropdown" data-target="#" href="OpenRC.html#">
+									<span class="fa fa-fw fa-map-o"></span> <span class="hidden-xs">gentoo.org sites</span> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="https://www.gentoo.org/" title="Gentoo's main website"><span class="fa fa-home fa-fw"></span> gentoo.org</a></li>
+									<li><a href="https://wiki.gentoo.org/" title="Find and contribute documentation"><span class="fa fa-file-text-o fa-fw"></span> Wiki</a></li>
+									<li><a href="https://bugs.gentoo.org/" title="Discover and report issues with Gentoo"><span class="fa fa-bug fa-fw"></span> Bugs</a></li>
+									<li><a href="https://packages.gentoo.org/" title="Find software to install"><span class="fa fa-hdd-o fa-fw"></span> Packages</a></li>
+									<li><a href="https://forums.gentoo.org/" title="Discuss with the community"><span class="fa fa-comments-o fa-fw"></span> Forums</a></li>
+									<li class="divider"></li>
+									<li><a href="https://planet.gentoo.org/" title="Find out what's going on in the dev community"><span class="fa fa-rss fa-fw"></span> Planet</a></li>
+									<li><a href="https://archives.gentoo.org/" title="Read up on past discussions"><span class="fa fa-archive fa-fw"></span> Archives</a></li>
+									<li><a href="https://devmanual.gentoo.org/" title="Read the development guide"><span class="fa fa-book fa-fw"></span> Devmanual</a></li>
+									<li><a href="https://gitweb.gentoo.org/" title="Browse our source code in Gitweb"><span class="fa fa-code fa-fw"></span> Gitweb</a></li>
+									<li class="divider"></li>
+									<li><a href="https://infra-status.gentoo.org/" title="Get updates on the services provided by the Gentoo infra team"><span class="fa fa-server fa-fw"></span> Infra status</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="https://wiki.gentoo.org/" title="Back to the homepage" class="site-logo">
+							<img src="https://assets.gentoo.org/tyrian/site-logo.png"  alt="Gentoo Linux Logo" srcset="https://assets.gentoo.org/tyrian/site-logo.svg">
+						</a>
+						<span class="site-label">Wiki</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="tyrian-navbar" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-main-collapse">
+						<ul class="nav navbar-nav">
+							<li id="n-mainpage-description"><a href="https://wiki.gentoo.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.gentoo.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-help"><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li><li id="n-Contribute.21"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Contributor%27s_guide">Contribute!</a></li>			<li class="dropdown">
+				<a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Menu-Documentation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu"><li id="n-Gentoo-Handbook"><a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page">Gentoo Handbook</a></li><li id="n-Gentoo-FAQ"><a href="https://wiki.gentoo.org/wiki/FAQ">Gentoo FAQ</a></li><li role="presentation" class="divider"></li><li id="n-Core-system"><a href="https://wiki.gentoo.org/wiki/Category:Core_system">Core system</a></li><li id="n-Hardware"><a href="https://wiki.gentoo.org/wiki/Category:Hardware">Hardware</a></li><li id="n-Software"><a href="https://wiki.gentoo.org/wiki/Category:Software">Software</a></li><li id="n-Desktop"><a href="https://wiki.gentoo.org/wiki/Category:Desktop">Desktop</a></li><li id="n-Server-.26-Security"><a href="https://wiki.gentoo.org/wiki/Category:Server_and_Security">Server &amp; Security</a></li><li id="n-Project-.26-Community"><a href="https://wiki.gentoo.org/wiki/Category:Project_and_Community">Project &amp; Community</a></li><li role="presentation" class="divider"></li><li id="n-Gentoo-Projects"><a href="https://wiki.gentoo.org/wiki/Project:Gentoo">Gentoo Projects</a></li>				</ul>
+			</li>						</ul>
+						<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+			<a href="OpenRC.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i> Tools <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="t-whatlinkshere"><a href="https://wiki.gentoo.org/wiki/Special:WhatLinksHere/OpenRC" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.gentoo.org/wiki/Special:RecentChangesLinked/OpenRC" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.gentoo.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.gentoo.org/index.php?title=OpenRC&amp;oldid=1451293" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.gentoo.org/index.php?title=OpenRC&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="https://wiki.gentoo.org/wiki/Special:Browse/:OpenRC" rel="search">Browse properties</a></li>			</ul>
+		</li>
+			<li class="dropdown">
+			<a href="OpenRC.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				<span class="fa fa-user" aria-label="Personal tools"></span>
+				User				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="pt-uls" class="active"><a href="OpenRC.html#" class="uls-trigger">English</a></li><li id="pt-createaccount"><a href="https://wiki.gentoo.org/index.php?title=Special:CreateAccount&amp;returnto=OpenRC" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.gentoo.org/index.php?title=Special:UserLogin&amp;returnto=OpenRC" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>			</ul>
+		</li>
+								</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="navbar navbar-grey navbar-stick" id="wiki-actions" role="navigation">
+			<div class="container"><div class="row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gw-toolbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="gw-toolbar">
+					<ul class="nav navbar-nav">
+					<li id="ca-nstab-main" class="selected active"><a href="OpenRC.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="https://wiki.gentoo.org/wiki/Talk:OpenRC" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>					</ul>
+							<form action="https://wiki.gentoo.org/index.php" id="searchform" class="navbar-form navbar-right" role="search">
+			<input type='hidden' name="title" value="Special:Search"/>
+
+				<div class="input-group">
+					<input type="search" name="search" placeholder="Search" title="Search Gentoo Wiki [f]" accesskey="f" id="searchInput" class="form-control"/>					<div class="input-group-btn"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton btn btn-default"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton btn btn-default"/></div>
+				</div>
+		</form>
+						<ul class="nav navbar-nav navbar-right">
+					<li id="ca-viewsource"><a href="https://wiki.gentoo.org/index.php?title=OpenRC&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li class="dropdown">
+						<a href="OpenRC.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">more <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+					<li id="ca-history"><a href="https://wiki.gentoo.org/index.php?title=OpenRC&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>							</ul>
+						</li>
+					</ul>
+				</div>
+			</div></div>
+		</nav>
+		</header>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="content" class="mw-body" role="main">
+						<a id="top"></a>
+						
+						<h1 id="firstHeading" class="first-header" lang="en">
+							<span dir="auto">OpenRC</span>
+						</h1>
+
+						<div id="bodyContent" class="mw-body-content">
+							<div id="siteSub">From Gentoo Wiki</div>
+							<div id="contentSub">
+															</div>
+												                <div id="jump-to-nav"></div>
+					                <a class="mw-jump-link" href="OpenRC.html#mw-head">Jump to:navigation</a>
+					                <a class="mw-jump-link" href="OpenRC.html#searchInput">Jump to:search</a>
+
+							<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="alert alert-warning"><span class="fa fa-fw fa-pencil"></span> Some of the information in this article may have drifted out of sync with current practices. Please help out by <a rel="nofollow" class="external text" href="https://wiki.gentoo.org/index.php?title=OpenRC&amp;action=edit">checking over the content</a> (<a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Contributor%27s_guide" title="Gentoo Wiki:Contributor&#39;s guide">how to get started</a>).<div style="color: black; padding-top: 8px; padding-left: 20px;">User services section might need updating to reflect Current Best Practices.</div></div>
+<div class="mw-pt-languages noprint" lang="en" dir="ltr"><div class="mw-pt-languages-label">Other languages:</div><ul class="mw-pt-languages-list"><li><a href="https://wiki.gentoo.org/wiki/OpenRC/de" class="mw-pt-progress mw-pt-progress--stub" title="OpenRC/de (12% translated)" lang="de" dir="ltr">Deutsch</a></li>
+<li><span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en" dir="ltr">English</span></li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/es" class="mw-pt-progress mw-pt-progress--high" title="OpenRC (71% translated)" lang="es" dir="ltr">español</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/it" class="mw-pt-progress mw-pt-progress--high" title="OpenRC (62% translated)" lang="it" dir="ltr">italiano</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/hu" class="mw-pt-progress mw-pt-progress--high" title="OpenRC (71% translated)" lang="hu" dir="ltr">magyar</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/cs" class="mw-pt-progress mw-pt-progress--stub" title="OpenRC/cs (1% translated)" lang="cs" dir="ltr">čeština</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/ru" class="mw-pt-progress mw-pt-progress--high" title="OpenRC (65% translated)" lang="ru" dir="ltr">русский</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/zh-cn" class="mw-pt-progress mw-pt-progress--stub" title="OpenRC/zh-cn (1% translated)" lang="zh-Hans-CN" dir="ltr">中文（中国大陆）‎</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/zh-tw" class="mw-pt-progress mw-pt-progress--stub" title="OpenRC/zh-tw (1% translated)" lang="zh-Hant-TW" dir="ltr">中文（台灣）‎</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/ja" class="mw-pt-progress mw-pt-progress--complete" title="OpenRC (81% translated)" lang="ja" dir="ltr">日本語</a></li></ul></div>
+<div id="infobox-stack" class="list-group" style="width: 25em; float: right; clear: right; font-size: 90%; margin-left: 1em;">
+<div class="list-group-item text-center" style="padding-top: 3px; padding-bottom: 3px; background-color: #463C65; color: white;"><b>Resources</b></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><a href="https://wiki.gentoo.org/wiki/Project:OpenRC" title="Project:OpenRC"><img alt="Gentoo peach graphic" src="../images/thumb/a/ad/Gentoo-logo-peach.svg/25px-Gentoo-logo-peach.svg.png" decoding="async" width="25" height="26" srcset="../images/thumb/a/ad/Gentoo-logo-peach.svg/38px-Gentoo-logo-peach.svg.png 1.5x, ../images/thumb/a/ad/Gentoo-logo-peach.svg/50px-Gentoo-logo-peach.svg.png 2x" /></a></span><span><a href="https://wiki.gentoo.org/wiki/Project:OpenRC" title="Project:OpenRC">Project</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-file-text fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/README.md">Official documentation</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-file-text fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/user-guide.md">Official documentation</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-hdd-o fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/openrc">Package information</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-wikipedia-w fa-fw fa-2x"></span></span><span><a href="https://en.wikipedia.org/wiki/OpenRC" class="extiw" title="wikipedia:OpenRC">Wikipedia</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-github fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc">GitHub</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-comments-o fa-fw fa-2x"></span></span><span><span style="font-family: monospace; font-size: 95%;"><a rel="nofollow" class="external text" href="ircs://irc.libera.chat/#openrc">#openrc</a></span> (<span style="font-family: monospace; font-size: 95%;"><a rel="nofollow" class="external text" href="https://web.libera.chat/#openrc">webchat</a></span>)</span></div>
+<div class="list-group-item text-center" style="padding-top: 3px; padding-bottom: 3px; background-color: #463C65; color: white;"><b>Article status</b></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-list-alt fa-fw fa-2x"></span></span><span>This article has some todo items:<br />
+<ul><li>Review for accuracy &amp; test.</li>
+<li>Complete to cover most basic usage under Gentoo.</li>
+<li>Rework for precision, readability, concision...</li>
+<li>Section <a href="OpenRC.html#BusyBox_integration" title="OpenRC">BusyBox Integration</a> needs testing and documenting (or removing).</li></ul></span></div>
+</div>
+<p><b>OpenRC</b> is a dependency-based <a href="https://wiki.gentoo.org/wiki/Init_system" title="Init system">init system</a> for Unix-like systems that maintains compatibility with the system-provided init system, normally located in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/sbin/init</span>.
+</p><p>OpenRC will start necessary system services in the correct order at boot, manage them while the system is in use, and stop them at shutdown. It can manage daemons installed from the Gentoo repository, can optionally supervise the processes it launches, and has the possibility to start processes in parallel - when possible - to shorten boot time.
+</p><p>Gentoo officially supports both OpenRC and <a href="https://wiki.gentoo.org/wiki/Systemd" title="Systemd">systemd</a>, but <a href="https://wiki.gentoo.org/wiki/Comparison_of_init_systems" title="Comparison of init systems">other init systems are available</a>.
+</p><p>OpenRC was developed for Gentoo, but is designed to be used in <a href="https://wiki.gentoo.org/wiki/OpenRC/Users" title="OpenRC/Users">other Linux distributions and BSD systems</a>. By default, OpenRC is invoked by <a href="https://wiki.gentoo.org/wiki/Sysvinit" title="Sysvinit">sysvinit</a>, on Gentoo.
+</p><p>Daemons installed from outside the Gentoo repository, e.g. software downloaded as source code and compiled manually, may sometimes need to be adapted to work with OpenRC (which is sometimes trivial).
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />See the <a href="OpenRC.html#OpenRC_documentation" title="OpenRC">OpenRC documentation section</a> for links to the documentation provided by the OpenRC project itself, including information about writing service scripts.
+See the <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Initscripts" title="Handbook:AMD64/Working/Initscripts">Handbook</a> for information on how OpenRC works with the init system.</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="OpenRC.html#Implementation"><span class="tocnumber">1</span> <span class="toctext">Implementation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="OpenRC.html#Installation"><span class="tocnumber">2</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="OpenRC.html#USE_flags"><span class="tocnumber">2.1</span> <span class="toctext">USE flags</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="OpenRC.html#Configuration"><span class="tocnumber">3</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="OpenRC.html#Files"><span class="tocnumber">3.1</span> <span class="toctext">Files</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="OpenRC.html#Logging"><span class="tocnumber">3.2</span> <span class="toctext">Logging</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="OpenRC.html#Network_management"><span class="tocnumber">3.3</span> <span class="toctext">Network management</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="OpenRC.html#Dependency_behavior"><span class="tocnumber">3.4</span> <span class="toctext">Dependency behavior</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="OpenRC.html#Selecting_a_specific_runlevel_at_boot"><span class="tocnumber">3.5</span> <span class="toctext">Selecting a specific runlevel at boot</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="OpenRC.html#Usage"><span class="tocnumber">4</span> <span class="toctext">Usage</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="OpenRC.html#Runlevels"><span class="tocnumber">4.1</span> <span class="toctext">Runlevels</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="OpenRC.html#Listing"><span class="tocnumber">4.1.1</span> <span class="toctext">Listing</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="OpenRC.html#Named_runlevels"><span class="tocnumber">4.1.2</span> <span class="toctext">Named runlevels</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="OpenRC.html#Stacked_runlevels"><span class="tocnumber">4.1.3</span> <span class="toctext">Stacked runlevels</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="OpenRC.html#Prefix"><span class="tocnumber">4.2</span> <span class="toctext">Prefix</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="OpenRC.html#Hotplug"><span class="tocnumber">4.3</span> <span class="toctext">Hotplug</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="OpenRC.html#CGroups_support"><span class="tocnumber">4.4</span> <span class="toctext">CGroups support</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="OpenRC.html#Chroot_support"><span class="tocnumber">4.5</span> <span class="toctext">Chroot support</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="OpenRC.html#User_services"><span class="tocnumber">4.6</span> <span class="toctext">User services</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="OpenRC.html#Lingering"><span class="tocnumber">4.6.1</span> <span class="toctext">Lingering</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="OpenRC.html#Service_start_on_boot_.28lingering.29"><span class="tocnumber">4.6.2</span> <span class="toctext">Service start on boot (lingering)</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="OpenRC.html#Service_start_on_login_.28no_lingering.29"><span class="tocnumber">4.6.3</span> <span class="toctext">Service start on login (no lingering)</span></a>
+<ul>
+<li class="toclevel-4 tocsection-23"><a href="OpenRC.html#PAM-based_auto-start"><span class="tocnumber">4.6.3.1</span> <span class="toctext">PAM-based auto-start</span></a></li>
+<li class="toclevel-4 tocsection-24"><a href="OpenRC.html#KDE_compatibility"><span class="tocnumber">4.6.3.2</span> <span class="toctext">KDE compatibility</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-25"><a href="OpenRC.html#Logging_2"><span class="tocnumber">4.6.4</span> <span class="toctext">Logging</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href="OpenRC.html#System_integration"><span class="tocnumber">5</span> <span class="toctext">System integration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-27"><a href="OpenRC.html#systemd_compatibility"><span class="tocnumber">5.1</span> <span class="toctext">systemd compatibility</span></a>
+<ul>
+<li class="toclevel-3 tocsection-28"><a href="OpenRC.html#logind"><span class="tocnumber">5.1.1</span> <span class="toctext">logind</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="OpenRC.html#tmpfiles.d"><span class="tocnumber">5.1.2</span> <span class="toctext">tmpfiles.d</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-30"><a href="OpenRC.html#udev_and_mdev"><span class="tocnumber">5.2</span> <span class="toctext">udev and mdev</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="OpenRC.html#BusyBox_integration"><span class="tocnumber">5.3</span> <span class="toctext">BusyBox integration</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="OpenRC.html#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-33"><a href="OpenRC.html#Respawning_crashed_services"><span class="tocnumber">6.1</span> <span class="toctext">Respawning crashed services</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="OpenRC.html#Manually_recovering_crashed_services"><span class="tocnumber">6.2</span> <span class="toctext">Manually recovering crashed services</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-35"><a href="OpenRC.html#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="OpenRC.html#External_resources"><span class="tocnumber">8</span> <span class="toctext">External resources</span></a>
+<ul>
+<li class="toclevel-2 tocsection-37"><a href="OpenRC.html#OpenRC_documentation"><span class="tocnumber">8.1</span> <span class="toctext">OpenRC documentation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-38"><a href="OpenRC.html#Man_pages"><span class="tocnumber">8.1.1</span> <span class="toctext">Man pages</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Implementation"><span class="anchor" id="Implementation"></span> Implementation</span></h2>
+<p>OpenRC does not require large, fundamental, changes to the traditional Unix-like system. OpenRC integrates with other system software as a component of a modular and flexible system. It is designed to be fast, lightweight, easily configurable, and adaptable. OpenRC has only a few basic dependencies, on core system components.
+</p><p>As a modern init system, OpenRC provides a number of useful features:
+</p>
+<ul><li><a href="https://wiki.gentoo.org/wiki/OpenRC/CGroups" title="OpenRC/CGroups">cgroups</a> support.</li>
+<li>Process supervision.</li>
+<li>Dependency-based launch, with parallel startup of services.</li>
+<li>Automatic resolving, and ordering, of dependencies.</li>
+<li>Hardware initiated initscripts.</li>
+<li>Setting <var>ulimit</var> and <var>nice</var> values per service through the <var>rc_ulimit</var> variable.</li>
+<li>Permits complex init scripts that start multiple components.</li>
+<li>Modular architecture, fitting into existing infrastructure.</li>
+<li>OpenRC has its own optional init system called <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">openrc-init</span>, see <a href="https://wiki.gentoo.org/wiki/OpenRC/openrc-init" title="OpenRC/openrc-init">OpenRC/openrc-init</a> for details.</li>
+<li>OpenRC has its own optional process supervisor, see <a href="https://wiki.gentoo.org/wiki/OpenRC/supervise-daemon" title="OpenRC/supervise-daemon">OpenRC/supervise-daemon</a> for details.</li></ul>
+<p>See the <a href="https://wiki.gentoo.org/wiki/Comparison_of_init_systems" title="Comparison of init systems">comparison of init systems</a> article for more information on init systems.
+</p>
+<h2><span class="mw-headline" id="Installation"><span class="anchor" id="Installation"></span> Installation</span></h2>
+<p>OpenRC generally does not need installing manually, and is provided as part of an OpenRC <a href="https://wiki.gentoo.org/wiki/Profile_(Portage)" class="mw-redirect" title="Profile (Portage)">profile</a> on <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Base#Choosing_the_right_profile" title="Handbook:AMD64/Installation/Base">installation</a>. It will be present in the <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Stage#OpenRC" title="Handbook:AMD64/Installation/Stage">stage 3 tarball</a>, and will be maintained across system updates.
+</p>
+<h3><span class="mw-headline" id="USE_flags"><span class="anchor" id="USE_flags"></span> USE flags</span></h3>
+<p class="mw-empty-elt">      </p><div class="panel panel-default gp-panel">
+        <div class="panel-heading gp-panel-heading">
+          <h3 class="panel-title">
+            <span class="text-muted">USE flags for</span>
+            <a href="https://packages.gentoo.org/packages/sys-apps/openrc">sys-apps/openrc</a>
+            <small><span class="fa fa-external-link-square"></span></small>
+            <small class="gp-pkg-desc">OpenRC manages the services, startup and shutdown of a host</small>
+          </h3>
+        </div>
+        <div class="table-responsive gp-useflag-table-container">
+                <table class="table gp-useflag-table">        <tbody><tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+netifrc">+netifrc</a></code>
+          </td>
+          <td>
+            enable Gentoo&#39;s network stack (net.* scripts)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+sysvinit">+sysvinit</a></code>
+          </td>
+          <td>
+            control the dependency on sysvinit (experimental)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/audit">audit</a></code>
+          </td>
+          <td>
+            Enable support for Linux audit subsystem using sys-process/audit
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/bash">bash</a></code>
+          </td>
+          <td>
+            enable the use of bash in service scripts (experimental)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/debug">debug</a></code>
+          </td>
+          <td>
+            Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see https://wiki.gentoo.org/wiki/Project:Quality_Assurance/Backtraces
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/newnet">newnet</a></code>
+          </td>
+          <td>
+            enable the new network stack (experimental)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/pam">pam</a></code>
+          </td>
+          <td>
+            Add support for PAM (Pluggable Authentication Modules) - DANGEROUS to arbitrarily flip
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/s6">s6</a></code>
+          </td>
+          <td>
+            install s6-linux-init
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/selinux">selinux</a></code>
+          </td>
+          <td>
+            !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/sysv-utils">sysv-utils</a></code>
+          </td>
+          <td>
+            Install sysvinit compatibility scripts for halt, init, poweroff, reboot and shutdown
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/unicode">unicode</a></code>
+          </td>
+          <td>
+            Add support for Unicode
+          </td>
+        </tr>      </tbody></table>
+        </div>
+        <div class="panel-footer gp-panel-footer">
+          <small class="pull-right">
+            Data provided by the <a href="https://packages.gentoo.org">Gentoo Package Database</a>
+            &#183;
+            Last update: 2026-09-23 08:25
+          </small>
+          <small>
+            <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE">More information about USE flags</a>
+          </small>
+        </div>
+      </div>
+<p class="mw-empty-elt"></p><p>If the USE flags are modified, the package may be rebuilt to apply changes. For OpenRC <a href="https://wiki.gentoo.org/wiki/Profile_(Portage)" class="mw-redirect" title="Profile (Portage)">profiles</a>, <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/openrc package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/openrc"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/openrc</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> is pulled in as a dependency of <span style="white-space: nowrap;" class="plainlinks" title="External link for the virtual/service-manager package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/virtual/service-manager"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">virtual/service-manager</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, thus it should never be added to the <a href="https://wiki.gentoo.org/wiki/Selected-packages_set_(Portage)" title="Selected-packages set (Portage)">selected-packages set</a> (<span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/var/lib/portage/world</span> file) - the <a href="https://wiki.gentoo.org/wiki/Emerge#Do_not_add_dependencies_to_the_world_file" title="Emerge"><code>--oneshot</code> option</a> avoids adding OpenRC to this set.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask&#160;--oneshot sys-apps/openrc</code></div></div> 
+<h2><span class="mw-headline" id="Configuration"><span class="anchor" id="Configuration"></span> Configuration</span></h2>
+<h3><span class="mw-headline" id="Files"><span class="anchor" id="Files"></span> Files</span></h3>
+<dl><dt><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/rc.conf</span></dt>
+<dd>The global OpenRC configuration file.</dd>
+<dd><b>Includes extensive comments documenting OpenRC configuration.</b></dd>
+<dt><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/conf.d</span></dt>
+<dd>Contains configuration files for individual initscripts.</dd></dl>
+<h3><span class="mw-headline" id="Logging"><span class="anchor" id="Logging"></span> Logging</span></h3>
+<p>OpenRC doesn't log anything by default. To log OpenRC's output during boot, uncomment and set the <var>rc_logger</var> option in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/rc.conf</span>. The log will be saved at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/var/log/rc.log</span> by default.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/rc.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">rc_logger</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="c1">#rc_log_path=&quot;/var/log/rc.log&quot;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Network_management"><span class="anchor" id="Network_management"></span> Network management</span></h3>
+<p>Although OpenRC doesn't require use of a network manager, it can nevertheless be used with a variety of network managers. By default, with Gentoo's <a href="https://wiki.gentoo.org/wiki/Profile_(Portage)" class="mw-redirect" title="Profile (Portage)">OpenRC profiles</a>, <a href="https://wiki.gentoo.org/wiki/Netifrc" title="Netifrc">netifrc</a> scripts manage network connections.
+</p><p>Refer to the <a href="https://wiki.gentoo.org/wiki/Network_management" title="Network management">the "Network management" page</a> for network management options.
+</p>
+<h3><span class="mw-headline" id="Dependency_behavior"><span class="anchor" id="Dependency_behavior"></span> Dependency behavior</span></h3>
+<p>More complex setups might require changing the default dependencies of services; for details, refer to the <i>rc_depend_strict</i> option in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/rc.conf</span>. The following examples show how flexible OpenRC can be.
+</p>
+<dl><dt><i>Multiple network interfaces (example)</i></dt></dl>
+<p>If the <a href="https://wiki.gentoo.org/wiki/SSH" title="SSH"><code>sshd</code> service</a> must come up only on the internal network, and not on the external network, e.g. only on <code>eth0</code> and not on <code>wlan0</code>, overrule the <code>net</code> dependency from <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/init.d/sshd</span> to instead depend on <code>net.eth0</code>:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/conf.d/sshd</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-sh mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">rc_need</span><span class="o">=</span><span class="s2">&quot;!net net.eth0&quot;</span>
+</pre></div>
+<dl><dt><i>Multiple network interfaces in multiple runlevels (example)</i></dt></dl>
+<p>If the <code>sshd</code> service must start with <code>eth0</code> and not <code>wlan0</code> in the "default" runlevel, but must start with <code>wlan0</code> and not <code>eth0</code> in the "office" runlevel, keep the default value of <code>YES</code> for the <i>rc_depend_strict</i> option:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/rc.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-sh mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">#rc_depend_strict=&quot;YES&quot;</span>
+</pre></div>
+<p>Then make additional symlinks to the <code>sshd</code> service with the relevant interface names:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>ln -s /etc/init.d/sshd /etc/init.d/sshd.eth0
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>ln -s /etc/init.d/sshd /etc/init.d/sshd.wlan0
+</code></div></div>
+<p>Create the associated <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/conf.d/sshd.eth0</span> and <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/conf.d/sshd.wlan0</span> configuration files:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>cp /etc/conf.d/sshd /etc/conf.d/sshd.eth0
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>cp /etc/conf.d/sshd /etc/conf.d/sshd.wlan0
+</code></div></div>
+<p>Add the dependencies:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>echo 'rc_need="!net net.eth0"' &gt;&gt; /etc/conf.d/sshd.eth0
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>echo 'rc_need="!net net.wlan0"' &gt;&gt; /etc/conf.d/sshd.wlan0
+</code></div></div>
+<p>Then, to have <code>net.eth0</code> and <code>net.wlan0</code> read their settings from <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/conf.d/net</span> or <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/conf.d/net.office</span>, depending on the active runlevel, add them to the appropriate runlevels:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-update add sshd.eth0 default
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-update add sshd.wlan0 office
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-update add net.eth0 default office
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-update add net.wlan0 default office
+</code></div></div>
+<p>Finally, to switch between the "default" runlevel and the "office" runlevel without rebooting the computer, change to the "nonetwork" runlevel in between:
+</p>
+<pre> "default" runlevel &lt;---&gt; "nonetwork" runlevel &lt;---&gt; "office" runlevel
+</pre>
+<p>This way, the network interfaces will be stopped, and their runlevel-specific configuration subsequently re-read.
+</p><p>This works best when "nonetwork" is a <a href="OpenRC.html#Stacked_runlevels" title="OpenRC">stacked runlevel</a> in both the "default" and "office" runlevels, and non-network services (e.g. the display manager) are added to the "nonetwork" runlevel only:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>openrc nonetwork &amp;&amp; openrc office
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>openrc nonetwork &amp;&amp; openrc default
+</code></div></div>
+<h3><span class="mw-headline" id="Selecting_a_specific_runlevel_at_boot"><span class="anchor" id="Selecting_a_specific_runlevel_at_boot"></span> Selecting a specific runlevel at boot</span></h3>
+<p>OpenRC reads the kernel command-line used at boot time, and will start the runlevel specified by the <var>softlevel</var> parameter if provided. If no <var>softlevel</var> parameter is provided, the <i>default</i> runlevel will be used.
+</p><p>The following example shows a <a href="GRUB.html" title="GRUB">grub</a> configuration allowing to choose to boot into either the <i>default</i> or <i>nonetwork</i> runlevels:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/boot/grub/grub.conf</code></strong><strong>Example grub.conf (GRUB Legacy)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>title=Regular Start-up
+ 
+kernel (hd0,0)/boot/kernel-3.7.10-gentoo-r1 root=/dev/sda3
+ 
+title=Start without Networking
+ 
+kernel (hd0,0)/boot/kernel-3.7.10-gentoo-r1 root=/dev/sda3 softlevel=nonetwork
+</pre></div>
+<p>See below for a description of how to add additional runlevels.
+</p>
+<h2><span class="mw-headline" id="Usage"><span class="anchor" id="Usage"></span> Usage</span></h2>
+<h3><span class="mw-headline" id="Runlevels"><span class="anchor" id="Runlevels"></span> Runlevels</span></h3>
+<p>OpenRC can be controlled and configured using <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">openrc</span>, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rc-update</span> and <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rc-status</span> commands.
+</p><p>Delete a service from default runlevel, where <code>&lt;service&gt;</code> is the name of the service to be removed:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-update delete &lt;service&gt; default</code></div></div>
+<h4><span class="mw-headline" id="Listing"><span class="anchor" id="Listing"></span> Listing</span></h4>
+<p>It is not necessary to have root permissions to list runlevels and services (init scripts) assigned to them.
+</p><p>Use <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rc-update show -v</span> to display all available init scripts and their current runlevel (if they have been added to one):
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-update show -v</code></div></div>
+<p>Running <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rc-update</span> or <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rc-update show</span> will display only the init scripts that have been added to a runlevel.
+</p><p>Alternatively, the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rc-status</span> command can be used with the <code>--servicelist</code> (<code>-s</code>) option to view the state of all services:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-status --servicelist</code></div></div>
+<h4><span class="mw-headline" id="Named_runlevels"><span class="anchor" id="Named_runlevels"></span> Named runlevels</span></h4>
+<p>OpenRC runlevels are implemented as directories living in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/runlevels</span>.  Additional runlevels (indicated as <code>&lt;runlevel&gt;</code> below) may be created by using:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>install -d /etc/runlevels/&lt;runlevel&gt;</code></div></div>
+<p>Additional runlevels are helpful to provide alternative system start-up profiles.
+</p>
+<h4><span class="mw-headline" id="Stacked_runlevels"><span class="anchor" id="Stacked_runlevels"></span> Stacked runlevels</span></h4>
+<p>Stacked runlevels are used to allow a runlevel to inherit the actions of one or more other runlevels.  The command variant used to create stacked runlevels is <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rc-update -s</span>.  Adding a runlevel to another runlevel causes a dependency to be created such that any init scripts (services) in any dependent (stacked) runlevels are started or stopped when the target runlevel is started or stopped.
+</p><p>An usage example for using stacked runlevel on laptop to group networking services based on location is at <a href="https://wiki.gentoo.org/wiki/OpenRC/Stacked_runlevel" title="OpenRC/Stacked runlevel">OpenRC/Stacked runlevel</a>.
+</p>
+<h3><span class="mw-headline" id="Prefix"><span class="anchor" id="Prefix"></span> Prefix</span></h3>
+<p><a href="https://wiki.gentoo.org/wiki/Project:Prefix" title="Project:Prefix">Gentoo Prefix</a> installs Gentoo within an offset, known as a prefix, allowing users to install Gentoo in another location in the filesystem hierarchy, hence avoiding conflicts. Next to this offset, Gentoo Prefix runs unprivileged, meaning no root user or rights are required to use it.
+</p><p>By using an offset (the "prefix" location), it is possible for many "alternative" user groups to benefit from a large part of the packages in the Gentoo Linux Portage tree. Currently users of the following systems successfully run Gentoo Prefix: Mac OS X on PPC and x86, Linux on x86, x86_64 and ia64, Solaris 10 on Sparc, Sparc/64, x86 and x86_64, FreeBSD on x86, AIX on PPC, Interix on x86, Windows on x86 (with the help of Interix), HP-UX on PARISC and ia64. 
+</p><p>OpenRC runscript already support prefix-installed daemons, during the Summer of Code 2012 work will be done to implement full secondary/session daemon behavior to complete the overall feature set provided by Prefix.
+</p><p><a href="https://wiki.gentoo.org/wiki/OpenRC/Prefix" title="OpenRC/Prefix">OpenRC/Prefix</a>, a tutorial for trying it out.
+</p>
+<h3><span class="mw-headline" id="Hotplug"><span class="anchor" id="Hotplug"></span> Hotplug</span></h3>
+<p>OpenRC can be triggered by external events, such as new hardware from udev. This is what the configuration file says about hotplugged services:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/rc.conf</code></strong><strong>rc_hotplug</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># rc_hotplug controls which services we allow to be hotplugged.</span>
+<span class="c1"># A hotplugged service is one started by a dynamic dev manager when a matching</span>
+<span class="c1"># hardware device is found.</span>
+<span class="c1"># Hotplugged services appear in the &quot;hotplugged&quot; runlevel.</span>
+<span class="c1"># If rc_hotplug is set to any value, we compare the name of this service</span>
+<span class="c1"># to every pattern in the value, from left to right, and we allow the</span>
+<span class="c1"># service to be hotplugged if it matches a pattern, or if it matches no</span>
+<span class="c1"># patterns. Patterns can include shell wildcards.</span>
+<span class="c1"># To disable services from being hotplugged, prefix patterns with &quot;!&quot;.</span>
+<span class="c1"># If rc_hotplug is not set or is empty, all hotplugging is disabled.</span>
+<span class="c1"># Example - rc_hotplug=&quot;net.wlan !net.*&quot;</span>
+<span class="c1"># This allows net.wlan and any service not matching net.* to be hotplugged.</span>
+<span class="c1"># Example - rc_hotplug=&quot;!net.*&quot;</span>
+<span class="c1"># This allows services that do not match &quot;net.*&quot; to be hotplugged.</span>
+</pre></div>
+<h3><span class="mw-headline" id="CGroups_support"><span class="anchor" id="CGroups_support"></span> CGroups support</span></h3>
+<p>OpenRC starting with version 0.12 has extended cgroups support. See <a href="https://wiki.gentoo.org/wiki/OpenRC/CGroups" title="OpenRC/CGroups">OpenRC/CGroups</a> for details. Since OpenRC 0.51, unified cgroups (v2) is enabled by default.
+</p>
+<h3><span class="mw-headline" id="Chroot_support"><span class="anchor" id="Chroot_support"></span> Chroot support</span></h3>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mkdir -p /lib64/rc/init.d</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>ln -s /lib64/rc/init.d /run/openrc
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>touch /run/openrc/softlevel
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --oneshot sys-apps/openrc
+</code></div></div>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/rc.conf</code></strong><strong>OpenRC config file</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">rc_sys</span><span class="o">=</span><span class="s2">&quot;prefix&quot;</span>
+<span class="nv">rc_controller_cgroups</span><span class="o">=</span><span class="s2">&quot;NO&quot;</span>
+<span class="nv">rc_depend_strict</span><span class="o">=</span><span class="s2">&quot;NO&quot;</span>
+<span class="nv">rc_need</span><span class="o">=</span><span class="s2">&quot;!net !dev !udev-mount !sysfs !checkfs !fsck !netmount !logger !clock !modules&quot;</span>
+</pre></div>
+<p>The system may report the following message upon attempting to start a service:
+</p>
+<pre>* WARNING: &lt;service&gt; is already starting
+</pre>
+<p>This may be fixed by issuing the following command:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-update --update</code></div></div>
+<h3><span class="mw-headline" id="User_services"><span class="anchor" id="User_services"></span> User services</span></h3>
+<p>User services are services that run as the specific user they belong to. OpenRC has support for user services, starting with version 0.60.
+</p><p>OpenRC user services require <var>XDG_RUNTIME_DIR</var> to be set, since user services store state in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_RUNTIME_DIR}/openrc/</span>; thus, a mechanism for setting <code>XDG_RUNTIME_DIR</code> is required. That could be <a href="https://wiki.gentoo.org/wiki/Elogind" title="Elogind">elogind</a>, <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-auth/pam_xdg package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-auth/pam_xdg"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-auth/pam_xdg</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, the shell's configuration file(s), or any other method of creating the directory and setting the environment variable, e.g. as described <a href="https://wiki.gentoo.org/wiki/Configuring_a_system_without_elogind#Environment_variables" title="Configuring a system without elogind">here</a>.
+</p><p>While system OpenRC service scripts are loaded from <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/init.d/</span>, scripts for user services are loaded from <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/user/init.d/</span>.
+</p><p>Configurations for particular user services are located in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/user/conf.d/</span>. Configuration options defined in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_CONFIG_HOME}/rc/conf.d/</span> override options set in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/user/conf.d/</span>, and options set in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_CONFIG_HOME}/rc/rc.conf</span> override those in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/rc.conf</span>. If <var>XDG_CONFIG_HOME</var> is unset, OpenRC uses <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">~/.config</span> as a default value.
+</p>
+<h4><span class="mw-headline" id="Lingering"><span class="anchor" id="lingering"></span> Lingering</span></h4>
+<p>In the context of systemd, lingering is a mechanism ensuring the presence of a user session for a specific user. A session is created on system startup and this session is guaranteed to persist until shutdown, even if the user logs in or out. Thus, services run on behalf of this user are preserved throughout the entire runtime of the system. While lingering itself is implemented by the session daemon (<code>logind</code> in case of systemd), there are methods to achieve the similar results on an OpenRC-based system.
+</p><p>Although <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-auth/elogind package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-auth/elogind"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-auth/elogind</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> has an <code>--enable-linger &lt;user&gt;</code> option that should work with the PAM-based auto-start, it is recommended to enable the <a href="OpenRC.html#User_service_start_boot">OpenRC user-specific session</a> that achieves the same effect.
+</p>
+<h4><span id="Service_start_on_boot_(lingering)"></span><span class="mw-headline" id="Service_start_on_boot_.28lingering.29"><span class="anchor" id="User_service_start_boot"></span> Service start on boot (lingering)</span></h4>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Due to a <a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/issues/929">bug</a>, this currently does not work when the PAM-based auto-start is enabled (which it is by default). PAM-based auto-start can be disabled by adding <code>rc_autostart_user="NO"</code> to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/rc.conf</span>.</div> 
+<p>To enable per-user services for a user (<code>&lt;user&gt;</code> is the name of the user), create a symlink <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/init.d/user.&lt;name&gt;</span> pointing to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/init.d/user</span>. This service starts an OpenRC user session that then handles all services enabled for the user.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>ln -s /etc/init.d/user /etc/init.d/user.&lt;user&gt;
+</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-update add user.&lt;user&gt;
+</code></div></div>
+<p>Enable a service for a user with:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-update --user add &lt;service&gt;
+</code></div></div>
+<p>The service to enable must be present in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/user/init.d</span>. All OpenRC commands (<code>rc-update</code>, <code>rc-service</code>, <code>rc-status</code> etc.) have a <code>--user</code> (<code>-U</code>) flag to act on the OpenRC user session instead of the system session.
+</p>
+<h4><span id="Service_start_on_login_(no_lingering)"></span><span class="mw-headline" id="Service_start_on_login_.28no_lingering.29"><span class="anchor" id="User_service_start_login"></span> Service start on login (no lingering)</span></h4>
+<p>The OpenRC session is only active while the user is logged in (see <a href="OpenRC.html#lingering">#lingering</a>). As soon as the user logs out, the session is terminated.
+</p>
+<h5><span class="mw-headline" id="PAM-based_auto-start">PAM-based auto-start</span></h5>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />This behavior is enabled by default since the <a rel="nofollow" class="external text" href="https://www.gentoo.org/support/news-items/2025-09-04-openrc-user-services.html">stabilization</a> of user services.</div>
+<p>The provided <code>pam_openrc.so</code> can automatically start openrc on login. It's loaded from <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/pam.d/system-login</span>, and dynamically starts <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/init.d/user</span> script, multiplexed for the user logging in, which launches the <code>openrc-user</code> daemon. 
+</p><p><code>openrc-user</code> opens another pam session for the user, which will last as long as any given session using pam_openrc is active. It loads <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/pam.d/openrc-user</span> as the pam stack for the new session, then proceeds to launch the <code>default</code> runlevel for the user via calling the user's login shell with <code>-c</code> as an argument, and creating <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_CONFIG_HOME}/rc/runlevels/default</span> should it not exist.
+</p><p>In order to make use of the PAM-based auto-start, <code>XDG_RUNTIME_DIR</code> must be set during the login process, either by a pam module or shell rc file.
+</p><p><span class="anchor" id="KDE_compatibility"></span>
+</p>
+<h5><span class="mw-headline" id="KDE_compatibility">KDE compatibility</span></h5>
+<p>As at OpenRC 0.62.10, using OpenRC user services with KDE requires some configuration changes.
+</p><p>Firstly, <a href="KDE.html" title="KDE">KDE</a>/<a href="https://wiki.gentoo.org/wiki/Qt" title="Qt">Qt</a> fails to find the socket for the <a href="https://wiki.gentoo.org/wiki/D-Bus" title="D-Bus">D-Bus</a> session bus created by the <code>dbus</code> user service at <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_RUNTIME_DIR}/bus</span>. (Note that this is distinct from the <code>dbus</code> <i>system</i> service, which provides a D-Bus <i>system</i> bus.) 
+</p><p>As a result, the following script is needed, in either <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/profile.d/</span> or the appropriate configuration file for the user's shell (e.g. <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">~/.bash_profile</span>):
+</p>
+<div class="gw-box"><div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #204A87">CODE</span> <strong><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/profile.d/zz-dbus-hack.sh</span></strong></div> <div class="mw-highlight mw-highlight-lang-sh mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$DBUS_SESSION_BUS_ADDRESS</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">DBUS_SESSION_BUS_ADDRESS</span><span class="o">=</span><span class="s2">&quot;unix:path=</span><span class="si">${</span><span class="nv">XDG_RUNTIME_DIR</span><span class="k">:-</span><span class="s2">&quot;/run/user/</span><span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span><span class="s2">&quot;</span><span class="si">}</span><span class="s2">/bus&quot;</span>
+<span class="k">fi</span>
+</pre></div></div>
+<p>Secondly, Gentoo bundles an autostart desktop file for PipeWire which conflicts with the PipeWire user services (<span class="plainlinks" style="color: MidnightBlue; font-family: monospace; font-size: 95%;" title="External link to https&#58;//bugs.gentoo.org."><a rel="nofollow" class="external text" href="https://bugs.gentoo.org/show_bug.cgi?id=964059"><span style="color: MidnightBlue;">bug #964059</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-bug fa-fw"></span></span>); refer also to <a href="PipeWire.html#User_Services" title="PipeWire">PipeWire</a>).
+</p><p>To disable the conflicting autostart file, add <code>Hidden=true</code> to it. It's also possible to copy <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">pipewire.desktop</span> to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_CONFIG_HOME}/autostart/</span> to create a local override for only the current user (where <var>XDG_CONFIG_HOME</var> is <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">~/.config/</span> by default).
+</p>
+<div class="gw-box"><div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #204A87">CODE</span> <strong>Disable autostart file: <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/xdg/autostart/pipewire.desktop</span></strong></div> <div class="mw-highlight mw-highlight-lang-sh mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Hidden=true&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/xdg/autostart/pipewire.desktop
+</pre></div></div>
+<p>Once this is done, the <code>dbus</code>, <code>pipewire</code>, <code>pipewire-pulse</code> and <code>wireplumber</code> services can be enabled via:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-update --user add &lt;service&gt; default</code></div></div>
+<p>where <code>&lt;service&gt;</code> should be replaced by the name of each service in turn.
+</p><p>After logging out and logging back in, all services should now be running and able to be used by KDE.
+</p><p><span class="anchor" id="User_services:_Logging"></span>
+</p>
+<h4><span class="mw-headline" id="Logging_2">Logging</span></h4>
+<p>To enable logging, add the following lines to <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_CONFIG_HOME}/rc/rc.conf</span>, creating that file if it doesn't already exist:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">${XDG_CONFIG_HOME}/rc/rc.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">rc_logger</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="nv">rc_log_path</span><span class="o">=</span><span class="s2">&quot;&lt;location&gt;/rc.log&quot;</span>
+</pre></div>
+<p>where <code>&lt;location&gt;</code> should be replaced by a literal directory path, e.g. <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/home/larry/logs/</span>.
+</p>
+<h2><span class="mw-headline" id="System_integration"><span class="anchor" id="System_integration"></span> System integration</span></h2>
+<h3><span class="mw-headline" id="systemd_compatibility"><span class="anchor" id="systemd_compatibility"></span> systemd compatibility</span></h3>
+<h4><span class="mw-headline" id="logind"><span class="anchor" id="logind"></span> logind</span></h4>
+<p>Some setups require systemd-logind. <a href="https://wiki.gentoo.org/wiki/Elogind" title="Elogind">Elogind</a> can be a suitable replacement as a standalone logind running with OpenRC.
+</p>
+<h4><span class="mw-headline" id="tmpfiles.d"><span class="anchor" id="tmpfiles.d"></span> tmpfiles.d</span></h4>
+<p>systemd has a special tmpfiles.d file syntax for managing temporary files. <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd-utils[tmpfiles]</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> is a standalone provider for OpenRC systems.
+</p><p>Both can also be used to manage volatile entries in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/sys</span> or <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/proc</span>.
+</p>
+<h3><span class="mw-headline" id="udev_and_mdev"><span class="anchor" id="udev_and_mdev"></span> udev and mdev</span></h3>
+<p><a href="https://wiki.gentoo.org/wiki/Udev" title="Udev">udev</a> and <a href="https://wiki.gentoo.org/wiki/Mdev" title="Mdev">mdev</a> are systems available on Gentoo to manage <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/dev</span>. <a href="https://wiki.gentoo.org/wiki/Eudev" title="Eudev">eudev</a> used to be available as well, but has been removed. udev is available for OpenRC via the <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd-utils[udev]</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package, however should be able to work with both on Gentoo.
+</p><p>Older Gentoo installs used udev as the main <span style="white-space: nowrap;" class="plainlinks" title="External link for the virtual/udev package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/virtual/udev"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">virtual/udev</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> provider. Based on <span class="plainlinks" style="color: MidnightBlue; font-family: monospace; font-size: 95%;" title="External link to https&#58;//bugs.gentoo.org."><a rel="nofollow" class="external text" href="https://bugs.gentoo.org/show_bug.cgi?id=575718"><span style="color: MidnightBlue;">bug #575718</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-bug fa-fw"></span></span> this was changed to eudev, but it was changed back to udev in <span class="plainlinks" style="color: MidnightBlue; font-family: monospace; font-size: 95%;" title="External link to https&#58;//bugs.gentoo.org."><a rel="nofollow" class="external text" href="https://bugs.gentoo.org/show_bug.cgi?id=807193"><span style="color: MidnightBlue;">bug #807193</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-bug fa-fw"></span></span>. However, the rc service is still <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/init.d/udev</span>.
+</p><p>See <a href="https://wiki.gentoo.org/wiki/Mdev" title="Mdev">mdev</a>, for possible use, e.g. for embedded systems.
+</p>
+<h3><span class="mw-headline" id="BusyBox_integration"><span class="anchor" id="BusyBox_integration"></span> BusyBox integration</span></h3>
+<p>N.B. This section lacks information on how to actually use BusyBox with OpenRC.
+</p><p>Please note that there are currently many BusyBox applets that are incompatible with OpenRC, see <span class="plainlinks" style="color: MidnightBlue; font-family: monospace; font-size: 95%;" title="External link to https&#58;//bugs.gentoo.org."><a rel="nofollow" class="external text" href="https://bugs.gentoo.org/show_bug.cgi?id=529086"><span style="color: MidnightBlue;">bug #529086</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-bug fa-fw"></span></span> for details. <b>Be warned that using OpenRC with BusyBox may require some work to set up.</b> BusyBox is more adapted to embedded use, see previous section about mdev.
+</p><p><a href="https://wiki.gentoo.org/wiki/Busybox" title="Busybox">BusyBox</a> can be used to replace most of the userspace utilities needed by OpenRC (<span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">init</span>, shell, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">awk</span>, and other POSIX tools), by using a complete BusyBox as the shell for OpenRC <a rel="nofollow" class="external autonumber" href="https://github.com/OpenRC/openrc/blob/master/BUSYBOX.md">[1]</a>, all the calls that normally would cause a fork/exec would be spared, improving the overall speed.
+</p><p>The SysV-init <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/inittab</span> file provided by Gentoo is not compatible with the BusyBox <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">init</span>. Here is an example inittab compatible with BusyBox:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/inittab</code></strong><strong>Example inittab compatible with BusyBox init</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>::sysinit:/sbin/openrc sysinit
+::wait:/sbin/openrc boot
+::wait:/sbin/openrc
+</pre></div>
+<p>BusyBox provides a number of applets that could be used to replace third party software like acpid or dhcp/dhcpcd.
+</p><p>See the OpenRC documentation on <a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/BUSYBOX.md">using BusyBox with OpenRC</a>.
+</p>
+<h2><span class="mw-headline" id="Troubleshooting"><span class="anchor" id="Troubleshooting"></span> Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="Respawning_crashed_services"><span class="anchor" id="Respawning_crashed_services"></span> Respawning crashed services</span></h3>
+<p>OpenRC can return state of services to runlevel setting state, to provide stateful init scripts and automatic respawning.
+</p><p>To respawn crashed services from the default runlevel, run <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">openrc</span>: crashed services will be started and any manually-run services will be stopped. To keep manually-started services running, run <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">openrc --no-stop</span> or <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">openrc -n</span>, for short.
+</p><p>By default <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">openrc</span> will attempt to <i>start</i> crashed services, not to <i>restart</i> them. This can be controlled by the rc_crashed_stop (default NO) and rc_crashed_start (default YES) options in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/rc.conf</span>.
+</p>
+<h3><span class="mw-headline" id="Manually_recovering_crashed_services"><span class="anchor" id="Manually_recovering_crashed_services"></span> Manually recovering crashed services</span></h3>
+<p>When a process crashes while starting, an error or warning message will be printed when trying to start, stop, or show the status of a service. For example, when using the <code>docker</code> service:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-service docker status</code></div><pre> * status: crashed</pre></div>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-service docker start</code></div><pre> * WARNING: docker has already been started</pre></div>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-service docker stop</code></div><pre> * Caching service dependencies ...                                                                                                  [ ok ]
+ * Stopping docker ...
+ * Failed to stop docker                                                                                                             [&#160;!! ]
+ * ERROR: docker failed to stop</pre></div>
+<p>To remedy this situation, zap the service:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-service docker zap
+</code></div></div>
+<h2><span class="mw-headline" id="See_also"><span class="anchor" id="See_also"></span> See also</span></h2>
+<ul><li><a href="https://wiki.gentoo.org/wiki/OpenRC/CGroups" title="OpenRC/CGroups">OpenRC/CGroups</a> — OpenRC includes support for <a href="https://wiki.gentoo.org/wiki/Cgroups" title="Cgroups">cgroups</a>.</li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/openrc-init" title="OpenRC/openrc-init">OpenRC/openrc-init</a> — OpenRC's own init system</li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/Prefix" title="OpenRC/Prefix">OpenRC/Prefix</a> — The following guideline applies to a Gentoo <a href="https://wiki.gentoo.org/wiki/Prefix" title="Prefix">Prefix</a> on RHEL-5.6 amd64 and on Debian 6.0 amd64, for other setups it should be similar.</li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/Stacked_runlevel" title="OpenRC/Stacked runlevel">OpenRC/Stacked runlevel</a> — a tutorial for setting up complicated networking with the help of stacked runlevel.</li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/supervise-daemon" title="OpenRC/supervise-daemon">OpenRC/supervise-daemon</a> — OpenRC's daemon supervisor</li>
+<li><a href="https://wiki.gentoo.org/wiki/OpenRC/Users" title="OpenRC/Users">OpenRC/Users</a> — an (incomplete) list of distributions and operating systems using OpenRC.</li>
+<li><a href="https://wiki.gentoo.org/wiki//etc/local.d" title="/etc/local.d">/etc/local.d</a> — <b><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/local.d/</span></b> can contain small programs or light scripts to be run when the local service is started or stopped.</li>
+<li><a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Initscripts" title="Handbook:AMD64/Working/Initscripts">Gentoo AMD64 Handbook - Initscript system</a></li>
+<li>The main OpenRC configuration file, <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/rc.conf</span>, contains extensive comments documenting OpenRC configuration.</li></ul>
+<h2><span class="mw-headline" id="External_resources"><span class="anchor" id="External_resources"></span> External resources</span></h2>
+<h3><span class="mw-headline" id="OpenRC_documentation"><span class="anchor" id="OpenRC_documentation"></span> OpenRC documentation</span></h3>
+<p>OpenRC has its own useful documentation, maintained by the OpenRC developers themselves. Be aware that Gentoo does not use all of OpenRC's functionality by default:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/README.md">README</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/user-guide.md">User Guide</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/init-guide.md">OpenRC init process guide</a> - How to <a href="https://wiki.gentoo.org/wiki/OpenRC/openrc-init" title="OpenRC/openrc-init">use OpenRC's own init system</a> (not used by default in Gentoo).</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/agetty-guide.md">agetty guide</a> - Setting up the agetty service in OpenRC (By default, ttys are spawned with <a href="https://wiki.gentoo.org/wiki/Sysvinit#Gentoo.27s_sysvinit_setup" title="Sysvinit">sysvinit</a> in Gentoo).</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/runit-guide.md">Using runit with OpenRC</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/s6-guide.md">Using S6 with OpenRC</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/supervise-daemon-guide.md">Using supervise-daemon</a> - <a href="https://wiki.gentoo.org/wiki/OpenRC/supervise-daemon" title="OpenRC/supervise-daemon">Optional process supervision</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/BUSYBOX.md">Using BusyBox with OpenRC</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/service-script-guide.md">Service script writing guide</a> - For developers or packagers.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/NEWS.md">NEWS</a> - Important information about each release.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/OpenRC/openrc/blob/master/HISTORY.md">HISTORY</a> - History of how OpenRC came to be.</li></ul>
+<h4><span class="mw-headline" id="Man_pages">Man pages</span></h4>
+<ul><li><span class="plainlinks" title="External link for the openrc man page."><a rel="nofollow" class="external text" href="https://manpages.debian.org/testing/openrc/openrc.8.en.html"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">openrc(8)</span></a></span><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a> - Stops and starts services for the specified runlevel.</li>
+<li><span class="plainlinks" title="External link for the openrc-run man page."><a rel="nofollow" class="external text" href="https://manpages.debian.org/testing/openrc/openrc-run.8.en.html"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">openrc-run(8)</span></a></span><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a> - Interpreter used to process OpenRC service scripts.</li>
+<li><span class="plainlinks" title="External link for the rc-service man page."><a rel="nofollow" class="external text" href="https://manpages.debian.org/testing/openrc/rc-service.8.en.html"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">rc-service(8)</span></a></span><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a> - Locate and run an OpenRC service with the given arguments.</li>
+<li><span class="plainlinks" title="External link for the rc-status man page."><a rel="nofollow" class="external text" href="https://manpages.debian.org/testing/openrc/rc-status.8.en.html"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">rc-status(8)</span></a></span><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a> - Show status info about runlevels.</li>
+<li><span class="plainlinks" title="External link for the rc-update man page."><a rel="nofollow" class="external text" href="https://manpages.debian.org/testing/openrc/rc-update.8.en.html"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">rc-update(8)</span></a></span><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a> - Add and remove services to and from a runlevel.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260924135914
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.002 seconds
+CPU time usage: 0.260 seconds
+Real time usage: 0.429 seconds
+Preprocessor visited node count: 6350/1000000
+Post‐expand include size: 128919/4194304 bytes
+Template argument size: 32991/4194304 bytes
+Highest expansion depth: 26/40
+Expensive parser function count: 44/150
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 11407/5000000 bytes
+Lua time usage: 0.070/7 seconds
+Lua virtual size: 5.26 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  348.721      1 -total
+ 33.98%  118.493     48 Template:Anchor
+ 24.66%   85.983      1 Template:InfoBox_stack
+ 20.02%   69.811      8 Template:InfoBox
+ 12.44%   43.382      1 Template:InfoBox_project
+ 11.34%   39.554      7 Template:See_also
+ 11.03%   38.474      2 Template:InfoBox_header
+ 10.57%   36.870     46 Template:Link
+  5.26%   18.335     15 Template:RootCmd
+  4.95%   17.253     19 Template:GenericCmd
+-->
+
+<!-- Saved in parser cache with key gentoo?hwiki:pcache:idhash:1238-0!dateformat=default and timestamp 20260924135913 and revision id 1451293
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.gentoo.org/index.php?title=OpenRC&amp;oldid=1451293">https://wiki.gentoo.org/index.php?title=OpenRC&amp;oldid=1451293</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.gentoo.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.gentoo.org/wiki/Category:Stale" title="Category:Stale">Stale</a></li><li><a href="https://wiki.gentoo.org/wiki/Category:Todo_articles" title="Category:Todo articles">Todo articles</a></li><li><a href="https://wiki.gentoo.org/wiki/Category:OpenRC" title="Category:OpenRC">OpenRC</a></li><li><a href="https://wiki.gentoo.org/wiki/Category:Logging" title="Category:Logging">Logging</a></li></ul></div></div>						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-7">
+											<div class="spacer"></div>
+						<ul id="f-list">
+							<li id="lastmod>"> This page was last edited on 1 September 2026, at 02:33.</li><li id="privacy>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Privacy_policy" class="mw-redirect" title="Gentoo Wiki:Privacy policy">Privacy policy</a></li><li id="about>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:About" title="Gentoo Wiki:About">About Gentoo Wiki</a></li><li id="disclaimer>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:General_disclaimer" title="Gentoo Wiki:General disclaimer">Disclaimers</a></li>						</ul>
+									</div>
+				<div class="col-xs-12 col-md-3">
+					<!-- No questions or comments, the Wiki has enough information on how to contact us. -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<ul class="footerlinks three-icons">
+						<li><a href="https://twitter.com/gentoo" title="@Gentoo on Twitter"><span class="fa fa-twitter fa-fw"></span></a></li>
+						<li><a href="https://www.facebook.com/gentoo.org" title="Gentoo on Facebook"><span class="fa fa-facebook fa-fw"></span></a></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-xs-9 col-md-9">
+					<strong>&copy; 2001&ndash;2026 Gentoo Authors</strong><br />
+					<small>
+						Gentoo is a trademark of the Gentoo Foundation, Inc. and of Förderverein Gentoo e.V.
+						The contents of this document, unless otherwise expressly stated, are licensed under the
+						<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC-BY-SA-4.0</a> license.
+						The <a href="https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html">Gentoo Name and Logo Usage Guidelines</a> apply.
+					</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script>
+function defer(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function() { defer(method) }, 50);
+    }
+}
+defer(function() { mw.loader.load( 'https://assets.gentoo.org/tyrian/bootstrap.min.js'); });
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.002},"limitreport":{"cputime":"0.260","walltime":"0.429","ppvisitednodes":{"value":6350,"limit":1000000},"postexpandincludesize":{"value":128919,"limit":4194304},"templateargumentsize":{"value":32991,"limit":4194304},"expansiondepth":{"value":26,"limit":40},"expensivefunctioncount":{"value":44,"limit":150},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11407,"limit":5000000},"timingprofile":["100.00%  348.721      1 -total"," 33.98%  118.493     48 Template:Anchor"," 24.66%   85.983      1 Template:InfoBox_stack"," 20.02%   69.811      8 Template:InfoBox"," 12.44%   43.382      1 Template:InfoBox_project"," 11.34%   39.554      7 Template:See_also"," 11.03%   38.474      2 Template:InfoBox_header"," 10.57%   36.870     46 Template:Link","  5.26%   18.335     15 Template:RootCmd","  4.95%   17.253     19 Template:GenericCmd"]},"scribunto":{"limitreport-timeusage":{"value":"0.070","limit":"7"},"limitreport-virtmemusage":{"value":5513216,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20260924135914","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":62});});</script></body></html>

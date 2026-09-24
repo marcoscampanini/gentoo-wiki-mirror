@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Dracut - Gentoo wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"88c12b8413db78d4f9f5a3a5","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Dracut","wgTitle":"Dracut","wgCurRevisionId":1443077,"wgRevisionId":1443077,"wgArticleId":1115,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Initramfs"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dracut","wgRelevantArticleId":1115,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgULSCurrentAutonym":"English","wgPageFormsTargetName":null,
+"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":!1,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":!1,"srfFilteredConfig":null,"wgULSPosition":"personal","wgULSisCompactLinksEnabled":!0};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","ext.cite.styles":"ready","mediawiki.toc.styles":"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","ext.uls.pt":"ready","ext.srf.styles":"ready",
+"mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.tyrian.styles":"ready","skins.tyrian.icons":"ready"};RLPAGEMODULES=["ext.gentooPackages","ext.smw.style","ext.smw.tooltips","ext.cite.ux-enhancements","smw.entityexaminer","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","ext.uls.compactlinks","ext.uls.interface"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.cite.styles|ext.pygments|ext.smw.style|ext.smw.tooltip.styles|ext.uls.pt|mediawiki.skinning.content.externallinks|mediawiki.skinning.interface|mediawiki.toc.styles|skins.tyrian.icons,styles&amp;only=styles&amp;skin=.css"/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.srf.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<script async="" src="../load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=tyrian"></script>
+<link rel="stylesheet" href="https://assets.gentoo.org/tyrian/bootstrap.min.css"/><link rel="stylesheet" href="https://assets.gentoo.org/tyrian/tyrian.min.css"/><style>#mw-indicator-mw-helplink {display:none;}</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=site.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<meta name="generator" content="MediaWiki 1.35.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#54487a"/>
+<link rel="alternate" type="application/rdf+xml" title="Dracut" href="https://wiki.gentoo.org/index.php?title=Special:ExportRDF/Dracut&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="https://www.gentoo.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.gentoo.org/opensearch_desc.php" title="Gentoo Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.gentoo.org/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Dracut rootpage-Dracut skin-tyrian action-view">	<div class="mw-jump sr-only">
+		Jump to:		<a href="Dracut.html#top">content</a>
+	</div>
+	<header>
+		<div class="site-title">
+			<div class="container">
+				<div class="row">
+					<div class="site-title-buttons">
+						<div class="btn-group btn-group-sm">
+							<a href="https://get.gentoo.org/" role="button" class="btn get-gentoo"><span class="fa fa-fw fa-download"></span> <strong>Get Gentoo!</strong></a>
+							<div class="btn-group btn-group-sm">
+								<a class="btn gentoo-org-sites dropdown-toggle" data-toggle="dropdown" data-target="#" href="Dracut.html#">
+									<span class="fa fa-fw fa-map-o"></span> <span class="hidden-xs">gentoo.org sites</span> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="https://www.gentoo.org/" title="Gentoo's main website"><span class="fa fa-home fa-fw"></span> gentoo.org</a></li>
+									<li><a href="https://wiki.gentoo.org/" title="Find and contribute documentation"><span class="fa fa-file-text-o fa-fw"></span> Wiki</a></li>
+									<li><a href="https://bugs.gentoo.org/" title="Discover and report issues with Gentoo"><span class="fa fa-bug fa-fw"></span> Bugs</a></li>
+									<li><a href="https://packages.gentoo.org/" title="Find software to install"><span class="fa fa-hdd-o fa-fw"></span> Packages</a></li>
+									<li><a href="https://forums.gentoo.org/" title="Discuss with the community"><span class="fa fa-comments-o fa-fw"></span> Forums</a></li>
+									<li class="divider"></li>
+									<li><a href="https://planet.gentoo.org/" title="Find out what's going on in the dev community"><span class="fa fa-rss fa-fw"></span> Planet</a></li>
+									<li><a href="https://archives.gentoo.org/" title="Read up on past discussions"><span class="fa fa-archive fa-fw"></span> Archives</a></li>
+									<li><a href="https://devmanual.gentoo.org/" title="Read the development guide"><span class="fa fa-book fa-fw"></span> Devmanual</a></li>
+									<li><a href="https://gitweb.gentoo.org/" title="Browse our source code in Gitweb"><span class="fa fa-code fa-fw"></span> Gitweb</a></li>
+									<li class="divider"></li>
+									<li><a href="https://infra-status.gentoo.org/" title="Get updates on the services provided by the Gentoo infra team"><span class="fa fa-server fa-fw"></span> Infra status</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="https://wiki.gentoo.org/" title="Back to the homepage" class="site-logo">
+							<img src="https://assets.gentoo.org/tyrian/site-logo.png"  alt="Gentoo Linux Logo" srcset="https://assets.gentoo.org/tyrian/site-logo.svg">
+						</a>
+						<span class="site-label">Wiki</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="tyrian-navbar" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-main-collapse">
+						<ul class="nav navbar-nav">
+							<li id="n-mainpage-description"><a href="https://wiki.gentoo.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.gentoo.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-help"><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li><li id="n-Contribute.21"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Contributor%27s_guide">Contribute!</a></li>			<li class="dropdown">
+				<a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Menu-Documentation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu"><li id="n-Gentoo-Handbook"><a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page">Gentoo Handbook</a></li><li id="n-Gentoo-FAQ"><a href="https://wiki.gentoo.org/wiki/FAQ">Gentoo FAQ</a></li><li role="presentation" class="divider"></li><li id="n-Core-system"><a href="https://wiki.gentoo.org/wiki/Category:Core_system">Core system</a></li><li id="n-Hardware"><a href="https://wiki.gentoo.org/wiki/Category:Hardware">Hardware</a></li><li id="n-Software"><a href="https://wiki.gentoo.org/wiki/Category:Software">Software</a></li><li id="n-Desktop"><a href="https://wiki.gentoo.org/wiki/Category:Desktop">Desktop</a></li><li id="n-Server-.26-Security"><a href="https://wiki.gentoo.org/wiki/Category:Server_and_Security">Server &amp; Security</a></li><li id="n-Project-.26-Community"><a href="https://wiki.gentoo.org/wiki/Category:Project_and_Community">Project &amp; Community</a></li><li role="presentation" class="divider"></li><li id="n-Gentoo-Projects"><a href="https://wiki.gentoo.org/wiki/Project:Gentoo">Gentoo Projects</a></li>				</ul>
+			</li>						</ul>
+						<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+			<a href="Dracut.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i> Tools <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="t-whatlinkshere"><a href="https://wiki.gentoo.org/wiki/Special:WhatLinksHere/Dracut" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.gentoo.org/wiki/Special:RecentChangesLinked/Dracut" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.gentoo.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.gentoo.org/index.php?title=Dracut&amp;oldid=1443077" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.gentoo.org/index.php?title=Dracut&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="https://wiki.gentoo.org/wiki/Special:Browse/:Dracut" rel="search">Browse properties</a></li>			</ul>
+		</li>
+			<li class="dropdown">
+			<a href="Dracut.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				<span class="fa fa-user" aria-label="Personal tools"></span>
+				User				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="pt-uls" class="active"><a href="Dracut.html#" class="uls-trigger">English</a></li><li id="pt-createaccount"><a href="https://wiki.gentoo.org/index.php?title=Special:CreateAccount&amp;returnto=Dracut" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.gentoo.org/index.php?title=Special:UserLogin&amp;returnto=Dracut" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>			</ul>
+		</li>
+								</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="navbar navbar-grey navbar-stick" id="wiki-actions" role="navigation">
+			<div class="container"><div class="row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gw-toolbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="gw-toolbar">
+					<ul class="nav navbar-nav">
+					<li id="ca-nstab-main" class="selected active"><a href="Dracut.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="https://wiki.gentoo.org/wiki/Talk:Dracut" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>					</ul>
+							<form action="https://wiki.gentoo.org/index.php" id="searchform" class="navbar-form navbar-right" role="search">
+			<input type='hidden' name="title" value="Special:Search"/>
+
+				<div class="input-group">
+					<input type="search" name="search" placeholder="Search" title="Search Gentoo Wiki [f]" accesskey="f" id="searchInput" class="form-control"/>					<div class="input-group-btn"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton btn btn-default"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton btn btn-default"/></div>
+				</div>
+		</form>
+						<ul class="nav navbar-nav navbar-right">
+					<li id="ca-viewsource"><a href="https://wiki.gentoo.org/index.php?title=Dracut&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li class="dropdown">
+						<a href="Dracut.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">more <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+					<li id="ca-history"><a href="https://wiki.gentoo.org/index.php?title=Dracut&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>							</ul>
+						</li>
+					</ul>
+				</div>
+			</div></div>
+		</nav>
+		</header>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="content" class="mw-body" role="main">
+						<a id="top"></a>
+						
+						<h1 id="firstHeading" class="first-header" lang="en">
+							<span dir="auto">Dracut</span>
+						</h1>
+
+						<div id="bodyContent" class="mw-body-content">
+							<div id="siteSub">From Gentoo Wiki</div>
+							<div id="contentSub">
+															</div>
+												                <div id="jump-to-nav"></div>
+					                <a class="mw-jump-link" href="Dracut.html#mw-head">Jump to:navigation</a>
+					                <a class="mw-jump-link" href="Dracut.html#searchInput">Jump to:search</a>
+
+							<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div id="infobox-stack" class="list-group" style="width: 25em; float: right; clear: right; font-size: 90%; margin-left: 1em;">
+<div class="list-group-item text-center" style="padding-top: 3px; padding-bottom: 3px; background-color: #463C65; color: white;"><b>Resources</b></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-home fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://dracut-ng.github.io/dracut-ng/">Home</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-github fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://github.com/dracut-ng/dracut-ng">GitHub</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-wikipedia-w fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://dracut-ng.github.io/dracut-ng/">Official project wiki</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-wikipedia-w fa-fw fa-2x"></span></span><span><a href="https://en.wikipedia.org/wiki/Dracut_(software)" class="extiw" title="wikipedia:Dracut (software)">Wikipedia</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><img alt="Ohloh Logo" src="../images/thumb/c/c1/Ohloh-logo.png/30px-Ohloh-logo.png" decoding="async" width="30" height="30" srcset="../images/c/c1/Ohloh-logo.png 1.5x" /></span><span><a rel="nofollow" class="external text" href="https://www.openhub.net/p/dracut">Open Hub</a></span></div>
+</div>
+<p><b>Dracut</b> is an <a href="https://wiki.gentoo.org/wiki/Initramfs" title="Initramfs">initramfs</a> infrastructure and aims to have as little as possible hard-coded into the initramfs. 
+</p><p>Dracut originated from the <a rel="nofollow" class="external text" href="https://fedoraproject.org/wiki/Dracut">Fedora Project</a> and was ported to Gentoo in the <a rel="nofollow" class="external text" href="https://www.google-melange.com/archive/gsoc/2010/orgs/gentoo/projects/aidecoe.html">2010 Google Summer of Code</a>. The project has since forked as <b>dracut-ng</b> (next generation) which continues active development. For more detailed information, refer to the project <a rel="nofollow" class="external text" href="https://dracut-ng.github.io/dracut-ng/">documentation</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Dracut.html#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Dracut.html#USE_flags"><span class="tocnumber">1.1</span> <span class="toctext">USE flags</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="Dracut.html#Kernel"><span class="tocnumber">1.2</span> <span class="toctext">Kernel</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Dracut.html#Emerge"><span class="tocnumber">1.3</span> <span class="toctext">Emerge</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="Dracut.html#Building_an_initramfs_image"><span class="tocnumber">2</span> <span class="toctext">Building an initramfs image</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="Dracut.html#Automation"><span class="tocnumber">2.1</span> <span class="toctext">Automation</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Dracut.html#Default_images"><span class="tocnumber">2.2</span> <span class="toctext">Default images</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Dracut.html#Configuration"><span class="tocnumber">2.3</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="Dracut.html#Localization_.2F_i18n"><span class="tocnumber">2.3.1</span> <span class="toctext">Localization / i18n</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="Dracut.html#Modules"><span class="tocnumber">2.4</span> <span class="toctext">Modules</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Dracut.html#Adding_modules"><span class="tocnumber">2.5</span> <span class="toctext">Adding modules</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="Dracut.html#List_of_modules"><span class="tocnumber">2.6</span> <span class="toctext">List of modules</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="Dracut.html#Customizing_the_image"><span class="tocnumber">2.7</span> <span class="toctext">Customizing the image</span></a>
+<ul>
+<li class="toclevel-3 tocsection-14"><a href="Dracut.html#Adding_files_to_the_image"><span class="tocnumber">2.7.1</span> <span class="toctext">Adding files to the image</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="Dracut.html#Kernel_modules"><span class="tocnumber">2.7.2</span> <span class="toctext">Kernel modules</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="Dracut.html#Filesystems_and_mount_points"><span class="tocnumber">2.7.3</span> <span class="toctext">Filesystems and mount points</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="Dracut.html#Elogind"><span class="tocnumber">2.7.4</span> <span class="toctext">Elogind</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="Dracut.html#Compressing_the_image"><span class="tocnumber">2.7.5</span> <span class="toctext">Compressing the image</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="Dracut.html#Booting_the_initramfs"><span class="tocnumber">3</span> <span class="toctext">Booting the initramfs</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="Dracut.html#Tasks"><span class="tocnumber">4</span> <span class="toctext">Tasks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="Dracut.html#ext_boot"><span class="tocnumber">4.1</span> <span class="toctext">ext boot</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="Dracut.html#LVM_on_LUKS"><span class="tocnumber">4.2</span> <span class="toctext">LVM on LUKS</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="Dracut.html#NFS_boot"><span class="tocnumber">4.3</span> <span class="toctext">NFS boot</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="Dracut.html#NBD_boot"><span class="tocnumber">4.4</span> <span class="toctext">NBD boot</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="Dracut.html#Debug"><span class="tocnumber">4.5</span> <span class="toctext">Debug</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="Dracut.html#Other_filesystems"><span class="tocnumber">4.6</span> <span class="toctext">Other filesystems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-27"><a href="Dracut.html#Custom_modules"><span class="tocnumber">5</span> <span class="toctext">Custom modules</span></a>
+<ul>
+<li class="toclevel-2 tocsection-28"><a href="Dracut.html#Module_structure"><span class="tocnumber">5.1</span> <span class="toctext">Module structure</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="Dracut.html#Creating_a_basic_module"><span class="tocnumber">5.2</span> <span class="toctext">Creating a basic module</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="Dracut.html#Hook_scripts"><span class="tocnumber">5.3</span> <span class="toctext">Hook scripts</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="Dracut.html#Module_installation_functions"><span class="tocnumber">5.4</span> <span class="toctext">Module installation functions</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="Dracut.html#Testing_custom_modules"><span class="tocnumber">5.5</span> <span class="toctext">Testing custom modules</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="Dracut.html#Module_naming_and_priorities"><span class="tocnumber">5.6</span> <span class="toctext">Module naming and priorities</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="Dracut.html#Advanced_features"><span class="tocnumber">5.7</span> <span class="toctext">Advanced features</span></a>
+<ul>
+<li class="toclevel-3 tocsection-35"><a href="Dracut.html#Dependencies"><span class="tocnumber">5.7.1</span> <span class="toctext">Dependencies</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="Dracut.html#Conditional_installation"><span class="tocnumber">5.7.2</span> <span class="toctext">Conditional installation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-37"><a href="Dracut.html#Example:_Custom_filesystem_module"><span class="tocnumber">5.8</span> <span class="toctext">Example: Custom filesystem module</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="Dracut.html#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-39"><a href="Dracut.html#Common_issues"><span class="tocnumber">6.1</span> <span class="toctext">Common issues</span></a>
+<ul>
+<li class="toclevel-3 tocsection-40"><a href="Dracut.html#Boot_failure:_.22No_root_device_found.22"><span class="tocnumber">6.1.1</span> <span class="toctext">Boot failure: "No root device found"</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="Dracut.html#Dracut_emergency_shell"><span class="tocnumber">6.1.2</span> <span class="toctext">Dracut emergency shell</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="Dracut.html#Module_dependency_errors"><span class="tocnumber">6.1.3</span> <span class="toctext">Module dependency errors</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="Dracut.html#Kernel_module_missing"><span class="tocnumber">6.1.4</span> <span class="toctext">Kernel module missing</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-44"><a href="Dracut.html#Debug_mode"><span class="tocnumber">6.2</span> <span class="toctext">Debug mode</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="Dracut.html#Network_boot_issues"><span class="tocnumber">6.3</span> <span class="toctext">Network boot issues</span></a>
+<ul>
+<li class="toclevel-3 tocsection-46"><a href="Dracut.html#DHCP_not_working"><span class="tocnumber">6.3.1</span> <span class="toctext">DHCP not working</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="Dracut.html#NFS_mount_failures"><span class="tocnumber">6.3.2</span> <span class="toctext">NFS mount failures</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-48"><a href="Dracut.html#Recovery_procedures"><span class="tocnumber">6.4</span> <span class="toctext">Recovery procedures</span></a>
+<ul>
+<li class="toclevel-3 tocsection-49"><a href="Dracut.html#Rescue_with_working_initramfs"><span class="tocnumber">6.4.1</span> <span class="toctext">Rescue with working initramfs</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="Dracut.html#Rescue_with_live_media"><span class="tocnumber">6.4.2</span> <span class="toctext">Rescue with live media</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="Dracut.html#Recreate_initramfs"><span class="tocnumber">6.4.3</span> <span class="toctext">Recreate initramfs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-52"><a href="Dracut.html#Logging_and_diagnosis"><span class="tocnumber">6.5</span> <span class="toctext">Logging and diagnosis</span></a>
+<ul>
+<li class="toclevel-3 tocsection-53"><a href="Dracut.html#Check_dracut_build_log"><span class="tocnumber">6.5.1</span> <span class="toctext">Check dracut build log</span></a></li>
+<li class="toclevel-3 tocsection-54"><a href="Dracut.html#Check_boot_messages"><span class="tocnumber">6.5.2</span> <span class="toctext">Check boot messages</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="Dracut.html#Examine_initramfs_contents"><span class="tocnumber">6.5.3</span> <span class="toctext">Examine initramfs contents</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-56"><a href="Dracut.html#Performance_issues"><span class="tocnumber">6.6</span> <span class="toctext">Performance issues</span></a>
+<ul>
+<li class="toclevel-3 tocsection-57"><a href="Dracut.html#Large_initramfs_size"><span class="tocnumber">6.6.1</span> <span class="toctext">Large initramfs size</span></a></li>
+<li class="toclevel-3 tocsection-58"><a href="Dracut.html#Slow_boot_times"><span class="tocnumber">6.6.2</span> <span class="toctext">Slow boot times</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-59"><a href="Dracut.html#When_dracut_is_executed"><span class="tocnumber">6.7</span> <span class="toctext">When dracut is executed</span></a>
+<ul>
+<li class="toclevel-3 tocsection-60"><a href="Dracut.html#Bluetooth"><span class="tocnumber">6.7.1</span> <span class="toctext">Bluetooth</span></a></li>
+<li class="toclevel-3 tocsection-61"><a href="Dracut.html#Cryptsetup"><span class="tocnumber">6.7.2</span> <span class="toctext">Cryptsetup</span></a></li>
+<li class="toclevel-3 tocsection-62"><a href="Dracut.html#NFS_.2F_rpcbind"><span class="tocnumber">6.7.3</span> <span class="toctext">NFS / rpcbind</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-63"><a href="Dracut.html#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-64"><a href="Dracut.html#External_resources"><span class="tocnumber">8</span> <span class="toctext">External resources</span></a></li>
+<li class="toclevel-1 tocsection-65"><a href="Dracut.html#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<h3><span class="mw-headline" id="USE_flags">USE flags</span></h3>
+<p class="mw-empty-elt">      </p><div class="panel panel-default gp-panel">
+        <div class="panel-heading gp-panel-heading">
+          <h3 class="panel-title">
+            <span class="text-muted">USE flags for</span>
+            <a href="https://packages.gentoo.org/packages/sys-kernel/dracut">sys-kernel/dracut</a>
+            <small><span class="fa fa-external-link-square"></span></small>
+            <small class="gp-pkg-desc">Generic initramfs generation tool</small>
+          </h3>
+        </div>
+        <div class="table-responsive gp-useflag-table-container">
+                <table class="table gp-useflag-table">        <tbody><tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/debug">debug</a></code>
+          </td>
+          <td>
+            Enable extra debug codepaths, like asserts and extra output. If you want to get meaningful backtraces see https://wiki.gentoo.org/wiki/Project:Quality_Assurance/Backtraces
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/dracut-cpio">dracut-cpio</a></code>
+          </td>
+          <td>
+            Build the enhanced &#39;dracut-cpio&#39; program
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/selinux">selinux</a></code>
+          </td>
+          <td>
+            !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/systemd">systemd</a></code>
+          </td>
+          <td>
+            Enable use of systemd-specific libraries and features like socket activation or session tracking
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/test">test</a></code>
+          </td>
+          <td>
+            Enable dependencies and/or preparations necessary to run tests (usually controlled by FEATURES=test but can be toggled independently)
+          </td>
+        </tr>      </tbody></table>
+        </div>
+        <div class="panel-footer gp-panel-footer">
+          <small class="pull-right">
+            Data provided by the <a href="https://packages.gentoo.org">Gentoo Package Database</a>
+            &#183;
+            Last update: 2026-09-14 04:15
+          </small>
+          <small>
+            <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE">More information about USE flags</a>
+          </small>
+        </div>
+      </div>
+<p class="mw-empty-elt"></p><p>Note: some packages have the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the dracut USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/dracut"><span style="color: MidnightBlue;">dracut</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> <a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag">USE flag</a>.
+</p>
+<h3><span class="mw-headline" id="Kernel">Kernel</span></h3>
+<p>Before using the images generated by dracut, the Linux kernel must include initramfs support. The ebuild will provide a warning post-installation if the kernel is missing the required options:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong>Enabling the initramfs (<var>CONFIG_BLK_DEV_INITRD</var> and <var>CONFIG_DEVTMPFS</var> respectively)</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>General setup  ---&gt;
+   [*] Initial RAM filesystem and RAM disk (initramfs/initrd) support
+Device Drivers ---&gt;
+   Generic Driver Options ---&gt;
+      [*] Maintain a devtmpfs filesystem to mount at /dev
+</pre></div>
+<p>Certain dracut modules also require additional dependencies to function. A list of optional dependencies is listed at the end of the installation. The <var>DRACUT_MODULES</var> variable in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">make.conf</span> is no longer used.
+</p>
+<h3><span class="mw-headline" id="Emerge">Emerge</span></h3>
+<p>Install dracut:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask sys-kernel/dracut</code></div></div> 
+<h2><span class="mw-headline" id="Building_an_initramfs_image">Building an initramfs image</span></h2>
+<h3><span class="mw-headline" id="Automation">Automation</span></h3>
+<p>Installing an initramfs image generated with Dracut can be automated by enabling the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the dracut USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/dracut"><span style="color: MidnightBlue;">dracut</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag on <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/installkernel package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/installkernel"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/installkernel</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>. This will generate a new initramfs image via <a href="https://wiki.gentoo.org/wiki/Installkernel" title="Installkernel">/sbin/installkernel</a> everytime a kernel is installed via <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">make install</span> or <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">emerge --config &lt;distribution kernel package&gt;</span>.
+</p>
+<h3><span class="mw-headline" id="Default_images">Default images</span></h3>
+<p>Once dracut is installed, it can be used to build an <a href="https://wiki.gentoo.org/wiki/Initramfs" title="Initramfs">initramfs</a> image. The simplest way to do this is to just run:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount /boot</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut</code></div></div>
+<p>By default Dracut will create an <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">initramfs</span> for the host system (hostonly). The built image will be suitable for booting the currently active kernel and only those kernel modules required for booting the current machine will be included.
+</p><p>Hostonly images produced will contain only those elements used by the local machine for booting. Certain modules behave differently in hostonly mode. For example, the list of included kernel modules will only contain the tools and modules used by the current rootfs file system, and the i18n module will install the fonts and keymaps for the local machine. Otherwise, every available file system, font, etc. would be included.
+</p><p>In some situations, like using a faster machine to compile <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-kernel/gentoo-kernel package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-kernel/gentoo-kernel"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-kernel/gentoo-kernel</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> this will cause issues with booting once moved to the new machine. Generic generation can be restored using the <code>--no-hostonly</code> as detailed below:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --no-hostonly</code></div></div>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-check-circle"></i> Tip</strong><br />No-hostonly mode can be also set as the default in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/dracut.conf</span>:
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">hostonly</span><span class="o">=</span><span class="s2">&quot;no&quot;</span>
+</pre></div></div>
+<p>The image will be written in a file called <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot/initramfs-&lt;kernel version&gt;.img</span>. Both options may be overridden by specifying a new file name and kernel version on the command line, in that order. Both parameters are optional. To override the kernel version and keep the default file name, add the --kver option:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --hostonly --kver 3.2.5-hardened</code></div></div>
+<h3><span class="mw-headline" id="Configuration">Configuration</span></h3>
+<h4><span id="Localization_/_i18n"></span><span class="mw-headline" id="Localization_.2F_i18n">Localization / i18n</span></h4>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-check-circle"></i> Tip</strong><br />Localization can be set in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/dracut.conf</span>:
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">i18n_vars</span><span class="o">=</span><span class="s2">&quot;/usr/share/consolefonts  /usr/share/keymaps&quot;</span>
+</pre></div></div>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Modules">Modules</span></h3>
+<p>Dracut installs all available modules, though some may need additional dependencies. The purpose of each module is to arrange for files to be included in the final initramfs image. In addition, dracut exposes hooks that run at certain points, which modules can hook into to perform required boot actions.
+</p>
+<h3><span class="mw-headline" id="Adding_modules">Adding modules</span></h3>
+<p>Dracut comes with a suitable set of default modules (see below). This module list can be overridden in two ways: on the command line, or in the configuration file. Editing the configuration file will set up dracut to be re-run easily when changing kernels or after modifying other boot-time options. Options specified in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/dracut.conf</span> can be overridden by files in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/dracut.conf.d</span>, which are installed by various dracut-aware packages. Both options can be overridden by command-line parameters. The following configuration options deal with the default modules list:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Equivalent to -H</span>
+<span class="nv">hostonly</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span>
+
+<span class="c1"># Equivalent to -m &quot;module module module&quot;</span>
+<span class="nv">dracutmodules</span><span class="o">+=</span><span class="s2">&quot; dash kernel-modules rootfs-block usrmount fs-lib shutdown &quot;</span>
+
+<span class="c1"># Equivalent to -a &quot;module&quot;</span>
+<span class="nv">add_dracutmodules</span><span class="o">+=</span><span class="s2">&quot; module &quot;</span><span class="w"> </span><span class="c1"># Note leading and trailing spaces</span>
+
+<span class="c1"># Equivalent to -o &quot;module&quot;</span>
+<span class="nv">omit_dracutmodules</span><span class="o">+=</span><span class="s2">&quot; module &quot;</span><span class="w"> </span><span class="c1"># Note leading and trailing spaces</span>
+</pre></div>
+<p>Specifying <var>dracutmodules</var> (or the <code>-m</code> option) will override the entire default list, and install <i>only</i> the modules specified. This can cut down significantly on image size (for example, if no kernel modules are needed, or i18n support, etc.). If it is not clear which modules are needed, build one fully-featured image and keep it in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/boot</span> to experiment. If anything goes wrong, <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">grub.conf</span> may be edited at boot to switch to that.
+</p><p>The other options can be used to add or remove items from the default list, including <a href="Dracut.html#Custom_modules">custom modules</a>. If a module refuses to install (for example, its prerequisite binaries are missing) there is a <code>--force-add</code> command-line switch (but no matching configuration option) to add them anyway. Note that forcing a module to be added this way is dangerous, as the installed scripts will likely to run execute commands that are not present.
+</p>
+<h3><span class="mw-headline" id="List_of_modules">List of modules</span></h3>
+<p>Full list of supported modules can be obtained using the <code>--list-modules</code> parameter. The following list has been updated for <b>dracut-106</b> and is accurate as of <b>2025-07-01</b>. Note that available modules may vary depending on your system configuration and installed packages. Modules are listed with their additional requirements. <sup id="cite_ref-1" class="reference"><a href="Dracut.html#cite_note-1">&#91;1&#93;</a></sup>
+</p>
+<table class="table table-condensed table-striped">
+<tbody><tr>
+<th>Module</th>
+<th>Description</th>
+<th>Enabled?</th>
+<th>Depends on modules</th>
+<th>Requirements
+</th></tr>
+<tr>
+<th colspan="5">Core System
+</th></tr>
+<tr>
+<td>base</td>
+<td>Base module with required utilities</td>
+<td>always</td>
+<td>udev-rules</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Bash" title="Bash">bash</a></td>
+<td>Includes <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/bin/bash</span> as <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/bin/sh</span></td>
+<td>when required; bash is preferred interpreter if there more of them available</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the app-shells/bash package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-shells/bash"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-shells/bash</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (bash)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Busybox" title="Busybox">busybox</a></td>
+<td>Includes <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/bin/busybox</span> as replacement of utilities supported by <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">busybox --list</span></td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/busybox package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/busybox"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/busybox</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (busybox)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Dash" title="Dash">dash</a></td>
+<td>Includes <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/bin/dash</span> as <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/bin/sh</span></td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the app-shells/dash package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-shells/dash"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-shells/dash</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (dash)
+</td></tr>
+<tr>
+<td>debug</td>
+<td>Enable debug features</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>dracut-systemd</td>
+<td>Legacy compatibility module for systemd support</td>
+<td>when required</td>
+<td>systemd</td>
+<td>
+</td></tr>
+<tr>
+<td>rescue</td>
+<td>Includes various utilities for rescue mode (such as ping, ssh, vi, fsck.*)</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>shell-interpreter</td>
+<td>Virtual module for shell interpreter selection</td>
+<td>when required</td>
+<td>OR(bash dash mksh busybox)</td>
+<td>
+</td></tr>
+<tr>
+<td>shutdown</td>
+<td>Sets up hooks to run on shutdown</td>
+<td>always</td>
+<td>base</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Systemd" title="Systemd">systemd</a></td>
+<td>Adds systemd as early init initialization system</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-ac-power</td>
+<td>Adds systemd AC power detection support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-ask-password</td>
+<td>Adds systemd password prompting support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-battery-check</td>
+<td>Adds systemd battery level checking</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-bsod</td>
+<td>Adds systemd blue screen of death support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-coredump</td>
+<td>Adds systemd coredump handling</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-creds</td>
+<td>Adds systemd credentials support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-emergency</td>
+<td>Adds systemd emergency mode support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-hostnamed</td>
+<td>Adds systemd hostname daemon</td>
+<td>when required</td>
+<td>systemd dbus</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-initrd</td>
+<td>Adds systemd initrd support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-integritysetup</td>
+<td>Adds systemd dm-integrity support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-journald</td>
+<td>Adds systemd journal daemon</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-ldconfig</td>
+<td>Adds systemd ldconfig support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-modules-load</td>
+<td>Adds systemd kernel module loading</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-network-management</td>
+<td>Adds network management for systemd</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>systemd-networkd</td>
+<td>Adds systemd network daemon</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-pcrphase</td>
+<td>Adds systemd PCR phase support</td>
+<td>when required</td>
+<td>systemd tpm2-tss</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-portabled</td>
+<td>Adds systemd portable service support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-pstore</td>
+<td>Adds systemd persistent storage support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-repart</td>
+<td>Adds systemd partition management</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-resolved</td>
+<td>Adds systemd DNS resolver daemon</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-sysctl</td>
+<td>Adds systemd sysctl support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-sysext</td>
+<td>Adds systemd system extension support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-sysusers</td>
+<td>Adds systemd system users support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-timedated</td>
+<td>Adds systemd time daemon</td>
+<td>when required</td>
+<td>systemd dbus</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-timesyncd</td>
+<td>Adds systemd time synchronization daemon</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-tmpfiles</td>
+<td>Adds systemd temporary files support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-udevd</td>
+<td>Adds systemd udev daemon</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-veritysetup</td>
+<td>Adds systemd dm-verity support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>syslog</td>
+<td>Includes syslog capabilites to initramfs</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>terminfo</td>
+<td>Includes a terminfo file</td>
+<td>always</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>udev-rules</td>
+<td>Includes udev and some basic rules</td>
+<td>always</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the virtual/udev package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/virtual/udev"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">virtual/udev</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (udevadm)
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<th colspan="5">File Systems
+</th></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Btrfs" title="Btrfs">btrfs</a></td>
+<td>Adds BTRFS support</td>
+<td>always; hostonly: rootfs</td>
+<td>udev-rules</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/btrfs-progs package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/btrfs-progs"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/btrfs-progs</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>cifs</td>
+<td>Adds CIFS filesystem support</td>
+<td>always; hostonly: rootfs</td>
+<td>network</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the net-fs/cifs-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-fs/cifs-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-fs/cifs-utils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (mount.cifs)
+</td></tr>
+<tr>
+<td>convertfs</td>
+<td>Merges <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/</span> into <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr</span> on next boot</td>
+<td>when required</td>
+<td>base bash</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Ecryptfs" class="mw-redirect" title="Ecryptfs">ecryptfs</a></td>
+<td>Adds ecryptfs filesystems support</td>
+<td>when required</td>
+<td>masterkey</td>
+<td>
+</td></tr>
+<tr>
+<td>fs-lib</td>
+<td>Includes filesystem tools (including fsck.* and mount)</td>
+<td>always</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>fstab-sys</td>
+<td>Arranges for arbitrary partitions to be mounted before rootfs.</td>
+<td>always if <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/fstab.sys</span> exists, or command line includes <code>--fstab</code> or <code>--add_fstab</code></td>
+<td>fs-lib</td>
+<td>
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/NFS" class="mw-redirect" title="NFS">nfs</a></td>
+<td>Adds support for NFS</td>
+<td>always; hostonly: rootfs</td>
+<td>network</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the net-fs/nfs-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-fs/nfs-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-fs/nfs-utils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (rpc.statd mount.nfs mount.nfs4 umount sed chmod chown) <span style="white-space: nowrap;" class="plainlinks" title="External link for the net-nds/rpcbind package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-nds/rpcbind"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-nds/rpcbind</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (rpcbind portmap)
+</td></tr>
+<tr>
+<td>rootfs-block</td>
+<td>Arranges for the block device containing the rootfs to be mounted</td>
+<td>always</td>
+<td>base fs-lib</td>
+<td>
+</td></tr>
+<tr>
+<td>usrmount</td>
+<td>Arranges for <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr</span> to be mounted</td>
+<td>always</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>virtfs</td>
+<td>Adds virtual filesystems (9p) support</td>
+<td>when required; hostonly: rootfs</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>virtiofs</td>
+<td>Adds virtiofs filesystems support</td>
+<td>always; hostonly: rootfs</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>zfs</td>
+<td>Adds ZFS filesystem support</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/zfs package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/zfs"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/zfs</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (zfs zpool)
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<th colspan="5">Storage &amp; Block Devices
+</th></tr>
+<tr>
+<td>cms</td>
+<td>Includes support for mounting z/VM CMS disks</td>
+<td>when required</td>
+<td>znet zfcp dasd dasd_mod bash</td>
+<td>
+</td></tr>
+<tr>
+<td>crypt</td>
+<td>Adds support for encrypted with <a href="https://wiki.gentoo.org/wiki/LUKS" class="mw-redirect" title="LUKS">LUKS</a> filesystems</td>
+<td>always; hostonly: rootfs</td>
+<td>dm rootfs-block</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/cryptsetup package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/cryptsetup"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/cryptsetup</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (cryptsetup)
+</td></tr>
+<tr>
+<td>crypt-gpg</td>
+<td>Adds support GPG for crypto operations and SmartCards (may requires GPG keys)</td>
+<td>when required; always if file /etc/dracut.conf.d/crypt-public-key.gpg exists</td>
+<td>crypt</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the app-crypt/gnupg package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-crypt/gnupg"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-crypt/gnupg</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (gpg)
+</td></tr>
+<tr>
+<td>crypt-loop</td>
+<td>Adds support for encrypted loopback devices (symmetric key)</td>
+<td>when required</td>
+<td>crypt</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/util-linux package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/util-linux"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/util-linux</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> losetup
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/LVM" title="LVM">dm</a></td>
+<td>Adds support of device-mapper</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/lvm2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/lvm2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/lvm2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (dmsetup)
+</td></tr>
+<tr>
+<td>dmraid</td>
+<td>Adds support for DMRAID arrays</td>
+<td>always; hostonly: rootfs</td>
+<td>dm rootfs-block</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/dmraid package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/dmraid"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/dmraid</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (dmraid)
+</td></tr>
+<tr>
+<td>dmsquash-live</td>
+<td>Includes support for SquashFS images</td>
+<td>when required; hostonly: never</td>
+<td>dm rootfs-block img-lib bash</td>
+<td>
+</td></tr>
+<tr>
+<td>dmsquash-live-autooverlay</td>
+<td>Auto-overlay support for live images</td>
+<td>when required</td>
+<td>dmsquash-live</td>
+<td>
+</td></tr>
+<tr>
+<td>dmsquash-live-ntfs</td>
+<td>Includes support for <a href="https://wiki.gentoo.org/wiki/SquashFS" title="SquashFS">SquashFS</a> images located in NTFS filesystems</td>
+<td>when required</td>
+<td>dmsquash-live</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/ntfs3g package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/ntfs3g"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/ntfs3g</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (ntfs-3g)
+</td></tr>
+<tr>
+<td>fcoe</td>
+<td>Adds support for Fibre Channel over Ethernet (FCoE)</td>
+<td>always; hostonly: rootfs</td>
+<td>network</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/fcoe-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/fcoe-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/fcoe-utils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (fcoemon fcoeadm fipvlan) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/lldpad package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/lldpad"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/lldpad</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (lldpad dcbtool) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/iproute2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/iproute2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/iproute2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (ip) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/coreutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/coreutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/coreutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (readlink tr)
+</td></tr>
+<tr>
+<td>fcoe-uefi</td>
+<td>Adds support for Fibre Channel over Ethernet (FCoE) in EFI mode</td>
+<td>always; hostonly: rootfs</td>
+<td>fcoe uefi-lib bash</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/fcoe-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/fcoe-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/fcoe-utils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (fipvlan) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/lldpad package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/lldpad"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/lldpad</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (lldpad dcbtool) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/iproute2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/iproute2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/iproute2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (ip) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/coreutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/coreutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/coreutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (readlink)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/ISCSI" title="ISCSI">iscsi</a></td>
+<td>Adds support for iSCSI devices</td>
+<td>always; hostonly: rootfs</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-block/open-iscsi package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-block/open-iscsi"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-block/open-iscsi</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (iscsi-iname iscsiadm iscsid)
+</td></tr>
+<tr>
+<td>livenet</td>
+<td>Fetch live updates for SquashFS images</td>
+<td>when required</td>
+<td>network url-lib dmsquash-live img-lib bash</td>
+<td>
+</td></tr>
+<tr>
+<td>lunmask</td>
+<td>Masks LUN devices to select only ones which required to boot</td>
+<td>always; hostonly: rootfs when type in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/sys/module/scsi_mod/parameters/scan</span> is "manual"</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/LVM" title="LVM">lvm</a></td>
+<td>Supports LVM devices</td>
+<td>always; hostonly: rootfs</td>
+<td>rootfs-block dm</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/lvm2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/lvm2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/lvm2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (lvm, needs USE=lvm enabled), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/grep package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/grep"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/grep</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (grep)
+</td></tr>
+<tr>
+<td>lvmmerge</td>
+<td>Merges lvm snapshots</td>
+<td>when required</td>
+<td>lvm dracut-systemd systemd bash</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/lvm2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/lvm2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/lvm2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (lvm, needs USE=lvm enabled), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/coreutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/coreutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/coreutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (dd), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/util-linux package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/util-linux"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/util-linux</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (swapoff)
+</td></tr>
+<tr>
+<td>lvmthinpool-monitor</td>
+<td>Monitor LVM thinpool service</td>
+<td>when required</td>
+<td>lvm</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/lvm2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/lvm2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/lvm2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (lvm), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/coreutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/coreutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/coreutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (tr, sort), <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-alternatives/awk package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-alternatives/awk"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-alternatives/awk</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (awk)
+</td></tr>
+<tr>
+<td>mdraid</td>
+<td>Adds support for mdadm arrays</td>
+<td>always; hostonly: rootfs</td>
+<td>rootfs-block</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/mdadm package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/mdadm"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/mdadm</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (mdadm)
+</td></tr>
+<tr>
+<td>multipath</td>
+<td>Adds support for multipath devices</td>
+<td>always; hostonly: rootfs</td>
+<td>rootfs-block dm</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/multipath-tools package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/multipath-tools"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/multipath-tools</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (multipath)
+</td></tr>
+<tr>
+<td>nbd</td>
+<td>Adds support for network block device devices</td>
+<td>always; hostonly: rootfs</td>
+<td>network rootfs-block</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-block/nbd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-block/nbd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-block/nbd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (nbd-client)
+</td></tr>
+<tr>
+<td>nvdimm</td>
+<td>Adds support for non-volatile DIMM devices</td>
+<td>when required; hostonly: rootfs or there nvdimm devices in system - always</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>nvmf</td>
+<td>Adds support for <a href="https://wiki.gentoo.org/wiki/NVMe" title="NVMe">NVMe</a> over Fabrics devices</td>
+<td>always; hostonly: rootfs</td>
+<td>bash rootfs-block network</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/nvme-cli package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/nvme-cli"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/nvme-cli</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (nvme) <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-misc/jq package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-misc/jq"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-misc/jq</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (jq)
+</td></tr>
+<tr>
+<td>pollcdrom</td>
+<td>Enables <a href="https://wiki.gentoo.org/wiki/CDROM" title="CDROM">CD-ROM</a> polling</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>squash</td>
+<td>Builds SquashFS initramfs</td>
+<td>when required</td>
+<td>systemd-initrd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/squashfs-tools package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/squashfs-tools"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/squashfs-tools</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (mksquashfs unsquashfs)
+</td></tr>
+<tr>
+<td>squash-erofs</td>
+<td>Builds EROFS SquashFS initramfs</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/erofs-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/erofs-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/erofs-utils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (mkfs.erofs)
+</td></tr>
+<tr>
+<td>squash-lib</td>
+<td>Library functions for squash modules</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>squash-squashfs</td>
+<td>SquashFS specific support</td>
+<td>when required</td>
+<td>squash-lib</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/squashfs-tools package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/squashfs-tools"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/squashfs-tools</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>systemd-cryptsetup</td>
+<td>Use systemd-cryptsetup to unlock a device for <code>crypt</code></td>
+<td>when required</td>
+<td>dm rootfs-block crypt systemd-ask-password</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/systemd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/systemd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/systemd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td>zfcp</td>
+<td>Adds support for z Systems FCP devices</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>zipl</td>
+<td>Adds support for z Systems IPL</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<th colspan="5">Network &amp; Communication
+</th></tr>
+<tr>
+<td>biosdevname</td>
+<td>Enables <a href="https://wiki.gentoo.org/wiki/BIOS" title="BIOS">BIOS</a> network device renaming.</td>
+<td>always</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/biosdevname package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/biosdevname"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/biosdevname</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (biosdevname)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Bluetooth" title="Bluetooth">bluetooth</a></td>
+<td>Includes bluetooth devices support</td>
+<td>when required; hostonly: always if there bluetooth keyboard or pointing device</td>
+<td>systemd dbus</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the net-wireless/bluez package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-wireless/bluez"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-wireless/bluez</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Connman" title="Connman">connman</a></td>
+<td>Includes <span style="white-space: nowrap;" class="plainlinks" title="External link for the net-misc/connman package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-misc/connman"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-misc/connman</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> support</td>
+<td>when required</td>
+<td>dbus systemd bash</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/sed package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/sed"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/sed</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (sed), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/grep package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/grep"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/grep</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (grep), <span style="white-space: nowrap;" class="plainlinks" title="External link for the net-misc/connman package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-misc/connman"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-misc/connman</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (connmand, connmanctl, connmand-wait-online)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Dbus" class="mw-redirect" title="Dbus">dbus</a></td>
+<td>Virtual package for dbus-broker or dbus-daemon</td>
+<td>when required</td>
+<td>OR(dbus-broker dbus-daemon)</td>
+<td>
+</td></tr>
+<tr>
+<td>dbus-broker</td>
+<td>Use <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/dbus-broker package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/dbus-broker"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/dbus-broker</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> as dbus service provider</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/dbus-broker package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/dbus-broker"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/dbus-broker</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (busctl, dbus-broker, dbus-broker-launch)
+</td></tr>
+<tr>
+<td>dbus-daemon</td>
+<td>Use <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/dbus package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/dbus"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/dbus</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> as dbus service provider</td>
+<td>when required; dbus-broker not in use</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/dbus package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/dbus"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/dbus</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (busctl, dbus-broker, dbus-broker-launch)
+</td></tr>
+<tr>
+<td>kernel-network-modules</td>
+<td>Includes and loads kernel modules for network devices</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>network</td>
+<td>Virtual module for network service providers</td>
+<td>when required</td>
+<td>OR(connman network-manager network-legacy systemd-networkd) kernel-network-modules</td>
+<td>
+</td></tr>
+<tr>
+<td>network-legacy</td>
+<td>Includes legacy networking tools support</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/iproute2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/iproute2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/iproute2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (ip), <span style="white-space: nowrap;" class="plainlinks" title="External link for the net-misc/dhcp package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-misc/dhcp"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-misc/dhcp</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (dhclient), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/sed package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/sed"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/sed</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (sed), <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-alternatives/awk package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-alternatives/awk"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-alternatives/awk</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (awk), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/grep package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/grep"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/grep</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (grep), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/coreutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/coreutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/coreutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (tr, expr), <span style="white-space: nowrap;" class="plainlinks" title="External link for the net-analyzer/arping package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-analyzer/arping"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-analyzer/arping</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (arping)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/NetworkManager" title="NetworkManager">network-manager</a></td>
+<td>Includes <span style="white-space: nowrap;" class="plainlinks" title="External link for the net-misc/networkmanager package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-misc/networkmanager"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-misc/networkmanager</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> support</td>
+<td>when required</td>
+<td>dbus bash</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/sed package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/sed"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/sed</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (sed), <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/grep package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/grep"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/grep</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (grep)
+</td></tr>
+<tr>
+<td>net-lib</td>
+<td>Network library functions</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>qemu-net</td>
+<td>Includes network kernel modules for <a href="https://wiki.gentoo.org/wiki/QEMU" title="QEMU">QEMU</a> environment</td>
+<td>always; in hostonly when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>znet</td>
+<td>Adds support for z Systems network devices</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>ssh-client</td>
+<td>Includes <a href="https://wiki.gentoo.org/wiki/SSH" title="SSH">ssh</a> and scp clients</td>
+<td>when required</td>
+<td>network</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the net-misc/openssh package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-misc/openssh"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-misc/openssh</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (ssh scp)
+</td></tr>
+<tr>
+<td>url-lib</td>
+<td>Includes curl and SSL certs.</td>
+<td>when required</td>
+<td>network</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the net-misc/curl package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/net-misc/curl"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">net-misc/curl</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (curl)
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<th colspan="5">Hardware &amp; Drivers
+</th></tr>
+<tr>
+<td>drm</td>
+<td>Includes kernel modules that provides DRM support</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Kernel_Modules" title="Kernel Modules">kernel-modules</a></td>
+<td>Includes and loads kernel modules for root filesystems and other boot-time devices</td>
+<td>always</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>kernel-modules-extra</td>
+<td>Includes and loads extra out-of-tree kernel modules</td>
+<td>always</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>numlock</td>
+<td>Enables NumLock on boot</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>overlayfs</td>
+<td>Adds OverlayFS support</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>pcmcia</td>
+<td>Adds PCMCIA support</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>ppcmac</td>
+<td>PowerPC Mac specific support</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>qemu</td>
+<td>QEMU/KVM specific optimizations</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>watchdog</td>
+<td>Includes watchdog devices management; works only if systemd not in use</td>
+<td>when required</td>
+<td>watchdog-modules</td>
+<td>
+</td></tr>
+<tr>
+<td>watchdog-modules</td>
+<td>Includes watchdog kernel modules to be loaded early in booting</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<th colspan="5">Security &amp; Access Control
+</th></tr>
+<tr>
+<td>caps</td>
+<td>Supports dropping capabilities before init</td>
+<td>when required; not working if systemd in use</td>
+<td>bash</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-libs/libcap package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-libs/libcap"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-libs/libcap</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (capsh)
+</td></tr>
+<tr>
+<td>fido2</td>
+<td>Adds FIDO2 authentication support</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the dev-libs/libfido2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/dev-libs/libfido2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">dev-libs/libfido2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (fido2-token)
+</td></tr>
+<tr>
+<td>fips</td>
+<td>Enforces FIPS security standard regulations</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>fips-crypto-policies</td>
+<td>Enforces FIPS crypto policies</td>
+<td>when required</td>
+<td>fips</td>
+<td>
+</td></tr>
+<tr>
+<td>integrity</td>
+<td>Adds support for Extended Verification Module</td>
+<td>when required</td>
+<td>masterkey securityfs</td>
+<td>
+</td></tr>
+<tr>
+<td>masterkey</td>
+<td>Includes masterkey that can be used to decrypt other keys</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/keyutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/keyutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/keyutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (keyctl) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/coreutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/coreutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/coreutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (uname)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Signed_kernel_module_support" title="Signed kernel module support">modsign</a></td>
+<td>Adds signing kernel modules support</td>
+<td>when required; in hostonly mode requires keys from /lib/modules/keys/</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/keyutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/keyutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/keyutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (keyctl)
+</td></tr>
+<tr>
+<td>pcsc</td>
+<td>Adds support for PCSC Smart cards</td>
+<td>when required</td>
+<td>systemd-udevd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/pcsc-lite package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/pcsc-lite"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/pcsc-lite</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (pcsc)
+</td></tr>
+<tr>
+<td>pkcs11</td>
+<td>Includes PKCS#11 libraries</td>
+<td>when required</td>
+<td>systemd-udevd</td>
+<td>
+</td></tr>
+<tr>
+<td>securityfs</td>
+<td>Arranges for the securityfs to be mounted early</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/SELinux" title="SELinux">selinux</a></td>
+<td>Arranges for the selinux policy to be loaded</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>tpm2-tss</td>
+<td>Adds support for TPM2 devices</td>
+<td>when required</td>
+<td>systemd-sysusers systemd-udevd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the app-crypt/tpm2-tools package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-crypt/tpm2-tools"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-crypt/tpm2-tools</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (tpm2)
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<th colspan="5">Boot &amp; System Services
+</th></tr>
+<tr>
+<td>i18n</td>
+<td>Includes keymaps, console fonts, etc.</td>
+<td>always</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/kbd package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/kbd"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/kbd</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (setfont, loadkeys, kbd_mode)
+</td></tr>
+<tr>
+<td>memstrack</td>
+<td>Includes memstrack for memory usage monitoring</td>
+<td>always</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-process/procps package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-process/procps"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-process/procps</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (pgrep pkill) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/memstrack package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/memstrack"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/memstrack</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (memstrack)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/Plymouth" title="Plymouth">plymouth</a></td>
+<td>Includes boot splash support via plymouth</td>
+<td>when required</td>
+<td>drm</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-boot/plymouth package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-boot/plymouth"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-boot/plymouth</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (plymouthd plymouth plymouth-set-default-theme)
+</td></tr>
+<tr>
+<td>resume</td>
+<td>Allows initramfs to resume from low-power state</td>
+<td>always; hostonly: rootfs when local swap partition exists - always</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>rngd</td>
+<td>Starts random generator serive on early boot</td>
+<td>when required</td>
+<td>systemd</td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/rng-tools package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/rng-tools"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/rng-tools</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (rngd)
+</td></tr>
+<tr>
+<td><a href="https://wiki.gentoo.org/wiki/UEFI" title="UEFI">uefi-lib</a></td>
+<td>Includes UEFI tools</td>
+<td>when required</td>
+<td>bash</td>
+<td>
+</td></tr>
+<tr>
+<td>warpclock</td>
+<td>Sets kernel's timezone and reset the system time if adjtime is set to LOCAL</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/util-linux package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/util-linux"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/util-linux</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (hwclock)
+</td></tr>
+<tr>
+<td>
+</td></tr>
+<tr>
+<th colspan="5">Utilities &amp; Tools
+</th></tr>
+<tr>
+<td>dasd</td>
+<td>Adds support for z Systems DASD</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>dasd_mod</td>
+<td>DASD module support</td>
+<td>when required</td>
+<td>dasd</td>
+<td>
+</td></tr>
+<tr>
+<td>dcssblk</td>
+<td>z Systems DCSS block device support</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>hwdb</td>
+<td>Includes hardware database files</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>img-lib</td>
+<td>Includes various tools for decompressing images</td>
+<td>when required</td>
+<td></td>
+<td><span style="white-space: nowrap;" class="plainlinks" title="External link for the app-arch/tar package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-arch/tar"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-arch/tar</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (tar) <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-arch/gzip package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-arch/gzip"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-arch/gzip</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (gzip) <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/coreutils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/coreutils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/coreutils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> (dd echo tr)
+</td></tr>
+<tr>
+<td>test</td>
+<td>Test module for dracut development</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>test-makeroot</td>
+<td>Test makeroot for dracut development</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>test-root</td>
+<td>Test root for dracut development</td>
+<td>when required</td>
+<td></td>
+<td>
+</td></tr>
+<tr>
+<td>zfsexpandknowledge</td>
+<td>ZFS expand knowledge support</td>
+<td>when required</td>
+<td>zfs</td>
+<td>
+</td></tr></tbody></table>
+<ul><li>The Enabled field indicates when a particular module will be included <i>by default</i> into the initramfs image.</li>
+<li>Modules with pre-requisite packages cannot be included (even explicitly) if the required software is missing from the host.</li>
+<li>Modules enabled for "host-only: rootfs" are included in host-only images if the active rootfs requires that module.</li>
+<li>Modules enabled "when required" may be installed as dependency or when explicitly added via the command-line or configuration file.</li></ul>
+<h3><span class="mw-headline" id="Customizing_the_image">Customizing the image</span></h3>
+<p>Besides defining the list of modules to include, the final initramfs may be customized in a few other ways. The <code>install_items</code> option in the configuration file can list a number of arbitrary items to add to the image. Other options add specific elements to the image, as described below.
+</p>
+<h4><span class="mw-headline" id="Adding_files_to_the_image">Adding files to the image</span></h4>
+<p>It is possible to add multiple files to the initramfs image. For example, adding two <a href="https://wiki.gentoo.org/wiki/Linux_firmware" title="Linux firmware">firmware</a> files can be achieved via:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf.d/firmware.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">install_items</span><span class="o">+=</span><span class="s2">&quot; /lib/firmware/i915/kbl_guc_ver9_33.bin /lib/firmware/i915/kbl_huc_ver01_07_1398.bin &quot;</span>
+</pre></div>
+<h4><span class="mw-headline" id="Kernel_modules">Kernel modules</span></h4>
+<p>By default, the <code>kernel-modules</code> driver scans the list of available kernel modules, and installs the set of modules needed to boot a system and bring up the rootfs. This includes the hardware bus drivers (SCSI, ATA, USB, etc), keyboard drivers, block device drivers, and file system drivers. (In host-only mode, only the file systems used by the build host are included.) Update the list of installed modules via the command-line or configuration file. When specifying a kernel module name, do not include the <code>.ko</code> extension.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Equivalent to --drivers=&quot;module module module&quot;</span>
+<span class="nv">drivers</span><span class="o">+=</span><span class="s2">&quot; module module module &quot;</span>
+
+<span class="c1"># Equivalent to --add-drivers</span>
+<span class="nv">add_drivers</span><span class="o">+=</span><span class="s2">&quot; module &quot;</span>
+
+<span class="c1"># Equivalent to --omit-drivers=&quot;module&quot;</span>
+<span class="nv">omit_drivers</span><span class="o">+=</span><span class="s2">&quot; module &quot;</span>
+
+<span class="c1"># Equivalent to --filesystems=&quot;fs fs fs&quot;</span>
+<span class="nv">filesystems</span><span class="o">+=</span><span class="s2">&quot; fs fs fs &quot;</span>
+
+<span class="c1"># Equivalent to --kmoddir=&quot;/lib/modules/fixed&quot;</span>
+<span class="nv">drivers_dir</span><span class="o">=</span><span class="s2">&quot;/lib/modules/fixed&quot;</span>
+
+<span class="c1"># Equivalent to  --fwdir=&quot;:/lib/fw/alt:/lib/fw/alt2&quot;</span>
+<span class="nv">fw_dir</span><span class="o">+=</span><span class="s2">&quot;:/lib/fw/alt:/lib/fw/alt2&quot;</span>
+</pre></div>
+<ul><li>In host-only mode, the running hosts filesystems are always installed, regardless of the <code>filesystems</code> parameter.</li></ul>
+<h4><span class="mw-headline" id="Filesystems_and_mount_points">Filesystems and mount points</span></h4>
+<p>The default image will arrange for the rootfs and the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr</span> partition (if different) to be mounted at boot time. The build process will obtain the device and file system information it needs from <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/proc/self/mountinfo</span>. This may not be the desired behavior, or other partitions may need to be mounted as well.
+To just have additional partitions mounted at boot, add them under:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Bring up &lt;device&gt; in initramfs, &lt;device&gt; should be the device name</span>
+<span class="nv">add_device</span><span class="o">+=</span><span class="s2">&quot; /dev/mapper/sysvg-home /dev/mapper/sysvg-swap /dev/mapper/hdvg-private &quot;</span>
+</pre></div>
+<p>To further alter the behavior of the initramfs the <code>fstab-sys</code> module is required, plus the following options:
+</p>
+<ul><li>Create a file called <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/fstab.sys</span>, which will be copied to the initramfs and mounted.</li>
+<li>Specify <code>use_fstab="yes"</code> (or <code>--use-fstab</code>), which will use the system's <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/fstab</span> instead of <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/proc/self/mountinfo</span>.</li>
+<li>Specify <code>add_fstab+=" <i>filename</i> "</code> or <code>--add_fstab <i>filename</i></code>, which will add the contents of <i>filename</i> to the initramfs's <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/fstab</span>.</li>
+<li>Specify <code>--mount <i>fstab mount spec</i></code>, which adds individual entries into the initramfs' <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/fstab</span>.</li></ul>
+<p>(Note that <code>add_fstab</code> does not automatically trigger <code>fstab-sys</code> to be included in the image; this may be a bug, as <code>use_fstab</code> does include the module but does not actually supply an <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/fstab</span>.)
+</p>
+<h4><span class="mw-headline" id="Elogind">Elogind</span></h4>
+<p>To fully support elogind, an extra command should be added to the initramfs via the dracut configuration:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf.d/elogind.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">install_items</span><span class="o">+=</span><span class="s2">&quot; /usr/lib/elogind/elogind-uaccess-command &quot;</span>
+</pre></div>
+<p>This will allow uaccess rules to be processed correctly.
+</p>
+<h4><span class="mw-headline" id="Compressing_the_image">Compressing the image</span></h4>
+<p>For zstd, refer to <a href="https://wiki.gentoo.org/wiki/Zstd#Dracut" title="Zstd">Zstd</a>. Dracut uses <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-arch/lbzip2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-arch/lbzip2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-arch/lbzip2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> if available for bzip2 or <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-arch/pigz package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-arch/pigz"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-arch/pigz</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> if available for gzip. By default, file systems are compressed with gzip.
+</p>
+<div class="alert alert-danger gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-triangle"></i> Warning</strong><br />For a working system that will boot, compile the userspace compression program AND the kernel with decompression.</div>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf.d/compression.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Choose compression program for the image</span>
+<span class="nv">compress</span><span class="o">=</span><span class="s2">&quot;gzip&quot;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Booting_the_initramfs">Booting the initramfs</span></h2>
+<p>Any parameters that are need to pass to the dracut modules are passed on the kernel command line. If net booting, the DHCP server can also provide command-line parameters. The dracut scripts parse the kernel command line very early in the boot process and use the information found there to adjust their behavior. The list of options, by module, can be found in the man dracut.cmdline man page.
+</p>
+<h2><span class="mw-headline" id="Tasks">Tasks</span></h2>
+<h3><span class="mw-headline" id="ext_boot">ext boot</span></h3>
+<p>For booting an ext(2,3,4) filesystem none of the optional dracut modules are required.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut initramfs.img</code></div></div>
+<p>Once the image is built, the final step is to include the image in the <a href="https://wiki.gentoo.org/wiki/Bootloader" title="Bootloader">bootloader</a>. To do this, simply add a line in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">grub.conf</span>:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/boot/grub/grub.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>kernel<span class="w"> </span>/boot/vmlinuz<span class="w"> </span><span class="nv">root</span><span class="o">=</span><span class="nv">UUID</span><span class="o">=</span><span class="m">00000000</span>-0000-0000-0000-000000000000
+initrd<span class="w"> </span>/boot/initramfs.img
+</pre></div>
+<p>It is recommended to use the UUID= (or LABEL=) form of the root specification; to guard against device names changing between boots. Find the UUID of the root device by running this command:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>ls -alF /dev/disk/by-uuid</code></div></div>
+<h3><span class="mw-headline" id="LVM_on_LUKS">LVM on LUKS</span></h3>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-check-circle"></i> Tip</strong><br /><span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/lvm2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/lvm2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/lvm2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> needs the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the lvm USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/lvm"><span style="color: MidnightBlue;">lvm</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag for this.</div>
+<p>To boot from a root residing on an <a href="https://wiki.gentoo.org/wiki/LVM" title="LVM">LVM</a> volume located inside of an encrypted <a href="https://wiki.gentoo.org/wiki/Dm-crypt" title="Dm-crypt">LUKS</a> container these kernel command line options can be used: <code>root=UUID=&lt;root volume UUID&gt; rd.luks.uuid=&lt;LUKS partition UUID&gt; rd.lvm.vg=&lt;volume group name&gt;</code>. And to enable <a href="https://wiki.gentoo.org/wiki/SSD#Discard_.28trim.29_support" title="SSD">discard</a> <code>rd.luks.allow-discards</code> is needed. <code>rd.lvm.vg</code> might not be need depending on specific configuration but might lead to not all LVM partitions being activated. If for example the system has the following partitions:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>blkid</code></div><pre>/dev/sda1: UUID="2acb7668-fff1-492d-b46e-f05ead26d153" TYPE="crypto_LUKS" PARTUUID="cbe8be3c-3bcf-0d44-9f7b-27c7ad4dd9f6"
+/dev/mapper/luks-2acb7668-fff1-492d-b46e-f05ead26d153: UUID="19Mtok-zEfG-7JXI-GXvM-Neoz-JnST-vwNlO3" TYPE="LVM2_member"
+/dev/mapper/Vg-root: UUID="199bb83d-c783-4254-a6eb-fdbb83c33144" TYPE="ext4"
+</pre></div>
+<p>the kernel command line options will look like <code>root=UUID=199bb83d-c783-4254-a6eb-fdbb83c33144 rd.luks.uuid=2acb7668-fff1-492d-b46e-f05ead26d153 rd.lvm.vg=Vg</code>.
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />In some instances it might not work to add <code>root</code> option, as Dracut also adds the default on its own. This could result in a duplication that will cause the kernel to fail.</div>
+<h3><span class="mw-headline" id="NFS_boot">NFS boot</span></h3>
+<p><b>Warning</b>: Currently Dracut does not have a proper network useflag (see <a rel="nofollow" class="external text" href="https://bugs.gentoo.org/show_bug.cgi?id=590566">Bug 590566</a>), so make sure that  "net-analyzer/arping" is not installed, but instead "net-misc/iputils[arping]".
+</p><p>For an NFS boot, the nfs dracut module is required:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut -a "nfs" initramfs-nfs-only.img</code></div></div>
+<p>Booting is done with the following line in the <a href="https://wiki.gentoo.org/wiki/Syslinux" title="Syslinux">PXE config</a>. The rd.ip=auto let's it auto detect the NFS settings through DHCP. The NFS boot path is provided to the client through the DHCP option "root-path" with the following value: &lt;SERVER&gt;:&lt;NFS Export&gt;
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/var/lib/tftpboot/pxelinux.cfg/default</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>...
+ APPEND initrd=initramfs-nfs-only.img rd.ip=auto root=dhcp
+...
+</pre></div>
+<p>For more specific problems, consult official Dracut page at Fedora Wiki:
+</p>
+<ul><li><a rel="nofollow" class="external free" href="https://fedoraproject.org/wiki/Dracut/Options#NFS">https://fedoraproject.org/wiki/Dracut/Options#NFS</a></li></ul>
+<h3><span class="mw-headline" id="NBD_boot">NBD boot</span></h3>
+<p>For an NBD boot, the nbd dracut module is needed:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut -a "nbd" initramfs-nbd-only.img</code></div></div>
+<p>Booting is done with the following line in the <a href="https://wiki.gentoo.org/wiki/Syslinux" title="Syslinux">PXE config</a>. The rd.ip=auto let's it auto detect the NBD settings through DHCP. The NBD boot path is provided to the client through the DHCP option "root-path" with the following value: nbd:&lt;SERVER&gt;:&lt;NBD_PORT&gt;:&lt;FS&gt;
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />Connecting to name based exports is not documented. A code review of the module shows that specifying an export name instead of a port number is allowed and can be used to connect to name based exports.</div>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/var/lib/tftpboot/pxelinux.cfg/default</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>...
+ APPEND initrd=initramfs-nbd-only.img rd.ip=auto root=dhcp
+...
+</pre></div>
+<p>It is also possible to boot from a partitioned nbd device. To do this, the <a href="https://wiki.gentoo.org/wiki/Syslinux" title="Syslinux">PXE config</a> needs to include
+</p>
+<ul><li>a kernel parameter "nbd.max_part=X" with X&gt;0 to load the nbd module with partition support</li>
+<li>a root device setting specifying the partition to mount</li>
+<li>a netroot setting as described above for the root-path.</li></ul>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/var/lib/tftpboot/pxelinux.cfg/default</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>...
+ APPEND initrd=initramfs-nbd-only.img rd.ip=auto nbd.max_part=X root=/dev/nbd0pY netroot=nbd:&lt;SERVER&gt;:&lt;NBD_PORT|EXPORTNAME&gt;
+...
+</pre></div>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />During shutdown, networking (including dhcp) and nbd-client must not be stopped, otherwise the nbd can not be unmounted cleanly. For OpenRC, this can be configured in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/conf.d/net</span> for DHCP client daemon options and <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/conf.d/killprocs</span> to exclude nbd-client processes from being killed.</div>
+<h3><span class="mw-headline" id="Debug">Debug</span></h3>
+<p>For debugging the Dracut boot process, a special module is required. Including the module in the initramfs also includes several useful tools like <span style="color:green;">scp</span> for copying logfiles. Enable the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">debug</span> USE flag:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut -a "&lt;other modules&gt;" initramfs-with-debug-only.img</code></div></div>
+<p>Using the <span style="color:green;">rd.debug</span> flag, all Dracut commands are shown. When dropped to the Dracut shell, the logfile will be available in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/run/initramfs/init.log</span>.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/var/lib/tftpboot/pxelinux.cfg/default</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>...
+ APPEND initrd=initramfs-with-debug.img rd.debug
+...
+</pre></div><p>In order to be dropped to a shell when mounting the root filesystem fails, the <span style="color:green;">rd.shell</span> kernel cmdline flag has to be enabled. To force dropping to a shell before mount, set the <span style="color:green;">rd.break=mount</span> flag. See the manpage of dracut.cmdline for more options.
+</p><div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />It is possible that the typed characters are not being displayed when you are in the rescue shell. An attempt at fixing this with <code>stty echo</code> or <code>reset</code> results in error message <i>unable to perform all requested operations</i>. This is caused by plymouth, and can be fixed by blindly typing <code>plymouth quit</code> and running the command.<a rel="nofollow" class="external autonumber" href="https://github.com/dracutdevs/dracut/issues/2299">[1]</a></div>
+<h3><span class="mw-headline" id="Other_filesystems">Other filesystems</span></h3>
+<p>Other filesystems than the ones that are available through the Dracut modules can be installed using the <span style="color:green;">filesystems</span> parameter. To include kernel modules, the <span style="color:green;">kernel-modules</span> Dracut module also has to be included. This module is installed by default.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --filesystems "squashfs" initramfs-with-squashfs.img</code></div></div>
+<h2><span class="mw-headline" id="Custom_modules">Custom modules</span></h2>
+<p>Dracut allows creation of custom modules to extend initramfs functionality. Custom modules are useful for adding specialized hardware support, custom filesystems, or specific boot requirements not covered by standard modules.
+</p>
+<h3><span class="mw-headline" id="Module_structure">Module structure</span></h3>
+<p>A dracut module consists of a directory containing several files that define the module's behavior:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">{{{filename}}}</code></strong><strong>Basic module directory structure</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>/usr/lib/dracut/modules.d/99mymodule/
+├── module-setup.sh     # Main module configuration
+├── mymodule.sh         # Runtime script (optional)
+└── README              # Documentation (optional)
+</pre></div>
+<h3><span class="mw-headline" id="Creating_a_basic_module">Creating a basic module</span></h3>
+<p>The minimal requirement is a <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">module-setup.sh</span> file that defines the module's behavior:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/usr/lib/dracut/modules.d/99mymodule/module-setup.sh</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Called by dracut to determine if this module should be included</span>
+check<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Return 0 to include module, 1 to exclude</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="o">}</span>
+
+<span class="c1"># Called by dracut when building the initramfs</span>
+install<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Install files, binaries, and dependencies</span>
+<span class="w">    </span>inst_hook<span class="w"> </span>cmdline<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$moddir</span><span class="s2">/mymodule.sh&quot;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># Install required binaries</span>
+<span class="w">    </span>inst_multiple<span class="w"> </span>grep<span class="w"> </span>sed<span class="w"> </span>awk
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># Install configuration files</span>
+<span class="w">    </span>inst<span class="w"> </span>/etc/mymodule.conf
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Hook_scripts">Hook scripts</span></h3>
+<p>Runtime scripts are executed at specific points during boot. Common hook points include:
+</p>
+<ul><li><b>cmdline</b> - Parse kernel command line parameters</li>
+<li><b>pre-mount</b> - Before mounting the root filesystem</li>
+<li><b>mount</b> - Mount the root filesystem</li>
+<li><b>pre-pivot</b> - Before switching to the real root</li>
+<li><b>cleanup</b> - Clean up before switching root</li></ul>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/usr/lib/dracut/modules.d/99mymodule/mymodule.sh</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nb">type</span><span class="w"> </span>getarg<span class="w"> </span>&gt;/dev/null<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>.<span class="w"> </span>/lib/dracut-lib.sh
+
+<span class="c1"># Parse kernel command line parameter</span>
+<span class="k">if</span><span class="w"> </span><span class="nv">myoption</span><span class="o">=</span><span class="k">$(</span>getarg<span class="w"> </span>mymodule.option<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>info<span class="w"> </span><span class="s2">&quot;mymodule: Got option: </span><span class="nv">$myoption</span><span class="s2">&quot;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># Perform custom actions</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$myoption</span><span class="s2">&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/mymodule-config
+<span class="k">fi</span>
+</pre></div>
+<h3><span class="mw-headline" id="Module_installation_functions">Module installation functions</span></h3>
+<p>Common functions available in the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">install()</span> function:
+</p>
+<ul><li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">inst</span> - Install a single file</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">inst_multiple</span> - Install multiple files/binaries</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">inst_hook</span> - Install a hook script</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">inst_dir</span> - Create directories</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">inst_binary</span> - Install binary with dependencies</li></ul>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">{{{filename}}}</code></strong><strong>Example installation commands</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Install configuration file</span>
+inst<span class="w"> </span>/etc/myconfig.conf
+
+<span class="c1"># Install multiple binaries</span>
+inst_multiple<span class="w"> </span>/bin/myapp<span class="w"> </span>/usr/bin/myutil
+
+<span class="c1"># Install hook at priority 50</span>
+inst_hook<span class="w"> </span>pre-mount<span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$moddir</span><span class="s2">/myhook.sh&quot;</span>
+
+<span class="c1"># Create directory</span>
+inst_dir<span class="w"> </span>/var/lib/mymodule
+</pre></div>
+<h3><span class="mw-headline" id="Testing_custom_modules">Testing custom modules</span></h3>
+<p>Test your module by building an initramfs and checking if it's included:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut -a "mymodule" --list-modules | grep mymodule</code></div></div>
+<p>Build a test initramfs with verbose output:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut -v -a "mymodule" /boot/test-initramfs.img</code></div></div>
+<h3><span class="mw-headline" id="Module_naming_and_priorities">Module naming and priorities</span></h3>
+<p>Module directories are processed in alphabetical order. Use number prefixes to control loading order:
+</p>
+<ul><li><b>00-</b> - Core system modules</li>
+<li><b>90-</b> - Standard modules</li>
+<li><b>99-</b> - Custom/local modules</li></ul>
+<h3><span class="mw-headline" id="Advanced_features">Advanced features</span></h3>
+<h4><span class="mw-headline" id="Dependencies">Dependencies</span></h4>
+<p>Specify module dependencies in the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">depends()</span> function:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">{{{filename}}}</code></strong><strong>Module dependencies</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>depends<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;network base&quot;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="o">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="Conditional_installation">Conditional installation</span></h4>
+<p>Use the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">check()</span> function to conditionally include modules:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">{{{filename}}}</code></strong><strong>Conditional module inclusion</strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>check<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Only include if hardware is present</span>
+<span class="w">    </span><span class="o">[[</span><span class="w"> </span>-d<span class="w"> </span>/sys/class/mydevice<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># Only include if explicitly requested</span>
+<span class="w">    </span><span class="o">[[</span><span class="w"> </span><span class="nv">$hostonly</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$mount_needs</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Example:_Custom_filesystem_module">Example: Custom filesystem module</span></h3>
+<p>Here's a complete example for adding custom filesystem support:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/usr/lib/dracut/modules.d/99myfs/module-setup.sh</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+check<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Include if myfs tools are available</span>
+<span class="w">    </span>require_binaries<span class="w"> </span>mount.myfs<span class="w"> </span>mkfs.myfs<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="o">}</span>
+
+depends<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;base&quot;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
+<span class="o">}</span>
+
+install<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Install filesystem utilities</span>
+<span class="w">    </span>inst_multiple<span class="w"> </span>mount.myfs<span class="w"> </span>fsck.myfs<span class="w"> </span>mkfs.myfs
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># Install kernel module if needed</span>
+<span class="w">    </span>instmods<span class="w"> </span>myfs
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># Install hook for filesystem detection</span>
+<span class="w">    </span>inst_hook<span class="w"> </span>cmdline<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$moddir</span><span class="s2">/parse-myfs.sh&quot;</span>
+<span class="o">}</span>
+</pre></div>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/usr/lib/dracut/modules.d/99myfs/parse-myfs.sh</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Check if root filesystem is myfs</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$root</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>myfs:*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>info<span class="w"> </span><span class="s2">&quot;myfs: Detected myfs root filesystem&quot;</span>
+<span class="w">    </span><span class="c1"># Set up myfs-specific configuration</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;myfs&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/rootfstype
+<span class="k">fi</span>
+</pre></div>
+<p>For more advanced examples and detailed documentation, refer to the existing modules in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr/lib/dracut/modules.d/</span> and the <a rel="nofollow" class="external text" href="https://dracut-ng.github.io/dracut-ng/">official dracut-ng documentation</a>.
+</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="Common_issues">Common issues</span></h3>
+<h4><span id="Boot_failure:_&quot;No_root_device_found&quot;"></span><span class="mw-headline" id="Boot_failure:_.22No_root_device_found.22">Boot failure: "No root device found"</span></h4>
+<p>This usually indicates that required modules are missing from the initramfs:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dmesg | grep -i "root"</code></div></div>
+<p><b>Solutions:</b>
+</p>
+<ul><li>Ensure required filesystem modules are included: <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">btrfs</span>, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">lvm</span>, <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">dm</span>, etc.</li>
+<li>Check if the correct kernel modules are loaded: <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">dracut -H</span></li>
+<li>For encrypted root: ensure <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">crypt</span> module is included</li>
+<li>Verify root device UUID/LABEL: <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">blkid</span></li></ul>
+<h4><span class="mw-headline" id="Dracut_emergency_shell">Dracut emergency shell</span></h4>
+<p>If dracut drops to an emergency shell, check these common causes:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">{{{filename}}}</code></strong><strong>Emergency shell debugging commands</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span># Check what&#39;s mounted
+mount
+
+# Check available block devices  
+lsblk
+
+# Check dracut log
+journalctl -b
+
+# Check for kernel modules
+lsmod | grep -E &quot;(dm_|raid|crypt)&quot;
+
+# Manual root mounting (example)
+mount /dev/mapper/root /sysroot
+</pre></div>
+<h4><span class="mw-headline" id="Module_dependency_errors">Module dependency errors</span></h4>
+<p>Error: "dracut module 'X' will not be installed, because command 'Y' could not be found!"
+</p><p><b>Solution:</b> Install the required package providing the missing binary:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>equery belongs Y</code></div></div>
+<p>Common missing dependencies:
+</p>
+<ul><li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">dcbtool</span> → <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/lldpad package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/lldpad"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/lldpad</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span></li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">fcoemon</span> → <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-apps/fcoe-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-apps/fcoe-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-apps/fcoe-utils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span></li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">cryptsetup</span> → <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-fs/cryptsetup package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-fs/cryptsetup"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-fs/cryptsetup</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span></li></ul>
+<h4><span class="mw-headline" id="Kernel_module_missing">Kernel module missing</span></h4>
+<p>Error: "modprobe: FATAL: Module X not found"
+</p><p><b>Solutions:</b>
+</p>
+<ul><li>Verify module exists: <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">find /lib/modules/$(uname -r) -name "*.ko" </span></li>
+<li>Rebuild initramfs with correct kernel version: <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">dracut --kver $(uname -r)</span></li>
+<li>Check if module is built into kernel: <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">zcat /proc/config.gz </span></li></ul>
+<h3><span class="mw-headline" id="Debug_mode">Debug mode</span></h3>
+<p>Enable debug mode for detailed information:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut -v -H</code></div></div>
+<p>Add kernel parameters for runtime debugging:
+</p>
+<ul><li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rd.debug</span> - Enable dracut debug output</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rd.shell</span> - Drop to shell on error</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">{{{1}}}</span> - Break before mounting root</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rd.info</span> - Show informational messages</li></ul>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/boot/grub/grub.conf</code></strong><strong>GRUB debug entry example</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>title Gentoo Linux (debug)
+kernel /boot/vmlinuz root=UUID=xxx rd.shell rd.debug
+initrd /boot/initramfs.img
+</pre></div>
+<h3><span class="mw-headline" id="Network_boot_issues">Network boot issues</span></h3>
+<h4><span class="mw-headline" id="DHCP_not_working">DHCP not working</span></h4>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">{{{filename}}}</code></strong><strong>Manual network configuration</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span># Set IP manually in emergency shell
+ip addr add 192.168.1.100/24 dev eth0
+ip route add default via 192.168.1.1
+
+# Test connectivity
+ping 8.8.8.8
+</pre></div>
+<p>Add network debugging parameters:
+</p>
+<ul><li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">{{{1}}}</span> - Require network</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">{{{1}}}</span> - Force DHCP</li>
+<li><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rd.debug</span> - Network debug output</li></ul>
+<h4><span class="mw-headline" id="NFS_mount_failures">NFS mount failures</span></h4>
+<p>Check NFS server accessibility and exports:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">{{{filename}}}</code></strong><strong>NFS debugging</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span># Test NFS server connectivity
+showmount -e nfs-server-ip
+
+# Manual NFS mount
+mount -t nfs server:/path /mnt
+</pre></div>
+<p>Common NFS kernel command line:
+<span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">{{{1}}}</span>
+</p>
+<h3><span class="mw-headline" id="Recovery_procedures">Recovery procedures</span></h3>
+<h4><span class="mw-headline" id="Rescue_with_working_initramfs">Rescue with working initramfs</span></h4>
+<p>If you have a working backup initramfs:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount /boot</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>cp /boot/initramfs-backup.img /boot/initramfs-$(uname -r).img</code></div></div>
+<h4><span class="mw-headline" id="Rescue_with_live_media">Rescue with live media</span></h4>
+<p>Boot from live media and chroot into your system:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount /dev/sdaX /mnt/gentoo</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount /dev/sdaY /mnt/gentoo/boot</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount -t proc proc /mnt/gentoo/proc</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount --rbind /dev /mnt/gentoo/dev</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mount --rbind /sys /mnt/gentoo/sys</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>chroot /mnt/gentoo /bin/bash</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>source /etc/profile</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --force</code></div></div>
+<h4><span class="mw-headline" id="Recreate_initramfs">Recreate initramfs</span></h4>
+<p>Force rebuild of initramfs:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --force --verbose</code></div></div>
+<p>For host-only rebuild:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut -H --force</code></div></div>
+<h3><span class="mw-headline" id="Logging_and_diagnosis">Logging and diagnosis</span></h3>
+<h4><span class="mw-headline" id="Check_dracut_build_log">Check dracut build log</span></h4>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --verbose 2&gt;&amp;1 | tee dracut.log</code></div></div>
+<h4><span class="mw-headline" id="Check_boot_messages">Check boot messages</span></h4>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dmesg | grep -i dracut</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>journalctl -b | grep dracut</code></div></div>
+<h4><span class="mw-headline" id="Examine_initramfs_contents">Examine initramfs contents</span></h4>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>lsinitrd /boot/initramfs-$(uname -r).img</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>lsinitrd /boot/initramfs-$(uname -r).img | grep -i module</code></div></div>
+<p>Extract initramfs for inspection:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>mkdir /tmp/initramfs</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>cd /tmp/initramfs</code></div><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>zcat /boot/initramfs-$(uname -r).img | cpio -idmv</code></div></div>
+<h3><span class="mw-headline" id="Performance_issues">Performance issues</span></h3>
+<h4><span class="mw-headline" id="Large_initramfs_size">Large initramfs size</span></h4>
+<p>Use host-only mode to reduce size:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut -H</code></div></div>
+<p>List included files to identify large components:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>lsinitrd | sort -k5 -n</code></div></div>
+<p>Exclude unnecessary modules:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">omit_dracutmodules</span><span class="o">+=</span><span class="s2">&quot; plymouth bluetooth &quot;</span>
+</pre></div>
+<h4><span class="mw-headline" id="Slow_boot_times">Slow boot times</span></h4>
+<p>Identify bottlenecks:
+</p>
+<ul><li>Check <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">systemd-analyze blame</span> (if using systemd)</li>
+<li>Use <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">rd.debug</span> to see where time is spent</li>
+<li>Consider disabling unnecessary services</li></ul>
+<h3><span class="mw-headline" id="When_dracut_is_executed">When dracut is executed</span></h3>
+<p>The following items appear as part of the output of the command <i>dracut</i> or <i>dracut --force</i>.
+</p>
+<h4><span class="mw-headline" id="Bluetooth">Bluetooth</span></h4>
+<p>This is not reported as an error and the message may be expected by the user, but if it is not expected, it may cause some confusion when the service is not started.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --force</code></div><pre>dracut[I]: Executing: /usr/bin/dracut
+dracut[I]: 70bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+...
+</pre></div>
+<p>Check that the bluetooth service is started
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>rc-status --all | grep -i bluetooth</code></div><pre> bluetooth                                                           [  started  ]
+</pre></div>
+<p>The previous command should return <i>[  started  ]</i>, if it returns <i>[  stopped  ]</i>, restart the service and execute dracut again.
+</p><p>If the previous command doesn't return any result, and bluetooth is expected to be working, follow the <a href="https://wiki.gentoo.org/wiki/Bluetooth" title="Bluetooth">Bluetooth</a> tutorial.
+</p>
+<h4><span class="mw-headline" id="Cryptsetup">Cryptsetup</span></h4>
+<p>This is not reported as an error and the message may be expected by the user, but if it is not expected, it may cause some confusion, specially if <i>systemd</i> is not expected to be running.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --force</code></div><pre>dracut[I]: Executing: /usr/bin/dracut
+...
+dracut[I]: 70crypt: Could not find any command of '/usr/lib/systemd/systemd-cryptsetup cryptsetup'!
+...
+</pre></div>
+<p>This message is triggered by the activation of the <i>crypt</i> module. If disk encryption is not required, the previous information message can be avoided with the following configuration.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">omit_dracutmodules</span><span class="o">+=</span><span class="s2">&quot; crypt &quot;</span>
+</pre></div>
+<h4><span id="NFS_/_rpcbind"></span><span class="mw-headline" id="NFS_.2F_rpcbind">NFS / rpcbind</span></h4>
+<p>This is not reported as an error and the message may be expected by the user, but if it is not expected, it may cause some confusion.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>dracut --force</code></div><pre>dracut[I]: Executing: /usr/bin/dracut
+...
+dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
+...
+</pre></div>
+<p>This message is triggered by the activation of the <i>nfs</i> module. If there is no need to connect to a NFS at boot time; the previous information message can be avoided with the following configuration.
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/dracut.conf</code></strong><strong></strong></div> <div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">omit_dracutmodules</span><span class="o">+=</span><span class="s2">&quot; nfs &quot;</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="https://wiki.gentoo.org/wiki/Initramfs" title="Initramfs">Initramfs</a> — is used to prepare Linux systems during boot before the <b>init</b> process starts.</li></ul>
+<h2><span class="mw-headline" id="External_resources">External resources</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://dracut-ng.github.io/dracut-ng/">The Official Dracut Page</a></li>
+<li><a rel="nofollow" class="external text" href="https://fedoraproject.org/wiki/Dracut">The Official Fedora Wiki Dracut Page</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="Dracut.html#cite_ref-1">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://github.com/dracut-ng/dracut-ng/tree/master/modules.d">modules.d</a>, GitHub.com. dracut</span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20260924231533
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.002 seconds
+CPU time usage: 0.286 seconds
+Real time usage: 0.375 seconds
+Preprocessor visited node count: 12469/1000000
+Post‐expand include size: 227113/4194304 bytes
+Template argument size: 55216/4194304 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 31/150
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 20869/5000000 bytes
+Lua time usage: 0.020/7 seconds
+Lua virtual size: 4.86 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  227.401      1 -total
+ 27.55%   62.658      1 Template:InfoBox_stack
+ 23.09%   52.508      5 Template:InfoBox
+ 21.15%   48.086      7 Template:Anchor
+ 20.36%   46.289      1 Template:InfoBox_homepage
+ 19.41%   44.150    115 Template:Package
+ 17.20%   39.115      1 Template:InfoBox_header
+ 12.64%   28.751     31 Template:Link
+ 10.22%   23.238     30 Template:RootCmd
+  8.20%   18.647     30 Template:GenericCmd
+-->
+
+<!-- Saved in parser cache with key gentoo?hwiki:pcache:idhash:1115-0!dateformat=default and timestamp 20260924231532 and revision id 1443077
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.gentoo.org/index.php?title=Dracut&amp;oldid=1443077">https://wiki.gentoo.org/index.php?title=Dracut&amp;oldid=1443077</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.gentoo.org/wiki/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://wiki.gentoo.org/wiki/Category:Initramfs" title="Category:Initramfs">Initramfs</a></li></ul></div></div>						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-7">
+											<div class="spacer"></div>
+						<ul id="f-list">
+							<li id="lastmod>"> This page was last edited on 15 June 2026, at 14:55.</li><li id="privacy>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Privacy_policy" class="mw-redirect" title="Gentoo Wiki:Privacy policy">Privacy policy</a></li><li id="about>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:About" title="Gentoo Wiki:About">About Gentoo Wiki</a></li><li id="disclaimer>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:General_disclaimer" title="Gentoo Wiki:General disclaimer">Disclaimers</a></li>						</ul>
+									</div>
+				<div class="col-xs-12 col-md-3">
+					<!-- No questions or comments, the Wiki has enough information on how to contact us. -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<ul class="footerlinks three-icons">
+						<li><a href="https://twitter.com/gentoo" title="@Gentoo on Twitter"><span class="fa fa-twitter fa-fw"></span></a></li>
+						<li><a href="https://www.facebook.com/gentoo.org" title="Gentoo on Facebook"><span class="fa fa-facebook fa-fw"></span></a></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-xs-9 col-md-9">
+					<strong>&copy; 2001&ndash;2026 Gentoo Authors</strong><br />
+					<small>
+						Gentoo is a trademark of the Gentoo Foundation, Inc. and of Förderverein Gentoo e.V.
+						The contents of this document, unless otherwise expressly stated, are licensed under the
+						<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC-BY-SA-4.0</a> license.
+						The <a href="https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html">Gentoo Name and Logo Usage Guidelines</a> apply.
+					</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script>
+function defer(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function() { defer(method) }, 50);
+    }
+}
+defer(function() { mw.loader.load( 'https://assets.gentoo.org/tyrian/bootstrap.min.js'); });
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.002},"limitreport":{"cputime":"0.286","walltime":"0.375","ppvisitednodes":{"value":12469,"limit":1000000},"postexpandincludesize":{"value":227113,"limit":4194304},"templateargumentsize":{"value":55216,"limit":4194304},"expansiondepth":{"value":15,"limit":40},"expensivefunctioncount":{"value":31,"limit":150},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":20869,"limit":5000000},"timingprofile":["100.00%  227.401      1 -total"," 27.55%   62.658      1 Template:InfoBox_stack"," 23.09%   52.508      5 Template:InfoBox"," 21.15%   48.086      7 Template:Anchor"," 20.36%   46.289      1 Template:InfoBox_homepage"," 19.41%   44.150    115 Template:Package"," 17.20%   39.115      1 Template:InfoBox_header"," 12.64%   28.751     31 Template:Link"," 10.22%   23.238     30 Template:RootCmd","  8.20%   18.647     30 Template:GenericCmd"]},"scribunto":{"limitreport-timeusage":{"value":"0.020","limit":"7"},"limitreport-virtmemusage":{"value":5095424,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20260924231533","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":90});});</script></body></html>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>PipeWire - Gentoo wiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"7e87a68862ee88efdc4063de","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"PipeWire","wgTitle":"PipeWire","wgCurRevisionId":1451709,"wgRevisionId":1451709,"wgArticleId":272497,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Audio","Multimedia","Sound devices"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PipeWire","wgRelevantArticleId":272497,"wgIsProbablyEditable":!1,"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgULSCurrentAutonym":"English",
+"wgPageFormsTargetName":null,"wgPageFormsAutocompleteValues":[],"wgPageFormsAutocompleteOnAllChars":!1,"wgPageFormsFieldProperties":[],"wgPageFormsCargoFields":[],"wgPageFormsDependentFields":[],"wgPageFormsCalendarValues":[],"wgPageFormsCalendarParams":[],"wgPageFormsCalendarHTML":null,"wgPageFormsGridValues":[],"wgPageFormsGridParams":[],"wgPageFormsContLangYes":null,"wgPageFormsContLangNo":null,"wgPageFormsContLangMonths":[],"wgPageFormsHeightForMinimizingInstances":800,"wgPageFormsShowOnSelect":[],"wgPageFormsScriptPath":"/extensions/PageForms","edgValues":null,"wgPageFormsEDSettings":null,"wgAmericanDates":!1,"srfFilteredConfig":null,"wgULSPosition":"personal","wgULSisCompactLinksEnabled":!0,"wgTranslatePageTranslation":"source"};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.translate":"ready","ext.translate.tag.languages":"ready","ext.pygments":"ready","ext.cite.styles":"ready","mediawiki.toc.styles":
+"ready","ext.smw.style":"ready","ext.smw.tooltip.styles":"ready","ext.uls.pt":"ready","ext.srf.styles":"ready","mediawiki.skinning.interface":"ready","mediawiki.skinning.content.externallinks":"ready","skins.tyrian.styles":"ready","skins.tyrian.icons":"ready"};RLPAGEMODULES=["ext.smw.tooltips","ext.smw.style","ext.cite.ux-enhancements","ext.gentooPackages","smw.entityexaminer","site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","ext.uls.compactlinks","ext.uls.interface"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.cite.styles|ext.pygments,translate|ext.smw.style|ext.smw.tooltip.styles|ext.translate.tag.languages|ext.uls.pt|mediawiki.skinning.content.externallinks|mediawiki.skinning.interface|mediawiki.toc.styles|skins.css"/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=ext.srf.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<script async="" src="../load.php%3Flang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=tyrian"></script>
+<link rel="stylesheet" href="https://assets.gentoo.org/tyrian/bootstrap.min.css"/><link rel="stylesheet" href="https://assets.gentoo.org/tyrian/tyrian.min.css"/><style>#mw-indicator-mw-helplink {display:none;}</style>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="../load.php%3Flang=en&amp;modules=site.styles&amp;only=styles&amp;skin=tyrian.css"/>
+<meta name="generator" content="MediaWiki 1.35.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#54487a"/>
+<link rel="alternate" type="application/rdf+xml" title="PipeWire" href="https://wiki.gentoo.org/index.php?title=Special:ExportRDF/PipeWire&amp;xmlmime=rdf"/>
+<link rel="shortcut icon" href="https://www.gentoo.org/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.gentoo.org/opensearch_desc.php" title="Gentoo Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.gentoo.org/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-PipeWire rootpage-PipeWire skin-tyrian action-view">	<div class="mw-jump sr-only">
+		Jump to:		<a href="PipeWire.html#top">content</a>
+	</div>
+	<header>
+		<div class="site-title">
+			<div class="container">
+				<div class="row">
+					<div class="site-title-buttons">
+						<div class="btn-group btn-group-sm">
+							<a href="https://get.gentoo.org/" role="button" class="btn get-gentoo"><span class="fa fa-fw fa-download"></span> <strong>Get Gentoo!</strong></a>
+							<div class="btn-group btn-group-sm">
+								<a class="btn gentoo-org-sites dropdown-toggle" data-toggle="dropdown" data-target="#" href="PipeWire.html#">
+									<span class="fa fa-fw fa-map-o"></span> <span class="hidden-xs">gentoo.org sites</span> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="https://www.gentoo.org/" title="Gentoo's main website"><span class="fa fa-home fa-fw"></span> gentoo.org</a></li>
+									<li><a href="https://wiki.gentoo.org/" title="Find and contribute documentation"><span class="fa fa-file-text-o fa-fw"></span> Wiki</a></li>
+									<li><a href="https://bugs.gentoo.org/" title="Discover and report issues with Gentoo"><span class="fa fa-bug fa-fw"></span> Bugs</a></li>
+									<li><a href="https://packages.gentoo.org/" title="Find software to install"><span class="fa fa-hdd-o fa-fw"></span> Packages</a></li>
+									<li><a href="https://forums.gentoo.org/" title="Discuss with the community"><span class="fa fa-comments-o fa-fw"></span> Forums</a></li>
+									<li class="divider"></li>
+									<li><a href="https://planet.gentoo.org/" title="Find out what's going on in the dev community"><span class="fa fa-rss fa-fw"></span> Planet</a></li>
+									<li><a href="https://archives.gentoo.org/" title="Read up on past discussions"><span class="fa fa-archive fa-fw"></span> Archives</a></li>
+									<li><a href="https://devmanual.gentoo.org/" title="Read the development guide"><span class="fa fa-book fa-fw"></span> Devmanual</a></li>
+									<li><a href="https://gitweb.gentoo.org/" title="Browse our source code in Gitweb"><span class="fa fa-code fa-fw"></span> Gitweb</a></li>
+									<li class="divider"></li>
+									<li><a href="https://infra-status.gentoo.org/" title="Get updates on the services provided by the Gentoo infra team"><span class="fa fa-server fa-fw"></span> Infra status</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="https://wiki.gentoo.org/" title="Back to the homepage" class="site-logo">
+							<img src="https://assets.gentoo.org/tyrian/site-logo.png"  alt="Gentoo Linux Logo" srcset="https://assets.gentoo.org/tyrian/site-logo.svg">
+						</a>
+						<span class="site-label">Wiki</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="tyrian-navbar" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse navbar-main-collapse">
+						<ul class="nav navbar-nav">
+							<li id="n-mainpage-description"><a href="https://wiki.gentoo.org/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-recentchanges"><a href="https://wiki.gentoo.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-help"><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li><li id="n-Contribute.21"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Contributor%27s_guide">Contribute!</a></li>			<li class="dropdown">
+				<a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Menu-Documentation" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu"><li id="n-Gentoo-Handbook"><a href="https://wiki.gentoo.org/wiki/Handbook:Main_Page">Gentoo Handbook</a></li><li id="n-Gentoo-FAQ"><a href="https://wiki.gentoo.org/wiki/FAQ">Gentoo FAQ</a></li><li role="presentation" class="divider"></li><li id="n-Core-system"><a href="https://wiki.gentoo.org/wiki/Category:Core_system">Core system</a></li><li id="n-Hardware"><a href="https://wiki.gentoo.org/wiki/Category:Hardware">Hardware</a></li><li id="n-Software"><a href="https://wiki.gentoo.org/wiki/Category:Software">Software</a></li><li id="n-Desktop"><a href="https://wiki.gentoo.org/wiki/Category:Desktop">Desktop</a></li><li id="n-Server-.26-Security"><a href="https://wiki.gentoo.org/wiki/Category:Server_and_Security">Server &amp; Security</a></li><li id="n-Project-.26-Community"><a href="https://wiki.gentoo.org/wiki/Category:Project_and_Community">Project &amp; Community</a></li><li role="presentation" class="divider"></li><li id="n-Gentoo-Projects"><a href="https://wiki.gentoo.org/wiki/Project:Gentoo">Gentoo Projects</a></li>				</ul>
+			</li>						</ul>
+						<ul class="nav navbar-nav navbar-right">
+									<li class="dropdown">
+			<a href="PipeWire.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i> Tools <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="t-whatlinkshere"><a href="https://wiki.gentoo.org/wiki/Special:WhatLinksHere/PipeWire" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="https://wiki.gentoo.org/wiki/Special:RecentChangesLinked/PipeWire" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="https://wiki.gentoo.org/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="https://wiki.gentoo.org/index.php?title=PipeWire&amp;oldid=1451709" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="https://wiki.gentoo.org/index.php?title=PipeWire&amp;action=info" title="More information about this page">Page information</a></li><li id="t-smwbrowselink"><a href="https://wiki.gentoo.org/wiki/Special:Browse/:PipeWire" rel="search">Browse properties</a></li>			</ul>
+		</li>
+			<li class="dropdown">
+			<a href="PipeWire.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+				<span class="fa fa-user" aria-label="Personal tools"></span>
+				User				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu" role="menu">
+				<li id="pt-uls" class="active"><a href="PipeWire.html#" class="uls-trigger">English</a></li><li id="pt-createaccount"><a href="https://wiki.gentoo.org/index.php?title=Special:CreateAccount&amp;returnto=PipeWire" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="https://wiki.gentoo.org/index.php?title=Special:UserLogin&amp;returnto=PipeWire" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>			</ul>
+		</li>
+								</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="navbar navbar-grey navbar-stick" id="wiki-actions" role="navigation">
+			<div class="container"><div class="row">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gw-toolbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="gw-toolbar">
+					<ul class="nav navbar-nav">
+					<li id="ca-nstab-main" class="selected active"><a href="PipeWire.html" title="View the content page [c]" accesskey="c">Page</a></li><li id="ca-talk"><a href="https://wiki.gentoo.org/wiki/Talk:PipeWire" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>					</ul>
+							<form action="https://wiki.gentoo.org/index.php" id="searchform" class="navbar-form navbar-right" role="search">
+			<input type='hidden' name="title" value="Special:Search"/>
+
+				<div class="input-group">
+					<input type="search" name="search" placeholder="Search" title="Search Gentoo Wiki [f]" accesskey="f" id="searchInput" class="form-control"/>					<div class="input-group-btn"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchGoButton" class="searchButton btn btn-default"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton btn btn-default"/></div>
+				</div>
+		</form>
+						<ul class="nav navbar-nav navbar-right">
+					<li id="ca-viewsource"><a href="https://wiki.gentoo.org/index.php?title=PipeWire&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></li><li class="dropdown">
+						<a href="PipeWire.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">more <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+					<li id="ca-history"><a href="https://wiki.gentoo.org/index.php?title=PipeWire&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></li>							</ul>
+						</li>
+					</ul>
+				</div>
+			</div></div>
+		</nav>
+		</header>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="content" class="mw-body" role="main">
+						<a id="top"></a>
+						
+						<h1 id="firstHeading" class="first-header" lang="en">
+							<span dir="auto">PipeWire</span>
+						</h1>
+
+						<div id="bodyContent" class="mw-body-content">
+							<div id="siteSub">From Gentoo Wiki</div>
+							<div id="contentSub">
+															</div>
+												                <div id="jump-to-nav"></div>
+					                <a class="mw-jump-link" href="PipeWire.html#mw-head">Jump to:navigation</a>
+					                <a class="mw-jump-link" href="PipeWire.html#searchInput">Jump to:search</a>
+
+							<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-pt-translate-header noprint nomobile" dir="ltr" lang="en">This page contains <span class="plainlinks"><a rel="nofollow" class="external text" href="https://wiki.gentoo.org/index.php?title=PipeWire&amp;oldid=1451245&amp;diff=1451709">changes</a></span> which are not marked for translation.</div><div class="mw-parser-output"><div class="mw-pt-languages noprint" lang="en" dir="ltr"><div class="mw-pt-languages-label">Other languages:</div><ul class="mw-pt-languages-list"><li><span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en" dir="ltr">English</span></li>
+<li><a href="https://wiki.gentoo.org/wiki/PipeWire/es" class="mw-pt-progress mw-pt-progress--stub" title="PipeWire (5% translated)" lang="es" dir="ltr">español</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/PipeWire/fr" class="mw-pt-progress mw-pt-progress--med" title="PipeWire (50% translated)" lang="fr" dir="ltr">français</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/PipeWire/hu" class="mw-pt-progress mw-pt-progress--stub" title="PipeWire (16% translated)" lang="hu" dir="ltr">magyar</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/PipeWire/ru" class="mw-pt-progress mw-pt-progress--low" title="PipeWire (31% translated)" lang="ru" dir="ltr">русский</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/PipeWire/zh-cn" class="mw-pt-progress mw-pt-progress--low" title="PipeWire (20% translated)" lang="zh-Hans-CN" dir="ltr">中文（中国大陆）‎</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/PipeWire/ja" class="mw-pt-progress mw-pt-progress--high" title="PipeWire (75% translated)" lang="ja" dir="ltr">日本語</a></li></ul></div>
+<div id="infobox-stack" class="list-group" style="width: 25em; float: right; clear: right; font-size: 90%; margin-left: 1em;">
+<div class="list-group-item text-center" style="padding-top: 3px; padding-bottom: 3px; background-color: #463C65; color: white;"><b>Resources</b></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-home fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://pipewire.org/">Home</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-file-text fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/home">Official documentation</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-hdd-o fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-video/pipewire">Package information</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-wikipedia-w fa-fw fa-2x"></span></span><span><a href="https://en.wikipedia.org/wiki/PipeWire" class="extiw" title="wikipedia:PipeWire">Wikipedia</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><img alt="Ohloh Logo" src="../images/thumb/c/c1/Ohloh-logo.png/30px-Ohloh-logo.png" decoding="async" width="30" height="30" srcset="../images/c/c1/Ohloh-logo.png 1.5x" /></span><span><a rel="nofollow" class="external text" href="https://www.openhub.net/p/pipewire">Open Hub</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-gitlab fa-fw fa-2x"></span></span><span><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/pipewire/pipewire.git">GitLab</a></span></div>
+<div id="infobox" class="list-group-item" style="display: flex; align-items: center; padding: 5px; min-height: 3em;"><span style="display: inline-block; width: 3em; overflow: hidden; text-align: center;"><span class="fa fa-comments-o fa-fw fa-2x"></span></span><span><span style="font-family: monospace; font-size: 95%;"><a rel="nofollow" class="external text" href="irc://irc.oftc.net/pipewire">pipewire</a> (on <a rel="nofollow" class="external free" href="irc://irc.oftc.net">irc://irc.oftc.net</a></span>)(registration required)</span></div>
+</div>
+<p><b>PipeWire</b> is a low-latency, graph-based, processing engine and server, for interfacing with audio and video devices. It can be used to support use-cases currently handled by <a href="https://wiki.gentoo.org/wiki/ALSA" title="ALSA">ALSA</a>, <a href="https://wiki.gentoo.org/wiki/PulseAudio" title="PulseAudio">PulseAudio</a>, and/or <a href="https://wiki.gentoo.org/wiki/JACK" title="JACK">JACK</a>, and aims to improve handling of audio and video under Linux.
+</p>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br /><a href="https://wiki.gentoo.org/wiki/Wayland" title="Wayland">Wayland</a> systems use PipeWire to provide <a href="https://wiki.gentoo.org/wiki/XDG/xdg-desktop-portal" title="XDG/xdg-desktop-portal">desktop portal</a> functionality such as screen sharing and remote desktop.</div>
+<p>Some key features of PipeWire include:
+</p>
+<ul><li>Minimal latency capture/playback of audio <i>and</i> video.</li>
+<li>Real-time multimedia processing.</li>
+<li>Multi-process architecture allowing multimedia content sharing between applications.</li>
+<li>Seamless support for PulseAudio, JACK, ALSA, and <a href="https://wiki.gentoo.org/wiki/GStreamer" title="GStreamer">GStreamer</a>.</li>
+<li>Applications sandboxing support with <a href="https://wiki.gentoo.org/wiki/Flatpak" title="Flatpak">Flatpak</a>, with a security model that facilitates interacting containerized applications.</li></ul>
+<p>Most applications - including e.g. <a href="https://wiki.gentoo.org/wiki/Firefox" title="Firefox">Firefox</a> - don't yet support PipeWire's native API. However, PipeWire can emulate PulseAudio, thus removing the need for a separate PulseAudio sound server. Refer to <a href="PipeWire.html#USE_flags" title="PipeWire">the "USE flags" section</a> for details.
+</p><p>PipeWire currently ships a PipeWire daemon, an example session manager, tools to introspect and use the PipeWire daemon, a library to develop PipeWire applications and plugins, and the <a rel="nofollow" class="external text" href="https://docs.pipewire.org/page_spa.html">SPA (Simple Plugin API)</a> used by both the PipeWire daemon and the PipeWire library.
+</p><p>PipeWire users will typically need to install and use <a href="https://wiki.gentoo.org/wiki/WirePlumber" title="WirePlumber">WirePlumber</a> for session/policy management functionality, such as volume management; refer to that page for details.
+</p><p><span class="anchor" id="Installation"></span>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="PipeWire.html#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="PipeWire.html#Kernel"><span class="tocnumber">1.1</span> <span class="toctext">Kernel</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="PipeWire.html#Desktop_profiles"><span class="tocnumber">1.2</span> <span class="toctext">Desktop profiles</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="PipeWire.html#Non-desktop_profiles"><span class="tocnumber">1.3</span> <span class="toctext">Non-desktop profiles</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="PipeWire.html#USE_flags"><span class="tocnumber">1.3.1</span> <span class="toctext">USE flags</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="PipeWire.html#Emerge"><span class="tocnumber">1.3.2</span> <span class="toctext">Emerge</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="PipeWire.html#Configuration"><span class="tocnumber">2</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="PipeWire.html#Audio_groups"><span class="tocnumber">2.1</span> <span class="toctext">Audio groups</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="PipeWire.html#Sound_server_configuration"><span class="tocnumber">3</span> <span class="toctext">Sound server configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="PipeWire.html#File_locations"><span class="tocnumber">3.1</span> <span class="toctext">File locations</span></a>
+<ul>
+<li class="toclevel-3 tocsection-11"><a href="PipeWire.html#Configuration_fragments"><span class="tocnumber">3.1.1</span> <span class="toctext">Configuration fragments</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="PipeWire.html#User_services"><span class="tocnumber">3.2</span> <span class="toctext">User services</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="PipeWire.html#systemd"><span class="tocnumber">3.2.1</span> <span class="toctext">systemd</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="PipeWire.html#OpenRC"><span class="tocnumber">3.2.2</span> <span class="toctext">OpenRC</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="PipeWire.html#PulseAudio_server_emulation"><span class="tocnumber">3.3</span> <span class="toctext">PulseAudio server emulation</span></a>
+<ul>
+<li class="toclevel-3 tocsection-16"><a href="PipeWire.html#Multi-user_support"><span class="tocnumber">3.3.1</span> <span class="toctext">Multi-user support</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="PipeWire.html#Advanced"><span class="tocnumber">3.4</span> <span class="toctext">Advanced</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="PipeWire.html#Usage"><span class="tocnumber">4</span> <span class="toctext">Usage</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="PipeWire.html#Controlling_the_volume"><span class="tocnumber">4.1</span> <span class="toctext">Controlling the volume</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="PipeWire.html#Checking_settings"><span class="tocnumber">4.2</span> <span class="toctext">Checking settings</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="PipeWire.html#GUI_patchbays"><span class="tocnumber">4.3</span> <span class="toctext">GUI patchbays</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="PipeWire.html#Advanced_2"><span class="tocnumber">4.4</span> <span class="toctext">Advanced</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="PipeWire.html#Replacing_JACK"><span class="tocnumber">5</span> <span class="toctext">Replacing JACK</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="PipeWire.html#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="PipeWire.html#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="PipeWire.html#External_resources"><span class="tocnumber">8</span> <span class="toctext">External resources</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="PipeWire.html#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p><span class="anchor" id="Kernel"></span>
+</p>
+<h3><span class="mw-headline" id="Kernel">Kernel</span></h3>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #4E9A06">KERNEL</span> <strong></strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"></div>
+<pre>Device Drivers  ---&gt;
+  &lt;*&gt; Sound card support <span class="smw-highlighter" data-type="8" data-state="inline" data-title="Note" title="Search for CONFIG_SOUND to find this item."><span class="smwtticon note"></span><span class="smwttcontent"><a href="https://wiki.gentoo.org/wiki/Kernel/Configuration#Search_modules" title="Kernel/Configuration">Search</a> for &lt;code&gt;CONFIG_SOUND&lt;/code&gt; to find this item.</span></span>  ---&gt;
+    &lt;*&gt; Advanced Linux Sound Architecture <span class="smw-highlighter" data-type="8" data-state="inline" data-title="Note" title="Search for CONFIG_SND to find this item."><span class="smwtticon note"></span><span class="smwttcontent"><a href="https://wiki.gentoo.org/wiki/Kernel/Configuration#Search_modules" title="Kernel/Configuration">Search</a> for &lt;code&gt;CONFIG_SND&lt;/code&gt; to find this item.</span></span>  ---&gt;
+      -*-  Sound Proc FS Support <span class="smw-highlighter" data-type="8" data-state="inline" data-title="Note" title="Search for CONFIG_SND_PROC_FS to find this item."><span class="smwtticon note"></span><span class="smwttcontent"><a href="https://wiki.gentoo.org/wiki/Kernel/Configuration#Search_modules" title="Kernel/Configuration">Search</a> for &lt;code&gt;CONFIG_SND_PROC_FS&lt;/code&gt; to find this item.</span></span>
+      [*]    Verbose procfs contents <span class="smw-highlighter" data-type="8" data-state="inline" data-title="Note" title="Search for CONFIG_SND_VERBOSE_PROCFS to find this item."><span class="smwtticon note"></span><span class="smwttcontent"><a href="https://wiki.gentoo.org/wiki/Kernel/Configuration#Search_modules" title="Kernel/Configuration">Search</a> for &lt;code&gt;CONFIG_SND_VERBOSE_PROCFS&lt;/code&gt; to find this item.</span></span>
+</pre>
+<p><span class="anchor" id="Desktop_profiles"></span>
+</p>
+<h3><span class="mw-headline" id="Desktop_profiles">Desktop profiles</span></h3>
+<p>All desktop profiles now enable PipeWire by default, so no installation should be required.
+</p><p>systemd users need to enable the <code>wireplumber</code> service by following <a href="PipeWire.html#systemd" title="PipeWire">this section</a>.
+</p><p><span class="anchor" id="Non-desktop_profiles"></span>
+</p>
+<h3><span class="mw-headline" id="Non-desktop_profiles">Non-desktop profiles</span></h3>
+<div class="alert alert-info gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-sticky-note-o fa-rotate-180"></i> Note</strong><br />If the system is planned to be used as a desktop then it is generally recommended to just enable a desktop profile. It's easier to disable the one or two USE flags the system doesn't require, rather adding 20 just to match what the desktop profile enables as standard for common system needs.</div> 
+<p><span class="anchor" id="USE_flags"></span>
+</p>
+<h4><span class="mw-headline" id="USE_flags">USE flags</span></h4>
+<p>To use PipeWire as a sound server, specify the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the sound-server USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/sound-server"><span style="color: MidnightBlue;">sound-server</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> <a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag">USE flag</a> on <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-video/pipewire package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-video/pipewire"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-video/pipewire</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span><sup id="cite_ref-1" class="reference"><a href="PipeWire.html#cite_note-1">&#91;1&#93;</a></sup>.
+</p><p>Then, if using PipeWire as a replacement for the PulseAudio sound server:
+</p>
+<ol><li>Ensure <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-sound/pulseaudio-daemon package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-sound/pulseaudio-daemon"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-sound/pulseaudio-daemon</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> is not installed. This is necessary to avoid issues resulting from running more than one sound server.</li>
+<li>Ensure <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-libs/libpulse package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-libs/libpulse"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-libs/libpulse</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> is installed, which will allow PipeWire to emulate a PulseAudio sound server. Not many applications currently support PipeWire's native API.</li>
+<li>Ensure the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the pulseaudio USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/pulseaudio"><span style="color: MidnightBlue;">pulseaudio</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag is still set globally.</li></ol>
+<p>If compiled with the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the dbus USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/dbus"><span style="color: MidnightBlue;">dbus</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag enabled, PipeWire requires the presence of a <a href="https://wiki.gentoo.org/wiki/D-Bus" title="D-Bus">D-Bus</a> session bus and an XDG-compliant environment. Both requirements should be met by a desktop <a href="https://wiki.gentoo.org/wiki/Portage/Profiles" title="Portage/Profiles">profile</a>; on such systems, starting PipeWire is as simple as running the <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">pipewire</span> binary. On other profiles, if using OpenRC, permissions requirements might also need the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the elogind USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/elogind"><span style="color: MidnightBlue;">elogind</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag on the <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-video/wireplumber package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-video/wireplumber"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-video/wireplumber</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package, together with <a href="https://wiki.gentoo.org/wiki/Elogind" title="Elogind">elogind</a> itself.
+</p><p>D-Bus is required for <a href="https://wiki.gentoo.org/wiki/Bluetooth" title="Bluetooth">Bluetooth</a> support, interacting with RTKit to acquire real-time priorities, and interacting with other multimedia clients.<sup id="cite_ref-2" class="reference"><a href="PipeWire.html#cite_note-2">&#91;2&#93;</a></sup> D-Bus is also used by KDE Plasma to notify PipeWire of volume changes.
+</p><p>To enable direct screencasting support on applications offering it, specify the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the screencast USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/screencast"><span style="color: MidnightBlue;">screencast</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag on the relevant packages. Otherwise, screencasting support may also be provided through the PulseAudio or JACK compatibility layers.
+</p><p class="mw-empty-elt">      </p><div class="panel panel-default gp-panel">
+        <div class="panel-heading gp-panel-heading">
+          <h3 class="panel-title">
+            <span class="text-muted">USE flags for</span>
+            <a href="https://packages.gentoo.org/packages/media-video/pipewire">media-video/pipewire</a>
+            <small><span class="fa fa-external-link-square"></span></small>
+            <small class="gp-pkg-desc">Multimedia processing graphs</small>
+          </h3>
+        </div>
+        <div class="table-responsive gp-useflag-table-container">
+                <table class="table gp-useflag-table">        <tbody><tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/+man">+man</a></code>
+          </td>
+          <td>
+            Build and install man pages
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/X">X</a></code>
+          </td>
+          <td>
+            Enable audible bell for X11
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/bluetooth">bluetooth</a></code>
+          </td>
+          <td>
+            Enable Bluetooth Support
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/dbus">dbus</a></code>
+          </td>
+          <td>
+            Enable dbus support for anything that needs it (gpsd, gnomemeeting, etc)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/doc">doc</a></code>
+          </td>
+          <td>
+            Add extra documentation (API, Javadoc, etc). It is recommended to enable per package instead of globally
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/echo-cancel">echo-cancel</a></code>
+          </td>
+          <td>
+            Enable WebRTC-based echo canceller via media-libs/webrtc-audio-processing
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/elogind">elogind</a></code>
+          </td>
+          <td>
+            Enable session tracking via sys-auth/elogind
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/extra">extra</a></code>
+          </td>
+          <td>
+            Build pw-cat/pw-play/pw-record
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/ffmpeg">ffmpeg</a></code>
+          </td>
+          <td>
+            Enable ffmpeg/libav-based audio/video codec support
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/fftw">fftw</a></code>
+          </td>
+          <td>
+            Use FFTW library for computing Fourier transforms
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/flatpak">flatpak</a></code>
+          </td>
+          <td>
+            Enable Flatpak support
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/gsettings">gsettings</a></code>
+          </td>
+          <td>
+            Use gsettings (dev-libs/glib) to read/save used modules (useful for e.g. media-sound/paprefs
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/gstreamer">gstreamer</a></code>
+          </td>
+          <td>
+            Add support for media-libs/gstreamer (Streaming media)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/ieee1394">ieee1394</a></code>
+          </td>
+          <td>
+            Enable FireWire/iLink IEEE1394 support (dv, camera, ...)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/jack-client">jack-client</a></code>
+          </td>
+          <td>
+            Install a plugin for running PipeWire as a JACK client
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/jack-sdk">jack-sdk</a></code>
+          </td>
+          <td>
+            Use PipeWire as JACK replacement
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/libcamera">libcamera</a></code>
+          </td>
+          <td>
+            Enable libcamera plugin via media-libs/libcamera
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/loudness">loudness</a></code>
+          </td>
+          <td>
+            Enable loudness normalisation according to the EBU R128 standard using media-libs/libebur128
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/lv2">lv2</a></code>
+          </td>
+          <td>
+            Allow loading LV2 plugins via media-libs/lv2
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/modemmanager">modemmanager</a></code>
+          </td>
+          <td>
+            Combined with USE=bluetooth, allows PipeWire to perform telephony on mobile devices.
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/pipewire-alsa">pipewire-alsa</a></code>
+          </td>
+          <td>
+            Install ALSA plugin, similar to media-plugins/alsa-plugins&#39;s USE=pulseaudio.
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/pulseaudio">pulseaudio</a></code>
+          </td>
+          <td>
+            Add sound server support via media-libs/libpulse (may be PulseAudio or PipeWire)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/readline">readline</a></code>
+          </td>
+          <td>
+            Enable support for libreadline, a GNU line-editing library that almost everyone wants
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/roc">roc</a></code>
+          </td>
+          <td>
+            Enable roc support for real-time audio streaming over the network, using media-libs/roc-toolkit. See https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Network#roc
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/selinux">selinux</a></code>
+          </td>
+          <td>
+            !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/sofa">sofa</a></code>
+          </td>
+          <td>
+            Spatially Oriented Format for Acoustics (SOFA) support via media-libs/libmysofa
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/sound-server">sound-server</a></code>
+          </td>
+          <td>
+            Provide sound server using ALSA and bluetooth devices
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/ssl">ssl</a></code>
+          </td>
+          <td>
+            Enable raop-sink support (needs dev-libs/openssl)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/system-service">system-service</a></code>
+          </td>
+          <td>
+            Install systemd unit files for running as a system service. Not recommended.
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/systemd">systemd</a></code>
+          </td>
+          <td>
+            Enable use of systemd-specific libraries and features like socket activation or session tracking
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/test">test</a></code>
+          </td>
+          <td>
+            Enable dependencies and/or preparations necessary to run tests (usually controlled by FEATURES=test but can be toggled independently)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/v4l">v4l</a></code>
+          </td>
+          <td>
+            Enable support for video4linux (using linux-headers or userspace libv4l libraries)
+          </td>
+        </tr>        <tr>
+          <td>
+            <code><a href="https://packages.gentoo.org/useflags/zeroconf">zeroconf</a></code>
+          </td>
+          <td>
+            Support for DNS Service Discovery (DNS-SD)
+          </td>
+        </tr>      </tbody></table>
+        </div>
+        <div class="panel-footer gp-panel-footer">
+          <small class="pull-right">
+            Data provided by the <a href="https://packages.gentoo.org">Gentoo Package Database</a>
+            &#183;
+            Last update: 2026-09-18 06:07
+          </small>
+          <small>
+            <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE">More information about USE flags</a>
+          </small>
+        </div>
+      </div>
+<p class="mw-empty-elt"></p><p><span class="anchor" id="Emerge"></span>
+</p>
+<h4><span class="mw-headline" id="Emerge">Emerge</span></h4>
+<p>Once the USE flags have been specified, rebuild the affected packages:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask --verbose --changed-use --update --deep @world</code></div></div>
+<p>Alternatively, PipeWire may be emerged independently, though the previous method is usually what is required:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask media-video/pipewire</code></div></div> 
+<p><span class="anchor" id="Configuration"></span>
+</p>
+<h2><span class="mw-headline" id="Configuration">Configuration</span></h2>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px; background-color: #f5f5f5; border-color: #b8adde; color: #4d4370&#32;;"><strong><i class="fa fa-search-plus"></i> See also</strong><br />Detailed, non Gentoo-specific, configuration documentation can be found at <a rel="nofollow" class="external text" href="https://docs.pipewire.org/page_config.html">project's official site</a>.</div>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-check-circle"></i> Tip</strong><br />Typically, things work reasonably well out of the box, and PipeWire's system-level configuration is usually best left unmodified. Those moving to PipeWire from other audio systems, such as <a href="https://wiki.gentoo.org/wiki/ALSA" title="ALSA">ALSA</a> or <a href="https://wiki.gentoo.org/wiki/PulseAudio" title="PulseAudio">PulseAudio</a>, should consider moving configuration files for those systems - e.g. <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">asoundrc</span> files, <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">~/.config/pulse</span>, etc. - to a location where they won't potentially create conflicts within the Linux audio subsystem, but where their contents are still available for reference and use if needed.</div>
+<p>PipeWire recognizes multiple environment variables that allow settings to be changed, either per-user, or for individual commands: for example, <var>PIPEWIRE_RUNTIME_DIR</var>, <var>PIPEWIRE_MODULE_DIR</var>, and <var>DISABLE_RTKIT</var>. Refer to the <span class="plainlinks" title="External link for the pipewire man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/pipewire.1.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">pipewire(1)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span> man page for a complete list.
+</p><p><span class="anchor" id="Audio_groups"></span>
+</p>
+<h3><span class="mw-headline" id="Audio_groups">Audio groups</span></h3>
+<p>It's recommended that users are in the <code>pipewire</code> group.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>usermod -aG pipewire larry</code></div></div>
+<p>PipeWire's default configuration tries to use <i>realtime</i> scheduling to increase audio thread priorities. If the user doesn't have the necessary permissions for this, the configuration will try to use <a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/pipewire/rtkit/">RealtimeKit</a> (RTKit) instead, such that <span style="white-space: nowrap;" class="plainlinks" title="External link for the sys-auth/rtkit package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/sys-auth/rtkit"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">sys-auth/rtkit</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> will need to be installed. This behavior is defined under the <code>context.modules</code> portion of PipeWire's configuration.
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>emerge --ask sys-auth/rtkit</code></div></div> 
+<p>In general, for the best experience with fast user switching, users should not be in the <code>audio</code> group, in order to avoid a user application being able to take exclusive control of the audio device. Exceptions include systems that use <a href="https://wiki.gentoo.org/wiki/Seatd" title="Seatd">seatd</a> or that rely on the <code>audio</code> group for device access control / <abbr title="Access Control List">ACL</abbr>s.
+</p><p>To remove a user from the <code>audio</code> group:
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>usermod -rG audio larry</code></div></div>
+<p><span class="anchor" id="Sound_server_configuration"></span>
+</p>
+<h2><span class="mw-headline" id="Sound_server_configuration">Sound server configuration</span></h2>
+<div class="alert alert-success gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-check-circle"></i> Tip</strong><br />SDDM users should make sure to start it up via the <a href="https://wiki.gentoo.org/wiki/SDDM#Service" title="SDDM">proper service</a> or XDG_RUNTIME_DIR may not be set up correctly.</div>
+<p><span class="anchor" id="File_locations"></span>
+</p>
+<h3><span class="mw-headline" id="File_locations">File locations</span></h3>
+<p>Use <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">pw-config</span> to output the current configuration paths, and use <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">pw-config list</span> to list the current configuration.
+</p><p>The default configuration should be fine for most users. This configuration is described in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr/share/pipewire/pipewire.conf</span>.
+</p><p>If customization is required, do <i>not</i> modify that file. Instead, copy it to either or both of:
+</p>
+<ul><li><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/pipewire/</span>, for system-wide configuration; or</li>
+<li><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_CONFIG_HOME}/pipewire/</span>, for per-user configuration,</li></ul>
+<p>and modify either or both of those files as appropriate.
+</p><p>By default, <var>XDG_CONFIG_HOME</var> is <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">~/.config/</span>. Refer to the <a href="https://wiki.gentoo.org/wiki/XDG/Base_Directories" title="XDG/Base Directories">XDG/Base_Directories</a> page for further information.
+</p><p><span class="anchor" id="Configuration_fragments"></span>
+</p>
+<h4><span class="mw-headline" id="Configuration_fragments">Configuration fragments</span></h4>
+<p>Configuration fragments can be specified via a file with a <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">.conf</span> extension (e.g. <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">90-local.conf</span>) in the following directories<sup id="cite_ref-3" class="reference"><a href="PipeWire.html#cite_note-3">&#91;3&#93;</a></sup>:
+</p>
+<ol><li><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr/share/pipewire/pipewire.conf.d/</span></li>
+<li><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/pipewire/pipewire.conf.d/</span></li>
+<li><span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">${XDG_CONFIG_HOME}/pipewire/pipewire.conf.d/</span></li></ol>
+<p><span class="anchor" id="User_services"></span>
+</p>
+<h3><span class="mw-headline" id="User_services">User services</span></h3>
+<p>User services are available for both systemd and OpenRC. Those not using systemd or OpenRC can instead use <a href="https://wiki.gentoo.org/wiki/PipeWire/gentoo-pipewire-launcher" title="PipeWire/gentoo-pipewire-launcher">PipeWire/gentoo-pipewire-launcher</a>.
+</p><p><span class="anchor" id="User_services:_systemd"></span>
+</p>
+<h4><span class="mw-headline" id="systemd">systemd</span></h4>
+<p>PipeWire provides socket and service files when built with the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the systemd USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/systemd"><span style="color: MidnightBlue;">systemd</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag.
+</p><p>If the PulseAudio user service is enabled, disable it; this is safe to do even if the user service was not in use.
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>systemctl --user disable --now pulseaudio.socket pulseaudio.service</code></div></div>
+<p>While PipeWire does not appear to utilize the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">~/.config/pulse/</span> directory beyond the cookie file, it may be a good idea to rename or delete it.
+</p><p>Enable the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">pipewire-pulse</span> socket; enabling the <code>pipewire-pulse</code> socket will cause the <code>pipewire-pulse</code> service to be started if required. That service will in turn start the <code>pipewire</code> service.
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>systemctl --user enable --now pipewire-pulse.socket</code></div></div>
+<p>Socket activation means the <code>pipewire</code> service will only be started when required, which is usually sufficient. However, the <code>pipewire</code> service can be always started when the user logs in by enabling <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">pipewire.service</span>:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>systemctl --user enable --now pipewire.service</code></div></div>
+<p>Enable the <code>wireplumber</code> service:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>systemctl --user enable --now wireplumber.service</code></div></div>
+<p>In these cases, the <code>--now</code> flag is optional, but probably safe to use, as starting PipeWire with default configuration merely allows using new interfaces and doesn't change the existing ones, i.e. non-PipeWire clients continue using the same libraries and services they were using previously.
+</p><p><span class="anchor" id="User_services:_OpenRC"></span>
+</p>
+<h4><span class="mw-headline" id="OpenRC">OpenRC</span></h4>
+<p>OpenRC has built-in and enabled by default support for <a href="OpenRC.html#User_services" title="OpenRC">user services</a> since version 0.60. Similarly to systemd, they can be used to automatically launch and stop PipeWire on login and logout.
+</p><p>To enable the PipeWire services run:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-update add -U pipewire default
+</code></div><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-update add -U pipewire-pulse default
+</code></div><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-update add -U wireplumber default
+</code></div></div>
+<p>To start the services without enabling them:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-service --user pipewire start
+</code></div><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-service --user pipewire-pulse start
+</code></div><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>rc-service --user wireplumber start
+</code></div></div>
+<p><span class="anchor" id="PulseAudio_server_emulation"></span>
+</p>
+<h3><span class="mw-headline" id="PulseAudio_server_emulation">PulseAudio server emulation</span></h3>
+<p>To confirm PulseAudio server emulation:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>LANG=C pactl info | grep "Server Name"</code></div><pre>Server Name: PulseAudio (on PipeWire 0.3.39)
+</pre></div>
+<p><span class="anchor" id="Multi-user_support"></span>
+</p>
+<h4><span class="mw-headline" id="Multi-user_support">Multi-user support</span></h4>
+<p>Multi-user support requires the UNIX socket interface.
+</p><p>If there is not yet a <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">pipewire-pulse.conf</span> file in <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/pipewire/</span>, add it (creating the <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/pipewire/</span> directory if necessary):
+</p>
+<div class="cmd-box"><div><code style="color: #ef2929; user-select: none; font-weight: bold;">root <span style="color:royalblue;">#</span></code><code>cp /usr/share/pipewire/pipewire-pulse.conf /etc/pipewire/</code></div></div>
+<p>Then edit <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/etc/pipewire/pipewire-pulse.conf</span> to specify the UNIX socket location, which must match the <a href="https://wiki.gentoo.org/wiki/PulseAudio#Allow_multiple_users_to_use_PulseAudio_concurrently" title="PulseAudio">PulseAudio client configuration</a>:
+</p>
+<div class="box-caption"><span class="label" style="margin-right: .5em; background-color: #54487A">FILE</span> <strong><code style="border: none; background: none; color: #54487A; margin-right: .5em;">/etc/pipewire/pipewire-pulse.conf</code></strong><strong>PulseAudio UNIX socket</strong></div> <div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>pulse.properties = {
+    server.address = [
+        &quot;unix:/tmp/pulse-socket&quot;
+    ]
+}
+</pre></div>
+<p><span class="anchor" id="Sound_server_configuration:_Advanced"></span>
+</p>
+<h3><span class="mw-headline" id="Advanced">Advanced</span></h3>
+<p>For information about more advanced PipeWire configuration, refer to the <a href="https://wiki.gentoo.org/wiki/PipeWire/extra" title="PipeWire/extra">PipeWire/extra</a> page. 
+</p><p><span class="anchor" id="Usage"></span>
+</p>
+<h2><span class="mw-headline" id="Usage">Usage</span></h2>
+<p>A command-line interface to PipeWire is provided by <span class="plainlinks" title="External link for the pw-cli man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/pw-cli.1.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">pw-cli(1)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span>. This tool can be used to e.g. list the IDs of PipeWire nodes:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>pw-cli ls Node</code></div></div>
+<p>and to check the current properties of a given node:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>pw-cli e &lt;node-id&gt; Props</code></div></div>
+<p><span class="anchor" id="Controlling_the_volume"></span>
+</p>
+<h3><span class="mw-headline" id="Controlling_the_volume">Controlling the volume</span></h3>
+<p>Ways to control the volume - which on typical setups will be managed by <a href="https://wiki.gentoo.org/wiki/WirePlumber" title="WirePlumber">WirePlumber</a> - include:
+</p>
+<ul><li><span style="white-space: nowrap;" class="plainlinks" title="External link for the media-sound/pwvucontrol package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-sound/pwvucontrol"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-sound/pwvucontrol</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, a pavucontrol-like <abbr title="Graphical User Interface">GUI</abbr>.</li></ul>
+<ul><li><a href="https://wiki.gentoo.org/wiki/Wiremix" title="Wiremix">wiremix</a>, a <abbr title="Text-based User Interface">TUI</abbr>.</li></ul>
+<ul><li><span style="white-space: nowrap;" class="plainlinks" title="External link for the media-sound/pipemixer package."><a rel="nofollow" class="external text" href="https://github.com/gentoo-mirror/guru/tree/master/media-sound/pipemixer"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-sound/pipemixer::guru</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, a <abbr title="Text-based User Interface">TUI</abbr>.</li></ul>
+<ul><li><a href="https://wiki.gentoo.org/wiki/WirePlumber#Usage" title="WirePlumber">WirePlumber's wpctl(1) command</a>.</li></ul>
+<ul><li>PulseAudio tools such as <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-sound/pavucontrol package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-sound/pavucontrol"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-sound/pavucontrol</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> and <span class="plainlinks" title="External link for the pactl man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/pactl.1.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">pactl(1)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span> (provided by <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-libs/libpulse package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-libs/libpulse"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-libs/libpulse</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>).</li></ul>
+<ul><li>The <span class="plainlinks" title="External link for the pw-cli man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/pw-cli.1.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">pw-cli(1)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span> command<sup id="cite_ref-4" class="reference"><a href="PipeWire.html#cite_note-4">&#91;4&#93;</a></sup>, e.g.:</li></ul>
+<dl><dd><div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>pw-cli s &lt;node-id&gt; Props '{ mute: false, channelVolumes: [ 0.3, 0.3 ] }'</code></div></div></dd></dl>
+<p><span class="anchor" id="Checking_settings"></span>
+</p>
+<h3><span class="mw-headline" id="Checking_settings">Checking settings</span></h3>
+<p><span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">pw-metadata</span> can be used to check the current sample rate and other settings:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>pw-metadata -n settings</code></div><pre>Found "settings" metadata 31
+update: id:0 key:'log.level' value:'2' type:''
+update: id:0 key:'clock.rate' value:'192000' type:''
+update: id:0 key:'clock.allowed-rates' value:'[ 192000, 48000, 44100 ]' type:''
+update: id:0 key:'clock.quantum' value:'1024' type:''
+update: id:0 key:'clock.min-quantum' value:'32' type:''
+update: id:0 key:'clock.max-quantum' value:'2048' type:''
+update: id:0 key:'clock.force-quantum' value:'0' type:''
+update: id:0 key:'clock.force-rate' value:'0' type:''
+</pre></div>
+<p>If PipeWire is being used as a PulseAudio backend, the sample rate and bit depth, or <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">Default Sample Specification</span>, can be checked with:
+</p>
+<div class="cmd-box"><div><code style="color: #4E9A06; user-select: none; font-weight: bold;">user <span style="color:royalblue;">$</span></code><code>pactl info</code></div><pre>Server String: /run/user/1000/pulse/native
+Library Protocol Version: 35
+Server Protocol Version: 35
+Is Local: yes
+Client Index: 213
+Tile Size: 65472
+User Name: larry
+Host Name: gentoo
+Server Name: PulseAudio (on PipeWire 0.3.71)
+Server Version: 15.0.0
+Default Sample Specification: float32le 2ch 192000Hz
+Default Channel Map: front-left,front-right
+Default Sink: alsa_output.usb-Generic_USB_Audio-00.pro-output-2
+Default Source: alsa_input.usb-Focusrite_Scarlett_Solo_USB-00.pro-input-0
+</pre></div>
+<p><span class="anchor" id="GUI_patchbays"></span>
+</p>
+<h3><span class="mw-headline" id="GUI_patchbays">GUI patchbays</span></h3>
+<p>GUI patchbays available via the <a rel="nofollow" class="external text" href="https://repos.gentoo.org/#gentoo">gentoo</a> repository include:
+</p>
+<ul><li><span style="white-space: nowrap;" class="plainlinks" title="External link for the media-sound/helvum package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-sound/helvum"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-sound/helvum</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, a <a href="https://wiki.gentoo.org/wiki/GTK" title="GTK">GTK</a>-based patchbay.</li></ul>
+<ul><li><span style="white-space: nowrap;" class="plainlinks" title="External link for the media-sound/qpwgraph package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-sound/qpwgraph"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-sound/qpwgraph</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>, a <a href="https://wiki.gentoo.org/wiki/Qt" title="Qt">Qt</a>-based patchbay that can save layout.</li></ul>
+<p>Additionally, <a rel="nofollow" class="external text" href="https://github.com/dimtpap/coppwr">coppwr</a> is a low-level patchbay available via <a href="https://wiki.gentoo.org/wiki/Flatpak" title="Flatpak">Flatpak</a> (io.github.dimtpap.coppwr).
+</p><p><span class="anchor" id="Usage:_Advanced"></span>
+</p>
+<h3><span class="mw-headline" id="Advanced_2">Advanced</span></h3>
+<p>For information about more advanced PipeWire usage, refer to the <a href="https://wiki.gentoo.org/wiki/PipeWire/extra" title="PipeWire/extra">PipeWire/extra</a> page.
+</p><p><span class="anchor" id="Replacing_JACK"></span>
+</p>
+<h2><span class="mw-headline" id="Replacing_JACK">Replacing JACK</span></h2>
+<p>If the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the jack-sdk USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/jack-sdk"><span style="color: MidnightBlue;">jack-sdk</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag is enabled, PipeWire can be used as the server for <a href="https://wiki.gentoo.org/wiki/JACK" title="JACK">JACK</a> clients; calls to the JACK API will be translated into calls to PipeWire's native API. Clients can be connected via a patchbay interface such as <span class="plainlinks" title="External link for the qjackctl man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/qjackctl.1.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">qjackctl(1)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span>. Refer to <span class="plainlinks" title="External link for the pipewire-jack.conf man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/pipewire-jack.conf.5.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">pipewire-jack.conf(5)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span> for information about configuring PipeWire for JACK clients.
+</p><p>When PipeWire is configured this way, the <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-sound/jack2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-sound/jack2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-sound/jack2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package must be uninstalled; <span style="font-family: monospace; font-size: 95%; color: #3c763d; font-weight: 600;">/usr/lib/libjack.so</span> will be owned by the <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-video/pipewire package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-video/pipewire"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-video/pipewire</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> package. This can be checked via e.g. <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">qfile</span> (provided by <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-portage/portage-utils package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-portage/portage-utils"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-portage/portage-utils</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>) or <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">equery</span> (provided by <span style="white-space: nowrap;" class="plainlinks" title="External link for the app-portage/gentoolkit package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/app-portage/gentoolkit"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">app-portage/gentoolkit</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span>).
+</p><p>If the <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the jack-sdk USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/jack-sdk"><span style="color: MidnightBlue;">jack-sdk</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag is not enabled, <span style="white-space: nowrap;" class="plainlinks" title="External link for the media-sound/jack2 package."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/packages/media-sound/jack2"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;">media-sound/jack2</span></a><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-hdd-o fa-fw"></span></span> will be installed (and its <span style="font-family: monospace; font-size: 95%; color: MidnightBlue; white-space: nowrap;" class="plainlinks" title="External link to https&#58;//packages.gentoo.org for the dbus USE Flag."><a rel="nofollow" class="external text" href="https://packages.gentoo.org/useflags/dbus"><span style="color: MidnightBlue;">dbus</span></a><a href="https://wiki.gentoo.org/wiki/USE_flag" title="USE flag"><span style="color: grey; margin-left: 0.1em; font-size: 70% !important;" class="fa fa-flag-o fa-fw"></span></a></span> USE flag must be enabled). In this case, individual JACK clients can be run via <span class="plainlinks" title="External link for the pw-jack man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/pw-jack.1.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">pw-jack(1)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span>, e.g. <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">pw-jack qjackctl</span>. When using <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">pw-jack</span>, do <b>not</b> use either <span class="plainlinks" title="External link for the jackd man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/jackd.1.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">jackd(1)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span> nor <span style="font-family: monospace; font-size: 95%; font-weight: bold;" class="tripleclick-separator">jackdbus</span>.
+</p><p>Not every client will necessarily work; some may even ungracefully exit due to missing symbols. Re-configuration of JACK clients might be required.
+</p>
+<div class="alert alert-warning gw-box" style="padding-top: 8px; padding-bottom: 8px;"><strong><i class="fa fa-exclamation-circle"></i> Important</strong><br />Existing JACK users are likely to have realtime capability set up, but new users are advised to raise the value of <var>RLIMIT_MEMLOCK</var> from 64k (Gentoo's default) to 256k for all PipeWire users that want JACK emulation; refer to <a href="PipeWire.html#Clients_unable_to_lock_memory" title="PipeWire">the "Clients unable to lock memory" section</a>. Failure to do this will likely cause at least occasional buffer underruns (xruns), as a single page fault is likely to spend half to the entire length of a buffer just in kernel time to resolve.</div>
+<p><span class="anchor" id="Troubleshooting"></span>
+</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<p>Refer to <a href="https://wiki.gentoo.org/wiki/PipeWire/troubleshooting" title="PipeWire/troubleshooting">PipeWire/troubleshooting</a>.
+</p><p><span class="anchor" id="See_also"></span>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a href="https://wiki.gentoo.org/wiki/WirePlumber" title="WirePlumber">WirePlumber</a> — a modular session / policy manager for <a class="mw-selflink selflink">PipeWire</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/PulseAudio" title="PulseAudio">PulseAudio</a> — a multi-platform, open source, <i>sound server</i> that provides a number of features on top of the low-level audio interface <a href="https://wiki.gentoo.org/wiki/ALSA" title="ALSA">ALSA</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/ALSA" title="ALSA">ALSA</a> — the Linux kernel's <abbr title="Application Programming Interface">API</abbr> for sound cards, together with an associated software framework</li>
+<li><a href="https://wiki.gentoo.org/wiki/User:Sam/PipeWire_changes" title="User:Sam/PipeWire changes">Technical notes on the packaging of PipeWire</a></li></ul>
+<p><span class="anchor" id="External_resources"></span>
+</p>
+<h2><span class="mw-headline" id="External_resources">External resources</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/mikeroyal/PipeWire-Guide/blob/main/README.md">Pipewire Guide</a></li>
+<li><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/FAQ">PipeWire FAQ</a></li>
+<li><a rel="nofollow" class="external text" href="https://fedoramagazine.org/introduction-to-pipewire/">Introduction to Pipewire</a> (2025-02-07)</li>
+<li><a rel="nofollow" class="external text" href="https://bootlin.com/blog/an-introduction-to-pipewire/">An introduction to PipeWire</a> (2022-06-20)</li>
+<li><a rel="nofollow" class="external text" href="https://venam.nixers.net/blog/unix/2021/06/23/pipewire-under-the-hood.html">PipeWire under the hood</a> (2021-06-23) - blog post explaining PipeWire from a unique perspective</li>
+<li><a rel="nofollow" class="external text" href="https://lwn.net/Articles/847412/">PipeWire: The Linux audio/video bus</a>, on Linux Weekly News (2021-03-02)</li>
+<li><a rel="nofollow" class="external text" href="https://www.gentoo.org/support/news-items/2026-01-15-desktop-profile-pipewire.html">Desktop Profile to enable PipeWire support</a> (2026-01-15) -  official Gentoo news about pipewire support</li>
+<li><span class="plainlinks" title="External link for the libpipewire-modules man page."><a rel="nofollow" class="external text" href="https://man.archlinux.org/man/libpipewire-modules.7.en"><span style="font-family: monospace; font-size: 95%; color: MidnightBlue;" class="plainlinks">libpipewire-modules(7)</span></a><a href="https://wiki.gentoo.org/wiki/Special:MyLanguage/man_page" title="Special:MyLanguage/man page"><span style="color: grey; margin-left: 0.1em; font-size: 70%;" class="fa fa-life-ring fa-fw"></span></a></span> - overview of PipeWire modules</li></ul>
+<p><span class="anchor" id="References"></span>
+</p>
+<h2><span class="mw-headline" id="References">References</span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="PipeWire.html#cite_ref-1">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.gentoo.org/support/news-items/2022-07-29-pipewire-sound-server.html">https://www.gentoo.org/support/news-items/2022-07-29-pipewire-sound-server.html</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="PipeWire.html#cite_ref-2">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/FAQ#does-pipewire-require-dbussystemdflatpak">PipeWire FAQ: "Does PipeWire require DBus/SystemD/Flatpak"</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="PipeWire.html#cite_ref-3">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Config-PipeWire#configuration-file-pipewireconf">https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Config-PipeWire#configuration-file-pipewireconf</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="PipeWire.html#cite_ref-4">↑</a></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Migrate-PulseAudio#sink-inputsource-output-volumemute">https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Migrate-PulseAudio#sink-inputsource-output-volumemute</a></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20260924042638
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+[SMW] In‐text annotation parser time: 0.002 seconds
+CPU time usage: 0.270 seconds
+Real time usage: 0.496 seconds
+Preprocessor visited node count: 5892/1000000
+Post‐expand include size: 117432/4194304 bytes
+Template argument size: 25720/4194304 bytes
+Highest expansion depth: 20/40
+Expensive parser function count: 30/150
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 14429/5000000 bytes
+Lua time usage: 0.110/7 seconds
+Lua virtual size: 5.22 MB/50 MB
+Lua estimated memory usage: 0 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  356.065      1 -total
+ 43.63%  155.357     36 Template:Anchor
+ 28.39%  101.100      1 Template:InfoBox_stack
+ 23.71%   84.410      7 Template:InfoBox
+ 17.96%   63.938      1 Template:InfoBox_homepage
+ 15.09%   53.726      1 Template:InfoBox_header
+ 12.47%   44.402      4 Template:See_also
+  8.59%   30.593     39 Template:Link
+  3.86%   13.728     18 Template:GenericCmd
+  2.96%   10.532      6 Template:RootCmd
+-->
+
+<!-- Saved in parser cache with key gentoo?hwiki:pcache:idhash:272497-0!dateformat=default and timestamp 20260924042638 and revision id 1451709
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://wiki.gentoo.org/index.php?title=PipeWire&amp;oldid=1451709">https://wiki.gentoo.org/index.php?title=PipeWire&amp;oldid=1451709</a>"</div>
+<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.gentoo.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://wiki.gentoo.org/wiki/Category:Audio" title="Category:Audio">Audio</a></li><li><a href="https://wiki.gentoo.org/wiki/Category:Multimedia" title="Category:Multimedia">Multimedia</a></li><li><a href="https://wiki.gentoo.org/wiki/Category:Sound_devices" title="Category:Sound devices">Sound devices</a></li></ul></div></div>						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-offset-2 col-md-7">
+											<div class="spacer"></div>
+						<ul id="f-list">
+							<li id="lastmod>"> This page was last edited on 3 September 2026, at 13:03.</li><li id="privacy>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:Privacy_policy" class="mw-redirect" title="Gentoo Wiki:Privacy policy">Privacy policy</a></li><li id="about>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:About" title="Gentoo Wiki:About">About Gentoo Wiki</a></li><li id="disclaimer>"><a href="https://wiki.gentoo.org/wiki/Gentoo_Wiki:General_disclaimer" title="Gentoo Wiki:General disclaimer">Disclaimers</a></li>						</ul>
+									</div>
+				<div class="col-xs-12 col-md-3">
+					<!-- No questions or comments, the Wiki has enough information on how to contact us. -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 col-md-2">
+					<ul class="footerlinks three-icons">
+						<li><a href="https://twitter.com/gentoo" title="@Gentoo on Twitter"><span class="fa fa-twitter fa-fw"></span></a></li>
+						<li><a href="https://www.facebook.com/gentoo.org" title="Gentoo on Facebook"><span class="fa fa-facebook fa-fw"></span></a></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-xs-9 col-md-9">
+					<strong>&copy; 2001&ndash;2026 Gentoo Authors</strong><br />
+					<small>
+						Gentoo is a trademark of the Gentoo Foundation, Inc. and of Förderverein Gentoo e.V.
+						The contents of this document, unless otherwise expressly stated, are licensed under the
+						<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC-BY-SA-4.0</a> license.
+						The <a href="https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html">Gentoo Name and Logo Usage Guidelines</a> apply.
+					</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+<script>
+function defer(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function() { defer(method) }, 50);
+    }
+}
+defer(function() { mw.loader.load( 'https://assets.gentoo.org/tyrian/bootstrap.min.js'); });
+</script>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"smw":{"limitreport-intext-parsertime":0.002},"limitreport":{"cputime":"0.270","walltime":"0.496","ppvisitednodes":{"value":5892,"limit":1000000},"postexpandincludesize":{"value":117432,"limit":4194304},"templateargumentsize":{"value":25720,"limit":4194304},"expansiondepth":{"value":20,"limit":40},"expensivefunctioncount":{"value":30,"limit":150},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":14429,"limit":5000000},"timingprofile":["100.00%  356.065      1 -total"," 43.63%  155.357     36 Template:Anchor"," 28.39%  101.100      1 Template:InfoBox_stack"," 23.71%   84.410      7 Template:InfoBox"," 17.96%   63.938      1 Template:InfoBox_homepage"," 15.09%   53.726      1 Template:InfoBox_header"," 12.47%   44.402      4 Template:See_also","  8.59%   30.593     39 Template:Link","  3.86%   13.728     18 Template:GenericCmd","  2.96%   10.532      6 Template:RootCmd"]},"scribunto":{"limitreport-timeusage":{"value":"0.110","limit":"7"},"limitreport-virtmemusage":{"value":5476352,"limit":52428800},"limitreport-estmemusage":0},"cachereport":{"timestamp":"20260924042638","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":70});});</script></body></html>
